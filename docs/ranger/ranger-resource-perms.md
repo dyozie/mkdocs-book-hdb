@@ -28,7 +28,7 @@ The following table identifies the specific permissions supported by each HAWQ r
 ![Permissions Supported by each HAWQ Resource](../images/resource-perms.png)
 
 
-## <a id="dbops"></a> Policies for Database Operations
+##  Policies for Database Operations<a id="dbops"></a>
 
 The database operations governed by HAWQ-Ranger authorization are those that you perform at the purely database-level. These operations include connecting to the database, creating schemas, and creating temporary tables and sequences. Use the following HAWQ Ranger Policy Details to assign permissions for these operations:
 
@@ -47,7 +47,7 @@ specifying the permissions you wish to assign:
 | temp| CREATE TEMP TABLE<p>CREATE TEMP SEQUENCE | GRANT TEMP ON DATABASE \<db-name\> TO \<user-name\> |
 
 
-## <a id="dbschemaops"></a> Policies for Schema Operations
+##  Policies for Schema Operations<a id="dbschemaops"></a>
 
 You perform many HAWQ operations within the scope of a specific database and schema, including creating/dropping/altering database objects. These operations will require permission to use the specified schema. 
 
@@ -69,7 +69,7 @@ specifying these permissions:
 | create | ALTER/CREATE AGGREGATE, ALTER TABLE, CREATE [EXTERNAL] TABLE, CREATE FUNCTION, CREATE OPERATOR, CREATE OPERATOR CLASS (superuser only), CREATE SEQUENCE, CREATE VIEW, CREATE TYPE, SELECT INTO  |    GRANT CREATE ON SCHEMA \<schema-name\> TO \<user-name\> |
 
 
-## <a id="tblops"></a> Policies for Table Operations
+##  Policies for Table Operations<a id="tblops"></a>
 
 You can insert data into and select a table within schemas in which you have `usage-schema` permissions. Use the following HAWQ Ranger Policy Details to assign permission for these operations:
 
@@ -87,7 +87,7 @@ specifying the permissions you wish to assign:
 | insert  | COPY FROM, INSERT | GRANT INSERT ON TABLE \<table-name\> TO \<user-name\> |
 
 
-## <a id="sequenceops"></a> Policies for Sequence Operations
+##  Policies for Sequence Operations<a id="sequenceops"></a>
 
 You can use and select sequences and update sequence values in schemas in which you have `usage-schema` permissions. You can also use the `nextval()` and `setval()` HAWQ built-in functions to return and set sequence values. Use the following HAWQ Ranger Policy Details to assign permission for these operations:
 
@@ -106,7 +106,7 @@ specifying the permissions you wish to assign:
 | update | setval() | GRANT UPDATE ON SEQUENCE \<sequence-name\> TO \<user-name\> |
 
 
-## <a id="functionops"></a> Policies for Function Operations
+##  Policies for Function Operations<a id="functionops"></a>
 
 You can execute user-defined functions in schemas in which you have `usage-schema` permissions. Use the following HAWQ Ranger Policy Details to assign permission for this operation:
 
@@ -125,7 +125,7 @@ specifying the permissions you wish to assign:
 **Note**: Functions typically access database objects such as tables, views, sequences, etc and other functions. When setting up your HAWQ policies, ensure you have also provided access to all database resources referenced within the function (recursively).
 
 
-## <a id="dblangops"></a> Policies for Language Operations
+##  Policies for Language Operations<a id="dblangops"></a>
 
 Only super-users may register and drop languages for a specific database. These operations are governed by HAWQ-Native authorization. 
 
@@ -143,7 +143,7 @@ specifying these permissions:
 | usage | CREATE FUNCTION ... LANGUAGE \<language-name\> |    GRANT USAGE ON LANGUAGE\<language-name\> TO \<user-name\> |
 
 
-## <a id="dbtblspaceops"></a> Policies for Tablespace Operations
+##  Policies for Tablespace Operations<a id="dbtblspaceops"></a>
 
 Only super-users may create and drop tablespaces. These operations are governed by HAWQ-Native authorization. 
 
@@ -160,7 +160,7 @@ specifying these permissions:
 | create | CREATE TABLE ... TABLESPACE |  GRANT CREATE ON \<tablespace-name\> TO \<user-name\> |
 
 
-## <a id="dbprotocolops"></a> Policies for Protocol Operations
+##  Policies for Protocol Operations<a id="dbprotocolops"></a>
 
 You may choose to permit access to the `pxf`, `gpfdist`, and/or `http`  protocols to create readable and writable external tables. Use the following HAWQ Ranger Policy Details to assign permission for these operations:
 

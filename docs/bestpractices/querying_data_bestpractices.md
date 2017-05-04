@@ -23,7 +23,7 @@ under the License.
 
 To obtain the best results when querying data in HAWQ, review the best practices described in this topic.
 
-## <a id="virtual_seg_performance"></a>Factors Impacting Query Performance
+## Factors Impacting Query Performance<a id="virtual_seg_performance"></a>
 
 The number of virtual segments used for a query directly impacts the query's performance. The following factors can impact the degree of parallelism of a query:
 
@@ -42,7 +42,7 @@ The number of virtual segments used for a query directly impacts the query's per
 
 See [Query Performance](../query/query-performance.html#topic38) for more details.
 
-## <a id="id_xtk_jmq_1v"></a>Examining Query Plans to Solve Problems
+## Examining Query Plans to Solve Problems<a id="id_xtk_jmq_1v"></a>
 
 If a query performs poorly, examine its query plan and ask the following questions:
 

@@ -25,7 +25,7 @@ Activates a standby master host and makes it the active master for the HAWQ syst
 
 **Note:** If HAWQ was installed using Ambari, do not use `hawq activate` to activate a standby master host. The system catalogs could become unsynchronized if you mix Ambari and command line functions. For Ambari-managed HAWQ clusters, always use the Ambari administration interface to activate a standby master. For more information, see [Manging HAWQ Using Ambari](../../../admin/ambari-admin.html#topic1).
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq activate standby 
@@ -38,7 +38,7 @@ hawq activate [-h | --help]
 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 If the primary master fails, the log replication process is shut down, and the standby master can be activated in its place. The `hawq activate                                         standby` utility activates a backup, standby master host and brings it into operation as the active master instance for a HAWQ system. The activated standby master effectively becomes the HAWQ master, accepting client connections on the master port.
 
@@ -63,7 +63,7 @@ $ psql <dbname> -c 'ANALYZE;'
 
 After you activate the standby master as the primary master, the HAWQ system no longer has a standby master configured. You might want to specify another host to be the new standby with the [hawq init](hawqinit.html#topic1) utility.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-M, -\\\-mode (smart | fast | immediate) </dt>
 <dd>Stop with one of the specified modes.
@@ -89,7 +89,7 @@ Immediate shutdown aborts transactions in progress and kills all `postgres` proc
 <dt>-h, -\\\-help (help)  </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section5"></a>Example
+## Example<a id="topic1__section5"></a>
 
 Activate the standby master host and make it the active master instance for a HAWQ system (run from backup master host you are activating):
 
@@ -97,6 +97,6 @@ Activate the standby master host and make it the active master instance for a HA
 $ hawq activate standby
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq init](hawqinit.html#topic1)

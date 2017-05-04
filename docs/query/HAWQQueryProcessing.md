@@ -25,7 +25,7 @@ This topic provides an overview of how HAWQ processes queries. Understanding thi
 
 Users issue queries to HAWQ as they would to any database management system. They connect to the database instance on the HAWQ master host using a client application such as `psql` and submit SQL statements.
 
-## <a id="topic2"></a>Understanding Query Planning and Dispatch
+## Understanding Query Planning and Dispatch<a id="topic2"></a>
 
 After a query is accepted on master, the master parses and analyzes the query. After completing its analysis, the master generates a query tree and provides the query tree to the query optimizer.
 
@@ -35,7 +35,7 @@ This diagram depicts basic query flow in HAWQ.
 
 <img src="../images/basic_query_flow.png" id="topic2__image_ezs_wbh_sv" class="image" width="672" />
 
-## <a id="topic3"></a>Understanding HAWQ Query Plans
+## Understanding HAWQ Query Plans<a id="topic3"></a>
 
 A query plan is the set of operations HAWQ will perform to produce the answer to a query. Each *node* or step in the plan represents a database operation such as a table scan, join, aggregation, or sort. Plans are read and executed from bottom to top.
 
@@ -62,7 +62,7 @@ This query plan has another type of motion operation called a *gather motion*. A
 
 <img src="../images/slice_plan.jpg" class="image" width="462" height="382" />
 
-## <a id="topic4"></a>Understanding Parallel Query Execution
+## Understanding Parallel Query Execution<a id="topic4"></a>
 
 HAWQ creates a number of database processes to handle the work of a query. On the master, the query worker process is called the *query dispatcher* (QD). The QD is responsible for creating and dispatching the query plan. It also accumulates and presents the final results. On virtual segments, a query worker process is called a *query executor* (QE). A QE is responsible for completing its portion of work and communicating its intermediate results to the other worker processes.
 

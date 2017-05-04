@@ -23,31 +23,31 @@ under the License.
 
 Defines a new savepoint within the current transaction.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 SAVEPOINT <savepoint_name>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `SAVEPOINT` establishes a new savepoint within the current transaction.
 
 A savepoint is a special mark inside a transaction that allows all commands that are executed after it was established to be rolled back, restoring the transaction state to what it was at the time of the savepoint.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<savepoint\_name\>   </dt>
 <dd>The name of the new savepoint.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Use [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html) to rollback to a savepoint. Use [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html) to destroy a savepoint, keeping the effects of commands executed after it was established.
 
 Savepoints can only be established when inside a transaction block. There can be multiple savepoints defined within a transaction.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To establish a savepoint and later undo the effects of all commands executed after it was established:
 
@@ -76,10 +76,10 @@ COMMIT;
 
 The above transaction will insert both 3 and 4.
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 SQL requires a savepoint to be destroyed automatically when another savepoint with the same name is established. In HAWQ, the old savepoint is kept, though only the more recent one will be used when rolling back or releasing. (Releasing the newer savepoint will cause the older one to again become accessible to [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html) and [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html).) Otherwise, `SAVEPOINT` is fully SQL conforming.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK.html), [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html), [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html)

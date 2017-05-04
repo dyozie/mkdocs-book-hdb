@@ -23,7 +23,7 @@ under the License.
 
 Defines a new data type.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE TYPE <name> AS ( <attribute_name>
@@ -46,7 +46,7 @@ CREATE TYPE name
 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE TYPE` registers a new data type for use in the current database. The user who defines a type becomes its owner.
 
@@ -86,7 +86,7 @@ Whenever a user-defined base data type is created, HAWQ automatically creates an
 
 You might reasonably ask why there is an `ELEMENT` option, if the system makes the correct array type automatically. The only case where it's useful to use `ELEMENT` is when you are making a fixed-length type that happens to be internally an array of a number of identical things, and you want to allow these things to be accessed directly by subscripting, in addition to whatever operations you plan to provide for the type as a whole. For example, type `name` allows its constituent `char` elements to be accessed this way. A 2-D point type could allow its two component numbers to be accessed like point\[0\] and point\[1\]. Note that this facility only works for fixed-length types whose internal form is exactly a sequence of identical fixed-length fields. A subscriptable variable-length type must have the generalized internal representation used by `array_in` and `array_out`. For historical reasons, subscripting of fixed-length array types starts from zero, rather than from one as for variable-length arrays.
 
-## <a id="topic1__section7"></a>Parameters
+## Parameters<a id="topic1__section7"></a>
 
 <dt> \<name\>  </dt>
 <dd>The name (optionally schema-qualified) of a type to be created.</dd>
@@ -127,13 +127,13 @@ You might reasonably ask why there is an `ELEMENT` option, if the system makes t
 <dt> \<delimiter\>  </dt>
 <dd>The delimiter character to be used between values in arrays made of this type.</dd>
 
-## <a id="topic1__section8"></a>Notes
+## Notes<a id="topic1__section8"></a>
 
 User-defined type names cannot begin with the underscore character (\_) and can only be 62 characters long (or in general `NAMEDATALEN - 2`, rather than the `NAMEDATALEN - 1` characters allowed for other names). Type names beginning with underscore are reserved for internally-created array type names.
 
 Because there are no restrictions on use of a data type once it's been created, creating a base type is tantamount to granting public execute permission on the functions mentioned in the type definition. (The creator of the type is therefore required to own these functions.) This is usually not an issue for the sorts of functions that are useful in a type definition. But you might want to think twice before designing a type in a way that would require 'secret' information to be used while converting it to or from external form.
 
-## <a id="topic1__section9"></a>Examples
+## Examples<a id="topic1__section9"></a>
 
 This example creates a composite type and uses it in a function definition:
 
@@ -195,10 +195,10 @@ CREATE TABLE big_objs (
 );
 ```
 
-## <a id="topic1__section10"></a>Compatibility
+## Compatibility<a id="topic1__section10"></a>
 
 `CREATE TYPE` command is a HAWQ extension. There is a `CREATE                     TYPE` statement in the SQL standard that is rather different in detail.
 
-## <a id="topic1__section11"></a>See Also
+## See Also<a id="topic1__section11"></a>
 
 [CREATE FUNCTION](CREATE-FUNCTION.html), [ALTER TYPE](ALTER-TYPE.html), [DROP TYPE](DROP-TYPE.html)

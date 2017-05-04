@@ -23,7 +23,7 @@ under the License.
 
 This topic describes basic data operations that you perform in HAWQ.
 
-## <a id="topic3"></a>Inserting Rows
+## Inserting Rows<a id="topic3"></a>
 
 Use the `INSERT` command to create rows in a table. This command requires the table name and a value for each column in the table; you may optionally specify the column names in any order. If you do not specify column names, list the data values in the order of the columns in the table, separated by commas.
 
@@ -59,7 +59,7 @@ To insert data into a partitioned table, you specify the root partitioned table,
 
 To insert large amounts of data, use external tables or the `COPY` command. These load mechanisms are more efficient than `INSERT` for inserting large quantities of rows. See [Loading and Unloading Data](load/g-loading-and-unloading-data.html#topic1) for more information about bulk data loading.
 
-## <a id="topic9"></a>Vacuuming the System Catalog Tables
+## Vacuuming the System Catalog Tables<a id="topic9"></a>
 
 Only HAWQ system catalog tables use multiple version concurrency control. Deleted or updated data rows in the catalog tables occupy physical space on disk even though new transactions cannot see them. Periodically running the `VACUUM` command removes these expired rows. 
 
@@ -71,7 +71,7 @@ For example:
 VACUUM pg_class;
 ```
 
-### <a id="topic10"></a>Configuring the Free Space Map
+### Configuring the Free Space Map<a id="topic10"></a>
 
 Expired rows are held in the *free space map*. The free space map must be sized large enough to hold all expired rows in your database. If not, a regular `VACUUM` command cannot reclaim space occupied by expired rows that overflow the free space map.
 

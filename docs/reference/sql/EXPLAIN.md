@@ -23,14 +23,14 @@ under the License.
 
 Shows the query plan of a statement.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 EXPLAIN [ANALYZE] [VERBOSE] <statement>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `EXPLAIN` displays the query plan that the HAWQ planner generates for the supplied statement. Query plans are a tree plan of nodes. Each node in the plan represents a single operation, such as table scan, join, aggregation or a sort.
 
@@ -74,7 +74,7 @@ EXPLAIN ANALYZE ...;
 ROLLBACK;
 ```
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<name\>   </dt>
 <dd>The name of the prepared statement to execute.</dd>
@@ -82,11 +82,11 @@ ROLLBACK;
 <dt>\<parameter\>  </dt>
 <dd>The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as was determined when the prepared statement was created.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 In order to allow the query planner to make reasonably informed decisions when optimizing queries, the `ANALYZE` statement should be run to record statistics about the distribution of data within the table. If you have not done this (or if the statistical distribution of the data in the table has changed significantly since the last time `ANALYZE` was run), the estimated costs are unlikely to conform to the real properties of the query, and consequently an inferior query plan may be chosen.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To illustrate how to read an `EXPLAIN` query plan, consider the following example for a very simple query:
 
@@ -106,10 +106,10 @@ The results of the scan operation are passed up to a *gather motion* operation. 
 
 The estimated startup cost for this plan is `00.00` (no cost) and a total cost of `20.88` disk page fetches. The planner is estimating that this query will return one row.
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 There is no `EXPLAIN` statement defined in the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [ANALYZE](ANALYZE.html)

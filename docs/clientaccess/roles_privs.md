@@ -33,14 +33,14 @@ Roles are defined at the system level, meaning they are valid for all databases 
 
 In order to bootstrap the HAWQ system, a freshly initialized system always contains one predefined *superuser* role \(also referred to as the system user\). This role will have the same name as the operating system user that initialized the HAWQ system. Customarily, this role is named `gpadmin`. In order to create more roles you first have to connect as this initial role.
 
-## <a id="topic2"></a>Security Best Practices for Roles and Privileges 
+## Security Best Practices for Roles and Privileges <a id="topic2"></a>
 
 -   **Secure the gpadmin system user.** HAWQ requires a UNIX user id to install and initialize the HAWQ system. This system user is referred to as `gpadmin` in the HAWQ documentation. This `gpadmin` user is the default database superuser in HAWQ, as well as the file system owner of the HAWQ installation and its underlying data files. This default administrator account is fundamental to the design of HAWQ. The system cannot run without it, and there is no way to limit the access of this gpadmin user id. Use roles to manage who has access to the database for specific purposes. You should only use the `gpadmin` account for system maintenance tasks such as expansion and upgrade. Anyone who logs on to a HAWQ host as this user id can read, alter or delete any data; specifically system catalog data and database access rights. Therefore, it is very important to secure the gpadmin user id and only provide access to essential system administrators. Administrators should only log in to HAWQ as `gpadmin` when performing certain system maintenance tasks \(such as upgrade or expansion\). Database users should never log on as `gpadmin`, and ETL or production workloads should never run as `gpadmin`.
 -   **Assign a distinct role to each user that logs in.** For logging and auditing purposes, each user that is allowed to log in to HAWQ should be given their own database role. For applications or web services, consider creating a distinct role for each application or service. See [Creating New Roles \(Users\)](#topic3).
 -   **Use groups to manage access privileges.** See [Role Membership](#topic5).
 -   **Limit users who have the SUPERUSER role attribute.** Roles that are superusers bypass all access privilege checks in HAWQ, as well as resource queuing. Only system administrators should be given superuser rights. See [Altering Role Attributes](#topic4).
 
-## <a id="topic3"></a>Creating New Roles \(Users\) 
+## Creating New Roles \(Users\) <a id="topic3"></a>
 
 A user-level role is considered to be a database role that can log in to the database and initiate a database session. Therefore, when you create a new user-level role using the `CREATE ROLE` command, you must specify the `LOGIN` privilege. For example:
 
@@ -50,7 +50,7 @@ A user-level role is considered to be a database role that can log in to the dat
 
 A database role may have a number of attributes that define what sort of tasks that role can perform in the database. You can set these attributes when you create the role, or later using the `ALTER ROLE` command. See [Table 1](#iq139556) for a description of the role attributes you can set.
 
-### <a id="topic4"></a>Altering Role Attributes 
+### Altering Role Attributes <a id="topic4"></a>
 
 A database role may have a number of attributes that define what sort of tasks that role can perform in the database.
 
@@ -80,7 +80,7 @@ You can set these attributes when you create the role, or later using the `ALTER
 =# ALTER ROLE jsmith DENY DAY 'Sunday';
 ```
 
-## <a id="topic5"></a>Role Membership 
+## Role Membership <a id="topic5"></a>
 
 It is frequently convenient to group users together to ease management of object privileges: that way, privileges can be granted to, or revoked from, a group as a whole. In HAWQ this is done by creating a role that represents the group, and then granting membership in the group role to individual user roles.
 
@@ -111,7 +111,7 @@ The role attributes `LOGIN`, `SUPERUSER`, `CREATEDB`, and `CREATEROLE` are never
 => SET ROLE admin;
 ```
 
-## <a id="topic6"></a>Managing Object Privileges 
+## Managing Object Privileges <a id="topic6"></a>
 
 When an object \(table, view, sequence, database, function, language, schema, or tablespace\) is created, it is assigned an owner. The owner is normally the role that executed the creation statement. For most kinds of objects, the initial state is that only the owner \(or a superuser\) can do anything with the object. To allow other roles to use it, privileges must be granted. HAWQ supports the following privileges for each object type:
 
@@ -148,11 +148,11 @@ You can also use the `DROP OWNED` and `REASSIGN OWNED` commands for managing obj
 =# DROP OWNED BY visitor;
 ```
 
-### <a id="topic7"></a>Simulating Row and Column Level Access Control 
+### Simulating Row and Column Level Access Control <a id="topic7"></a>
 
 Row-level or column-level access is not supported, nor is labeled security. Row-level and column-level access can be simulated using views to restrict the columns and/or rows that are selected. Row-level labels can be simulated by adding an extra column to the table to store sensitivity information, and then using views to control row-level access based on this column. Roles can then be granted access to the views rather than the base table.
 
-## <a id="topic8"></a>Encrypting Data 
+## Encrypting Data <a id="topic8"></a>
 
 PostgreSQL provides an optional package of encryption/decryption functions called `pgcrypto`, which you can enable in HAWQ.
 
@@ -162,15 +162,15 @@ The `pgcrypto` functions allow database administrators to store certain columns 
 
 **Note:** The `pgcrypto` functions run inside the database server, which means that all the data and passwords move between `pgcrypto` and the client application in clear-text. For optimal security, consider also using SSL connections between the client and the HAWQ master server.
 
-## <a id="topic9"></a>Encrypting Passwords 
+## Encrypting Passwords <a id="topic9"></a>
 
 This technical note outlines how to use a server parameter to implement SHA-256 encrypted password storage. Note that in order to use SHA-256 encryption for storage, the client authentication method must be set to `password` rather than the default, `MD5`. \(See [Encrypting Client/Server Connections](client_auth.html) for more details.\) This means that the password is transmitted in clear text over the network; to avoid this, set up SSL to encrypt the client server communication channel.
 
-### <a id="topic10"></a>Enabling SHA-256 Encryption 
+### Enabling SHA-256 Encryption <a id="topic10"></a>
 
 You can set your chosen encryption method system-wide or on a per-session basis. There are three encryption methods available: `SHA-256`, `SHA-256-FIPS`, and `MD5` \(for backward compatibility\). The `SHA-256-FIPS` method requires that FIPS compliant libraries are used.
 
-#### <a id="topic11"></a>System-wide 
+#### System-wide <a id="topic11"></a>
 
 You will perform different procedures to set the encryption method (`password_hash_algorithm` server parameter) system-wide depending upon whether you manage your cluster from the command line or use Ambari. If you use Ambari to manage your HAWQ cluster, you must ensure that you update encryption method configuration parameters only via the Ambari Web UI. If you manage your HAWQ cluster from the command line, you will use the `hawq config` command line utility to set encryption method configuration parameters.
 
@@ -211,7 +211,7 @@ If you manage your HAWQ cluster from the command line:
     $ hawq config -s password_hash_algorithm
     ```
 
-#### <a id="topic12"></a>Individual Session 
+#### Individual Session <a id="topic12"></a>
 
 To set the `password_hash_algorithm` server parameter for an individual database session:
 
@@ -299,6 +299,6 @@ To set the `password_hash_algorithm` server parameter for an individual database
         ```
 
 
-## <a id="topic13"></a>Time-based Authentication 
+## Time-based Authentication <a id="topic13"></a>
 
 HAWQ enables the administrator to restrict access to certain times by role. Use the `CREATE ROLE` or `ALTER ROLE` commands to specify time-based constraints.

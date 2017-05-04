@@ -25,18 +25,18 @@ Configuration parameters affect categories of server behaviors, such as resource
 
 **Note:** If you install and manage HAWQ using Ambari, be aware that property changes made using `hawq config` could be overwritten by Ambari. For Ambari-managed HAWQ clusters, always use the Ambari administration interface to set or change HAWQ configuration properties.
 
-## <a id="topic_hfd_1tl_zp"></a>Append-Only Table Parameters
+## Append-Only Table Parameters<a id="topic_hfd_1tl_zp"></a>
 
 The following parameters configure the <span class="ph">append-only</span> tables feature of HAWQ.
 
 -   [max\_appendonly\_tables](parameter_definitions.html#max_appendonly_tables)
 -   [optimizer\_parts\_to\_force\_sort\_on\_insert](parameter_definitions.html#optimizer_parts_to_force_sort_on_insert)
 
-## <a id="topic39"></a>Client Connection Default Parameters
+## Client Connection Default Parameters<a id="topic39"></a>
 
 These configuration parameters set defaults that are used for client connections.
 
-### <a id="topic40"></a>Statement Behavior Parameters
+### Statement Behavior Parameters<a id="topic40"></a>
 
 -   [check\_function\_bodies](parameter_definitions.html#check_function_bodies)
 -   [default\_tablespace](parameter_definitions.html#default_tablespace)
@@ -46,7 +46,7 @@ These configuration parameters set defaults that are used for client connections
 -   [statement\_timeout](parameter_definitions.html#statement_timeout)
 -   [vacuum\_freeze\_min\_age](parameter_definitions.html#vacuum_freeze_min_age)
 
-### <a id="topic41"></a>Locale and Formatting Parameters
+### Locale and Formatting Parameters<a id="topic41"></a>
 
 -   [client\_encoding](parameter_definitions.html#client_encoding)
 -   [DateStyle](parameter_definitions.html#DateStyle)
@@ -60,18 +60,18 @@ These configuration parameters set defaults that are used for client connections
 -   [lc\_time](parameter_definitions.html#lc_time)
 -   [TimeZone](parameter_definitions.html#TimeZone)
 
-### <a id="topic42"></a>Other Client Default Parameters
+### Other Client Default Parameters<a id="topic42"></a>
 
 -   [dynamic\_library\_path](parameter_definitions.html#dynamic_library_path)
 -   [explain\_memory\_verbosity](parameter_definitions.html#explain_memory_verbosity)
 -   [explain\_pretty\_print](parameter_definitions.html#explain_pretty_print)
 -   [local\_preload\_libraries](parameter_definitions.html#local_preload_libraries)
 
-## <a id="topic12"></a>Connection and Authentication Parameters
+## Connection and Authentication Parameters<a id="topic12"></a>
 
 These parameters control how clients connect and authenticate to HAWQ.
 
-### <a id="topic13"></a>Connection Parameters
+### Connection Parameters<a id="topic13"></a>
 
 -   [listen\_addresses](parameter_definitions.html#listen_addresses)
 -   [max\_connections](parameter_definitions.html#max_connections)
@@ -84,7 +84,7 @@ These parameters control how clients connect and authenticate to HAWQ.
 -   [unix\_socket\_group](parameter_definitions.html#unix_socket_group)
 -   [unix\_socket\_permissions](parameter_definitions.html#unix_socket_permissions)
 
-### <a id="topic14"></a>Security and Authentication Parameters
+### Security and Authentication Parameters<a id="topic14"></a>
 
 -   [authentication\_timeout](parameter_definitions.html#authentication_timeout)
 -   [db\_user\_namespace](parameter_definitions.html#db_user_namespace)
@@ -97,7 +97,7 @@ These parameters control how clients connect and authenticate to HAWQ.
 -   [ssl](parameter_definitions.html#ssl)
 -   [ssl\_ciphers](parameter_definitions.html#ssl_ciphers)
 
-## <a id="topic47"></a>Database and Tablespace/Filespace Parameters
+## Database and Tablespace/Filespace Parameters<a id="topic47"></a>
 
 The following parameters configure the maximum number of databases, tablespaces, and filespaces allowed in a system.
 
@@ -105,17 +105,17 @@ The following parameters configure the maximum number of databases, tablespaces,
 -   [gp\_max\_filespaces](parameter_definitions.html#gp_max_filespaces)
 -   [gp\_max\_databases](parameter_definitions.html#gp_max_databases)
 
-## <a id="topic29"></a>Error Reporting and Logging Parameters
+## Error Reporting and Logging Parameters<a id="topic29"></a>
 
 These configuration parameters control HAWQ logging.
 
-### <a id="topic30"></a>Log Rotation
+### Log Rotation<a id="topic30"></a>
 
 -   [log\_rotation\_age](parameter_definitions.html#log_rotation_age)
 -   [log\_rotation\_size](parameter_definitions.html#log_rotation_size)
 -   [log\_truncate\_on\_rotation](parameter_definitions.html#log_truncate_on_rotation)
 
-### <a id="topic31"></a>When to Log
+### When to Log<a id="topic31"></a>
 
 -   [client\_min\_messages](parameter_definitions.html#client_min_messages)
 -   [log\_error\_verbosity](parameter_definitions.html#log_error_verbosity)
@@ -124,7 +124,7 @@ These configuration parameters control HAWQ logging.
 -   [log\_min\_messages](parameter_definitions.html#log_min_messages)
 -   [optimizer\_minidump](parameter_definitions.html#optimizer_minidump)
 
-### <a id="topic32"></a>What to Log
+### What to Log<a id="topic32"></a>
 
 -   [debug\_pretty\_print](parameter_definitions.html#debug_pretty_print)
 -   [debug\_print\_parse](parameter_definitions.html#debug_print_parse)
@@ -150,7 +150,7 @@ These configuration parameters control HAWQ logging.
 -   [gp\_max\_csv\_line\_length](parameter_definitions.html#gp_max_csv_line_length)
 -   [gp\_reraise\_signal](parameter_definitions.html#gp_reraise_signal)
 
-## <a id="topic45"></a>External Table Parameters
+## External Table Parameters<a id="topic45"></a>
 
 The following parameters configure the external tables feature of HAWQ.
 
@@ -159,7 +159,7 @@ The following parameters configure the external tables feature of HAWQ.
 -   [gp\_external\_max\_segs](parameter_definitions.html#gp_external_max_segs)
 -   [gp\_reject\_percent\_threshold](parameter_definitions.html#gp_reject_percent_threshold)
 
-## <a id="topic57"></a>GPORCA Parameters
+## GPORCA Parameters<a id="topic57"></a>
 
 These parameters control the usage of GPORCA by HAWQ. For information about GPORCA, see [About GPORCA](../../query/gporca/query-gporca-optimizer.html#topic_i4y_prl_vp).
 
@@ -169,11 +169,11 @@ These parameters control the usage of GPORCA by HAWQ. For information about GPOR
 -   [optimizer\_parts\_to\_force\_sort\_on\_insert](parameter_definitions.html#optimizer_parts_to_force_sort_on_insert)
 -   [optimizer\_prefer\_scalar\_dqa\_multistage\_agg](parameter_definitions.html#optimizer_prefer_scalar_dqa_multistage_agg)
 
-## <a id="topic49"></a>HAWQ Array Configuration Parameters
+## HAWQ Array Configuration Parameters<a id="topic49"></a>
 
 The parameters in this topic control the configuration of the HAWQ array and its components: segments, master, distributed transaction manager, master mirror, and interconnect.
 
-### <a id="topic50"></a>Interconnect Configuration Parameters
+### Interconnect Configuration Parameters<a id="topic50"></a>
 
 -   [gp\_interconnect\_cache\_future\_packets](../../reference/guc/parameter_definitions.html#gp_interconnect_cache_future_packets)
 -  [gp\_interconnect\_default\_rtt](../../reference/guc/parameter_definitions.html#gp_interconnect_default_rtt)
@@ -193,7 +193,7 @@ The parameters in this topic control the configuration of the HAWQ array and its
 -   [gp\_interconnect\_type](parameter_definitions.html#gp_interconnect_type)
 -   [gp\_max\_packet\_size](parameter_definitions.html#gp_max_packet_size)
 
-### <a id="topic51"></a>Dispatch Configuration Parameters
+### Dispatch Configuration Parameters<a id="topic51"></a>
 
 -   [gp\_cached\_segworkers\_threshold](parameter_definitions.html#gp_cached_segworkers_threshold)
 -   [gp\_connections\_per\_thread](parameter_definitions.html#gp_connections_per_thread)
@@ -202,34 +202,34 @@ The parameters in this topic control the configuration of the HAWQ array and its
 -   [gp\_set\_proc\_affinity](parameter_definitions.html#gp_set_proc_affinity)
 -   [gp\_vmem\_idle\_resource\_timeout](parameter_definitions.html#gp_vmem_idle_resource_timeout)
 
-### <a id="topic52"></a>Fault Operation Parameters
+### Fault Operation Parameters<a id="topic52"></a>
 
 -   [gp\_set\_read\_only](parameter_definitions.html#gp_set_read_only)
 
-### <a id="topic_ctl_sww_vv"></a>Filepace Parameters
+### Filepace Parameters<a id="topic_ctl_sww_vv"></a>
 
 -   [hawq\_dfs\_url](parameter_definitions.html#hawq_dfs_url)
 
-### <a id="topic_r4m_5ww_vv"></a>Master Configuration Parameters
+### Master Configuration Parameters<a id="topic_r4m_5ww_vv"></a>
 
 -   [hawq\_master\_address\_host](parameter_definitions.html#hawq_master_address_host)
 -   [hawq\_master\_address\_port](parameter_definitions.html#hawq_master_address_port)
 -   [hawq\_master\_directory](parameter_definitions.html#hawq_master_directory)
 -   [hawq\_master\_temp\_directory](parameter_definitions.html#hawq_master_temp_directory)
 
-### <a id="topic54"></a>Read-Only Parameters
+### Read-Only Parameters<a id="topic54"></a>
 
 -   [gp\_command\_count](parameter_definitions.html#gp_command_count)
 -   [gp\_role](parameter_definitions.html#gp_role)
 -   [gp\_session\_id](parameter_definitions.html#gp_session_id)
 
-### <a id="topic_zgm_vww_vv"></a>Segment Configuration Parameters
+### Segment Configuration Parameters<a id="topic_zgm_vww_vv"></a>
 
 -   [hawq\_segment\_address\_port](parameter_definitions.html#hawq_segment_address_port)
 -   [hawq\_segment\_directory](parameter_definitions.html#hawq_segment_directory)
 -   [hawq\_segment\_temp\_directory](parameter_definitions.html#hawq_segment_temp_directory)
 
-## <a id="topic_pxfparam"></a>HAWQ Extension Framework (PXF) Parameters
+## HAWQ Extension Framework (PXF) Parameters<a id="topic_pxfparam"></a>
 
 The parameters in this topic control configuration, query analysis, and statistics collection in the HAWQ Extension Framework (PXF).
 
@@ -241,7 +241,7 @@ The parameters in this topic control configuration, query analysis, and statisti
 -   [pxf\_service\_port] (parameter_definitions.html#pxf_service_port)
 -   [pxf\_stat\_max\_fragments] (parameter_definitions.html#pxf_stat_max_fragments)
 
-## <a id="topic56"></a>HAWQ PL/Java Extension Parameters
+## HAWQ PL/Java Extension Parameters<a id="topic56"></a>
 
 The parameters in this topic control the configuration of HAWQ PL/Java extensions.
 
@@ -250,7 +250,7 @@ The parameters in this topic control the configuration of HAWQ PL/Java extension
 -   [pljava\_release\_lingering\_savepoints](parameter_definitions.html#pljava_release_lingering_savepoints)
 -   [pljava\_vmoptions](parameter_definitions.html#pljava_vmoptions)
 
-## <a id="hawq_resource_management"></a>HAWQ Resource Management Parameters
+## HAWQ Resource Management Parameters<a id="hawq_resource_management"></a>
 
 The following configuration parameters configure the HAWQ resource management feature.
 
@@ -280,14 +280,14 @@ The following configuration parameters configure the HAWQ resource management fe
 -   [hawq\_rm\_yarn\_queue\_name](parameter_definitions.html#hawq_rm_yarn_queue_name)
 -   [hawq\_rm\_yarn\_scheduler\_address](parameter_definitions.html#hawq_rm_yarn_scheduler_address)
 
-## <a id="topic43"></a>Lock Management Parameters
+## Lock Management Parameters<a id="topic43"></a>
 
 These configuration parameters set limits for locks and deadlocks.
 
 -   [deadlock\_timeout](parameter_definitions.html#deadlock_timeout)
 -   [max\_locks\_per\_transaction](parameter_definitions.html#max_locks_per_transaction)
 
-## <a id="topic48"></a>Past PostgreSQL Version Compatibility Parameters
+## Past PostgreSQL Version Compatibility Parameters<a id="topic48"></a>
 
 The following parameters provide compatibility with older PostgreSQL versions. You do not need to change these parameters in HAWQ.
 
@@ -299,11 +299,11 @@ The following parameters provide compatibility with older PostgreSQL versions. Y
 -   [standard\_conforming\_strings](parameter_definitions.html#standard_conforming_strings)
 -   [transform\_null\_equals](parameter_definitions.html#transform_null_equals)
 
-## <a id="topic21"></a>Query Tuning Parameters
+## Query Tuning Parameters<a id="topic21"></a>
 
 These parameters control aspects of SQL query processing such as query operators and operator settings and statistics sampling.
 
-### <a id="topic22"></a>Legacy Query Optimizer Operator Control Parameters
+### Legacy Query Optimizer Operator Control Parameters<a id="topic22"></a>
 
 The following parameters control the types of plan operations the legacy query optimizer can use. Enable or disable plan operations to force the legacy optimizer to choose a different plan. This is useful for testing and comparing query performance using different plan types.
 
@@ -331,7 +331,7 @@ The following parameters control the types of plan operations the legacy query o
 -   [gp\_enable\_sort\_distinct](parameter_definitions.html#gp_enable_sort_distinct)
 -   [gp\_enable\_sort\_limit](parameter_definitions.html#gp_enable_sort_limit)
 
-### <a id="topic23"></a>Legacy Query Optimizer Costing Parameters
+### Legacy Query Optimizer Costing Parameters<a id="topic23"></a>
 
 **Warning:** Do not adjust these query costing parameters. They are tuned to reflect HAWQ hardware configurations and typical workloads. All of these parameters are related. Changing one without changing the others can have adverse affects on performance.
 
@@ -345,19 +345,19 @@ The following parameters control the types of plan operations the legacy query o
 -   [random\_page\_cost](parameter_definitions.html#random_page_cost)
 -   [seq\_page\_cost](parameter_definitions.html#seq_page_cost)
 
-### <a id="topic24"></a>Database Statistics Sampling Parameters
+### Database Statistics Sampling Parameters<a id="topic24"></a>
 
 These parameters adjust the amount of data sampled by an `ANALYZE` operation. Adjusting these parameters affects statistics collection system-wide. You can configure statistics collection on particular tables and columns by using the `ALTER TABLE` `SET STATISTICS` clause. See [About Database Statistics](../../datamgmt/about_statistics.html).
 
 -   [default\_statistics\_target](parameter_definitions.html#default_statistics_target)
 -   [gp\_analyze\_relative\_error](parameter_definitions.html#gp_analyze_relative_error)
 
-### <a id="topic25"></a>Sort Operator Configuration Parameters
+### Sort Operator Configuration Parameters<a id="topic25"></a>
 
 -   [gp\_enable\_sort\_distinct](parameter_definitions.html#gp_enable_sort_distinct)
 -   [gp\_enable\_sort\_limit](parameter_definitions.html#gp_enable_sort_limit)
 
-### <a id="topic26"></a>Aggregate Operator Configuration Parameters
+### Aggregate Operator Configuration Parameters<a id="topic26"></a>
 
 -   [gp\_enable\_agg\_distinct](parameter_definitions.html#gp_enable_agg_distinct)
 -   [gp\_enable\_agg\_distinct\_pruning](parameter_definitions.html#gp_enable_agg_distinct_pruning)
@@ -367,7 +367,7 @@ These parameters adjust the amount of data sampled by an `ANALYZE` operation. Ad
 -   [gp\_enable\_groupext\_distinct\_pruning](parameter_definitions.html#gp_enable_groupext_distinct_pruning)
 -   [gp\_workfile\_compress\_algorithm](parameter_definitions.html#gp_workfile_compress_algorithm)
 
-### <a id="topic27"></a>Join Operator Configuration Parameters
+### Join Operator Configuration Parameters<a id="topic27"></a>
 
 -   [join\_collapse\_limit](parameter_definitions.html#join_collapse_limit)
 -   [gp\_adjust\_selectivity\_for\_outerjoins](parameter_definitions.html#gp_adjust_selectivity_for_outerjoins)
@@ -375,7 +375,7 @@ These parameters adjust the amount of data sampled by an `ANALYZE` operation. Ad
 -   [gp\_statistics\_use\_fkeys](parameter_definitions.html#gp_statistics_use_fkeys)
 -   [gp\_workfile\_compress\_algorithm](parameter_definitions.html#gp_workfile_compress_algorithm)
 
-### <a id="topic28"></a>Other Legacy Query Optimizer Configuration Parameters
+### Other Legacy Query Optimizer Configuration Parameters<a id="topic28"></a>
 
 -   [from\_collapse\_limit](parameter_definitions.html#from_collapse_limit)
 -   [gp\_enable\_predicate\_propagation](parameter_definitions.html#gp_enable_predicate_propagation)
@@ -383,7 +383,7 @@ These parameters adjust the amount of data sampled by an `ANALYZE` operation. Ad
 -   [gp\_statistics\_pullup\_from\_child\_partition](parameter_definitions.html#gp_statistics_pullup_from_child_partition)
 
 
-## <a id="ranger_related"></a>Ranger Configuration Parameters
+## Ranger Configuration Parameters<a id="ranger_related"></a>
 
 These parameters control certain aspects of Ranger configuration, including enabling Ranger authorization for HAWQ and the HAWQ Ranger Plug-in Service port setting.
 
@@ -392,16 +392,16 @@ These parameters control certain aspects of Ranger configuration, including enab
 
 
 
-## <a id="statistics_collection"></a>Statistics Collection Parameters
+## Statistics Collection Parameters<a id="statistics_collection"></a>
 
-### <a id="topic_qvz_nz3_yv"></a>Automatic Statistics Collection
+### Automatic Statistics Collection<a id="topic_qvz_nz3_yv"></a>
 
 When automatic statistics collection is enabled, you can run `ANALYZE` automatically in the same transaction as an `INSERT`, `COPY` or `CREATE TABLE...AS SELECT` statement when a certain threshold of rows is affected (`on_change`), or when a newly generated table has no statistics (`on_no_stats`). To enable this feature, set the following server configuration parameters in your HAWQ `hawq-site.xml` file by using the `hawq config` utility and restart HAWQ:
 
 -   [gp\_autostats\_mode](parameter_definitions.html#gp_autostats_mode)
 -   [log\_autostats](parameter_definitions.html#log_autostats)
 
-### <a id="topic37"></a>Runtime Statistics Collection Parameters
+### Runtime Statistics Collection Parameters<a id="topic37"></a>
 
 These parameters control the server statistics collection feature. When statistics collection is enabled, you can access the statistics data using the *pg\_stat* and *pg\_statio* family of system catalog views.
 
@@ -409,11 +409,11 @@ These parameters control the server statistics collection feature. When statisti
 -   [track\_counts](parameter_definitions.html#track_counts)
 -   [update\_process\_title](parameter_definitions.html#update_process_title)
 
-## <a id="topic15"></a>System Resource Consumption Parameters
+## System Resource Consumption Parameters<a id="topic15"></a>
 
 These parameters set the limits for system resources consumed by HAWQ.
 
-### <a id="topic16"></a>Memory Consumption Parameters
+### Memory Consumption Parameters<a id="topic16"></a>
 
 These parameters control system memory usage. You can adjust `hawq_re_memory_overcommit_max` to avoid running out of memory at the segment hosts during query processing. See also [HAWQ Resource Management](#hawq_resource_management).
 
@@ -427,19 +427,19 @@ These parameters control system memory usage. You can adjust `hawq_re_memory_ove
 -   [shared\_buffers](parameter_definitions.html#shared_buffers)
 -   [temp\_buffers](parameter_definitions.html#temp_buffers)
 
-### <a id="topic17"></a>Free Space Map Parameters
+### Free Space Map Parameters<a id="topic17"></a>
 
 These parameters control the sizing of the *free space map, which contains* expired rows. Use `VACUUM` to reclaim the free space map disk space.
 
 -   [max\_fsm\_pages](parameter_definitions.html#max_fsm_pages)
 -   [max\_fsm\_relations](parameter_definitions.html#max_fsm_relations)
 
-### <a id="topic18"></a>OS Resource Parameters
+### OS Resource Parameters<a id="topic18"></a>
 
 -   [max\_files\_per\_process](parameter_definitions.html#max_files_per_process)
 -   [shared\_preload\_libraries](parameter_definitions.html#shared_preload_libraries)
 
-### <a id="topic19"></a>Cost-Based Vacuum Delay Parameters
+### Cost-Based Vacuum Delay Parameters<a id="topic19"></a>
 
 **Warning:** Avoid using cost-based vacuum delay because it runs asynchronously among the segment instances. The vacuum cost limit and delay is invoked at the segment level without taking into account the state of the entire HAWQ array
 
@@ -450,7 +450,7 @@ You can configure the execution cost of `VACUUM` and `ANALYZE` commands to reduc
 -   [vacuum\_cost\_page\_dirty](parameter_definitions.html#vacuum_cost_page_dirty)
 -   [vacuum\_cost\_page\_miss](parameter_definitions.html#vacuum_cost_page_miss)
 
-### <a id="topic20"></a>Transaction ID Management Parameters
+### Transaction ID Management Parameters<a id="topic20"></a>
 
 -   [xid\_stop\_limit](parameter_definitions.html#xid_stop_limit)
 

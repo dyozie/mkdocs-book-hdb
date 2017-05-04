@@ -23,7 +23,7 @@ under the License.
 
 Copies data between a file and a table.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 COPY <table> [(<column> [, ...])] FROM {'<file>' | STDIN}
@@ -51,7 +51,7 @@ COPY {<table> [(<column> [, ...])] | (<query>)} TO {'<file>' | STDOUT}
              [FORCE QUOTE <column> [, ...]] ]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `COPY` moves data between HAWQ tables and standard file-system files. `COPY TO` copies the contents of a table to a file, while `COPY FROM` copies data from a file to a table (appending the data to whatever is in the table already). `COPY TO` can also copy the results of a `SELECT` query.
 
@@ -76,7 +76,7 @@ If running a `COPY FROM` command in single row error isolation mode, the followi
 NOTICE: Rejected <count> badly formatted rows.
 ```
 
-## <a id="topic1__section5"></a>Parameters
+## Parameters<a id="topic1__section5"></a>
 
 <dt> \<table\>   </dt>
 <dd>The name (optionally schema-qualified) of an existing table.</dd>
@@ -144,7 +144,7 @@ CREATE TABLE <error_table_name> ( cmdtime timestamptz, relname text,
 <dt>SEGMENT REJECT LIMIT \<count\> \[ROWS | PERCENT\]  </dt>
 <dd>Runs a `COPY FROM` operation in single row error isolation mode. If the input rows have format errors they will be discarded provided that the reject limit count is not reached on any HAWQ segment instance during the load operation. The reject limit count can be specified as number of rows (the default) or percentage of total rows (1-100). If `PERCENT` is used, each segment starts calculating the bad row percentage only after the number of rows specified by the parameter `gp_reject_percent_threshold` has been processed. The default for `gp_reject_percent_threshold` is 300 rows. Constraint errors such as violation of a `NOT NULL` or `CHECK` constraint will still be handled in 'all-or-nothing' input mode. If the limit is not reached, all good rows will be loaded and any error rows discarded.</dd>
 
-## <a id="topic1__section6"></a>Notes
+## Notes<a id="topic1__section6"></a>
 
 `COPY` can only be used with tables, not with views. However, you can write `COPY (SELECT * FROM viewname) TO ...`
 
@@ -165,7 +165,7 @@ COPY supports creating readable foreign tables with error tables. The default fo
 -   Multiple foreign tables can use different error tables
 -   Multiple foreign tables cannot use the same error table
 
-## <a id="topic1__section7"></a>File Formats
+## File Formats<a id="topic1__section7"></a>
 
 File formats supported by `COPY`.
 
@@ -231,7 +231,7 @@ The `BINARY` format consists of a file header, zero or more tuples containing th
 
 -   **File Trailer** — The file trailer consists of a 16-bit integer word containing `-1`. This is easily distinguished from a tuple's field-count word. A reader should report an error if a field-count word is neither `-1` nor the expected number of columns. This provides an extra check against somehow getting out of sync with the data.
 
-## <a id="topic1__section11"></a>Examples
+## Examples<a id="topic1__section11"></a>
 
 Copy a table to the client using the vertical bar (|) as the field delimiter:
 
@@ -266,10 +266,10 @@ COPY sales FROM '/home/usr1/sql/sales_data' LOG ERRORS INTO
 err_sales SEGMENT REJECT LIMIT 10 ROWS;
 ```
 
-## <a id="topic1__section12"></a>Compatibility
+## Compatibility<a id="topic1__section12"></a>
 
 There is no `COPY` statement in the SQL standard.
 
-## <a id="topic1__section13"></a>See Also
+## See Also<a id="topic1__section13"></a>
 
 [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html)

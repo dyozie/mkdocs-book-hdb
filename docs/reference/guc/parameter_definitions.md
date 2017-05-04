@@ -540,7 +540,7 @@ Descriptions of the HAWQ server configuration parameters listed alphabetically.
 
 
 
-## <a name="add_missing_from"></a>add\_missing\_from 
+## add\_missing\_from <a name="add_missing_from"></a>
 
 Automatically adds missing table references to FROM clauses. Present for compatibility with releases of PostgreSQL prior to 8.1, where this behavior was allowed by default.
 
@@ -549,7 +549,7 @@ Automatically adds missing table references to FROM clauses. Present for compati
 | Boolean     | off     | master, session, reload |
 
 
-## <a name="application_name"></a>application\_name 
+## application\_name <a name="application_name"></a>
 
 Sets the application name for a client session. For example, if connecting via `psql`, this will be set to `psql`. Setting an application name allows it to be reported in log messages and statistics views.
 
@@ -559,7 +559,7 @@ Sets the application name for a client session. For example, if connecting via `
 
 
 
-## <a name="array_nulls"></a>array\_nulls 
+## array\_nulls <a name="array_nulls"></a>
 
 This controls whether the array input parser recognizes unquoted NULL as specifying a null array element. By default, this is on, allowing array values containing null values to be entered.
 
@@ -569,7 +569,7 @@ This controls whether the array input parser recognizes unquoted NULL as specify
 
 
 
-## <a name="authentication_timeout"></a>authentication\_timeout 
+## authentication\_timeout <a name="authentication_timeout"></a>
 
 Maximum time to complete client authentication. This prevents hung clients from occupying a connection indefinitely.
 
@@ -578,7 +578,7 @@ Maximum time to complete client authentication. This prevents hung clients from 
 | Any valid time expression (number and unit) | 1min    | local, system, restart |
 
 
-## <a name="backslash_quote"></a>backslash\_quote 
+## backslash\_quote <a name="backslash_quote"></a>
 
 This controls whether a quote mark can be represented by `\'` in a string literal. The preferred, SQL-standard way to represent a quote mark is by doubling it (`''`) but PostgreSQL has historically also accepted `\'`. However, use of `\'` creates security risks because in some client character set encodings, there are multibyte characters in which the last byte is numerically equivalent to ASCII `\`.
 
@@ -607,7 +607,7 @@ This controls whether a quote mark can be represented by `\'` in a string litera
 </table>
 
 
-## <a name="block_size"></a>block\_size 
+## block\_size <a name="block_size"></a>
 
 Reports the size of a disk block.
 
@@ -616,7 +616,7 @@ Reports the size of a disk block.
 | number of bytes | 32768   | read only           |
 
 
-## <a name="bonjour_name"></a>bonjour\_name 
+## bonjour\_name <a name="bonjour_name"></a>
 
 Specifies the Bonjour broadcast name. By default, the computer name is used, specified as an empty string. This option is ignored if the server was not compiled with Bonjour support.
 
@@ -625,7 +625,7 @@ Specifies the Bonjour broadcast name. By default, the computer name is used, spe
 | string      | unset   | master, system, restart |
 
 
-## <a name="check_function_bodies"></a>check\_function\_bodies 
+## check\_function\_bodies <a name="check_function_bodies"></a>
 
 When set to off, disables validation of the function body string during `CREATE FUNCTION`. Disabling validation is occasionally useful to avoid problems such as forward references when restoring function definitions from a dump.
 
@@ -634,7 +634,7 @@ When set to off, disables validation of the function body string during `CREATE 
 | Boolean     | on      | master, session, reload |
 
 
-## <a name="client_encoding"></a>client\_encoding 
+## client\_encoding <a name="client_encoding"></a>
 
 Sets the client-side encoding (character set). The default is to use the same as the database encoding. See [Supported Character Sets](http://www.postgresql.org/docs/8.1/static/multibyte.html#MULTIBYTE-CHARSET-SUPPORTED) in the PostgreSQL documentation.
 
@@ -643,7 +643,7 @@ Sets the client-side encoding (character set). The default is to use the same as
 | character set | UTF8    | master, session, reload |
 
 
-## <a name="client_min_messages"></a>client\_min\_messages 
+## client\_min\_messages <a name="client_min_messages"></a>
 
 Controls which message levels are sent to the client. Each level includes all the levels that follow it. The later the level, the fewer messages are sent.
 
@@ -678,7 +678,7 @@ Controls which message levels are sent to the client. Each level includes all th
 </tbody>
 </table>
 
-## <a name="cpu_index_tuple_cost"></a>cpu\_index\_tuple\_cost 
+## cpu\_index\_tuple\_cost <a name="cpu_index_tuple_cost"></a>
 
 For the legacy query optimizer (planner), sets the estimate of the cost of processing each index row during an index scan. This is measured as a fraction of the cost of a sequential page fetch.
 
@@ -688,7 +688,7 @@ For the legacy query optimizer (planner), sets the estimate of the cost of proce
 
 
 
-## <a name="cpu_operator_cost"></a>cpu\_operator\_cost 
+## cpu\_operator\_cost <a name="cpu_operator_cost"></a>
 
 For the legacy query optimizer (planner), sets the estimate of the cost of processing each operator in a WHERE clause. This is measured as a fraction of the cost of a sequential page fetch.
 
@@ -697,7 +697,7 @@ For the legacy query optimizer (planner), sets the estimate of the cost of proce
 | floating point | 0.0025  | master, session, reload |
 
 
-## <a name="cpu_tuple_cost"></a>cpu\_tuple\_cost 
+## cpu\_tuple\_cost <a name="cpu_tuple_cost"></a>
 
 For the legacy query optimizer (planner), Sets the estimate of the cost of processing each row during a query. This is measured as a fraction of the cost of a sequential page fetch.
 
@@ -706,7 +706,7 @@ For the legacy query optimizer (planner), Sets the estimate of the cost of proce
 | floating point | 0.01    | master, session, reload |
 
 
-## <a name="cursor_tuple_fraction"></a>cursor\_tuple\_fraction 
+## cursor\_tuple\_fraction <a name="cursor_tuple_fraction"></a>
 
 Tells the legacy query optimizer (planner) how many rows are expected to be fetched in a cursor query, thereby allowing the legacy optimizer to use this information to optimize the query plan. The default of 1 means all rows will be fetched.
 
@@ -715,7 +715,7 @@ Tells the legacy query optimizer (planner) how many rows are expected to be fetc
 | integer     | 1       | master, session, reload |
 
 
-## <a name="custom_variable_classes"></a>custom\_variable\_classes 
+## custom\_variable\_classes <a name="custom_variable_classes"></a>
 
 Specifies one or several class names to be used for custom variables. A custom variable is a variable not normally known to the server but used by some add-on modules. Such variables must have names consisting of a class name, a dot, and a variable name.
 
@@ -724,7 +724,7 @@ Specifies one or several class names to be used for custom variables. A custom v
 | comma-separated list of class names | unset   | local, system, restart |
 
 
-## <a name="DateStyle"></a>DateStyle 
+## DateStyle <a name="DateStyle"></a>
 
 Sets the display format for date and time values, as well as the rules for interpreting ambiguous date input values. This variable contains two independent components: the output format specification and the input/output specification for year/month/day ordering.
 
@@ -753,7 +753,7 @@ Sets the display format for date and time values, as well as the rules for inter
 </tbody>
 </table>
 
-## <a name="db_user_namespace"></a>db\_user\_namespace 
+## db\_user\_namespace <a name="db_user_namespace"></a>
 
 This enables per-database user names. If on, you should create users as *username@dbname*. To create ordinary global users, simply append @ when specifying the user name in the client.
 
@@ -762,7 +762,7 @@ This enables per-database user names. If on, you should create users as *usernam
 | Boolean     | off     | local, system, restart |
 
 
-## <a name="deadlock_timeout"></a>deadlock\_timeout 
+## deadlock\_timeout <a name="deadlock_timeout"></a>
 
 The time, in milliseconds, to wait on a lock before checking to see if there is a deadlock condition. On a heavily loaded server you might want to raise this value. Ideally the setting should exceed your typical transaction time, so as to improve the odds that a lock will be released before the waiter decides to check for deadlock.
 
@@ -771,7 +771,7 @@ The time, in milliseconds, to wait on a lock before checking to see if there is 
 | integer (milliseconds) | 1000    | local, system, restart |
 
 
-## <a name="debug_assertions"></a>debug\_assertions 
+## debug\_assertions <a name="debug_assertions"></a>
 
 Turns on various assertion checks.
 
@@ -780,7 +780,7 @@ Turns on various assertion checks.
 | Boolean     | off     | local, system, restart |
 
 
-## <a name="debug_pretty_print"></a>debug\_pretty\_print 
+## debug\_pretty\_print <a name="debug_pretty_print"></a>
 
 Indents debug output to produce a more readable but much longer output format. *client\_min\_messages* or *log\_min\_messages* must be DEBUG1 or lower.
 
@@ -789,7 +789,7 @@ Indents debug output to produce a more readable but much longer output format. *
 | Boolean     | off     | master, session, reload |
 
 
-## <a name="debug_print_parse"></a>debug\_print\_parse 
+## debug\_print\_parse <a name="debug_print_parse"></a>
 
 
 For each executed query, prints the resulting parse tree. *client\_min\_messages* or *log\_min\_messages* must be DEBUG1 or lower.
@@ -799,7 +799,7 @@ For each executed query, prints the resulting parse tree. *client\_min\_messages
 | Boolean     | off     | master, session, reload |
 
 
-## <a name="debug_print_plan"></a>debug\_print\_plan 
+## debug\_print\_plan <a name="debug_print_plan"></a>
 
 For each executed query, prints the HAWQ parallel query execution plan. *client\_min\_messages* or *log\_min\_messages* must be DEBUG1 or lower.
 
@@ -807,7 +807,7 @@ For each executed query, prints the HAWQ parallel query execution plan. *client\
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="debug_print_prelim_plan"></a>debug\_print\_prelim\_plan 
+## debug\_print\_prelim\_plan <a name="debug_print_prelim_plan"></a>
 
 For each executed query, prints the preliminary query plan. *client\_min\_messages* or *log\_min\_messages* must be DEBUG1 or lower.
 
@@ -816,7 +816,7 @@ For each executed query, prints the preliminary query plan. *client\_min\_messag
 | Boolean     | off     | master, session, reload |
 
 
-## <a name="debug_print_rewritten"></a>debug\_print\_rewritten 
+## debug\_print\_rewritten <a name="debug_print_rewritten"></a>
 
 For each executed query, prints the query rewriter output. *client\_min\_messages* or *log\_min\_messages* must be DEBUG1 or lower.
 
@@ -825,7 +825,7 @@ For each executed query, prints the query rewriter output. *client\_min\_message
 | Boolean     | off     | master, session, reload |
 
 
-## <a name="debug_print_slice_table"></a>debug\_print\_slice\_table 
+## debug\_print\_slice\_table <a name="debug_print_slice_table"></a>
 
 For each executed query, prints the HAWQ query slice plan. *client\_min\_messages* or *log\_min\_messages* must be DEBUG1 or lower.
 
@@ -833,7 +833,7 @@ For each executed query, prints the HAWQ query slice plan. *client\_min\_message
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="topic_fqj_4fd_kv"></a>default\_hash\_table\_bucket\_number 
+## default\_hash\_table\_bucket\_number <a name="topic_fqj_4fd_kv"></a>
 
 The default number of hash buckets to use when executing a query statement on a hash table. Due to dynamic allocation, when the query is actually executed, the number of virtual segments may differ from this number depending on the query's needs. The total number of segments should never exceed the maximum set in `hawq_rm_nvseg_perquery_limit`.
 
@@ -844,7 +844,7 @@ When expanding the cluster, you should adjust this number to reflect the number 
 | integer &gt; 0 | 6\*SegmentCount | master, session, reload |
 
 
-## <a name="default_statement_mem"></a>default\_statement\_mem 
+## default\_statement\_mem <a name="default_statement_mem"></a>
 
 The default amount of memory, in KB, to allocate to query statements that do not require any segment resources and are executed only on the master host. This type of query execution is rare in HAWQ. 
 
@@ -855,7 +855,7 @@ The default value of this configuration parameter is acceptable for most deploym
 |----------------|-----------------|-------------------------|
 | integer &gt; 1000 |128000 | master, session, reload |
 
-## <a name="default_statistics_target"></a>default\_statistics\_target 
+## default\_statistics\_target <a name="default_statistics_target"></a>
 
 Sets the default statistics target for table columns that have not had a column-specific target set via `ALTER TABLE SET STATISTICS`. Larger values increase the time needed to do `ANALYZE`, but may improve the quality of the legacy query optimizer (planner) estimates.
 
@@ -864,7 +864,7 @@ Sets the default statistics target for table columns that have not had a column-
 | integer &gt; 0 | 25      | master, session, reload |
 
 
-## <a name="default_tablespace"></a>default\_tablespace 
+## default\_tablespace <a name="default_tablespace"></a>
 
 The default tablespace in which to create objects (tables and indexes) when a `CREATE` command does not explicitly specify a tablespace.
 
@@ -873,7 +873,7 @@ The default tablespace in which to create objects (tables and indexes) when a `C
 | name of a tablespace | unset   | master, session, reload |
 
 
-## <a name="default_transaction_isolation"></a>default\_transaction\_isolation 
+## default\_transaction\_isolation <a name="default_transaction_isolation"></a>
 
 Controls the default isolation level of each new transaction.
 
@@ -902,7 +902,7 @@ Controls the default isolation level of each new transaction.
 </tbody>
 </table>
 
-## <a name="default_transaction_read_only"></a>default\_transaction\_read\_only 
+## default\_transaction\_read\_only <a name="default_transaction_read_only"></a>
 
 Controls the default read-only status of each new transaction. A read-only SQL transaction cannot alter non-temporary tables.
 
@@ -911,7 +911,7 @@ Controls the default read-only status of each new transaction. A read-only SQL t
 | Boolean     | off     | master, session, reload |
 
 
-## <a name="dynamic_library_path"></a>dynamic\_library\_path 
+## dynamic\_library\_path <a name="dynamic_library_path"></a>
 
 If a dynamically loadable module needs to be opened and the file name specified in the `CREATE FUNCTION` or `LOAD` command does not have a directory component (i.e. the name does not contain a slash), the system will search this path for the required file. The compiled-in PostgreSQL package library directory is substituted for $libdir. This is where the modules provided by the standard PostgreSQL distribution are installed.
 
@@ -919,7 +919,7 @@ If a dynamically loadable module needs to be opened and the file name specified 
 |--------------------------------------------------------|---------|-------------------------|
 | a list of absolute directory paths separated by colons | $libdir | master, session, reload |
 
-## <a name="effective_cache_size"></a>effective\_cache\_size 
+## effective\_cache\_size <a name="effective_cache_size"></a>
 
 Sets the assumption about the effective size of the disk cache that is available to a single query for the legacy query optimizer (planner). This is factored into estimates of the cost of using an index; a higher value makes it more likely index scans will be used, a lower value makes it more likely sequential scans will be used. This parameter has no effect on the size of shared memory allocated by a HAWQ server instance, nor does it reserve kernel disk cache; it is used only for estimation purposes.
 
@@ -928,7 +928,7 @@ Sets the assumption about the effective size of the disk cache that is available
 | floating point | 512MB   | master, session, reload |
 
 
-## <a name="enable_bitmapscan"></a>enable\_bitmapscan 
+## enable\_bitmapscan <a name="enable_bitmapscan"></a>
 
 Enables or disables the use of bitmap-scan plan types by the legacy query optimizer (planner). Note that this is different than a Bitmap Index Scan. A Bitmap Scan means that indexes will be dynamically converted to bitmaps in memory when appropriate, giving faster index performance on complex queries against very large tables. It is used when there are multiple predicates on different indexed columns. Each bitmap per column can be compared to create a final list of selected tuples.
 
@@ -937,7 +937,7 @@ Enables or disables the use of bitmap-scan plan types by the legacy query optimi
 | Boolean     | on      | master, session, reload |
 
 
-## <a name="enable_groupagg"></a>enable\_groupagg 
+## enable\_groupagg <a name="enable_groupagg"></a>
 
 Enables or disables the use of group aggregation plan types by the legacy query optimizer (planner).
 
@@ -945,7 +945,7 @@ Enables or disables the use of group aggregation plan types by the legacy query 
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="enable_hashagg"></a>enable\_hashagg 
+## enable\_hashagg <a name="enable_hashagg"></a>
 
 Enables or disables the use of hash aggregation plan types by the legacy query optimizer (planner).
 
@@ -955,7 +955,7 @@ Enables or disables the use of hash aggregation plan types by the legacy query o
 
 
 
-## <a name="enable_hashjoin"></a>enable\_hashjoin 
+## enable\_hashjoin <a name="enable_hashjoin"></a>
 
 Enables or disables the use of hash-join plan types by the legacy query optimizer (planner).
 
@@ -963,7 +963,7 @@ Enables or disables the use of hash-join plan types by the legacy query optimize
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="enable_indexscan"></a>enable\_indexscan 
+## enable\_indexscan <a name="enable_indexscan"></a>
 
 Enables or disables the use of index-scan plan types by the legacy query optimizer (planner).
 
@@ -971,7 +971,7 @@ Enables or disables the use of index-scan plan types by the legacy query optimiz
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="enable_mergejoin"></a>enable\_mergejoin 
+## enable\_mergejoin <a name="enable_mergejoin"></a>
 
 Enables or disables the use of merge-join plan types by the legacy query optimizer (planner). Merge join is based on the idea of sorting the left- and right-hand tables into order and then scanning them in parallel. So, both data types must be capable of being fully ordered, and the join operator must be one that can only succeed for pairs of values that fall at the 'same place' in the sort order. In practice this means that the join operator must behave like equality.
 
@@ -979,7 +979,7 @@ Enables or disables the use of merge-join plan types by the legacy query optimiz
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="enable_nestloop"></a>enable\_nestloop 
+## enable\_nestloop <a name="enable_nestloop"></a>
 
 Enables or disables the use of nested-loop join plans by the legacy query optimizer (planner). It's not possible to suppress nested-loop joins entirely, but turning this variable off discourages the legacy optimizer from using one if there are other methods available.
 
@@ -987,7 +987,7 @@ Enables or disables the use of nested-loop join plans by the legacy query optimi
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="enable_secure_filesystem"></a>enable\_secure\_filesystem 
+## enable\_secure\_filesystem <a name="enable_secure_filesystem"></a>
 
 Enables or disables access to a secure HDFS file system.  To enable Kerberos security for HDFS, set this configuration parameter to `on` before starting HAWQ.
 
@@ -996,7 +996,7 @@ Enables or disables access to a secure HDFS file system.  To enable Kerberos sec
 | Boolean     | off     | master, system, superuser |
 
 
-## <a name="enable_seqscan"></a>enable\_seqscan
+## enable\_seqscan<a name="enable_seqscan"></a>
 
 Enables or disables the use of sequential scan plan types by the legacy query optimizer (planner). It's not possible to suppress sequential scans entirely, but turning this variable off discourages the legacy optimizer from using one if there are other methods available.
 
@@ -1004,7 +1004,7 @@ Enables or disables the use of sequential scan plan types by the legacy query op
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="enable_sort"></a>enable\_sort
+## enable\_sort<a name="enable_sort"></a>
 
 Enables or disables the use of explicit sort steps by the legacy query optimizer (planner). It's not possible to suppress explicit sorts entirely, but turning this variable off discourages the legacy optimizer from using one if there are other methods available.
 
@@ -1012,7 +1012,7 @@ Enables or disables the use of explicit sort steps by the legacy query optimizer
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="enable_tidscan"></a>enable\_tidscan
+## enable\_tidscan<a name="enable_tidscan"></a>
 
 Enables or disables the use of tuple identifier (TID) scan plan types by the legacy query optimizer (planner).
 
@@ -1020,7 +1020,7 @@ Enables or disables the use of tuple identifier (TID) scan plan types by the leg
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="escape_string_warning"></a>escape\_string\_warning
+## escape\_string\_warning<a name="escape_string_warning"></a>
 
 When on, a warning is issued if a backslash (\\) appears in an ordinary string literal ('...' syntax). Escape string syntax (E'...') should be used for escapes, because in future versions, ordinary strings will have the SQL standard-conforming behavior of treating backslashes literally.
 
@@ -1029,7 +1029,7 @@ When on, a warning is issued if a backslash (\\) appears in an ordinary string l
 | Boolean     | on      | master, session, reload |
 
 
-## <a name="explain_memory_verbosity"></a>explain\_memory\_verbosity
+## explain\_memory\_verbosity<a name="explain_memory_verbosity"></a>
 Controls the granularity of memory information displayed in `EXPLAIN ANALYZE` output.  `explain_memory_verbosity` takes three values:
 
 * SUPPRESS - generate only total memory information for the whole query
@@ -1061,7 +1061,7 @@ Controls the granularity of memory information displayed in `EXPLAIN ANALYZE` ou
 </table>
 
 
-## <a name="explain_pretty_print"></a>explain\_pretty\_print
+## explain\_pretty\_print<a name="explain_pretty_print"></a>
 
 Determines whether EXPLAIN VERBOSE uses the indented or non-indented format for displaying detailed query-tree dumps.
 
@@ -1069,7 +1069,7 @@ Determines whether EXPLAIN VERBOSE uses the indented or non-indented format for 
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="extra_float_digits"></a>extra\_float\_digits
+## extra\_float\_digits<a name="extra_float_digits"></a>
 
 Adjusts the number of digits displayed for floating-point values, including float4, float8, and geometric data types. The parameter value is added to the standard number of digits. The value can be set as high as 2, to include partially-significant digits; this is especially useful for dumping float data that needs to be restored exactly. Or it can be set negative to suppress unwanted digits.
 
@@ -1077,7 +1077,7 @@ Adjusts the number of digits displayed for floating-point values, including floa
 |-------------|---------|-------------------------|
 | integer     | 0       | master, session, reload |
 
-## <a name="from_collapse_limit"></a>from\_collapse\_limit
+## from\_collapse\_limit<a name="from_collapse_limit"></a>
 
 The legacy query optimizer (planner) will merge sub-queries into upper queries if the resulting FROM list would have no more than this many items. Smaller values reduce planning time but may yield inferior query plans.
 
@@ -1085,7 +1085,7 @@ The legacy query optimizer (planner) will merge sub-queries into upper queries i
 |-----------------|---------|-------------------------|
 | integer (1-*n*) | 20      | master, session, reload |
 
-## <a name="gp_adjust_selectivity_for_outerjoins"></a>gp\_adjust\_selectivity\_for\_outerjoins
+## gp\_adjust\_selectivity\_for\_outerjoins<a name="gp_adjust_selectivity_for_outerjoins"></a>
 
 Enables the selectivity of NULL tests over outer joins.
 
@@ -1093,7 +1093,7 @@ Enables the selectivity of NULL tests over outer joins.
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_analyze_relative_error"></a>gp\_analyze\_relative\_error
+## gp\_analyze\_relative\_error<a name="gp_analyze_relative_error"></a>
 
 Sets the estimated acceptable error in the cardinality of the table " a value of 0.5 is supposed to be equivalent to an acceptable error of 50% (this is the default value used in PostgreSQL). If the statistics collected during `ANALYZE` are not producing good estimates of cardinality for a particular table attribute, decreasing the relative error fraction (accepting less error) tells the system to sample more rows.
 
@@ -1101,7 +1101,7 @@ Sets the estimated acceptable error in the cardinality of the table " a value of
 |-------------------------|---------|-------------------------|
 | floating point &lt; 1.0 | 0.25    | master, session, reload |
 
-## <a name="gp_autostats_mode"></a>gp\_autostats\_mode
+## gp\_autostats\_mode<a name="gp_autostats_mode"></a>
 
 Specifies the mode for triggering automatic statistics collection with `ANALYZE`. The `on_no_stats` option triggers statistics collection for `CREATE TABLE AS SELECT`, `INSERT`, or `COPY` operations on any table that has no existing statistics.
 
@@ -1144,7 +1144,7 @@ Automatic statistics collection is triggered if data is inserted directly in a l
 </tbody>
 </table>
 
-## <a name="topic_imj_zhf_gw"></a>gp\_autostats\_on\_change\_threshold
+## gp\_autostats\_on\_change\_threshold<a name="topic_imj_zhf_gw"></a>
 
 Specifies the threshold for automatic statistics collection when `gp_autostats_mode` is set to `on_change`. When a triggering table operation affects a number of rows exceeding this threshold, `ANALYZE         `is added and statistics are collected for the table.
 
@@ -1152,7 +1152,7 @@ Specifies the threshold for automatic statistics collection when `gp_autostats_m
 |-------------|------------|-------------------------|
 | integer     | 2147483647 | master, session, reload |
 
-## <a name="gp_backup_directIO"></a>gp\_backup\_directIO
+## gp\_backup\_directIO<a name="gp_backup_directIO"></a>
 
 Direct I/O allows HAWQ to bypass the buffering of memory within the file system cache for backup. When Direct I/O is used for a file, data is transferred directly from the disk to the application buffer, without the use of the file buffer cache.
 
@@ -1162,7 +1162,7 @@ Direct I/O is supported only on Red Hat Enterprise Linux, CentOS, and SUSE.
 |-------------|---------|-------------------------|
 | on, off     | off     | master, session, reload |
 
-## <a name="gp_backup_directIO_read_chunk_mb"></a>gp\_backup\_directIO\_read\_chunk\_mb
+## gp\_backup\_directIO\_read\_chunk\_mb<a name="gp_backup_directIO_read_chunk_mb"></a>
 
 Sets the chunk size in MB when Direct I/O is enabled with [gp\_backup\_directIO](#gp_backup_directIO). The default chunk size is 20MB.
 
@@ -1172,7 +1172,7 @@ The default value is the optimal setting. Decreasing it will increase the backup
 |-------------|---------|------------------------|
 | 1-200       | 20 MB   | local, session, reload |
 
-## <a name="gp_cached_segworkers_threshold"></a>gp\_cached\_segworkers\_threshold
+## gp\_cached\_segworkers\_threshold<a name="gp_cached_segworkers_threshold"></a>
 
 When a user starts a session with HAWQ and issues a query, the system creates groups or 'gangs' of worker processes on each segment to do the work. After the work is done, the segment worker processes are destroyed except for a cached number which is set by this parameter. A lower setting conserves system resources on the segment hosts, but a higher setting may improve performance for power-users that want to issue many complex queries in a row.
 
@@ -1180,7 +1180,7 @@ When a user starts a session with HAWQ and issues a query, the system creates gr
 |----------------|---------|-------------------------|
 | integer &gt; 0 | 5       | master, session, reload |
 
-## <a name="gp_command_count"></a>gp\_command\_count
+## gp\_command\_count<a name="gp_command_count"></a>
 
 Shows how many commands the master has received from the client. Note that a single SQL command might actually involve more than one command internally, so the counter may increment by more than one for a single query. This counter also is shared by all of the segment processes working on the command.
 
@@ -1188,7 +1188,7 @@ Shows how many commands the master has received from the client. Note that a sin
 |----------------|---------|---------------------|
 | integer &gt; 0 | 1       | read only           |
 
-## <a name="gp_connections_per_thread"></a>gp\_connections\_per\_thread
+## gp\_connections\_per\_thread<a name="gp_connections_per_thread"></a>
 
 A value larger than or equal to the number of segments means that each slice in a query plan will get its own thread when dispatching to the segments. A value of 0 indicates that the dispatcher should use a single thread when dispatching all query plan slices to a segment. Lower values will use more threads, which utilizes more resources on the master. Typically, the default does not need to be changed unless there is a known throughput performance problem.
 
@@ -1196,7 +1196,7 @@ A value larger than or equal to the number of segments means that each slice in 
 |-------------|---------|-------------------------|
 | integer     | 64      | master, session, reload |
 
-## <a name="gp_debug_linger"></a>gp\_debug\_linger
+## gp\_debug\_linger<a name="gp_debug_linger"></a>
 
 Number of seconds for a HAWQ process to linger after a fatal internal error.
 
@@ -1204,7 +1204,7 @@ Number of seconds for a HAWQ process to linger after a fatal internal error.
 |---------------------------------------------|---------|-------------------------|
 | Any valid time expression (number and unit) | 0       | master, session, reload |
 
-## <a name="gp_dynamic_partition_pruning"></a>gp\_dynamic\_partition\_pruning
+## gp\_dynamic\_partition\_pruning<a name="gp_dynamic_partition_pruning"></a>
 
 Enables plans that can dynamically eliminate the scanning of partitions.
 
@@ -1212,7 +1212,7 @@ Enables plans that can dynamically eliminate the scanning of partitions.
 |-------------|---------|-------------------------|
 | on/off      | on      | master, session, reload |
 
-## <a name="gp_enable_agg_distinct"></a>gp\_enable\_agg\_distinct
+## gp\_enable\_agg\_distinct<a name="gp_enable_agg_distinct"></a>
 
 Enables or disables two-phase aggregation to compute a single distinct-qualified aggregate. This applies only to subqueries that include a single distinct-qualified aggregate function.
 
@@ -1220,7 +1220,7 @@ Enables or disables two-phase aggregation to compute a single distinct-qualified
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_agg_distinct_pruning"></a>gp\_enable\_agg\_distinct\_pruning
+## gp\_enable\_agg\_distinct\_pruning<a name="gp_enable_agg_distinct_pruning"></a>
 
 Enables or disables three-phase aggregation and join to compute distinct-qualified aggregates. This applies only to subqueries that include one or more distinct-qualified aggregate functions.
 
@@ -1228,7 +1228,7 @@ Enables or disables three-phase aggregation and join to compute distinct-qualifi
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_direct_dispatch"></a>gp\_enable\_direct\_dispatch
+## gp\_enable\_direct\_dispatch<a name="gp_enable_direct_dispatch"></a>
 
 Enables or disables the dispatching of targeted query plans for queries that access data on a single segment. When on, queries that target rows on a single segment will only have their query plan dispatched to that segment (rather than to all segments). This significantly reduces the response time of qualifying queries as there is no interconnect setup involved. Direct dispatch does require more CPU utilization on the master.
 
@@ -1236,7 +1236,7 @@ Enables or disables the dispatching of targeted query plans for queries that acc
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, system, restart |
 
-## <a name="gp_enable_fallback_plan"></a>gp\_enable\_fallback\_plan
+## gp\_enable\_fallback\_plan<a name="gp_enable_fallback_plan"></a>
 
 Allows use of disabled plan types when a query would not be feasible without them.
 
@@ -1244,7 +1244,7 @@ Allows use of disabled plan types when a query would not be feasible without the
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_fast_sri"></a>gp\_enable\_fast\_sri
+## gp\_enable\_fast\_sri<a name="gp_enable_fast_sri"></a>
 
 When set to `on`, the legacy query optimizer (planner) plans single row inserts so that they are sent directly to the correct segment instance (no motion operation required). This significantly improves performance of single-row-insert statements.
 
@@ -1252,7 +1252,7 @@ When set to `on`, the legacy query optimizer (planner) plans single row inserts 
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_groupext_distinct_gather"></a>gp\_enable\_groupext\_distinct\_gather
+## gp\_enable\_groupext\_distinct\_gather<a name="gp_enable_groupext_distinct_gather"></a>
 
 Enables or disables gathering data to a single node to compute distinct-qualified aggregates on grouping extension queries. When this parameter and `gp_enable_groupext_distinct_pruning` are both enabled, the legacy query optimizer (planner) uses the cheaper plan.
 
@@ -1260,7 +1260,7 @@ Enables or disables gathering data to a single node to compute distinct-qualifie
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_groupext_distinct_pruning"></a>gp\_enable\_groupext\_distinct\_pruning
+## gp\_enable\_groupext\_distinct\_pruning<a name="gp_enable_groupext_distinct_pruning"></a>
 
 Enables or disables three-phase aggregation and join to compute distinct-qualified aggregates on grouping extension queries. Usually, enabling this parameter generates a cheaper query plan that the legacy query optimizer (planner) will use in preference to existing plan.
 
@@ -1268,7 +1268,7 @@ Enables or disables three-phase aggregation and join to compute distinct-qualifi
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_multiphase_agg"></a>gp\_enable\_multiphase\_agg
+## gp\_enable\_multiphase\_agg<a name="gp_enable_multiphase_agg"></a>
 
 Enables or disables the use of two or three-stage parallel aggregation plans legacy query optimizer (planner). This approach applies to any subquery with aggregation. If `gp_enable_multiphase_agg` is off, then`           gp_enable_agg_distinct` and `gp_enable_agg_distinct_pruning` are disabled.
 
@@ -1276,7 +1276,7 @@ Enables or disables the use of two or three-stage parallel aggregation plans leg
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_predicate_propagation"></a>gp\_enable\_predicate\_propagation
+## gp\_enable\_predicate\_propagation<a name="gp_enable_predicate_propagation"></a>
 
 When enabled, the legacy query optimizer (planner) applies query predicates to both table expressions in cases where the tables are joined on their distribution key column(s). Filtering both tables prior to doing the join (when possible) is more efficient.
 
@@ -1284,7 +1284,7 @@ When enabled, the legacy query optimizer (planner) applies query predicates to b
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_preunique"></a>gp\_enable\_preunique
+## gp\_enable\_preunique<a name="gp_enable_preunique"></a>
 
 Enables two-phase duplicate removal for `SELECT DISTINCT` queries (not `SELECT COUNT(DISTINCT)`). When enabled, it adds an extra `SORT           DISTINCT` set of plan nodes before motioning. In cases where the distinct operation greatly reduces the number of rows, this extra `SORT DISTINCT` is much cheaper than the cost of sending the rows across the Interconnect.
 
@@ -1292,7 +1292,7 @@ Enables two-phase duplicate removal for `SELECT DISTINCT` queries (not `SELECT C
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_sequential_window_plans"></a>gp\_enable\_sequential\_window\_plans
+## gp\_enable\_sequential\_window\_plans<a name="gp_enable_sequential_window_plans"></a>
 
 If on, enables non-parallel (sequential) query plans for queries containing window function calls. If off, evaluates compatible window functions in parallel and rejoins the results. This is an experimental parameter.
 
@@ -1300,7 +1300,7 @@ If on, enables non-parallel (sequential) query plans for queries containing wind
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_sort_distinct"></a>gp\_enable\_sort\_distinct
+## gp\_enable\_sort\_distinct<a name="gp_enable_sort_distinct"></a>
 
 Enable duplicates to be removed while sorting.
 
@@ -1308,7 +1308,7 @@ Enable duplicates to be removed while sorting.
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_enable_sort_limit"></a>gp\_enable\_sort\_limit
+## gp\_enable\_sort\_limit<a name="gp_enable_sort_limit"></a>
 
 Enable `LIMIT` operation to be performed while sorting. Sorts more efficiently when the plan requires the first *limit\_number* of rows at most.
 
@@ -1316,7 +1316,7 @@ Enable `LIMIT` operation to be performed while sorting. Sorts more efficiently w
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_external_enable_exec"></a>gp\_external\_enable\_exec
+## gp\_external\_enable\_exec<a name="gp_external_enable_exec"></a>
 
 Enables or disables the use of external tables that execute OS commands or scripts on the segment hosts (`CREATE EXTERNAL TABLE EXECUTE` syntax).
 
@@ -1324,7 +1324,7 @@ Enables or disables the use of external tables that execute OS commands or scrip
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, system, restart |
 
-## <a name="gp_external_grant_privileges"></a>gp\_external\_grant\_privileges
+## gp\_external\_grant\_privileges<a name="gp_external_grant_privileges"></a>
 
 Enables or disables non-superusers to issue a `CREATE EXTERNAL [WEB] TABLE` command in cases where the `LOCATION` clause specifies specifies `http` or `gpfdist`. The ability to create an external table can be granted to a role using `CREATE ROLE` or `ALTER         ROLE`.
 
@@ -1332,7 +1332,7 @@ Enables or disables non-superusers to issue a `CREATE EXTERNAL [WEB] TABLE` comm
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, system, restart |
 
-## <a name="gp_external_max_segs"></a>gp\_external\_max\_segs
+## gp\_external\_max\_segs<a name="gp_external_max_segs"></a>
 
 Sets the number of segments that will scan external table data during an external table operation, the purpose being not to overload the system with scanning data and take away resources from other concurrent operations. This only applies to external tables that use the `gpfdist://` protocol to access external table data.
 
@@ -1340,7 +1340,7 @@ Sets the number of segments that will scan external table data during an externa
 |-------------|---------|-------------------------|
 | integer     | 64      | master, session, reload |
 
-## <a name="gp_filerep_tcp_keepalives_count"></a>gp\_filerep\_tcp\_keepalives\_count
+## gp\_filerep\_tcp\_keepalives\_count<a name="gp_filerep_tcp_keepalives_count"></a>
 
 How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default. If TCP\_KEEPCNT is not supported, this parameter must be 0.
 
@@ -1348,7 +1348,7 @@ How many keepalives may be lost before the connection is considered dead. A valu
 |---------------------------|---------|------------------------|
 | number of lost keepalives | 2       | local, system, restart |
 
-## <a name="gp_filerep_tcp_keepalives_idle"></a>gp\_filerep\_tcp\_keepalives\_idle
+## gp\_filerep\_tcp\_keepalives\_idle<a name="gp_filerep_tcp_keepalives_idle"></a>
 
 Number of seconds between sending keepalives on an otherwise idle connection. A value of 0 uses the system default. If TCP\_KEEPIDLE is not supported, this parameter must be 0.
 
@@ -1356,7 +1356,7 @@ Number of seconds between sending keepalives on an otherwise idle connection. A 
 |-------------------|---------|------------------------|
 | number of seconds | 1 min   | local, system, restart |
 
-## <a name="gp_filerep_tcp_keepalives_interval"></a>gp\_filerep\_tcp\_keepalives\_interval
+## gp\_filerep\_tcp\_keepalives\_interval<a name="gp_filerep_tcp_keepalives_interval"></a>
 
 How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default. If TCP\_KEEPINTVL is not supported, this parameter must be 0.
 
@@ -1364,7 +1364,7 @@ How many seconds to wait for a response to a keepalive before retransmitting. A 
 |-------------------|---------|------------------------|
 | number of seconds | 30 sec  | local, system, restart |
 
-## <a name="gp_hashjoin_tuples_per_bucket"></a>gp\_hashjoin\_tuples\_per\_bucket
+## gp\_hashjoin\_tuples\_per\_bucket<a name="gp_hashjoin_tuples_per_bucket"></a>
 
 Sets the target density of the hash table used by HashJoin operations. A smaller value will tend to produce larger hash tables, which can increase join performance.
 
@@ -1372,7 +1372,7 @@ Sets the target density of the hash table used by HashJoin operations. A smaller
 |-------------|---------|-------------------------|
 | integer     | 5       | master, session, reload |
 
-## <a name="gp_idf_deduplicate"></a>gp\_idf\_deduplicate
+## gp\_idf\_deduplicate<a name="gp_idf_deduplicate"></a>
 
 Changes the strategy to compute and process MEDIAN, and PERCENTILE\_DISC.
 
@@ -1400,7 +1400,7 @@ Changes the strategy to compute and process MEDIAN, and PERCENTILE\_DISC.
 </tbody>
 </table>
 
-## <a name="gp_interconnect_cache_future_packets"></a>gp\_interconnect\_cache\_future\_packets
+## gp\_interconnect\_cache\_future\_packets<a name="gp_interconnect_cache_future_packets"></a>
 
 Controls whether future packets are cached.
 
@@ -1409,7 +1409,7 @@ Controls whether future packets are cached.
 | Boolean     | true (on) | master, session, reload |
 
 
-## <a name="gp_interconnect_default_rtt"></a>gp\_interconnect\_default\_rtt
+## gp\_interconnect\_default\_rtt<a name="gp_interconnect_default_rtt"></a>
 
 Sets the default rtt (in ms) for UDP interconnect.
 
@@ -1435,7 +1435,7 @@ Sets the default rtt (in ms) for UDP interconnect.
 </tbody>
 </table>
 
-## <a name="gp_interconnect_fc_method"></a>gp\_interconnect\_fc\_method
+## gp\_interconnect\_fc\_method<a name="gp_interconnect_fc_method"></a>
 
 Specifies the flow control method used for UDP interconnect when the value of [gp\_interconnect\_type](#gp_interconnect_type) is UDPIFC.
 
@@ -1466,7 +1466,7 @@ Loss based flow control is based on capacity based flow control, and also tunes 
 </tbody>
 </table>
 
-## <a name="gp_interconnect_hash_multiplier"></a>gp\_interconnect\_hash\_multiplier
+## gp\_interconnect\_hash\_multiplier<a name="gp_interconnect_hash_multiplier"></a>
 
 Sets the size of the hash table used by the UDP interconnect to track connections. This number is multiplied by the number of segments to determine the number of buckets in the hash table. Increasing the value may increase interconnect performance for complex multi-slice queries (while consuming slightly more memory on the segment hosts).
 
@@ -1474,7 +1474,7 @@ Sets the size of the hash table used by the UDP interconnect to track connection
 |-------------|---------|-------------------------|
 | 2-25        | 2       | master, session, reload |
 
-## <a name="gp_interconnect_min_retries_before\_timeout"></a>gp\_interconnect\_min\_retries\_before\_timeout
+## gp\_interconnect\_min\_retries\_before\_timeout<a name="gp_interconnect_min_retries_before\_timeout"></a>
 
 Sets the minimum number of retries before reporting a transmit timeout in the interconnect.
 
@@ -1483,7 +1483,7 @@ Sets the minimum number of retries before reporting a transmit timeout in the in
 | 1-4096        | 100       | master, session, reload |
 
 
-## <a name="gp_interconnect_min_rto"></a>gp\_interconnect\_min\_rto
+## gp\_interconnect\_min\_rto<a name="gp_interconnect_min_rto"></a>
 
 Sets the minimum rto (in ms) for UDP interconnect.
 
@@ -1493,7 +1493,7 @@ Sets the minimum rto (in ms) for UDP interconnect.
 
 
 
-## <a name="gp_interconnect_queue_depth"></a>gp\_interconnect\_queue\_depth
+## gp\_interconnect\_queue\_depth<a name="gp_interconnect_queue_depth"></a>
 
 Sets the amount of data per-peer to be queued by the UDP interconnect on receivers (when data is received but no space is available to receive it the data will be dropped, and the transmitter will need to resend it). Increasing the depth from its default value will cause the system to use more memory; but may increase performance. It is reasonable for this to be set between 1 and 10. Queries with data skew potentially perform better when this is increased. Increasing this may radically increase the amount of memory used by the system.
 
@@ -1501,7 +1501,7 @@ Sets the amount of data per-peer to be queued by the UDP interconnect on receive
 |-------------|---------|-------------------------|
 | 1-2048      | 4       | master, session, reload |
 
-## <a name="gp_interconnect_setup_timeout"></a>gp\_interconnect\_setup\_timeout
+## gp\_interconnect\_setup\_timeout<a name="gp_interconnect_setup_timeout"></a>
 
 When the interconnect type is UDP, the time to wait for the Interconnect to complete setup before it times out. 
 
@@ -1513,7 +1513,7 @@ This parameter is used only when [gp\_interconnect\_type](#gp_interconnect_type)
 |---------------------------------------------|---------|-------------------------|
 | Any valid time expression (number and unit) | 2 hours | master, session, reload |
 
-## <a name="gp_interconnect_snd_queue_depth"></a>gp\_interconnect\_snd\_queue\_depth
+## gp\_interconnect\_snd\_queue\_depth<a name="gp_interconnect_snd_queue_depth"></a>
 
 Sets the amount of data per-peer to be queued by the UDP interconnect on senders. Increasing the depth from its default value will cause the system to use more memory; but may increase performance. Reasonable values for this parameter are between 1 and 4. Increasing the value might radically increase the amount of memory used by the system.
 
@@ -1523,7 +1523,7 @@ This parameter is used only when [gp\_interconnect\_type](#gp_interconnect_type)
 |-------------|---------|-------------------------|
 | 1 - 4096    | 2       | master, session, reload |
 
-## <a name="gp_interconnect_timer_period"></a>gp\_interconnect\_timer\_period
+## gp\_interconnect\_timer\_period<a name="gp_interconnect_timer_period"></a>
 
 Sets the timer period (in ms) for UDP interconnect.
 
@@ -1533,7 +1533,7 @@ Sets the timer period (in ms) for UDP interconnect.
 
 
 
-## <a name="gp_interconnect_timer_checking_period"></a>gp\_interconnect\_timer\_checking\_period
+## gp\_interconnect\_timer\_checking\_period<a name="gp_interconnect_timer_checking_period"></a>
 
 Sets the timer checking period (in ms) for UDP interconnect.
 
@@ -1543,7 +1543,7 @@ Sets the timer checking period (in ms) for UDP interconnect.
 
 
 
-## <a name="gp_interconnect_transmit_timeout"></a>gp\_interconnect\_transmit\_timeout
+## gp\_interconnect\_transmit\_timeout<a name="gp_interconnect_transmit_timeout"></a>
 
 Timeout (in seconds) on interconnect to transmit a packet.
 
@@ -1553,7 +1553,7 @@ Timeout (in seconds) on interconnect to transmit a packet.
 
 
 
-## <a name="gp_interconnect_type"></a>gp\_interconnect\_type
+## gp\_interconnect\_type<a name="gp_interconnect_type"></a>
 
 Sets the networking protocol used for Interconnect traffic. With the TCP protocol, HAWQ has an upper limit of 1000 segment instances - less than that if the query workload involves complex, multi-slice queries.
 
@@ -1585,7 +1585,7 @@ UDPIFC specifies using UDP with flow control for interconnect traffic. Specify t
 </tbody>
 </table>
 
-## <a name="gp_log_format"></a>gp\_log\_format
+## gp\_log\_format<a name="gp_log_format"></a>
 
 Specifies the format of the server log files. If using *hawq\_toolkit* administrative schema, the log files must be in CSV format.
 
@@ -1612,7 +1612,7 @@ Specifies the format of the server log files. If using *hawq\_toolkit* administr
 </tbody>
 </table>
 
-## <a name="gp_max_csv_line_length"></a>gp\_max\_csv\_line\_length
+## gp\_max\_csv\_line\_length<a name="gp_max_csv_line_length"></a>
 
 The maximum length of a line in a CSV formatted file that will be imported into the system. The default is 1MB (1048576 bytes). Maximum allowed is 4MB (4194184 bytes). The default may need to be increased if using the *hawq\_toolkit* administrative schema to read HAWQ log files.
 
@@ -1620,7 +1620,7 @@ The maximum length of a line in a CSV formatted file that will be imported into 
 |-----------------|---------|------------------------|
 | number of bytes | 1048576 | local, system, restart |
 
-## <a name="gp_max_databases"></a>gp\_max\_databases
+## gp\_max\_databases<a name="gp_max_databases"></a>
 
 The maximum number of databases allowed in a HAWQ system.
 
@@ -1628,7 +1628,7 @@ The maximum number of databases allowed in a HAWQ system.
 |-------------|---------|-------------------------|
 | integer     | 16      | master, system, restart |
 
-## <a name="gp_max_filespaces"></a>gp\_max\_filespaces
+## gp\_max\_filespaces<a name="gp_max_filespaces"></a>
 
 The maximum number of filespaces allowed in a HAWQ system.
 
@@ -1636,7 +1636,7 @@ The maximum number of filespaces allowed in a HAWQ system.
 |-------------|---------|-------------------------|
 | integer     | 8       | master, system, restart |
 
-## <a name="gp_max_packet_size"></a>gp\_max\_packet\_size
+## gp\_max\_packet\_size<a name="gp_max_packet_size"></a>
 
 Sets the size (in bytes) of messages sent by the UDP interconnect, and sets the tuple-serialization chunk size for both the UDP and TCP interconnect.
 
@@ -1644,7 +1644,7 @@ Sets the size (in bytes) of messages sent by the UDP interconnect, and sets the 
 |-------------|---------|-------------------------|
 | 512-65536   | 8192    | master, system, restart |
 
-## <a name="gp_max_plan_size"></a>gp\_max\_plan\_size
+## gp\_max\_plan\_size<a name="gp_max_plan_size"></a>
 
 Specifies the total maximum uncompressed size of a query execution plan multiplied by the number of Motion operators (slices) in the plan. If the size of the query plan exceeds the value, the query is cancelled and an error is returned. A value of 0 means that the size of the plan is not monitored.
 
@@ -1654,7 +1654,7 @@ You can specify a value in KB,MB, or GB. The default unit is KB. For example, a 
 |-------------|---------|----------------------------|
 | integer     | 0       | master, superuser, session |
 
-## <a name="gp_max_tablespaces"></a>gp\_max\_tablespaces
+## gp\_max\_tablespaces<a name="gp_max_tablespaces"></a>
 
 The maximum number of tablespaces allowed in a HAWQ system.
 
@@ -1662,7 +1662,7 @@ The maximum number of tablespaces allowed in a HAWQ system.
 |-------------|---------|-------------------------|
 | integer     | 16      | master, system, restart |
 
-## <a name="gp_motion_cost_per_row"></a>gp\_motion\_cost\_per\_row
+## gp\_motion\_cost\_per\_row<a name="gp_motion_cost_per_row"></a>
 
 Sets the legacy query optimizer (planner) cost estimate for a Motion operator to transfer a row from one segment to another, measured as a fraction of the cost of a sequential page fetch. If 0, then the value used is two times the value of *cpu\_tuple\_cost*.
 
@@ -1670,7 +1670,7 @@ Sets the legacy query optimizer (planner) cost estimate for a Motion operator to
 |----------------|---------|-------------------------|
 | floating point | 0       | master, session, reload |
 
-## <a name="gp_reject_percent_threshold"></a>gp\_reject\_percent\_threshold
+## gp\_reject\_percent\_threshold<a name="gp_reject_percent_threshold"></a>
 
 For single row error handling on COPY and external table SELECTs, sets the number of rows processed before SEGMENT REJECT LIMIT *n* PERCENT starts calculating.
 
@@ -1678,7 +1678,7 @@ For single row error handling on COPY and external table SELECTs, sets the numbe
 |-----------------|---------|-------------------------|
 | integer (1-*n*) | 300     | master, session, reload |
 
-## <a name="gp_reraise_signal"></a>gp\_reraise\_signal
+## gp\_reraise\_signal<a name="gp_reraise_signal"></a>
 
 If enabled, will attempt to dump core if a fatal server error occurs.
 
@@ -1686,7 +1686,7 @@ If enabled, will attempt to dump core if a fatal server error occurs.
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_role"></a>gp\_role
+## gp\_role<a name="gp_role"></a>
 
 The role of this server process " set to *dispatch* for the master and *execute* for a segment.
 
@@ -1714,7 +1714,7 @@ The role of this server process " set to *dispatch* for the master and *execute*
 </tbody>
 </table>
 
-## <a name="gp_safefswritesize"></a>gp\_safefswritesize
+## gp\_safefswritesize<a name="gp_safefswritesize"></a>
 
 Specifies a minimum size for safe write operations to append-only tables in a non-mature file system. When a number of bytes greater than zero is specified, the append-only writer adds padding data up to that number in order to prevent data corruption due to file system errors. Each non-mature file system has a known safe write size that must be specified here when using HAWQ with that type of file system. This is commonly set to a multiple of the extent size of the file system; for example, Linux ext3 is 4096 bytes, so a value of 32768 is commonly used.
 
@@ -1722,7 +1722,7 @@ Specifies a minimum size for safe write operations to append-only tables in a no
 |-------------|---------|------------------------|
 | integer     | 0       | local, system, restart |
 
-## <a name="gp_segment_connect_timeout"></a>gp\_segment\_connect\_timeout
+## gp\_segment\_connect\_timeout<a name="gp_segment_connect_timeout"></a>
 
 Time that the HAWQ interconnect will try to connect to a segment instance over the network before timing out. Controls the network connection timeout between master and segment replication processes.
 
@@ -1730,7 +1730,7 @@ Time that the HAWQ interconnect will try to connect to a segment instance over t
 |---------------------------------------------|---------|-----------------------|
 | Any valid time expression (number and unit) | 10min   | local, system, reload |
 
-## <a name="gp_segments_for_planner"></a>gp\_segments\_for\_planner
+## gp\_segments\_for\_planner<a name="gp_segments_for_planner"></a>
 
 Sets the number of segment instances for the legacy query optimizer (planner) to assume in its cost and size estimates. If 0, then the value used is the actual number of segments. This variable affects the legacy optimizer's estimates of the number of rows handled by each sending and receiving process in Motion operators.
 
@@ -1738,7 +1738,7 @@ Sets the number of segment instances for the legacy query optimizer (planner) to
 |-------------|---------|-------------------------|
 | integer     | 0       | master, session, reload |
 
-## <a name="gp_session_id"></a>gp\_session\_id
+## gp\_session\_id<a name="gp_session_id"></a>
 
 A system assigned ID number for a client session. Starts counting from 1 when the master instance is first started.
 
@@ -1746,7 +1746,7 @@ A system assigned ID number for a client session. Starts counting from 1 when th
 |-----------------|---------|---------------------|
 | integer (1-*n*) | 14      | read only           |
 
-## <a name="gp_set_proc_affinity"></a>gp\_set\_proc\_affinity
+## gp\_set\_proc\_affinity<a name="gp_set_proc_affinity"></a>
 
 If enabled, when a HAWQ server process (postmaster) is started it will bind to a CPU.
 
@@ -1754,7 +1754,7 @@ If enabled, when a HAWQ server process (postmaster) is started it will bind to a
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, system, restart |
 
-## <a name="gp_set_read_only"></a>gp\_set\_read\_only
+## gp\_set\_read\_only<a name="gp_set_read_only"></a>
 
 Set to on to disable writes to the database. Any in progress transactions must finish before read-only mode takes affect.
 
@@ -1762,7 +1762,7 @@ Set to on to disable writes to the database. Any in progress transactions must f
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="gp_statistics_pullup_from_child_partition"></a>gp\_statistics\_pullup\_from\_child\_partition
+## gp\_statistics\_pullup\_from\_child\_partition<a name="gp_statistics_pullup_from_child_partition"></a>
 
 Enables the use of statistics from child tables when planning queries on the parent table by the legacy query optimizer (planner).
 
@@ -1770,7 +1770,7 @@ Enables the use of statistics from child tables when planning queries on the par
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_statistics_use_fkeys"></a>gp\_statistics\_use\_fkeys
+## gp\_statistics\_use\_fkeys<a name="gp_statistics_use_fkeys"></a>
 
 When enabled, allows the legacy query optimizer (planner) to use foreign key information stored in the system catalog to optimize joins between foreign keys and primary keys.
 
@@ -1778,7 +1778,7 @@ When enabled, allows the legacy query optimizer (planner) to use foreign key inf
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_vmem_idle_resource_timeout"></a>gp\_vmem\_idle\_resource\_timeout
+## gp\_vmem\_idle\_resource\_timeout<a name="gp_vmem_idle_resource_timeout"></a>
 
 Sets the time in milliseconds a session can be idle before gangs on the segment databases are released to free up resources.
 
@@ -1787,7 +1787,7 @@ Sets the time in milliseconds a session can be idle before gangs on the segment 
 | number of milliseconds | 18000  | master, system, restart |
 
 
-## <a name="gp_vmem_protect_segworker_cache_limit"></a>gp\_vmem\_protect\_segworker\_cache\_limit
+## gp\_vmem\_protect\_segworker\_cache\_limit<a name="gp_vmem_protect_segworker_cache_limit"></a>
 
 If a query executor process consumes more than this configured amount, then the process will not be cached for use in subsequent queries after the process completes. Systems with lots of connections or idle processes may want to reduce this number to free more memory on the segments. Note that this is a local parameter and must be set for every segment.
 
@@ -1795,7 +1795,7 @@ If a query executor process consumes more than this configured amount, then the 
 |---------------------|---------|------------------------|
 | number of megabytes | 500     | local, system, restart |
 
-## <a name="gp_workfile_checksumming"></a>gp\_workfile\_checksumming
+## gp\_workfile\_checksumming<a name="gp_workfile_checksumming"></a>
 
 Adds a checksum value to each block of a work file (or spill file) used by `HashAgg` and `HashJoin` query operators. This adds an additional safeguard from faulty OS disk drivers writing corrupted blocks to disk. When a checksum operation fails, the query will cancel and rollback rather than potentially writing bad data to disk.
 
@@ -1803,7 +1803,7 @@ Adds a checksum value to each block of a work file (or spill file) used by `Hash
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="gp_workfile_compress_algorithm"></a>gp\_workfile\_compress\_algorithm
+## gp\_workfile\_compress\_algorithm<a name="gp_workfile_compress_algorithm"></a>
 
 When a hash aggregation or hash join operation spills to disk during query processing, specifies the compression algorithm to use on the spill files. If using zlib, it must be in your $PATH on all segments.
 
@@ -1832,7 +1832,7 @@ If your HAWQ database installation uses serial ATA (SATA) disk drives, setting t
 </tbody>
 </table>
 
-## <a name="gp_workfile_limit_files_per_query"></a>gp\_workfile\_limit\_files\_per\_query
+## gp\_workfile\_limit\_files\_per\_query<a name="gp_workfile_limit_files_per_query"></a>
 
 Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment. Spill files are created when executing a query that requires more memory than it is allocated. The current query is terminated when the limit is exceeded.
 
@@ -1842,7 +1842,7 @@ Set the value to 0 (zero) to allow an unlimited number of spill files. master se
 |-------------|---------|-------------------------|
 | integer     | 3000000 | master, session, reload |
 
-## <a name="gp_workfile_limit_per_query"></a>gp\_workfile\_limit\_per\_query
+## gp\_workfile\_limit\_per\_query<a name="gp_workfile_limit_per_query"></a>
 
 Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment. The default value is 0, which means a limit is not enforced.
 
@@ -1850,7 +1850,7 @@ Sets the maximum disk size an individual query is allowed to use for creating te
 |-------------|---------|-------------------------|
 | kilobytes   | 0       | master, session, reload |
 
-## <a name="gp_workfile_limit_per_segment"></a>gp\_workfile\_limit\_per\_segment
+## gp\_workfile\_limit\_per\_segment<a name="gp_workfile_limit_per_segment"></a>
 
 Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment. The default value is 0, which means a limit is not enforced.
 
@@ -1858,7 +1858,7 @@ Sets the maximum total disk size that all running queries are allowed to use for
 |-------------|---------|------------------------|
 | kilobytes   | 0       | local, system, restart |
 
-## <a name="hawq_acl_type"></a>hawq\_acl\_type
+## hawq\_acl\_type<a name="hawq_acl_type"></a>
 
 Identifies the authorization method currently configured in your HAWQ cluster. HAWQ supports native and Ranger authorization. Refer to [Configuring HAWQ to Use Ranger Policy Management](../../ranger/ranger-integration-config.html) for detailed information on configuring Ranger authorization for HAWQ.
 
@@ -1867,7 +1867,7 @@ Identifies the authorization method currently configured in your HAWQ cluster. H
 | standalone<p>ranger | standalone | master, restart |
 
 
-## <a name="hawq_dfs_url"></a>hawq\_dfs\_url
+## hawq\_dfs\_url<a name="hawq_dfs_url"></a>
 
 URL for HAWQ data directories on HDFS. The directory that you specify must be writeable by the `gpadmin` user. For example 'localhost:8020/hawq\_default'. If you have high availability enabled for your HDFS NameNodes, then this configuration parameter must be set to the service ID you configured in HDFS. See "HAWQ Filespaces and High Availability Enabled HDFS" for more information.
 
@@ -1875,7 +1875,7 @@ URL for HAWQ data directories on HDFS. The directory that you specify must be wr
 |-------------------------------------------------------------------------|---------------------|-------------------------|
 | URL in the form of *NameNode\_host name*:*port*/*data\_directory\_name* | localhost:8020/hawq | master, session, reload |
 
-## <a name="hawq_global_rm_type"></a>hawq\_global\_rm\_type
+## hawq\_global\_rm\_type<a name="hawq_global_rm_type"></a>
 
 HAWQ global resource manager type. Valid values are `yarn` and `none`. Setting this parameter to `none` indicates that the HAWQ resource manager will manages its own resources. Setting the value to `yarn` means that HAWQ will negotiate with YARN for resources.
 
@@ -1883,7 +1883,7 @@ HAWQ global resource manager type. Valid values are `yarn` and `none`. Setting t
 |--------------|---------|-------------------------|
 | yarn or none | none    | master, system, restart |
 
-## <a name="hawq_master_address_host"></a>hawq\_master\_address\_host
+## hawq\_master\_address\_host<a name="hawq_master_address_host"></a>
 
 Address or hostname of HAWQ master.
 
@@ -1891,7 +1891,7 @@ Address or hostname of HAWQ master.
 |-----------------|-----------|-------------------------|
 | master hostname | localhost | master, session, reload |
 
-## <a name="hawq_master_address_port"></a>hawq\_master\_address\_port
+## hawq\_master\_address\_port<a name="hawq_master_address_port"></a>
 
 Port of the HAWQ master.
 
@@ -1899,7 +1899,7 @@ Port of the HAWQ master.
 |-------------------|---------|-------------------------|
 | valid port number |         | master, session, reload |
 
-## <a name="hawq_master_directory"></a>hawq\_master\_directory
+## hawq\_master\_directory<a name="hawq_master_directory"></a>
 
 Master server data directory.
 
@@ -1907,7 +1907,7 @@ Master server data directory.
 |----------------|---------|-------------------------|
 | directory name |         | master, session, reload |
 
-## <a name="hawq_master_temp_directory"></a>hawq\_master\_temp\_directory
+## hawq\_master\_temp\_directory<a name="hawq_master_temp_directory"></a>
 
 One or more temporary directories for the HAWQ master. Separate multiple entries with commas.
 
@@ -1915,7 +1915,7 @@ One or more temporary directories for the HAWQ master. Separate multiple entries
 |-----------------------------------------------------------|---------|-------------------------|
 | directory name or comma-separated list of directory names | /tmp    | master, session, reload |
 
-## <a name="hawq_re_memory_overcommit_max"></a>hawq\_re\_memory\_overcommit\_max
+## hawq\_re\_memory\_overcommit\_max<a name="hawq_re_memory_overcommit_max"></a>
 
 Sets the maximum quota of memory overcommit (in MB) per physical segment for resource enforcement. This parameter sets the memory quota that can be overcommited beyond the memory quota dynamically assigned by the resource manager.
 
@@ -1925,7 +1925,7 @@ Specify a larger value to prevent out of memory errors in YARN mode.
 |-------------|---------|-------------------------|
 | integer     | 8192    | master, system, restart |
 
-## <a name="hawq_rm_cluster_report"></a>hawq\_rm\_cluster\_report\_period
+## hawq\_rm\_cluster\_report\_period<a name="hawq_rm_cluster_report"></a>
 
 Defines the time period, in seconds, for refreshing the global resource manager’s cluster report.
 
@@ -1933,7 +1933,7 @@ Defines the time period, in seconds, for refreshing the global resource manager�
 |-------------|---------|-------------------------|
 | 10-100      | 60      | master, session, reload |
 
-## <a name="hawq_rm_force_alterqueue_cancel_queued_request"></a>hawq\_rm\_force\_alterqueue\_cancel\_queued\_request
+## hawq\_rm\_force\_alterqueue\_cancel\_queued\_request<a name="hawq_rm_force_alterqueue_cancel_queued_request"></a>
 
 Instructs HAWQ to cancel by all resource requests that are in conflict with the new resource queue definitions supplied in a ALTER RESOURCE QUEUE statement.
 
@@ -1943,7 +1943,7 @@ If you set this parameter to false, the actions specified in ALTER RESOURCE QUEU
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="hawq_rm_master_port"></a>hawq\_rm\_master\_port
+## hawq\_rm\_master\_port<a name="hawq_rm_master_port"></a>
 
 HAWQ resource manager master port number.
 
@@ -1951,7 +1951,7 @@ HAWQ resource manager master port number.
 |-------------------|---------|-------------------------|
 | valid port number | 5437    | master, session, reload |
 
-## <a name="hawq_rm_memory_limit_perseg"></a>hawq\_rm\_memory\_limit\_perseg
+## hawq\_rm\_memory\_limit\_perseg<a name="hawq_rm_memory_limit_perseg"></a>
 
 Limit of memory usage by a HAWQ segment when `hawq_global_rm_type` is set to `none`. For example, `8GB`.
 
@@ -1959,7 +1959,7 @@ Limit of memory usage by a HAWQ segment when `hawq_global_rm_type` is set to `no
 |----------------------------------|---------|---------------------|
 | no specific lower or upper limit | 64GB    | session, reload     |
 
-## <a name="hawq_rm_min_resource_perseg"></a>hawq\_rm\_min\_resource\_perseg
+## hawq\_rm\_min\_resource\_perseg<a name="hawq_rm_min_resource_perseg"></a>
 
 This property guarantees that the resource manager will acquire at the least the specified number of YARN containers for each segment no matter how small the resource request is for the initial query. This property cannot exceed YARN's queue capacity.
 
@@ -1967,7 +1967,7 @@ This property guarantees that the resource manager will acquire at the least the
 |-------------|---------|-------------------------|
 | 0 to 65535  | 2       | master, session, reload |
 
-## <a name="hawq_rm_nresqueue_limit"></a>hawq\_rm\_nresqueue\_limit
+## hawq\_rm\_nresqueue\_limit<a name="hawq_rm_nresqueue_limit"></a>
 
 Maximum number of resource queues that you can create. The minimum number you can create is 3 and the maximum is 1024.
 
@@ -1975,7 +1975,7 @@ Maximum number of resource queues that you can create. The minimum number you ca
 |-------------|---------|-------------------------|
 | 3 to 1024   | 128     | master, session, reload |
 
-## <a name="hawq_rm_nslice_perseg_limit"></a>hawq\_rm\_nslice\_perseg\_limit
+## hawq\_rm\_nslice\_perseg\_limit<a name="hawq_rm_nslice_perseg_limit"></a>
 
 Limits the total number of slices in one HAWQ segment. HAWQ QE execution generates multiple processes called slices to process data in parallel. Too many processes can affect OS performance. If you need to allow more processes in one segment to run in parallel for high concurrency due to high complexity, then you can modify this parameter.
 
@@ -1983,7 +1983,7 @@ Limits the total number of slices in one HAWQ segment. HAWQ QE execution generat
 |-------------|---------|-------------------------|
 | 1 to 65535  | 5000    | master, session, reload |
 
-## <a name="hawq_rm_nvcore_limit_perseg"></a>hawq\_rm\_nvcore\_limit\_perseg
+## hawq\_rm\_nvcore\_limit\_perseg<a name="hawq_rm_nvcore_limit_perseg"></a>
 
 Maximum number of virtual cores that can be used for query execution in a HAWQ segment when `hawq_global_rm_type` is set to `none`. For example, `2.0`.
 
@@ -1991,7 +1991,7 @@ Maximum number of virtual cores that can be used for query execution in a HAWQ s
 |------------------------|---------|-------------------------|
 | 1.0 to maximum integer | 1.0     | master, session, reload |
 
-## <a name="hawq_rm_nvseg_perquery_limit"></a>hawq\_rm\_nvseg\_perquery\_limit
+## hawq\_rm\_nvseg\_perquery\_limit<a name="hawq_rm_nvseg_perquery_limit"></a>
 
 Cluster-wide limit on the maximum number of virtual segments that can be used for one query statement execution. The hash buckets defined in `default_hash_table_bucket_number` cannot exceed this number.
 
@@ -1999,7 +1999,7 @@ Cluster-wide limit on the maximum number of virtual segments that can be used fo
 |-------------|---------|-------------------------|
 | 1 to 65535  | 512     | master, session, reload |
 
-## <a name="hawq_rm_nvseg_perquery_perseg_limit"></a>hawq\_rm\_nvseg\_perquery\_perseg\_limit
+## hawq\_rm\_nvseg\_perquery\_perseg\_limit<a name="hawq_rm_nvseg_perquery_perseg_limit"></a>
 
 Cluster-wide limit on the maximum number of virtual segments in one HAWQ segment that can be used to execute one query statement. This parameter limits use of virtual segments for random tables, external tables, and user-defined tables, but has no effect on hash tables. If the query contains external tables or user-defined functions, it will allocate the number of segments defined by this parameter (value times segment count). Under most deployment circumstances, you should not modify the default.
 
@@ -2007,7 +2007,7 @@ Cluster-wide limit on the maximum number of virtual segments in one HAWQ segment
 |-------------|---------|-------------------------|
 | 1 to 65535  | 6       | master, session, reload |
 
-## <a name="hawq_rm_nvseg_variance_amon_seg_limit"></a>hawq\_rm\_nvseg\_variance\_amon\_seg\_limit
+## hawq\_rm\_nvseg\_variance\_amon\_seg\_limit<a name="hawq_rm_nvseg_variance_amon_seg_limit"></a>
 
 Maximum variance allowed for the number of virtual segments per physical segment used to execute one query statement. Resource manager will try to reallocate resources to avoid going over this limit. This configuration is introduced to ensure that the virtual segments allocated for query execution are dispatched evenly to physical segments.
 
@@ -2019,7 +2019,7 @@ Queries perform best when virtual segments allocated for query execution are dis
 |-------------|---------|---------------------|
 | 0 to 65535  | 1       | master              |
 
-## <a name="hawq_rm_rejectrequest_nseg_limit"></a>hawq\_rm\_rejectrequest\_nseg\_limit
+## hawq\_rm\_rejectrequest\_nseg\_limit<a name="hawq_rm_rejectrequest_nseg_limit"></a>
 
 Maximum number of unavailable physical segments, expressed as a fraction of the entire cluster, that are allowed before the resource manager rejects query resource requests.
 
@@ -2033,7 +2033,7 @@ In most deployment cases, you do not need to modify this value.
 |-------------|---------|---------------------|
 | 0.0 to 1.0  | 0.25    | master              |
 
-## <a name="hawq_rm_resource_idle_timeout"></a>hawq\_rm\_resource\_idle\_timeout
+## hawq\_rm\_resource\_idle\_timeout<a name="hawq_rm_resource_idle_timeout"></a>
 
 Amount of time, in seconds, before idle resources are returned to YARN.
 
@@ -2041,7 +2041,7 @@ Amount of time, in seconds, before idle resources are returned to YARN.
 |-----------------------|---------|-------------------------|
 | Seconds (-1 to 65535) | 300     | master, session, reload |
 
-## <a name="hawq_rm_return_percent_on_overcommit"></a>hawq\_rm\_return\_percent\_on\_overcommit
+## hawq\_rm\_return\_percent\_on\_overcommit<a name="hawq_rm_return_percent_on_overcommit"></a>
 
 Determines how many containers HAWQ should return to the global resource manager (YARN for example.) This configuration only applies when HAWQ's YARN queue is busy, and HAWQ makes the YARN queue overuse its resources. The default value is 10, which means HAWQ will return 10% of acquired YARN containers by pausing the allocation of resources to HAWQ queries.
 
@@ -2051,7 +2051,7 @@ In a typical deployment, you do not need to modify the default value of this par
 |-------------|---------|-------------------------|
 | 0-100       | 10      | master, session, reload |
 
-## <a name="hawq_rm_segment_heartbeat_interval"></a>hawq\_rm\_segment\_heartbeat\_interval
+## hawq\_rm\_segment\_heartbeat\_interval<a name="hawq_rm_segment_heartbeat_interval"></a>
 
 Time interval, in seconds, that the segment uses to send a heartbeat to the resource manager. This heartbeat keeps the segment alive and presents the segment's latest status.
 
@@ -2061,7 +2061,7 @@ For most deployments, you do not need to modify the default value.
 |-------------|---------|---------------------|
 | 1 to 65535  | 30      | master              |
 
-## <a name="hawq_rm_segment_port"></a>hawq\_rm\_segment\_port
+## hawq\_rm\_segment\_port<a name="hawq_rm_segment_port"></a>
 
 HAWQ resource manager segment server port number.
 
@@ -2069,7 +2069,7 @@ HAWQ resource manager segment server port number.
 |-------------------|---------|-------------------------|
 | valid port number | 5438    | master, session, reload |
 
-## <a name="hawq_rm_stmt_nvseg"></a>hawq\_rm\_stmt\_nvseg
+## hawq\_rm\_stmt\_nvseg<a name="hawq_rm_stmt_nvseg"></a>
 
 Defines the number of virtual segments to use for the next query's execution. The default value is 0, which means statement level resource quota setting is disabled.
 
@@ -2077,7 +2077,7 @@ Defines the number of virtual segments to use for the next query's execution. Th
 |-------------|---------|-------------------------|
 | 0 to 65535  | 0       | master, session, reload |
 
-## <a name="hawq_rm_stmt_vseg_memory"></a>hawq\_rm\_stmt\_vseg\_memory
+## hawq\_rm\_stmt\_vseg\_memory<a name="hawq_rm_stmt_vseg_memory"></a>
 
 Defines the memory quota of one virtual segment. You must set the number of virtual segments to a number greater than 0 in `hawq_rm_stmt_nvseg` before specifying the memory quota.  
 
@@ -2085,7 +2085,7 @@ Defines the memory quota of one virtual segment. You must set the number of virt
 |-------------------------------------------------------------------------------------|---------|-------------------------|
 | Acceptable values are ‘128mb’, ’256mb’, ’512mb’, ‘1gb’, ‘2gb’, ‘4gb’, ‘8gb’, ‘16gb' | 128mb   | master, session, reload |
 
-## <a name="hawq_rm_tolerate_nseg_limit"></a>hawq\_rm\_tolerate\_nseg\_limit
+## hawq\_rm\_tolerate\_nseg\_limit<a name="hawq_rm_tolerate_nseg_limit"></a>
 
 Maximum number of unused physical segments allowed when executing a query statement, expressed as a fraction of the total number of segments cluster. HAWQ checks this limit if a query has at least one physical segment with more than one virtual segments allocated. This configuration ensures that when executing a query in HAWQ, all allocated virtual segments are dispatched as widely as possible across physical segments.
 
@@ -2101,7 +2101,7 @@ Under most deployment circumstances, you do not need to modify the default. Reas
 |-------------|---------|---------------------|
 | 0.0 to 1.0  | 0.25    | master              |
 
-## <a name="hawq_rm_yarn_address"></a>hawq\_rm\_yarn\_address
+## hawq\_rm\_yarn\_address<a name="hawq_rm_yarn_address"></a>
 
 Server address (host and port) of the YARN resource manager server (the value of `yarn.resourcemanager.address`). User must define this if `hawq_global_rm_type` is set to `yarn`. For example, `localhost:8032`.
 
@@ -2111,7 +2111,7 @@ Server address (host and port) of the YARN resource manager server (the value of
 |-------------------------|---------|---------------------|
 | valid hostname and port |         | master              |
 
-## <a name="hawq_rm_yarn_app_name"></a>hawq\_rm\_yarn\_app\_name
+## hawq\_rm\_yarn\_app\_name<a name="hawq_rm_yarn_app_name"></a>
 
 The name of the YARN application registered with HAWQ's resource manager. For example, `hawq`.
 
@@ -2119,7 +2119,7 @@ The name of the YARN application registered with HAWQ's resource manager. For ex
 |-------------|---------|---------------------|
 | string      | hawq    | master              |
 
-## <a name="hawq_rm_yarn_queue_name"></a>hawq\_rm\_yarn\_queue\_name
+## hawq\_rm\_yarn\_queue\_name<a name="hawq_rm_yarn_queue_name"></a>
 
 The name of the YARN resource queue to register with HAWQ's resource manager.
 
@@ -2127,7 +2127,7 @@ The name of the YARN resource queue to register with HAWQ's resource manager.
 |-------------|---------|---------------------|
 | string      | default | master              |
 
-## <a name="hawq_rm_yarn_scheduler_address"></a>hawq\_rm\_yarn\_scheduler\_address
+## hawq\_rm\_yarn\_scheduler\_address<a name="hawq_rm_yarn_scheduler_address"></a>
 
 Server address (host and port) of the YARN resource manager scheduler (the value of `yarn.resourcemanager.scheduler.address`). User must define this if `hawq_global_rm_type` is set to `yarn`. For example, `localhost:8030`.
 
@@ -2139,7 +2139,7 @@ Server address (host and port) of the YARN resource manager scheduler (the value
 
 
 
-## <a name="hawq_rps_address_port"></a>hawq\_rps\_address\_port
+## hawq\_rps\_address\_port<a name="hawq_rps_address_port"></a>
 
 Identifies the port on which the HAWQ Ranger Plug-in Service runs. The `hawq_rps_address_port` configuration parameter value must match the  `rps.properties` `RPS_HTTP_PORT` environment variable setting. If you update the port, you must restart your HAWQ cluster, or reload HAWQ configuration and restart the HAWQ Ranger Plug-in Service.
 
@@ -2148,7 +2148,7 @@ Identifies the port on which the HAWQ Ranger Plug-in Service runs. The `hawq_rps
 | valid port number | 8432 | master, reload |
 
 
-## <a name="hawq_segment_address_port"></a>hawq\_segment\_address\_port
+## hawq\_segment\_address\_port<a name="hawq_segment_address_port"></a>
 
 Base port for the HAWQ segment host.
 
@@ -2156,7 +2156,7 @@ Base port for the HAWQ segment host.
 |-------------------|---------|------------------------|
 | valid port number |         | local, session, reload |
 
-## <a name="hawq_segment_directory"></a>hawq\_segment\_directory
+## hawq\_segment\_directory<a name="hawq_segment_directory"></a>
 
 Base path for the HAWQ segment data directory.
 
@@ -2164,7 +2164,7 @@ Base path for the HAWQ segment data directory.
 |----------------|---------|------------------------|
 | directory name |         | local, session, reload |
 
-## <a name="hawq_segment_temp_directory"></a>hawq\_segment\_temp\_directory
+## hawq\_segment\_temp\_directory<a name="hawq_segment_temp_directory"></a>
 
 One or more temporary directories for the HAWQ segment. Separate multiple entries with commas.
 
@@ -2172,7 +2172,7 @@ One or more temporary directories for the HAWQ segment. Separate multiple entrie
 |-----------------------------------------------------------|---------|------------------------|
 | directory name or comma-separated list of directory names | /tmp    | local, session, reload |
 
-## <a name="integer_datetimes"></a>integer\_datetimes
+## integer\_datetimes<a name="integer_datetimes"></a>
 
 Reports whether PostgreSQL was built with support for 64-bit-integer dates and times.
 
@@ -2180,7 +2180,7 @@ Reports whether PostgreSQL was built with support for 64-bit-integer dates and t
 |-------------|---------|---------------------|
 | Boolean     | on      | read only           |
 
-## <a name="IntervalStyle"></a>IntervalStyle
+## IntervalStyle<a name="IntervalStyle"></a>
 
 Sets the display format for interval values. The value *sql\_standard* produces output matching SQL standard interval literals. The value *postgres* produces output matching PostgreSQL releases prior to 8.4 when the [DateStyle](#DateStyle) parameter was set to ISO.
 
@@ -2211,7 +2211,7 @@ The value *iso\_8601* will produce output matching the time interval *format wit
 </tbody>
 </table>
 
-## <a name="join_collapse_limit"></a>join\_collapse\_limit
+## join\_collapse\_limit<a name="join_collapse_limit"></a>
 
 The legacy query optimizer (planner) will rewrite explicit inner `JOIN` constructs into lists of `FROM` items whenever a list of no more than this many items in total would result. By default, this variable is set the same as *from\_collapse\_limit*, which is appropriate for most uses. Setting it to 1 prevents any reordering of inner JOINs. Setting this variable to a value between 1 and *from\_collapse\_limit* might be useful to trade off planning time against the quality of the chosen plan (higher values produce better plans).
 
@@ -2219,7 +2219,7 @@ The legacy query optimizer (planner) will rewrite explicit inner `JOIN` construc
 |-----------------|---------|-------------------------|
 | integer (1-*n*) | 20      | master, session, reload |
 
-## <a name="krb_caseins_users"></a>krb\_caseins\_users
+## krb\_caseins\_users<a name="krb_caseins_users"></a>
 
 Sets whether Kerberos user names should be treated case-insensitively. The default is case sensitive (off).
 
@@ -2227,7 +2227,7 @@ Sets whether Kerberos user names should be treated case-insensitively. The defau
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, system, restart |
 
-## <a name="krb_server_keyfile"></a>krb\_server\_keyfile
+## krb\_server\_keyfile<a name="krb_server_keyfile"></a>
 
 Sets the location of the Kerberos server key file.
 
@@ -2235,7 +2235,7 @@ Sets the location of the Kerberos server key file.
 |--------------------|---------|-------------------------|
 | path and file name | unset   | master, system, restart |
 
-## <a name="krb_srvname"></a>krb\_srvname
+## krb\_srvname<a name="krb_srvname"></a>
 
 Sets the Kerberos service name.
 
@@ -2243,7 +2243,7 @@ Sets the Kerberos service name.
 |--------------|----------|-------------------------|
 | service name | postgres | master, system, restart |
 
-## <a name="lc_collate"></a>lc\_collate
+## lc\_collate<a name="lc_collate"></a>
 
 Reports the locale in which sorting of textual data is done. The value is determined when the HAWQ array is initialized.
 
@@ -2251,7 +2251,7 @@ Reports the locale in which sorting of textual data is done. The value is determ
 |--------------------------|---------|---------------------|
 | &lt;system dependent&gt; |         | read only           |
 
-## <a name="lc_ctype"></a>lc\_ctype
+## lc\_ctype<a name="lc_ctype"></a>
 
 Reports the locale that determines character classifications. The value is determined when the HAWQ array is initialized.
 
@@ -2259,7 +2259,7 @@ Reports the locale that determines character classifications. The value is deter
 |--------------------------|---------|---------------------|
 | &lt;system dependent&gt; |         | read only           |
 
-## <a name="lc_messages"></a>lc\_messages
+## lc\_messages<a name="lc_messages"></a>
 
 Sets the language in which messages are displayed. The locales available depends on what was installed with your operating system - use *locale -a* to list available locales. The default value is inherited from the execution environment of the server. On some systems, this locale category does not exist. Setting this variable will still work, but there will be no effect. Also, there is a chance that no translated messages for the desired language exist. In that case you will continue to see the English messages.
 
@@ -2267,7 +2267,7 @@ Sets the language in which messages are displayed. The locales available depends
 |--------------------------|---------|------------------------|
 | &lt;system dependent&gt; |         | local, system, restart |
 
-## <a name="lc_monetary"></a>lc\_monetary
+## lc\_monetary<a name="lc_monetary"></a>
 
 Sets the locale to use for formatting monetary amounts, for example with the *to\_char* family of functions. The locales available depends on what was installed with your operating system - use *locale -a* to list available locales. The default value is inherited from the execution environment of the server.
 
@@ -2275,7 +2275,7 @@ Sets the locale to use for formatting monetary amounts, for example with the *to
 |--------------------------|---------|------------------------|
 | &lt;system dependent&gt; |         | local, system, restart |
 
-## <a name="lc_numeric"></a>lc\_numeric
+## lc\_numeric<a name="lc_numeric"></a>
 
 Sets the locale to use for formatting numbers, for example with the *to\_char* family of functions. The locales available depends on what was installed with your operating system - use *locale -a* to list available locales. The default value is inherited from the execution environment of the server.
 
@@ -2283,7 +2283,7 @@ Sets the locale to use for formatting numbers, for example with the *to\_char* f
 |--------------------------|---------|------------------------|
 | &lt;system dependent&gt; |         | local, system, restart |
 
-## <a name="lc_time"></a>lc\_time
+## lc\_time<a name="lc_time"></a>
 
 This parameter currently does nothing, but may in the future.
 
@@ -2291,7 +2291,7 @@ This parameter currently does nothing, but may in the future.
 |--------------------------|---------|------------------------|
 | &lt;system dependent&gt; |         | local, system, restart |
 
-## <a name="listen_addresses"></a>listen\_addresses
+## listen\_addresses<a name="listen_addresses"></a>
 
 Specifies the TCP/IP address(es) on which the server is to listen for connections from client applications - a comma-separated list of host names and/or numeric IP addresses. The special entry \* corresponds to all available IP interfaces. If the list is empty, only UNIX-domain sockets can connect.
 
@@ -2320,7 +2320,7 @@ Specifies the TCP/IP address(es) on which the server is to listen for connection
 </tbody>
 </table>
 
-## <a name="local_preload_libraries"></a>local\_preload\_libraries
+## local\_preload\_libraries<a name="local_preload_libraries"></a>
 
 Comma separated list of shared library files to preload at the start of a client session.
 
@@ -2328,7 +2328,7 @@ Comma separated list of shared library files to preload at the start of a client
 |-------------------------------|--------------|------------------------|
 | string (comma-separated list) | no value set | local, system, restart |
 
-## <a name="log_autostats"></a>log\_autostats
+## log\_autostats<a name="log_autostats"></a>
 
 Logs information about automatic `ANALYZE` operations related to [gp\_autostats\_mode](#gp_autostats_mode).
 
@@ -2336,7 +2336,7 @@ Logs information about automatic `ANALYZE` operations related to [gp\_autostats\
 |-------------|---------|------------------------------------|
 | Boolean     | off     | master, session, reload, superuser |
 
-## <a name="log_connections"></a>log\_connections
+## log\_connections<a name="log_connections"></a>
 
 This outputs a line to the server log detailing each successful connection. Some client programs, like psql, attempt to connect twice while determining if a password is required, so duplicate "connection received" messages do not always indicate a problem.
 
@@ -2344,7 +2344,7 @@ This outputs a line to the server log detailing each successful connection. Some
 |-------------|---------|------------------------|
 | Boolean     | off     | local, system, restart |
 
-## <a name="log_disconnections"></a>log\_disconnections
+## log\_disconnections<a name="log_disconnections"></a>
 
 This outputs a line in the server log at termination of a client session, and includes the duration of the session.
 
@@ -2352,7 +2352,7 @@ This outputs a line in the server log at termination of a client session, and in
 |-------------|---------|------------------------|
 | Boolean     | off     | local, system, restart |
 
-## <a name="log_dispatch_stats"></a>log\_dispatch\_stats
+## log\_dispatch\_stats<a name="log_dispatch_stats"></a>
 
 When set to "on," this parameter adds a log message with verbose information about the dispatch of the statement.
 
@@ -2360,7 +2360,7 @@ When set to "on," this parameter adds a log message with verbose information abo
 |-------------|---------|------------------------|
 | Boolean     | off     | local, system, restart |
 
-## <a name="log_duration"></a>log\_duration
+## log\_duration<a name="log_duration"></a>
 
 Causes the duration of every completed statement which satisfies *log\_statement* to be logged.
 
@@ -2368,7 +2368,7 @@ Causes the duration of every completed statement which satisfies *log\_statement
 |-------------|---------|------------------------------------|
 | Boolean     | off     | master, session, reload, superuser |
 
-## <a name="log_error_verbosity"></a>log\_error\_verbosity
+## log\_error\_verbosity<a name="log_error_verbosity"></a>
 
 Controls the amount of detail written in the server log for each message that is logged.
 
@@ -2396,7 +2396,7 @@ Controls the amount of detail written in the server log for each message that is
 </tbody>
 </table>
 
-## <a name="log_executor_stats"></a>log\_executor\_stats
+## log\_executor\_stats<a name="log_executor_stats"></a>
 
 For each query, write performance statistics of the query executor to the server log. This is a crude profiling instrument. Cannot be enabled together with *log\_statement\_stats*.
 
@@ -2404,7 +2404,7 @@ For each query, write performance statistics of the query executor to the server
 |-------------|---------|------------------------|
 | Boolean     | off     | local, system, restart |
 
-## <a name="log_hostname"></a>log\_hostname
+## log\_hostname<a name="log_hostname"></a>
 
 By default, connection log messages only show the IP address of the connecting host. Turning on this option causes logging of the IP address and host name of the HAWQ master. Note that depending on your host name resolution setup this might impose a non-negligible performance penalty.
 
@@ -2412,7 +2412,7 @@ By default, connection log messages only show the IP address of the connecting h
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, system, restart |
 
-## <a name="log_min_duration_statement"></a>log\_min\_duration\_statement
+## log\_min\_duration\_statement<a name="log_min_duration_statement"></a>
 
 Logs the statement and its duration on a single log line if its duration is greater than or equal to the specified number of milliseconds. Setting this to 0 will print all statements and their durations. -1 disables the feature. For example, if you set it to 250 then all SQL statements that run 250ms or longer will be logged. Enabling this option can be useful in tracking down unoptimized queries in your applications.
 
@@ -2420,7 +2420,7 @@ Logs the statement and its duration on a single log line if its duration is grea
 |-------------------------------|---------|------------------------------------|
 | number of milliseconds, 0, -1 | -1      | master, session, reload, superuser |
 
-## <a name="log_min_error_statement"></a>log\_min\_error\_statement
+## log\_min\_error\_statement<a name="log_min_error_statement"></a>
 
 Controls whether or not the SQL statement that causes an error condition will also be recorded in the server log. All SQL statements that cause an error of the specified level or higher are logged. The default is PANIC (effectively turning this feature off for normal use). Enabling this option can be helpful in tracking down the source of any errors that appear in the server log.
 
@@ -2456,7 +2456,7 @@ Controls whether or not the SQL statement that causes an error condition will al
 </tbody>
 </table>
 
-## <a name="log_min_messages"></a>log\_min\_messages
+## log\_min\_messages<a name="log_min_messages"></a>
 
 Controls which message levels are written to the server log. Each level includes all the levels that follow it. The later the level, the fewer messages are sent to the log.
 
@@ -2492,7 +2492,7 @@ Controls which message levels are written to the server log. Each level includes
 </tbody>
 </table>
 
-## <a name="log_parser_stats"></a>log\_parser\_stats
+## log\_parser\_stats<a name="log_parser_stats"></a>
 
 For each query, write performance statistics of the query parser to the server log. This is a crude profiling instrument. Cannot be enabled together with *log\_statement\_stats*.
 
@@ -2500,7 +2500,7 @@ For each query, write performance statistics of the query parser to the server l
 |-------------|---------|------------------------------------|
 | Boolean     | off     | master, session, reload, superuser |
 
-## <a name="log_planner_stats"></a>log\_planner\_stats
+## log\_planner\_stats<a name="log_planner_stats"></a>
 
 For each query, write performance statistics of the legacy query optimizer (planner) to the server log. This is a crude profiling instrument. Cannot be enabled together with *log\_statement\_stats*.
 
@@ -2508,7 +2508,7 @@ For each query, write performance statistics of the legacy query optimizer (plan
 |-------------|---------|------------------------------------|
 | Boolean     | off     | master, session, reload, superuser |
 
-## <a name="log_rotation_age"></a>log\_rotation\_age
+## log\_rotation\_age<a name="log_rotation_age"></a>
 
 Determines the maximum lifetime of an individual log file. After this time has elapsed, a new log file will be created. Set to zero to disable time-based creation of new log files.
 
@@ -2516,7 +2516,7 @@ Determines the maximum lifetime of an individual log file. After this time has e
 |---------------------------------------------|---------|------------------------|
 | Any valid time expression (number and unit) | 1d      | local, system, restart |
 
-## <a name="log_rotation_size"></a>log\_rotation\_size
+## log\_rotation\_size<a name="log_rotation_size"></a>
 
 Determines the maximum size of an individual log file. After this many kilobytes have been emitted into a log file, a new log file will be created. Set to zero to disable size-based creation of new log files.
 
@@ -2526,7 +2526,7 @@ The maximum value is INT\_MAX/1024. If an invalid value is specified, the defaul
 |---------------------|---------|------------------------|
 | number of kilobytes | 0       | local, system, restart |
 
-## <a name="log_statement"></a>log\_statement
+## log\_statement<a name="log_statement"></a>
 
 Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands. MOD logs all DDL statements, plus INSERT, TRUNCATE, and COPY FROM. PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
 
@@ -2555,7 +2555,7 @@ Controls which SQL statements are logged. DDL logs all data definition commands 
 </tbody>
 </table>
 
-## <a name="log_statement_stats"></a>log\_statement\_stats
+## log\_statement\_stats<a name="log_statement_stats"></a>
 
 For each query, write total performance statistics of the query parser, planner, and executor to the server log. This is a crude profiling instrument.
 
@@ -2563,7 +2563,7 @@ For each query, write total performance statistics of the query parser, planner,
 |-------------|---------|------------------------------------|
 | Boolean     | off     | master, session, reload, superuser |
 
-## <a name="log_timezone"></a>log\_timezone
+## log\_timezone<a name="log_timezone"></a>
 
 Sets the time zone used for timestamps written in the log. Unlike [TimeZone](#TimeZone), this value is system-wide, so that all sessions will report timestamps consistently. The default is `unknown`, which means to use whatever the system environment specifies as the time zone.
 
@@ -2571,7 +2571,7 @@ Sets the time zone used for timestamps written in the log. Unlike [TimeZone](#Ti
 |-------------|---------|------------------------|
 | string      | unknown | local, system, restart |
 
-## <a name="log_truncate_on_rotation"></a>log\_truncate\_on\_rotation
+## log\_truncate\_on\_rotation<a name="log_truncate_on_rotation"></a>
 
 Truncates (overwrites), rather than appends to, any existing log file of the same name. Truncation will occur only when a new file is being opened due to time-based rotation. For example, using this setting in combination with a log\_filename such as `hawq-%H.log` would result in generating twenty-four hourly log files and then cyclically overwriting them. When off, pre-existing files will be appended to in all cases.
 
@@ -2580,7 +2580,7 @@ Truncates (overwrites), rather than appends to, any existing log file of the sam
 | Boolean     | off     | local, system, restart |
 
 
-## <a name="maintenance_work_mem"></a>maintenance\_work\_mem
+## maintenance\_work\_mem<a name="maintenance_work_mem"></a>
 
 Sets the maximum amount of memory to be used for maintenance operations including vacuum and create index.
 
@@ -2589,7 +2589,7 @@ Sets the maximum amount of memory to be used for maintenance operations includin
 | 1024KB - (no upper bound) | 65536KB    | master, session, reload     |
 
 
-## <a name="max_appendonly_tables"></a>max\_appendonly\_tables
+## max\_appendonly\_tables<a name="max_appendonly_tables"></a>
 
 Sets the maximum number of append-only relations that can be written to or loaded concurrently. Append-only table partitions and subpartitions are considered as unique tables against this limit. Increasing the limit will allocate more shared memory at server start.
 
@@ -2597,7 +2597,7 @@ Sets the maximum number of append-only relations that can be written to or loade
 |-------------|---------|-------------------------|
 | integer     | 10000   | master, system, restart |
 
-## <a name="max_connections"></a>max\_connections
+## max\_connections<a name="max_connections"></a>
 
 The maximum number of concurrent connections allowed on master. In a HAWQ system, user client connections go through the HAWQ master instance only. Segment instances should allow 5-10 times the amount as the master. When you increase this parameter, you must increase [max\_prepared\_transactions](#max_prepared_transactions) as well. For more information about limiting concurrent connections, see [Configuring Client Authentication](../../clientaccess/client_auth.html).
 
@@ -2607,7 +2607,7 @@ Increasing this parameter may cause HAWQ to request more shared memory. See [sha
 |------------------|---------|------------------------|
 | integer (10-*n*) | 1280    | local, system, restart |
 
-## <a name="max_files_per_process"></a>max\_files\_per\_process
+## max\_files\_per\_process<a name="max_files_per_process"></a>
 
 Sets the maximum number of simultaneously open files allowed to each server subprocess. If the kernel is enforcing a safe per-process limit, you don't need to worry about this setting. Some platforms such as BSD, the kernel will allow individual processes to open many more files than the system can really support.
 
@@ -2615,7 +2615,7 @@ Sets the maximum number of simultaneously open files allowed to each server subp
 |------------------|---------|------------------------|
 | integer (40-*n*) | 150     | local, system, restart |
 
-## <a name="max_fsm_pages"></a>max\_fsm\_pages
+## max\_fsm\_pages<a name="max_fsm_pages"></a>
 
 Sets the maximum number of disk pages for which free space will be tracked in the shared free-space map. Six bytes of shared memory are consumed for each page slot.
 
@@ -2623,7 +2623,7 @@ Sets the maximum number of disk pages for which free space will be tracked in th
 |------------------------------------------|---------|------------------------|
 | integer &gt; 16 \* *max\_fsm\_relations* | 200000  | local, system, restart |
 
-## <a name="max_fsm_relations"></a>max\_fsm\_relations
+## max\_fsm\_relations<a name="max_fsm_relations"></a>
 
 Sets the maximum number of relations for which free space will be tracked in the shared memory free-space map. Should be set to a value larger than the total number of:
 
@@ -2635,7 +2635,7 @@ It costs about 60 bytes of memory for each relation per segment instance. It is 
 |-------------|---------|------------------------|
 | integer     | 1000    | local, system, restart |
 
-## <a name="max_function_args"></a>max\_function\_args
+## max\_function\_args<a name="max_function_args"></a>
 
 Reports the maximum number of function arguments.
 
@@ -2643,7 +2643,7 @@ Reports the maximum number of function arguments.
 |-------------|---------|---------------------|
 | integer     | 100     | read only           |
 
-## <a name="max_identifier_length"></a>max\_identifier\_length
+## max\_identifier\_length<a name="max_identifier_length"></a>
 
 Reports the maximum identifier length.
 
@@ -2651,7 +2651,7 @@ Reports the maximum identifier length.
 |-------------|---------|---------------------|
 | integer     | 63      | read only           |
 
-## <a name="max_index_keys"></a>max\_index\_keys
+## max\_index\_keys<a name="max_index_keys"></a>
 
 Reports the maximum number of index keys.
 
@@ -2659,7 +2659,7 @@ Reports the maximum number of index keys.
 |-------------|---------|---------------------|
 | integer     | 32      | read only           |
 
-## <a name="max_locks_per_transaction"></a>max\_locks\_per\_transaction
+## max\_locks\_per\_transaction<a name="max_locks_per_transaction"></a>
 
 The shared lock table is created with room to describe locks on *max\_locks\_per\_transaction* \* (*max\_connections* + *max\_prepared\_transactions*) objects, so no more than this many distinct objects can be locked at any one time. This is not a hard limit on the number of locks taken by any one transaction, but rather a maximum average value. You might need to raise this value if you have clients that touch many different tables in a single transaction.
 
@@ -2667,7 +2667,7 @@ The shared lock table is created with room to describe locks on *max\_locks\_per
 |-------------|---------|------------------------|
 | integer     | 128     | local, system, restart |
 
-## <a name="max_prepared_transactions"></a>max\_prepared\_transactions
+## max\_prepared\_transactions<a name="max_prepared_transactions"></a>
 
 Sets the maximum number of transactions that can be in the prepared state simultaneously. HAWQ uses prepared transactions internally to ensure data integrity across the segments. This value must be at least as large as the value of [max\_connections](#max_connections) on the master. Segment instances should be set to the same value as the master.
 
@@ -2694,7 +2694,7 @@ Sets the maximum number of transactions that can be in the prepared state simult
 </tbody>
 </table>
 
-## <a name="max_stack_depth"></a>max\_stack\_depth
+## max\_stack\_depth<a name="max_stack_depth"></a>
 
 Specifies the maximum safe depth of the server's execution stack. The ideal setting for this parameter is the actual stack size limit enforced by the kernel (as set by *ulimit -s* or local equivalent), less a safety margin of a megabyte or so. Setting the parameter higher than the actual kernel limit will mean that a runaway recursive function can crash an individual backend process.
 
@@ -2702,7 +2702,7 @@ Specifies the maximum safe depth of the server's execution stack. The ideal sett
 |---------------------|---------|------------------------|
 | number of kilobytes | 2MB     | local, system, restart |
 
-## <a name="optimizer"></a>optimizer
+## optimizer<a name="optimizer"></a>
 
 Enables the GPORCA when running SQL queries. The default is `on`. When `off`, HAWQ uses only the legacy query optimizer.
 
@@ -2716,7 +2716,7 @@ For information about the legacy query optimizer and GPORCA, see [About GPORCA](
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="optimizer_analyze_root_partition"></a>optimizer\_analyze\_root\_partition
+## optimizer\_analyze\_root\_partition<a name="optimizer_analyze_root_partition"></a>
 
 For a partitioned table, collects statistics for the root partition when the `ANALYZE` command is run on the table. GPORCA uses the root partition statistics when generating a query plan. The legacy query optimizer does not use these statistics. If you set the value of the server configuration parameter [optimizer](#optimizer) to on, set the value of this parameter to on and run the command `ANALYZE` or `ANALYZE ROOTPARTITION` on partitioned tables to ensure the proper statistics have been collected.
 
@@ -2726,7 +2726,7 @@ For information about the legacy query optimizer and GPORCA, see [About GPORCA](
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="optimizer_minidump"></a>optimizer\_minidump
+## optimizer\_minidump<a name="optimizer_minidump"></a>
 
 GPORCA generates minidump files to describe the optimization context for a given query. Set this parameter to `ALWAYS` to generate a minidump for all queries.
 
@@ -2755,7 +2755,7 @@ GPORCA generates minidump files to describe the optimization context for a given
 </tbody>
 </table>
 
-## <a name="optimizer_parts_to_force_sort_on_insert"></a>optimizer\_parts\_to\_force\_sort\_on\_insert
+## optimizer\_parts\_to\_force\_sort\_on\_insert<a name="optimizer_parts_to_force_sort_on_insert"></a>
 
 Sets the minimum number of partitions required to force GPORCA to generate a plan for sorting tuples during insertion into an append-only, row-oriented (AORO) partitioned tables. If the number of partitions is less than the specified value, no sorting is performed.
 
@@ -2763,7 +2763,7 @@ Sets the minimum number of partitions required to force GPORCA to generate a pla
 |-------------|---------|-------------------------|
 | integer     | 160     | master, session, reload |
 
-## <a name="optimizer_prefer_scalar_dqa_multistage_agg"></a>optimizer\_prefer\_scalar\_dqa\_multistage\_agg
+## optimizer\_prefer\_scalar\_dqa\_multistage\_agg<a name="optimizer_prefer_scalar_dqa_multistage_agg"></a>
 
 When enabled, this parameter forces the GPORCA to use a three-stage scalar DQA plan. This type of plan evaluates the aggregate functions in three stages (local, intermediate, and global aggregations). By forcing the use of this plan, GPORCA ensures predictable performance for queries that contain distinct qualified aggregates (DQA).
 
@@ -2773,7 +2773,7 @@ By default, this configuration is on. If you set this parameter to false, then G
 |-------------|-----------|-------------------------|
 | Boolean     | true (on) | master, session, reload |
 
-## <a name="password_encryption"></a>password\_encryption
+## password\_encryption<a name="password_encryption"></a>
 
 When a password is specified in `CREATE USER` or `ALTER           USER` without writing either `ENCRYPTED` or `UNENCRYPTED`, this option determines whether the password is to be encrypted.
 
@@ -2781,7 +2781,7 @@ When a password is specified in `CREATE USER` or `ALTER           USER` without 
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="password_hash_algorithm"></a>password\_hash\_algorithm
+## password\_hash\_algorithm<a name="password_hash_algorithm"></a>
 
 Specifies the cryptographic hash algorithm that is used when storing an encrypted HAWQ Database user password. The default algorithm is MD5.
 
@@ -2809,7 +2809,7 @@ Specifies the cryptographic hash algorithm that is used when storing an encrypte
 </table>
 
 
-## <a name="pgstat_track_activity_query_size"></a>pgstat\_track\_activity\_query\_size
+## pgstat\_track\_activity\_query\_size<a name="pgstat_track_activity_query_size"></a>
 
 Sets the maximum length limit for the query text stored in `current_query` column of the system catalog view pg\_stat\_activity. The minimum length is 1024 characters.
 
@@ -2817,7 +2817,7 @@ Sets the maximum length limit for the query text stored in `current_query` colum
 |-------------|---------|------------------------|
 | integer     | 1024    | local, system, restart |
 
-## <a name="pljava_classpath"></a>pljava\_classpath
+## pljava\_classpath<a name="pljava_classpath"></a>
 
 A colon (:) separated list of the jar files containing the Java classes used in any PL/Java functions. The jar files listed here must also be installed on all HAWQ hosts in the following location: `$GPHOME/lib/postgresql/java/`
 
@@ -2826,7 +2826,7 @@ A colon (:) separated list of the jar files containing the Java classes used in 
 | string      |         | master, session, reload |
 
 
-## <a name="pljava_release_lingering_savepoints"></a>pljava\_release\_lingering\_savepoints
+## pljava\_release\_lingering\_savepoints<a name="pljava_release_lingering_savepoints"></a>
 
 If true, lingering savepoints used in PL/Java functions will be released on function exit. If false, savepoints will be rolled back.
 
@@ -2835,7 +2835,7 @@ If true, lingering savepoints used in PL/Java functions will be released on func
 | Boolean     | true    | master, system, restart, superuser |
 
 
-## <a name="pljava_statement_cache_size"></a>pljava\_statement\_cache\_size
+## pljava\_statement\_cache\_size<a name="pljava_statement_cache_size"></a>
 
 Sets the size in KB of the JRE MRU (Most Recently Used) cache for prepared statements.
 
@@ -2845,7 +2845,7 @@ Sets the size in KB of the JRE MRU (Most Recently Used) cache for prepared state
 
 
 
-## <a name="pljava_vmoptions"></a>pljava\_vmoptions
+## pljava\_vmoptions<a name="pljava_vmoptions"></a>
 
 Defines the startup options for the Java VM. The default value is an empty string ("").
 
@@ -2853,7 +2853,7 @@ Defines the startup options for the Java VM. The default value is an empty strin
 |-------------|---------|------------------------------------|
 | string      |         | master, system, restart, superuser |
 
-## <a name="port"></a>port
+## port<a name="port"></a>
 
 The database listener port for a HAWQ instance. The master and each segment has its own port. Port numbers for the HAWQ system must also be changed in the `gp_segment_configuration` catalog. You must shut down your HAWQ system before changing port numbers.
 
@@ -2861,7 +2861,7 @@ The database listener port for a HAWQ instance. The master and each segment has 
 |-----------------------|---------|------------------------|
 | any valid port number | 5432    | local, system, restart |
 
-## <a name="pxf_enable_filter_pushdown"></a>pxf\_enable\_filter\_pushdown
+## pxf\_enable\_filter\_pushdown<a name="pxf_enable_filter_pushdown"></a>
 
 Determines whether partition filtering is enabled. If on, filtering is performed by PXF at the partition level. When off, filtering is performed on the HAWQ side, possibly negatively impacting performance.
 
@@ -2869,7 +2869,7 @@ Determines whether partition filtering is enabled. If on, filtering is performed
 |-------------|---------|-------------------------|
 | Boolean     | on    | master, session, reload |
 
-## <a name="pxf_enable_stat_collection"></a>pxf\_enable\_stat\_collection
+## pxf\_enable\_stat\_collection<a name="pxf_enable_stat_collection"></a>
 
 Determines whether `ANALYZE` collects statistics for readable PXF tables. If true, an analyze operation on a readable PXF table estimates the number of tuples in the table, generates a sample table and runs statistics queries on the sample table to calculate statistics, as it does for native tables. When false, `ANALYZE` displays a message to warn that it is skipping the table because `pxf_enable_stat_collection` is off.
 
@@ -2877,7 +2877,7 @@ Determines whether `ANALYZE` collects statistics for readable PXF tables. If tru
 |-------------|---------|-------------------------|
 | Boolean     | true    | master, session, reload |
 
-## <a name="pxf_remote_service_login"></a>pxf\_remote\_service\_login
+## pxf\_remote\_service\_login<a name="pxf_remote_service_login"></a>
 
 Temporary configuration parameter identifying the login credential to forward to remote services requiring authentication.
 
@@ -2885,7 +2885,7 @@ Temporary configuration parameter identifying the login credential to forward to
 |---------------------------------------------------------|-----------------|-------------------------|
 | string | | master, session, reload |
 
-## <a name="pxf_remote_service_secret"></a>pxf\_remote\_service\_secret
+## pxf\_remote\_service\_secret<a name="pxf_remote_service_secret"></a>
 
 Temporary configuration parameter identifying the password credential to forward to remote services requiring authentication.
 
@@ -2894,7 +2894,7 @@ Temporary configuration parameter identifying the password credential to forward
 | string | | master, session, reload |
 
 
-## <a name="pxf_service_address"></a>pxf\_service\_address
+## pxf\_service\_address<a name="pxf_service_address"></a>
 
 Specifies the location and port of the PXF service used by HCatalog. To learn more about HCatalog integration with PXF, see [Using PXF and HCatalog to Query Hive](../../pxf/HivePXF.html#hcatalog).
 
@@ -2902,7 +2902,7 @@ Specifies the location and port of the PXF service used by HCatalog. To learn mo
 |---------------------------------------------------------|-----------------|-------------------------|
 | any valid hostname or IP address: any valid port number | localhost:51200 | master, session, reload |
 
-## <a name="pxf_service_port"></a>pxf\_service\_port
+## pxf\_service\_port<a name="pxf_service_port"></a>
 
 Specifies the listen port for the PXF service when HDFS NameNode High Availability (HA) is enabled. PXF connects to this port when the port number is omitted from the `LOCATION` clause of a `CREATE EXTERNAL TABLE` command.
 
@@ -2910,7 +2910,7 @@ Specifies the listen port for the PXF service when HDFS NameNode High Availabili
 |-----------------------|---------|-------------------------|
 | any valid port number | 51200   | master, session, reload |
 
-## <a name="pxf_stat_max_fragments"></a>pxf\_stat\_max\_fragments
+## pxf\_stat\_max\_fragments<a name="pxf_stat_max_fragments"></a>
 
 The maximum number of fragments to sample during `ANALYZE` on a PXF table. A lower value provides faster performance for the `ANALYZE` command, but the sampling is less uniform. A higher value provides more uniform sampling, with slower `ANALYZE` performance.
 
@@ -2918,7 +2918,7 @@ The maximum number of fragments to sample during `ANALYZE` on a PXF table. A low
 |---------------------|---------|-------------------------|
 | number of fragments | 100     | master, session, reload |
 
-## <a name="random_page_cost"></a>random\_page\_cost
+## random\_page\_cost<a name="random_page_cost"></a>
 
 Sets the estimate of the cost of a nonsequentially fetched disk page for the legacy query optimizer (planner). This is measured as a multiple of the cost of a sequential page fetch. A higher value makes it more likely a sequential scan will be used, a lower value makes it more likely an index scan will be used.
 
@@ -2926,7 +2926,7 @@ Sets the estimate of the cost of a nonsequentially fetched disk page for the leg
 |----------------|---------|-------------------------|
 | floating point | 100     | master, session, reload |
 
-## <a name="regex_flavor"></a>regex\_flavor
+## regex\_flavor<a name="regex_flavor"></a>
 
 The 'extended' setting may be useful for exact backwards compatibility with pre-7.4 releases of PostgreSQL.
 
@@ -2954,7 +2954,7 @@ The 'extended' setting may be useful for exact backwards compatibility with pre-
 </tbody>
 </table>
 
-## <a name="runaway_detector_activation_percent"></a>runaway\_detector\_activation\_percent
+## runaway\_detector\_activation\_percent<a name="runaway_detector_activation_percent"></a>
 
 Sets the percentage of the virtual memory quota that will trigger the termination of queries. If the amount of virtual memory utilized by a physical segment exceeds the calculated threshold, then HAWQ begins terminating queries based on memory usage, starting with the query that is consuming the largest amount of memory. Queries are terminated until the percentage of utilized virtual memory is below the specified percentage.
 
@@ -2972,7 +2972,7 @@ A value of 100 disables the automatic detection and termination of runaway queri
 |-------------|---------|-------------------------|
 | 0 to 100    | 95      | master, session, reload |
 
-## <a name="search_path"></a>search\_path
+## search\_path<a name="search_path"></a>
 
 Specifies the order in which schemas are searched when an object is referenced by a simple name with no schema component. When there are objects of identical names in different schemas, the one found first in the search path is used. The system catalog schema, *pg\_catalog*, is always searched, whether it is mentioned in the path or not. When objects are created without specifying a particular target schema, they will be placed in the first schema listed in the search path. The current effective value of the search path can be examined via the SQL function *current\_schemas()*. *current\_schemas()* shows how the requests appearing in *search\_path* were resolved.
 
@@ -2980,7 +2980,7 @@ Specifies the order in which schemas are searched when an object is referenced b
 |----------------------------------------|--------------|-------------------------|
 | a comma-separated list of schema names | $user,public | master, session, reload |
 
-## <a name="seg_max_connections"></a>seg\_max\_connections
+## seg\_max\_connections<a name="seg_max_connections"></a>
 
 The maximum number of concurrent connections on a segment. In a HAWQ system, user client connections go through the HAWQ master instance only. Segment instances should allow 5-10 times the amount of connections allowed on the master (see [max\_connections](#max_connections).) When you increase this parameter, you must increase [max\_prepared\_transactions](#max_prepared_transactions) as well. For more information about limiting concurrent connections, see [Configuring Client Authentication](../../clientaccess/client_auth.html).
 
@@ -3008,7 +3008,7 @@ Increasing this parameter may cause HAWQ to request more shared memory. See [sha
 </tbody>
 </table>
 
-## <a name="seq_page_cost"></a>seq\_page\_cost
+## seq\_page\_cost<a name="seq_page_cost"></a>
 
 For the legacy query optimizer (planner), sets the estimate of the cost of a disk page fetch that is part of a series of sequential fetches.
 
@@ -3016,7 +3016,7 @@ For the legacy query optimizer (planner), sets the estimate of the cost of a dis
 |----------------|---------|-------------------------|
 | floating point | 1       | master, session, reload |
 
-## <a name="server_encoding"></a>server\_encoding
+## server\_encoding<a name="server_encoding"></a>
 
 Reports the database encoding (character set). It is determined when the HAWQ array is initialized. Ordinarily, clients need only be concerned with the value of *client\_encoding*.
 
@@ -3024,7 +3024,7 @@ Reports the database encoding (character set). It is determined when the HAWQ ar
 |--------------------------|---------|---------------------|
 | &lt;system dependent&gt; | UTF8    | read only           |
 
-## <a name="server_version"></a>server\_version
+## server\_version<a name="server_version"></a>
 
 Reports the version of PostgreSQL that this release of HAWQ is based on.
 
@@ -3032,7 +3032,7 @@ Reports the version of PostgreSQL that this release of HAWQ is based on.
 |-------------|---------|---------------------|
 | string      | 8.2.15  | read only           |
 
-## <a name="server_version_num"></a>server\_version\_num
+## server\_version\_num<a name="server_version_num"></a>
 
 Reports the version of PostgreSQL that this release of HAWQ is based on as an integer.
 
@@ -3040,7 +3040,7 @@ Reports the version of PostgreSQL that this release of HAWQ is based on as an in
 |-------------|---------|---------------------|
 | integer     | 80215   | read only           |
 
-## <a name="shared_buffers"></a>shared\_buffers
+## shared\_buffers<a name="shared_buffers"></a>
 
 Sets the amount of memory a HAWQ segment instance uses for shared memory buffers. This setting must be at least 128KB and at least 16KB times [max\_connections](#max_connections).
 
@@ -3072,7 +3072,7 @@ See HAWQ installation documentation for information about the HAWQ values for th
 |----------------------------------------|---------|--------------------------|
 | integer &gt; 16K \* *max\_connections* | 125MB   | segment, system, restart |
 
-## <a name="shared_preload_libraries"></a>shared\_preload\_libraries
+## shared\_preload\_libraries<a name="shared_preload_libraries"></a>
 
 A comma-separated list of shared libraries that are to be preloaded at server start. PostgreSQL procedural language libraries can be preloaded in this way, typically by using the syntax '`$libdir/plXXX`' where *XXX* is pgsql, perl, tcl, or python. By preloading a shared library, the library startup time is avoided when the library is first used. If a specified library is not found, the server will fail to start.
 
@@ -3080,7 +3080,7 @@ A comma-separated list of shared libraries that are to be preloaded at server st
 |-------------------------------|--------------|------------------------|
 | string (comma-separated list) | no value set | local, system, restart |
 
-## <a name="ssl"></a>ssl
+## ssl<a name="ssl"></a>
 
 Enables SSL connections.
 
@@ -3088,7 +3088,7 @@ Enables SSL connections.
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, system, restart |
 
-## <a name="ssl_ciphers"></a>ssl\_ciphers
+## ssl\_ciphers<a name="ssl_ciphers"></a>
 
 Specifies a list of SSL ciphers that are allowed to be used on secure connections. See the openssl manual page for a list of supported ciphers.
 
@@ -3096,7 +3096,7 @@ Specifies a list of SSL ciphers that are allowed to be used on secure connection
 |-------------|---------|-------------------------|
 | string      | ALL     | master, system, restart |
 
-## <a name="standard_conforming_strings"></a>standard\_conforming\_strings
+## standard\_conforming\_strings<a name="standard_conforming_strings"></a>
 
 Reports whether ordinary string literals ('...') treat backslashes literally, as specified in the SQL standard. The value is currently always off, indicating that backslashes are treated as escapes. It is planned that this will change to on in a future release when string literal syntax changes to meet the standard. Applications may check this parameter to determine how string literals will be processed. The presence of this parameter can also be taken as an indication that the escape string syntax (E'...') is supported.
 
@@ -3104,7 +3104,7 @@ Reports whether ordinary string literals ('...') treat backslashes literally, as
 |-------------|---------|---------------------|
 | Boolean     | off     | read only           |
 
-## <a name="statement_timeout"></a>statement\_timeout
+## statement\_timeout<a name="statement_timeout"></a>
 
 Abort any statement that takes over the specified number of milliseconds. 0 turns off the limitation.
 
@@ -3112,7 +3112,7 @@ Abort any statement that takes over the specified number of milliseconds. 0 turn
 |------------------------|---------|-------------------------|
 | number of milliseconds | 0       | master, session, reload |
 
-## <a name="superuser_reserved_connections"></a>superuser\_reserved\_connections
+## superuser\_reserved\_connections<a name="superuser_reserved_connections"></a>
 
 Determines the number of connection slots that are reserved for HAWQ superusers.
 
@@ -3120,7 +3120,7 @@ Determines the number of connection slots that are reserved for HAWQ superusers.
 |---------------------------------|---------|------------------------|
 | integer &lt; *max\_connections* | 3       | local, system, restart |
 
-## <a name="tcp_keepalives_count"></a>tcp\_keepalives\_count
+## tcp\_keepalives\_count<a name="tcp_keepalives_count"></a>
 
 How many keepalives may be lost before the connection is considered dead. A value of 0 uses the system default. If TCP\_KEEPCNT is not supported, this parameter must be 0.
 
@@ -3128,7 +3128,7 @@ How many keepalives may be lost before the connection is considered dead. A valu
 |---------------------------|---------|------------------------|
 | number of lost keepalives | 0       | local, system, restart |
 
-## <a name="tcp_keepalives_idle"></a>tcp\_keepalives\_idle
+## tcp\_keepalives\_idle<a name="tcp_keepalives_idle"></a>
 
 Number of seconds between sending keepalives on an otherwise idle connection. A value of 0 uses the system default. If TCP\_KEEPIDLE is not supported, this parameter must be 0.
 
@@ -3136,7 +3136,7 @@ Number of seconds between sending keepalives on an otherwise idle connection. A 
 |-------------------|---------|------------------------|
 | number of seconds | 0       | local, system, restart |
 
-## <a name="tcp_keepalives_interval"></a>tcp\_keepalives\_interval
+## tcp\_keepalives\_interval<a name="tcp_keepalives_interval"></a>
 
 How many seconds to wait for a response to a keepalive before retransmitting. A value of 0 uses the system default. If TCP\_KEEPINTVL is not supported, this parameter must be 0.
 
@@ -3144,7 +3144,7 @@ How many seconds to wait for a response to a keepalive before retransmitting. A 
 |-------------------|---------|------------------------|
 | number of seconds | 0       | local, system, restart |
 
-## <a name="temp_buffers"></a>temp\_buffers
+## temp\_buffers<a name="temp_buffers"></a>
 
 Sets the maximum number of temporary buffers used by each database session. These are session-local buffers used only for access to temporary tables. The setting can be changed within individual sessions, but only up until the first use of temporary tables within a session. The cost of setting a large value in sessions that do not actually need a lot of temporary buffers is only a buffer descriptor, or about 64 bytes, per increment. However if a buffer is actually used, an additional 8192 bytes will be consumed.
 
@@ -3152,7 +3152,7 @@ Sets the maximum number of temporary buffers used by each database session. Thes
 |-------------|---------|-------------------------|
 | integer     | 1024    | master, session, reload |
 
-## <a name="TimeZone"></a>TimeZone
+## TimeZone<a name="TimeZone"></a>
 
 Sets the time zone for displaying and interpreting time stamps. The default is to use whatever the system environment specifies as the time zone. See [<span class="ph">Date/Time Keywords</span>](http://www.postgresql.org/docs/8.2/static/datetime-keywords.html) in the PostgreSQL documentation.
 
@@ -3160,7 +3160,7 @@ Sets the time zone for displaying and interpreting time stamps. The default is t
 |------------------------|---------|---------------------|
 | time zone abbreviation |         | local, restart      |
 
-## <a name="timezone_abbreviations"></a>timezone\_abbreviations
+## timezone\_abbreviations<a name="timezone_abbreviations"></a>
 
 Sets the collection of time zone abbreviations that will be accepted by the server for date time input. The default is `Default`, which is a collection that works in most of the world. `Australia` and `India`, and other collections can be defined for a particular installation. Possible values are names of configuration files stored in `$GPHOME/share/postgresql/timezonesets/`.
 
@@ -3175,7 +3175,7 @@ To configure HAWQ to use a custom collection of timezones, copy the file that co
 |-------------|---------|-------------------------|
 | string      | Default | master, session, reload |
 
-## <a name="track_activities"></a>track\_activities
+## track\_activities<a name="track_activities"></a>
 
 Enables the collection of statistics on the currently executing command of each session, along with the time at which that command began execution. When enabled, this information is not visible to all users, only to superusers and the user owning the session. This data can be accessed via the *pg\_stat\_activity* system view.
 
@@ -3183,7 +3183,7 @@ Enables the collection of statistics on the currently executing command of each 
 |-------------|---------|-------------------------|
 | Boolean     | on      | master, session, reload |
 
-## <a name="track_counts"></a>track\_counts
+## track\_counts<a name="track_counts"></a>
 
 Enables the collection of row and block level statistics on database activity. If enabled, the data that is produced can be accessed via the *pg\_stat* and *pg\_statio* family of system views.
 
@@ -3191,7 +3191,7 @@ Enables the collection of row and block level statistics on database activity. I
 |-------------|---------|------------------------|
 | Boolean     | off     | local, system, restart |
 
-## <a name="transaction_isolation"></a>transaction\_isolation
+## transaction\_isolation<a name="transaction_isolation"></a>
 
 Sets the current transaction's isolation level.
 
@@ -3218,7 +3218,7 @@ Sets the current transaction's isolation level.
 </tbody>
 </table>
 
-## <a name="transaction_read_only"></a>transaction\_read\_only
+## transaction\_read\_only<a name="transaction_read_only"></a>
 
 Sets the current transaction's read-only status.
 
@@ -3226,7 +3226,7 @@ Sets the current transaction's read-only status.
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="transform_null_equals"></a>transform\_null\_equals
+## transform\_null\_equals<a name="transform_null_equals"></a>
 
 When on, expressions of the form expr = NULL (or NULL = expr) are treated as expr IS NULL, that is, they return true if expr evaluates to the null value, and false otherwise. The correct SQL-spec-compliant behavior of expr = NULL is to always return null (unknown).
 
@@ -3234,7 +3234,7 @@ When on, expressions of the form expr = NULL (or NULL = expr) are treated as exp
 |-------------|---------|-------------------------|
 | Boolean     | off     | master, session, reload |
 
-## <a name="unix_socket_directory"></a>unix\_socket\_directory
+## unix\_socket\_directory<a name="unix_socket_directory"></a>
 
 Specifies the directory of the UNIX-domain socket on which the server is to listen for connections from client applications.
 
@@ -3242,7 +3242,7 @@ Specifies the directory of the UNIX-domain socket on which the server is to list
 |----------------|---------|------------------------|
 | directory path | unset   | local, system, restart |
 
-## <a name="unix_socket_group"></a>unix\_socket\_group
+## unix\_socket\_group<a name="unix_socket_group"></a>
 
 Sets the owning group of the UNIX-domain socket. By default this is an empty string, which uses the default group for the current user.
 
@@ -3250,7 +3250,7 @@ Sets the owning group of the UNIX-domain socket. By default this is an empty str
 |-----------------|---------|------------------------|
 | UNIX group name | unset   | local, system, restart |
 
-## <a name="unix_socket_permissions"></a>unix\_socket\_permissions
+## unix\_socket\_permissions<a name="unix_socket_permissions"></a>
 
 Sets the access permissions of the UNIX-domain socket. UNIX-domain sockets use the usual UNIX file system permission set. Note that for a UNIX-domain socket, only write permission matters.
 
@@ -3258,7 +3258,7 @@ Sets the access permissions of the UNIX-domain socket. UNIX-domain sockets use t
 |------------------------------------------------------------------------------------|---------|------------------------|
 | numeric UNIX file permission mode (as accepted by the *chmod* or *umask* commands) | 511     | local, system, restart |
 
-## <a name="update_process_title"></a>update\_process\_title
+## update\_process\_title<a name="update_process_title"></a>
 
 Enables updating of the process title every time a new SQL command is received by the server. The process title is typically viewed by the `ps` command.
 
@@ -3266,7 +3266,7 @@ Enables updating of the process title every time a new SQL command is received b
 |-------------|---------|------------------------|
 | Boolean     | on      | local, system, restart |
 
-## <a name="vacuum_cost_delay"></a>vacuum\_cost\_delay
+## vacuum\_cost\_delay<a name="vacuum_cost_delay"></a>
 
 The length of time that the process will sleep when the cost limit has been exceeded. 0 disables the cost-based vacuum delay feature.
 
@@ -3274,7 +3274,7 @@ The length of time that the process will sleep when the cost limit has been exce
 |------------------------------------------|---------|------------------------|
 | milliseconds &lt; 0 (in multiples of 10) | 0       | local, system, restart |
 
-## <a name="vacuum_cost_limit"></a>vacuum\_cost\_limit
+## vacuum\_cost\_limit<a name="vacuum_cost_limit"></a>
 
 The accumulated cost that will cause the vacuuming process to sleep.
 
@@ -3282,7 +3282,7 @@ The accumulated cost that will cause the vacuuming process to sleep.
 |----------------|---------|------------------------|
 | integer &gt; 0 | 200     | local, system, restart |
 
-## <a name="vacuum_cost_page_dirty"></a>vacuum\_cost\_page\_dirty
+## vacuum\_cost\_page\_dirty<a name="vacuum_cost_page_dirty"></a>
 
 The estimated cost charged when vacuum modifies a block that was previously clean. It represents the extra I/O required to flush the dirty block out to disk again.
 
@@ -3290,7 +3290,7 @@ The estimated cost charged when vacuum modifies a block that was previously clea
 |----------------|---------|------------------------|
 | integer &gt; 0 | 20      | local, system, restart |
 
-## <a name="vacuum_cost_page_miss"></a>vacuum\_cost\_page\_miss
+## vacuum\_cost\_page\_miss<a name="vacuum_cost_page_miss"></a>
 
 The estimated cost for vacuuming a buffer that has to be read from disk. This represents the effort to lock the buffer pool, lookup the shared hash table, read the desired block in from the disk and scan its content.
 
@@ -3298,7 +3298,7 @@ The estimated cost for vacuuming a buffer that has to be read from disk. This re
 |----------------|---------|------------------------|
 | integer &gt; 0 | 10      | local, system, restart |
 
-## <a name="vacuum_freeze_min_age"></a>vacuum\_freeze\_min\_age
+## vacuum\_freeze\_min\_age<a name="vacuum_freeze_min_age"></a>
 
 Specifies the cutoff age (in transactions) that `VACUUM` should use to decide whether to replace transaction IDs with *FrozenXID* while scanning a table.
 
@@ -3308,7 +3308,7 @@ For information about `VACUUM` and transaction ID management, see [Managing Data
 |------------------------|-----------|------------------------|
 | integer 0-100000000000 | 100000000 | local, system, restart |
 
-## <a name="xid_stop_limit"></a>xid\_stop\_limit
+## xid\_stop\_limit<a name="xid_stop_limit"></a>
 
 The number of transaction IDs prior to the ID where transaction ID wraparound occurs. When this limit is reached, HAWQ stops creating new transactions to avoid data loss due to transaction ID wraparound.
 

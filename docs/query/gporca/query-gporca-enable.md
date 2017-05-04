@@ -35,7 +35,7 @@ You can also use the HAWQ utility `analyzedb` to update table statistics. The HA
 
 As part of routine database maintenance, you should refresh statistics on the root partition when there are significant changes to child leaf partition data.
 
-## <a id="topic_r5d_hv1_kr"></a>Setting the optimizer\_analyze\_root\_partition Parameter
+## Setting the optimizer\_analyze\_root\_partition Parameter<a id="topic_r5d_hv1_kr"></a>
 
 When the configuration parameter `optimizer_analyze_root_partition` is set to `on`, root partition statistics will be collected when `ANALYZE` is run on a partitioned table. Root partition statistics are required by GPORCA.
 
@@ -65,7 +65,7 @@ If you manage your HAWQ cluster from the command line:
     $ hawq stop cluster -u
     ```
 
-## <a id="topic_byp_lqk_br"></a>Enabling GPORCA for a System
+## Enabling GPORCA for a System<a id="topic_byp_lqk_br"></a>
 
 Set the server configuration parameter `optimizer` for the HAWQ system.
 
@@ -93,7 +93,7 @@ If you manage your HAWQ cluster from the command line:
     $ hawq stop cluster -u
     ```
 
-## <a id="topic_pzr_3db_3r"></a>Enabling GPORCA for a Database
+## Enabling GPORCA for a Database<a id="topic_pzr_3db_3r"></a>
 
 Set the server configuration parameter `optimizer` for individual HAWQ databases with the `ALTER DATABASE` command. For example, this command enables GPORCA for the database *test\_db*.
 
@@ -101,7 +101,7 @@ Set the server configuration parameter `optimizer` for individual HAWQ databases
 => ALTER DATABASE test_db SET optimizer = ON ;
 ```
 
-## <a id="topic_lx4_vqk_br"></a>Enabling GPORCA for a Session or a Query
+## Enabling GPORCA for a Session or a Query<a id="topic_lx4_vqk_br"></a>
 
 You can use the `SET` command to set `optimizer` server configuration parameter for a session. For example, after you use the `psql` utility to connect to HAWQ, this `SET` command enables GPORCA:
 

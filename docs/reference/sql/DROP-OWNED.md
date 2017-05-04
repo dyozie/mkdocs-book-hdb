@@ -23,17 +23,17 @@ under the License.
 
 Removes database objects owned by a database role.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP OWNED BY <name> [, ...] [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP OWNED` drops all the objects in the current database that are owned by one of the specified roles. Any privileges granted to the given roles on objects in the current database will also be revoked.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<name\>   </dt>
 <dd>The name of a role whose objects will be dropped, and whose privileges will be revoked.</dd>
@@ -44,7 +44,7 @@ DROP OWNED BY <name> [, ...] [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the objects owned by a role if any other database objects depend on one of the affected objects. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 `DROP OWNED` is often used to prepare for the removal of one or more roles. Because `DROP OWNED` only affects the objects in the current database, it is usually necessary to execute this command in each database that contains objects owned by a role that is to be removed.
 
@@ -52,7 +52,7 @@ Using the `CASCADE` option may make the command recurse to objects owned by othe
 
 The `REASSIGN OWNED` command is an alternative that reassigns the ownership of all the database objects owned by one or more roles.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Remove any database objects owned by the role named `sally`:
 
@@ -60,10 +60,10 @@ Remove any database objects owned by the role named `sally`:
 DROP OWNED BY sally;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The `DROP OWNED` statement is a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [REASSIGN OWNED](REASSIGN-OWNED.html), [DROP ROLE](DROP-ROLE.html)

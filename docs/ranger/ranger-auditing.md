@@ -29,7 +29,7 @@ If you modify `ranger-hawq-audit.xml` after you have registered the HAWQ Ranger 
 
 Full documentation for the Ranger auditing configuration properties and the Ranger auditing framework is available at [Ranger 0.5 Audit Configuration](https://cwiki.apache.org/confluence/display/RANGER/Ranger+0.5+Audit+Configuration).
 
-## <a id="solr"></a>Configuring Solr Auditing
+## Configuring Solr Auditing<a id="solr"></a>
 To configure a Solr audit sink, you define a different set of properties in `ranger-hawq-audit.xml` depending on whether you use Zookeeper or a direct URL connect to your Solr destination. For a production environment, use Zookeeper instead of a direct URL.
 
 If you use Zookeeper to connect to Solr, configure these auditing properties in `ranger-hawq-audit.xml`:
@@ -81,7 +81,7 @@ For example:
 </property>
 ```
 
-## <a id="hdfs"></a>Configuring HDFS Auditing
+## Configuring HDFS Auditing<a id="hdfs"></a>
 To configure an HDFS audit sink, define these auditing properties in `ranger-hawq-audit.xml`:
 
 Table 2. Properties for HDFS Configuration
@@ -118,7 +118,7 @@ For example:
     <value>/usr/local/hawq_<version>/ranger/plugin-service/logs/spool/audit/hdfs</value>
 </property>
 ```
-## <a id="log4j"></a>Configuring Log4j Auditing
+## Configuring Log4j Auditing<a id="log4j"></a>
 To configure a Log4j audit sink, define these auditing properties in `ranger-hawq-audit.xml`:
 
 Table 3. Properties for Log4j Configuration

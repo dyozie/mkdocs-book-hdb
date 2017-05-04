@@ -23,7 +23,7 @@ under the License.
 
 Defines a cursor.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DECLARE <name> [BINARY] [INSENSITIVE] [NO SCROLL] CURSOR
@@ -31,7 +31,7 @@ DECLARE <name> [BINARY] [INSENSITIVE] [NO SCROLL] CURSOR
      FOR <query> [FOR READ ONLY]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DECLARE` allows a user to create cursors, which can be used to retrieve a small number of rows at a time out of a larger query. Cursors can return data either in text or in binary format using [FETCH](FETCH.html).
 
@@ -44,7 +44,7 @@ Binary cursors should be used carefully. Many applications, including psql, are 
 **Note:**
 When the client application uses the 'extended query' protocol to issue a `FETCH` command, the Bind protocol message specifies whether data is to be retrieved in text or binary format. This choice overrides the way that the cursor is defined. The concept of a binary cursor as such is thus obsolete when using extended query protocol — any cursor can be treated as either text or binary.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<name\>  </dt>
 <dd>The name of the cursor to be created.</dd>
@@ -70,7 +70,7 @@ WITHOUT HOLD  </dt>
 <dt>FOR READ ONLY  </dt>
 <dd>`FOR READ ONLY` indicates that the cursor is used in a read-only mode. Cursors can only be used in a read-only mode in HAWQ. HAWQ does not support updatable cursors (FOR UPDATE), so this is the default behavior.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Unless `WITH HOLD` is specified, the cursor created by this command can only be used within the current transaction. Thus, `DECLARE` without `WITH           HOLD` is useless outside a transaction block: the cursor would survive only to the completion of the statement. Therefore HAWQ reports an error if this command is used outside a transaction block. Use `BEGIN`, `COMMIT` and `ROLLBACK` to define a transaction block.
 
@@ -80,7 +80,7 @@ Scrollable cursors are not currently supported in HAWQ. You can only use `FETCH`
 
 You can see all available cursors by querying the `pg_cursors` system view.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Declare a cursor:
 
@@ -88,7 +88,7 @@ Declare a cursor:
 DECLARE mycursor CURSOR FOR SELECT * FROM mytable;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 SQL standard allows cursors only in embedded SQL and in modules. HAWQ permits cursors to be used interactively.
 
@@ -98,6 +98,6 @@ The SQL standard allows cursors to move both forward and backward. All HAWQ curs
 
 Binary cursors are a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [CLOSE](CLOSE.html), [FETCH](FETCH.html), [SELECT](SELECT.html)

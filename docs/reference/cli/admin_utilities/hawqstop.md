@@ -23,7 +23,7 @@ under the License.
 
 Stops or restarts a HAWQ system.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq stop <object> [-a | --prompt]
@@ -35,7 +35,7 @@ hawq stop <object> [-a | --prompt]
 hawq stop [-? | -h | --help]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq stop` utility is used to stop the database servers that comprise a HAWQ system. When you stop a HAWQ system, you are actually stopping several `postgres` database server processes at once (the master and all of the segment instances). The `hawq           stop` utility handles the shutdown of the individual instances. Each instance is shut down in parallel.
 
@@ -61,7 +61,7 @@ If the HAWQ cluster has active connections, use the command `hawq stop cluster -
 <dt>allsegments  </dt>
 <dd>Stop all segments.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-a, -\\\-prompt  </dt>
 <dd>Do not prompt the user for confirmation before executing.</dd>
@@ -92,7 +92,7 @@ Immediate shutdown aborts transactions in progress and kills all `postgres` proc
 <dd>Displays the online help.</dd>
 
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Stop a HAWQ system in smart mode:
 
@@ -118,6 +118,6 @@ Reload the `hawq-site.xml` and `pg_hba.conf` files after making configuration ch
 $ hawq stop cluster -u
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq start](hawqstart.html#topic1)

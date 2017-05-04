@@ -23,7 +23,7 @@ under the License.
 
 Changes the definition of a CONVERSION.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 ALTER CONVERSION <name> RENAME TO <newname>
@@ -31,13 +31,13 @@ ALTER CONVERSION <name> RENAME TO <newname>
 ALTER CONVERSION <name> OWNER TO <newowner>
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `ALTER CONVERSION` changes the definition of a conversion. 
 
 You must own the conversion to use `ALTER CONVERSION`. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have `CREATE` privilege on the conversion's schema. (These restrictions enforce that altering the owner does not do anything you could not do by dropping and recreating the conversion. However, a superuser can always alter ownership of any conversion.).
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<name\>   </dt>
 <dd>The (optionally schema-qualified) name of an existing conversion.</dd>
@@ -49,7 +49,7 @@ You must own the conversion to use `ALTER CONVERSION`. To alter the owner, you m
 <dd>The new owner of the conversion.</dd>
 
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 To rename the conversion `iso_8859_1_to_utf8` to `latin1_to_unicode`:
 
@@ -64,11 +64,11 @@ To change the owner of the conversion `iso_8859_1_to_utf8` to `joe`:
 ALTER CONVERSION iso_8859_1_to_utf8 OWNER TO joe;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 There is no ALTER CONVERSION statement in the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE CONVERSION](CREATE-CONVERSION.html), [DROP CONVERSION](DROP-CONVERSION.html)
 

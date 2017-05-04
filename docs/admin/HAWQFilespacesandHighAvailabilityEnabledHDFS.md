@@ -23,7 +23,7 @@ under the License.
 
 If you initialized HAWQ without the HDFS High Availability \(HA\) feature, you can enable it by using the following procedure.
 
-## <a id="enablingthehdfsnamenodehafeature"></a>Enabling the HDFS NameNode HA Feature 
+## Enabling the HDFS NameNode HA Feature <a id="enablingthehdfsnamenodehafeature"></a>
 
 To enable the HDFS NameNode HA feature for use with HAWQ, you need to perform the following tasks:
 
@@ -35,13 +35,13 @@ To enable the HDFS NameNode HA feature for use with HAWQ, you need to perform th
 1. Start the HAWQ cluster and resynchronize the standby master after moving the filespace.
 
 
-### <a id="enablehahdfs"></a>Step 1: Enable High Availability in Your HDFS Cluster 
+### Step 1: Enable High Availability in Your HDFS Cluster <a id="enablehahdfs"></a>
 
 Enable high availability for NameNodes in your HDFS cluster. See the documentation for your Hadoop distribution for instructions on how to do this. 
 
 **Note:** If you're using Ambari to manage your HDFS cluster, you can use the Enable NameNode HA Wizard. For example, [this Hortonworks HDP procedure](https://docs.hortonworks.com/HDPDocuments/Ambari-2.4.1.0/bk_ambari-user-guide/content/how_to_configure_namenode_high_availability.html) outlines how to do this in Ambari for HDP.
 
-### <a id="collectinginformationaboutthetargetfilespace"></a>Step 2: Collect Information about the Target Filespace 
+### Step 2: Collect Information about the Target Filespace <a id="collectinginformationaboutthetargetfilespace"></a>
 
 A default filespace named dfs\_system exists in the pg\_filespace catalog and the parameter, pg\_filespace\_entry, contains detailed information for each filespace. 
 
@@ -88,7 +88,7 @@ To move the filespace location to a HA-enabled HDFS location, you must move the 
     New location: hdfs://hdfs-cluster/hawq/hawq-1459499690
     ```
 
-### <a id="stoppinghawqclusterandbackupcatalog"></a>Step 3: Stop the HAWQ Cluster and Back Up the Catalog 
+### Step 3: Stop the HAWQ Cluster and Back Up the Catalog <a id="stoppinghawqclusterandbackupcatalog"></a>
 
 **Note:** Ambari users must perform this manual step.
 
@@ -134,7 +134,7 @@ When you enable HA HDFS, you are changing the HAWQ catalog and persistent table
     ```
 	The master data directory contains the catalog. Fatal errors can occur due to hardware failure or if you fail to kill a HAWQ process before attempting a filespace location change. Make sure you back this directory up.
 
-### <a id="movingthefilespacelocation"></a>Step 4: Move the Filespace Location 
+### Step 4: Move the Filespace Location <a id="movingthefilespacelocation"></a>
 
 **Note:** Ambari users must perform this manual step.
 
@@ -158,7 +158,7 @@ Non-fatal error can occur if you provide invalid input or if you have not stoppe
 
 Fatal errors can occur due to hardware failure or if you fail to kill a HAWQ process before attempting a filespace location change. When a fatal error occurs, you will see the message, "PLEASE RESTORE MASTER DATA DIRECTORY" in the output. If this occurs, shut down the database and restore the `${MDATA_DIR}` that you backed up in Step 4.
 
-### <a id="configuregphomeetchdfsclientxml"></a>Step 5: Update HAWQ to Use NameNode HA by Reconfiguring hdfs-client.xml and hawq-site.xml 
+### Step 5: Update HAWQ to Use NameNode HA by Reconfiguring hdfs-client.xml and hawq-site.xml <a id="configuregphomeetchdfsclientxml"></a>
 
 If you install and manage your cluster using command-line utilities, follow these steps to modify your HAWQ configuration to use the NameNode HA service.
 
@@ -226,7 +226,7 @@ For command-line administrators:
 	$ hawq scp -f hawq_hosts hdfs-client.xml hawq-site.xml =:$GPHOME/etc/
 	```
 
-### <a id="reinitializethestandbymaster"></a>Step 6: Restart the HAWQ Cluster and Resynchronize the Standby Master 
+### Step 6: Restart the HAWQ Cluster and Resynchronize the Standby Master <a id="reinitializethestandbymaster"></a>
 
 1. Restart the HAWQ cluster:
 
@@ -241,6 +241,6 @@ For command-line administrators:
 
 	```
 
-## <a id="pxfnhdfsnamenode"></a>Using PXF with HDFS NameNode HA
+## Using PXF with HDFS NameNode HA<a id="pxfnhdfsnamenode"></a>
 
 If HDFS NameNode High Availability is enabled, use the HDFS Nameservice ID in the `LOCATION` clause \<host\> field when invoking any PXF `CREATE EXTERNAL TABLE` command. If the \<port\> is omitted from the `LOCATION` URI, PXF connects to the port number designated by the `pxf_service_port` server configuration parameter value (default is 51200).

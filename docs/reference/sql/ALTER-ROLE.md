@@ -23,7 +23,7 @@ under the License.
 
 Changes a database role (user or group).
 
-## <a id="alterrole__section2"></a>Synopsis
+## Synopsis<a id="alterrole__section2"></a>
 
 ```pre
 ALTER ROLE <name> RENAME TO <newname>
@@ -55,7 +55,7 @@ where \<option\> can be:
     | [ DROP DENY FOR <deny_point> ]
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
 `ALTER ROLE` changes the attributes of a HAWQ role. There are several variants of this command:
 
@@ -65,7 +65,7 @@ where \<option\> can be:
 
 **Note:** SET and RESET commands are currently not supported in connection with ALTER ROLE and will result in an error. See [SET](SET.html) and [About Server Configuration Parameters](../guc/guc_config.html#topic1) for information about user-settable configuration parameters.
 
-## <a id="alterrole__section4"></a>Parameters
+## Parameters<a id="alterrole__section4"></a>
 
 <dt> \<name\>  </dt>
 <dd>The name of the role whose attributes are to be altered.</dd>
@@ -188,10 +188,10 @@ Alter a role to remove the constraint that does not allow login access on Sunday
 ALTER ROLE user3 DROP DENY FOR DAY 'Sunday';
 ```
 
-## <a id="compat"></a>Compatibility
+## Compatibility<a id="compat"></a>
 
 The `ALTER ROLE` statement is a HAWQ extension.
 
-## <a id="see"></a>See Also
+## See Also<a id="see"></a>
 
 [CREATE ROLE](CREATE-ROLE.html), [DROP ROLE](DROP-ROLE.html), [SET](SET.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html), [GRANT](GRANT.html), [REVOKE](REVOKE.html) 

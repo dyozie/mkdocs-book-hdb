@@ -23,14 +23,14 @@ under the License.
 
 Changes the value of a HAWQ configuration parameter.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 SET [SESSION | LOCAL] <configuration_parameter> {TO | =} {<value> | '<value>' | DEFAULT}
 SET [SESSION | LOCAL] TIME ZONE {<timezone> | LOCAL | DEFAULT}
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `SET` command changes server configuration parameters. Any configuration parameter classified as a *session* parameter can be changed on-the-fly with `SET`. See [About Server Configuration Parameters](../guc/guc_config.html#topic1). `SET` only affects the value used by the current session.
 
@@ -38,7 +38,7 @@ If `SET` or `SET SESSION` is issued within a transaction that is later aborted, 
 
 The effects of `SET LOCAL` only last till the end of the current transaction, whether committed or not. A special case is `SET` followed by `SET LOCAL` within a single transaction: the `SET                LOCAL` value will be seen until the end of the transaction, but afterwards (if the transaction is committed) the `SET` value will take effect.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>SESSION  </dt>
 <dd>Specifies that the command takes effect for the current session. This is the default.</dd>
@@ -71,7 +71,7 @@ DEFAULT  </dt>
 `INTERVAL '-08:00' HOUR TO MINUTE` (time zone 8 hours west from UTC).</dd>
 </dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Set the schema search path:
 
@@ -97,10 +97,10 @@ Set the time zone for Italy:
 SET TIME ZONE 'Europe/Rome';
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `SET TIME ZONE` extends the syntax defined in the SQL standard. The standard allows only numeric time zone offsets while HAWQ allows more flexible time-zone specifications. All other `SET` features are HAWQ extensions.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [RESET](RESET.html), [SHOW](SHOW.html)

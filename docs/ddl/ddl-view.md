@@ -25,7 +25,7 @@ Views enable you to save frequently used or complex queries, then access them in
 
 If a subquery is associated with a single query, consider using the `WITH` clause of the `SELECT` command instead of creating a seldom-used view.
 
-## <a id="topic101"></a>Creating Views 
+## Creating Views <a id="topic101"></a>
 
 The `CREATE VIEW`command defines a view of a query. For example:
 
@@ -35,7 +35,7 @@ CREATE VIEW comedies AS SELECT * FROM films WHERE kind = 'comedy';
 
 Views ignore `ORDER BY` and `SORT` operations stored in the view.
 
-## <a id="topic102"></a>Dropping Views 
+## Dropping Views <a id="topic102"></a>
 
 The `DROP VIEW` command removes a view. For example:
 

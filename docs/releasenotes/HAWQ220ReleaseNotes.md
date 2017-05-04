@@ -4,7 +4,7 @@ title: Pivotal HDB 2.2.0 Release Notes
 
 Pivotal HDB 2.2.0 is a minor release of the product and is based on [Apache HAWQ \(Incubating\)](http://hawq.incubator.apache.org/). This release includes RHEL/CentOS 7 support, Beta support for Apache Ranger integration, and bug fixes.
 
-## <a id="topic_dhh_2jx_yt"></a>Supported Platforms 
+## Supported Platforms <a id="topic_dhh_2jx_yt"></a>
 
 The supported platform for running Pivotal HDB 2.2.0 comprises:
 
@@ -15,7 +15,7 @@ The supported platform for running Pivotal HDB 2.2.0 comprises:
 
 Each Pivotal HDB host machine must also meet the Apache HAWQ \(Incubating\) system requirements. [See Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) for more information.
 
-### <a id="topic_g53_tgv_2v"></a>Product Support Matrix
+### Product Support Matrix<a id="topic_g53_tgv_2v"></a>
 
 The following table summarizes Pivotal HDB product support for current and previous versions of Pivotal HDB, Hadoop, HAWQ, Ambari, and operating systems.
 
@@ -35,7 +35,7 @@ The following table summarizes Pivotal HDB product support for current and previ
 |1.3.0.0|1.3.3|n/a|n/a|n/a|1.7.1, 1.8, 1.9, 1.9.1|n/a|n/a|
 
 
-### <a id="topic_plsupportmatrix"></a>Procedural Language Support Matrix
+### Procedural Language Support Matrix<a id="topic_plsupportmatrix"></a>
 
 The following table summarizes component version support for Procedural Languages available in Pivotal HDB 2.x. The versions listed have been tested with Pivotal HDB. Higher versions may be compatible. Please test higher versions thoroughly in your non-production environments before deploying to production.
 
@@ -47,12 +47,12 @@ The following table summarizes component version support for Procedural Language
 |2.0.0.0|1.6, 1.7|3.1.0|5.10.1|2.6.2|
 
 
-### <a id="topic_ywd_4fv_2v"></a>AWS Support Requirements 
+### AWS Support Requirements <a id="topic_ywd_4fv_2v"></a>
 
 Pivotal HDB is supported on Amazon Web Services \(AWS\) servers using either Amazon block level Instance store \(Amazon uses the volume names ephemeral\[0-23\]\) or Amazon Elastic Block Store \(Amazon EBS\) storage. Use long-running EC2 instances with these for long-running HAWQ instances, as Spot instances can be interrupted. If using Spot instances, minimize risk of data loss by loading from and exporting to external storage.
 
 
-## <a id="whatsnewintherelease"></a> Pivotal HDB 2.2.0 Features and Changes 
+##  Pivotal HDB 2.2.0 Features and Changes <a id="whatsnewintherelease"></a>
 
 Pivotal HDB 2.2.0 is based on [Apache HAWQ \(Incubating\)](http://hawq.incubator.apache.org/), and includes the following new features as compared to Pivotal HDB 2.1.2:
 
@@ -69,7 +69,7 @@ Pivotal HDB 2.2.0 is based on [Apache HAWQ \(Incubating\)](http://hawq.incubator
     Pivotal HDB 2.2.0 now fully supports PXF with Optimized Row Columnar \(ORC\) file format, which was formerly BETA.
 
 
-## <a id="hdb20121xmigrate"></a>Pivotal HDB 2.2.0 Upgrade 
+## Pivotal HDB 2.2.0 Upgrade <a id="hdb20121xmigrate"></a>
 
 Pivotal HDB 2.2.0 upgrade paths:
 
@@ -79,14 +79,14 @@ Pivotal HDB 2.2.0 upgrade paths:
 
 **Note**: There is no direct upgrade path from Pivotal HDB 1.x to HDB 2.2.0. For more information on considerations for upgrading from Pivotal 1.x releases to Pivotal 2.x releases, refer to the [Pivotal HDB 2.0 documentation](http://hdb.docs.pivotal.io/200/hdb/releasenotes/HAWQ20ReleaseNotes.html#upgradepaths). Contact your Pivotal representative for assistance in migrating from HDB 1.x to HDB 2.x.
 
-## <a id="haqhdbdiffs"></a>Differences Compared to Apache HAWQ \(Incubating\)
+## Differences Compared to Apache HAWQ \(Incubating\)<a id="haqhdbdiffs"></a>
 
 
 Pivotal HDB 2.2.0 does not currently support the PXF JDBC Plug-in.
 
 Otherwise, Pivotal HDB 2.2.0 includes all of the functionality in [Apache HAWQ \(Incubating\)](http://hawq.incubator.apache.org/).
 
-## <a id="resolvedissues"></a>Resolved Issues
+## Resolved Issues<a id="resolvedissues"></a>
 The following HAWQ and PXF issues were resolved in Pivotal HDB 2.2.0.
 
 | Apache Jira | Component | Summary |
@@ -106,10 +106,10 @@ The following HAWQ and PXF issues were resolved in Pivotal HDB 2.2.0.
 | [HAWQ-1408](https://issues.apache.org/jira/browse/HAWQ-1408) | Core | COPY ... FROM STDIN causes PANIC |
 | [HAWQ-1418](https://issues.apache.org/jira/browse/HAWQ-1418) | Command Line Tools | Print executing command for hawq register |
 
-## <a id="knownissues"></a>Known Issues and Limitations 
+## Known Issues and Limitations <a id="knownissues"></a>
 
 
-### <a id="madlib-install"></a>MADlib 1.9.x Compression
+### MADlib 1.9.x Compression<a id="madlib-install"></a>
 Pivotal HDB 2.2.0 is compatible with MADlib 1.9, 1.9.1, and 1.10. *If you have an existing HDB installation with MADlib 1.9.x installed, or are installing MADlib 1.9.x*, you must download and execute a script to remove MADlib's use of Quicklz compression, which is not supported in HDB 2.2.0. Run this script if you are upgrading an HDB installation with MADlib 1.9.x to HDB 2.2.0, or if you are installing MADlib 1.9.x on HDB 2.2.0.
 
 This procedure is not necessary if you are using or installing MADlib 1.10, or if you have previously disabled Quicklz compression.
@@ -151,15 +151,15 @@ This procedure is not necessary if you are using or installing MADlib 1.10, or i
     $ madpack –p hawq install
     ```
 
-### <a id="issues-os"></a>Operating System
+### Operating System<a id="issues-os"></a>
 -   Some Linux kernel versions between 2.6.32 to 4.3.3 \(not including 2.6.32 and 4.3.3\) have a bug that could introduce a `getaddrinfo()` function hang. To avoid this issue, upgrade your RHEL-6 kernel to version 4.3.3+.
 -   If you are running RHEL-7, ensure that your kernel version is 3.10.0-327.27 or above, otherwise you may experience hangs with large workloads.
   
-### <a id="issues-ranger"></a>Ranger Integration (Beta)
+### Ranger Integration (Beta)<a id="issues-ranger"></a>
 -   Beta-level support of Ranger Plugin Service has a number of known limitations. For more information, refer to [Limitations of Ranger Policy Management](../../hawq/ranger/ranger-overview.html#limitations).
 
 
-### <a id="issues-pxf"></a>PXF
+### PXF<a id="issues-pxf"></a>
 -   GPSQL-3345 - To take advantage of the change in number of virtual segments, PXF external tables must be dropped and recreated after updating the `default_hash_table_bucket_number` server configuration parameter.
 -   GPSQL-3347 - The `LOCATION` string provided when creating a PXF external table must use only ASCII characters to identify a file path. Specifying double-byte or multi-byte characters in a file path returns the following error (formatted for clarity):
 
@@ -175,7 +175,7 @@ This procedure is not necessary if you are using or installing MADlib 1.10, or i
 -   The `HiveORC` profile supports aggregate queries (count, min, max, etc.), but they have not yet been optimized to leverage ORC file- and stripe-level metadata.
 -   The `HiveORC` profile does not yet use the Vectorized Batch reader.
 
-### <a id="issues-plr"></a>PL/R
+### PL/R<a id="issues-plr"></a>
 The HAWQ PL/R extension is provided as a separate RPM in the `hdb-add-ons-2.2.0.0` repository. The files installed by this RPM are owned by `root`. If you installed HAWQ via Ambari, HAWQ files are owned by `gpadmin`. Perform the following steps on each node in your HAWQ cluster after PL/R RPM installation to align the ownership of PL/R files:
 
 ``` shell
@@ -183,7 +183,7 @@ root@hawq-node$ cd /usr/local/hawq
 root@hawq-node$ chown gpadmin:gpadmin share/postgresql/contrib/plr.sql docs/contrib/README.plr lib/postgresql/plr.so
 ```
 
-### <a id="issues-install"></a>Ambari
+### Ambari<a id="issues-install"></a>
 
 -  Ambari-managed clusters should only use Ambari for setting server configuration parameters. Parameters modified using the `hawq config`command will be overwritten on Ambari startup or reconfiguration.
 -   When installing HAWQ in a Kerberos-secured cluster, the installation process may report a warning/failure in Ambari if the HAWQ configuration for resource management type is switched to YARN mode during installation. The warning is related to HAWQ not being able to register with YARN until the HDFS & YARN services are restarted with new configurations resulting from the HAWQ installation process.
@@ -196,7 +196,7 @@ root@hawq-node$ chown gpadmin:gpadmin share/postgresql/contrib/plr.sql docs/cont
 -  Ambari does not support Custom Configuration Groups with HAWQ.
 - Certain HAWQ server configuration parameters related to resource enforcement are not active. Modifying the parameters has no effect in HAWQ since the resource enforcement feature is not currently supported. These parameters include `hawq_re_cgroup_hierarchy_name`, `hawq_re_cgroup_mount_point`, and `hawq_re_cpu_enable`. These parameters appear in the **Advanced hawq-site** configuration section of the Ambari management interface.
 
-#### <a id="nn-workaround"></a>Workaround Required after Moving Namenode
+#### Workaround Required after Moving Namenode<a id="nn-workaround"></a>
 If you use the Ambari Move Namenode Wizard to move a Hadoop namenode, the Wizard does not automatically update the HAWQ configuration to reflect the change. This leaves HAWQ in an non-functional state, and will cause HAWQ service checks to fail with an error similar to:
 
 <pre><code>

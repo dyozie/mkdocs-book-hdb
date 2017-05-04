@@ -28,7 +28,7 @@ This section describes how to use PXF to access Hive data. Options for querying 
 -  Querying Hive tables via PXF's integration with HCatalog
 -  Creating an external table in PXF and querying that table
 
-## <a id="installingthepxfhiveplugin"></a>Prerequisites
+## Prerequisites<a id="installingthepxfhiveplugin"></a>
 
 Before accessing Hive data with HAWQ and PXF, ensure that:
 
@@ -41,7 +41,7 @@ Before accessing Hive data with HAWQ and PXF, ensure that:
 -   You are running the Hive Metastore service on a machine in your cluster. 
 -   You have set the `hive.metastore.uris` property in the `hive-site.xml` on the NameNode.
 
-## <a id="topic_p2s_lvl_25"></a>Hive File Formats
+## Hive File Formats<a id="topic_p2s_lvl_25"></a>
 
 The PXF Hive plug-in supports several file formats and profiles for accessing these formats:
 
@@ -56,9 +56,9 @@ The PXF Hive plug-in supports several file formats and profiles for accessing th
 
 Refer to [File Formats](https://cwiki.apache.org/confluence/display/Hive/FileFormats) for detailed information about the file formats supported by Hive.
 
-## <a id="topic_p2s_lvl_29"></a>Data Type Mapping
+## Data Type Mapping<a id="topic_p2s_lvl_29"></a>
 
-### <a id="hive_primdatatypes"></a>Primitive Data Types
+### Primitive Data Types<a id="hive_primdatatypes"></a>
 
 To represent Hive data in HAWQ, map data values that use a primitive data type to HAWQ columns of the same type.
 
@@ -78,14 +78,14 @@ The following table summarizes external mapping rules for Hive primitive types.
 | timestamp   | timestamp |
 
 
-### <a id="topic_b4v_g3n_25"></a>Complex Data Types
+### Complex Data Types<a id="topic_b4v_g3n_25"></a>
 
 Hive supports complex data types including array, struct, map, and union. PXF maps each of these complex types to `text`.  While HAWQ does not natively support these types, you can create HAWQ functions or application code to extract subcomponents of these complex data types.
 
 Examples using complex data types with the `Hive` and `HiveORC` profiles are provided later in this topic.
 
 
-## <a id="hive_sampledataset"></a>Sample Data Set
+## Sample Data Set<a id="hive_sampledataset"></a>
 
 Examples used in this topic will operate on a common data set. This simple data set models a retail sales operation and includes fields with the following names and data types:
 
@@ -122,7 +122,7 @@ Prepare the sample data set for use:
 Make note of the path to `pxf_hive_datafile.txt`; you will use it in later exercises.
 
 
-## <a id="hivecommandline"></a>Hive Command Line
+## Hive Command Line<a id="hivecommandline"></a>
 
 The Hive command line is a subsystem similar to that of `psql`. To start the Hive command line:
 
@@ -132,7 +132,7 @@ $ HADOOP_USER_NAME=hdfs hive
 
 The default Hive database is named `default`. 
 
-### <a id="hivecommandline_createdb"></a>Example: Create a Hive Database
+### Example: Create a Hive Database<a id="hivecommandline_createdb"></a>
 
 Create a Hive table to expose our sample data set.
 
@@ -164,7 +164,7 @@ Create a Hive table to expose our sample data set.
     hive> SELECT * FROM sales_info;
     ```
 
-### <a id="get_hdfs_file_location"></a>Determine the HDFS location of a Hive Table
+### Determine the HDFS location of a Hive Table<a id="get_hdfs_file_location"></a>
 
 Should you need to identify the HDFS file location of a Hive managed table, reference it using its HDFS file path. You can determine a Hive table's location in HDFS using the `DESCRIBE` command, for example:
 
@@ -181,7 +181,7 @@ The `location` value identifies the HDFS file path of the table.
 
 
 
-## <a id="hcatalog"></a>Using PXF and HCatalog to Query Hive
+## Using PXF and HCatalog to Query Hive<a id="hcatalog"></a>
 
 You can query Hive tables directly through HCatalog integration with HAWQ and PXF, regardless of the underlying file storage format. This integration allows HAWQ to directly use table metadata stored in HCatalog.
 
@@ -200,7 +200,7 @@ The following diagram depicts how HAWQ integrates with HCatalog to query Hive ta
 3.  PXF queries Hive using table metadata that is stored in the HAWQ in-memory catalog tables. Table metadata is dropped at the end of the transaction.
 
 
-### <a id="topic_j1l_enabling"></a>Enabling HCatalog Integration
+### Enabling HCatalog Integration<a id="topic_j1l_enabling"></a>
 
 To enable HCatalog query integration in HAWQ, perform the following steps:
 
@@ -233,7 +233,7 @@ To enable HCatalog query integration in HAWQ, perform the following steps:
         postgres=# GRANT SELECT ON <table-created-WITH-OIDS> TO <role>
         ```
 
-### <a id="topic_j1l_y55_c5"></a>Usage
+### Usage<a id="topic_j1l_y55_c5"></a>
 
 To query a Hive table with HCatalog integration, query HCatalog directly from HAWQ. The query syntax is:
 
@@ -302,7 +302,7 @@ Alternatively, you can use the `pxf_get_item_fields` user-defined function (UDF)
     postgres=# SELECT * FROM pxf_get_item_fields('Hive', '*.*');
     ```
 
-### <a id="topic_r5k_pst_25"></a>Limitations
+### Limitations<a id="topic_r5k_pst_25"></a>
 
 HCatalog integration has the following limitations:
 
@@ -312,7 +312,7 @@ HCatalog integration has the following limitations:
 
 
 
-## <a id="topic_p2s_lvl_28"></a>Querying External Hive Data
+## Querying External Hive Data<a id="topic_p2s_lvl_28"></a>
 
 In the previous section, you used HCatalog integration to query a Hive table. You can also create a PXF/HAWQ external table to access Hive table data. This Hive table access mechanism requires that you identify an appropriate Hive profile.
 
@@ -342,11 +342,11 @@ Hive-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](..
 | FORMAT (`HiveText` and `HiveRC` profiles) | The `FORMAT` clause must specify `TEXT`. The `delimiter` must be specified a second time in '\<delim\>'. |
 
 
-## <a id="profile_hive"></a>Hive Profile
+## Hive Profile<a id="profile_hive"></a>
 
 Use the `Hive` profile with any Hive file storage format. With the `Hive` profile, you can also access heterogenous format data in a single table where each partition may be stored in a different file format. In both cases, the `Hive` profile will use the optimal `Hive*` profile for the underlying file storage type. Refer to the [Partition Filtering](#partitionfiltering) discussion later in this topic for additional information on partitioning and the `Hive` profile.
 
-### <a id="profile_hive_using"></a>Example: Using the Hive Profile
+### Example: Using the Hive Profile<a id="profile_hive_using"></a>
 
 Use the `Hive` profile to create a queryable HAWQ external table from the Hive `sales_info` textfile format table created earlier.
 
@@ -374,13 +374,13 @@ Use the `Hive` profile to create a queryable HAWQ external table from the Hive `
 
     ```
 
-## <a id="profile_hivetext"></a>HiveText Profile
+## HiveText Profile<a id="profile_hivetext"></a>
 
 Use the `HiveText` profile to query text format files.
 
 **Note**: When using the `HiveText` profile, you **must** specify a delimiter option in both the `LOCATION` and `FORMAT` clauses.
 
-### <a id="profile_hivetext_using"></a>Example: Using the HiveText Profile
+### Example: Using the HiveText Profile<a id="profile_hivetext_using"></a>
 
 Use the PXF `HiveText` profile to create a queryable HAWQ external table from the Hive `sales_info` textfile format table created earlier.
 
@@ -412,13 +412,13 @@ Use the PXF `HiveText` profile to create a queryable HAWQ external table from th
     (2 rows)
     ```
 
-## <a id="profile_hiverc"></a>HiveRC Profile
+## HiveRC Profile<a id="profile_hiverc"></a>
 
 The RCFile Hive format is used for row columnar formatted data. The `HiveRC` profile provides access to RCFile data.
 
 **Note**: When using the `HiveRC` profile, you **must** specify a delimiter option in both the `LOCATION` and `FORMAT` clauses.
 
-### <a id="profile_hiverc_rcfiletbl_using"></a>Example: Using the HiveRC Profile
+### Example: Using the HiveRC Profile<a id="profile_hiverc_rcfiletbl_using"></a>
 
 Use the `HiveRC` profile to query RCFile-formatted data in Hive tables.
 
@@ -475,7 +475,7 @@ Use the `HiveRC` profile to query RCFile-formatted data in Hive tables.
      ...
     ```
 
-## <a id="hiveorc-intro"></a>HiveORC Profile
+## HiveORC Profile<a id="hiveorc-intro"></a>
 
 The Optimized Row Columnar (ORC) file format is a columnar file format that provides a highly efficient way to both store and access HDFS data. ORC format offers improvements over text and RCFile formats in terms of both compression and performance. HAWQ/PXF supports ORC version 1.2.1.
 
@@ -499,7 +499,7 @@ Use the `HiveORC` profile to access ORC format data. The `HiveORC` profile provi
 
 **Note**: The `HiveORC` profile currently supports access to data stored in ORC format only through a Hive mapped table.
 
-### <a id="using-hiveorc-profile"></a>Example: Using the HiveORC Profile
+### Example: Using the HiveORC Profile<a id="using-hiveorc-profile"></a>
 
 In the following example, you will create a Hive table stored in ORC format and use the `HiveORC` profile to query this Hive table.
 
@@ -565,7 +565,7 @@ In the following example, you will create a Hive table stored in ORC format and 
     Time: 425.416 ms
     ```
 
-## <a id="topic_dbb_nz3_ts"></a>Accessing Parquet-Format Hive Tables
+## Accessing Parquet-Format Hive Tables<a id="topic_dbb_nz3_ts"></a>
 
 The PXF `Hive` profile supports both non-partitioned and partitioned Hive tables that use the Parquet storage format in HDFS. Simply map the table columns using equivalent HAWQ data types. For example, if a Hive table is created using:
 
@@ -588,9 +588,9 @@ And query the HAWQ external table using:
 postgres=# SELECT fname,lname FROM pxf_parquet_table;
 ```
 
-## <a id="complex_dt_example"></a> Complex Data Types
+##  Complex Data Types<a id="complex_dt_example"></a>
 
-### <a id="complex_dt_example"></a>Example: Using the Hive Profile with Complex Data Types
+### Example: Using the Hive Profile with Complex Data Types<a id="complex_dt_example"></a>
 
 This example employs the `Hive` profile and the array and map complex types, specifically an array of integers and a string key/value pair map.
 
@@ -698,7 +698,7 @@ When specifying an array field in a Hive table, you must identify the terminator
 
     `intarray` and `propmap` are each serialized as text strings.
 
-### <a id="using-hiveorc-profile-complex"></a>Example: Using the HiveORC Profile with Complex Data Types
+### Example: Using the HiveORC Profile with Complex Data Types<a id="using-hiveorc-profile-complex"></a>
 
 In the following example, you will create a Hive table stored in ORC format. You will use the `HiveORC` profile to query the complex types in the `table_complextypes` Hive table you created in the previous exercise.
 
@@ -774,7 +774,7 @@ In the following example, you will create a Hive table stored in ORC format. You
 
 
 
-## <a id="partitionfiltering"></a>Partition Filtering
+## Partition Filtering<a id="partitionfiltering"></a>
 
 The PXF Hive plug-in supports the Hive partitioning feature and directory structure. This enables partition exclusion on selected HDFS files comprising the Hive table. To use the partition filtering feature to reduce network traffic and I/O, run a PXF query using a `WHERE` clause that refers to a specific partition in the partitioned Hive table.
 
@@ -782,7 +782,7 @@ To take advantage of PXF partition filtering push-down, the Hive and PXF partiti
 
 **Note:** The Hive plug-in filters only on partition columns, not on other table attributes.
 
-### <a id="partitionfiltering_pushdowncfg"></a>Configure Partition Filtering Push-Down
+### Configure Partition Filtering Push-Down<a id="partitionfiltering_pushdowncfg"></a>
 
 PXF partition filtering push-down is enabled by default. To disable PXF partition filtering push-down, set the `pxf_enable_filter_pushdown` HAWQ server configuration parameter to `off`:
 
@@ -795,7 +795,7 @@ postgres=# SHOW pxf_enable_filter_pushdown;
 postgres=# SET pxf_enable_filter_pushdown=off;
 ```
 
-### <a id="example_hive_part"></a>Example: Using the Hive Profile to Access Partitioned Homogenous Data
+### Example: Using the Hive Profile to Access Partitioned Homogenous Data<a id="example_hive_part"></a>
 
 In this example, you will use the `Hive` profile to query a Hive table named `sales_part` you partition on `delivery_state` and `delivery_city` fields.  You will then create a HAWQ external table to query `sales_part`, including specific examples illustrating filter pushdown.
 
@@ -880,7 +880,7 @@ In this example, you will use the `Hive` profile to query a Hive table named `sa
 
     This query reads all of the data in the `CALIFORNIA` `delivery_state` partition, regardless of the city.
 
-### <a id="example_hive_part_multi"></a>Example: Using the Hive Profile to Access Partitioned Heterogenous Data
+### Example: Using the Hive Profile to Access Partitioned Heterogenous Data<a id="example_hive_part_multi"></a>
 
 The `Hive` profile supports multiple data format types. This support enables you  to query a partitioned Hive table that may be composed of data of different formats.
 
@@ -1004,7 +1004,7 @@ In this example, you will use the `Hive` profile both directly and indirectly vi
      433
     ```
 
-## <a id="topic_fdm_zrh_1s"></a>Using PXF with Hive Default Partitions
+## Using PXF with Hive Default Partitions<a id="topic_fdm_zrh_1s"></a>
 
 This topic describes a difference in query results between Hive and PXF queries when Hive tables use a default partition. When dynamic partitioning is enabled in Hive, a partitioned table may store data in a default partition. Hive creates a default partition when the value of a partitioning column does not match the defined type of the column (for example, when a NULL value is used for any partitioning column). In Hive, any query that includes a filter on a partition column *excludes* any data that is stored in the table's default partition.
 

@@ -23,7 +23,7 @@ under the License.
 
 Defines a new operator class.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE OPERATOR CLASS <name> [DEFAULT] FOR TYPE <data_type>  
@@ -37,7 +37,7 @@ CREATE OPERATOR CLASS <name> [DEFAULT] FOR TYPE <data_type>  
   } [, ... ]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE OPERATOR CLASS` creates a new operator class. An operator class defines how a particular data type can be used with an index. The operator class specifies that certain operators will fill particular roles or strategies for this data type and this index method. The operator class also specifies the support procedures to be used by the index method when the operator class is selected for an index column. All the operators and functions used by an operator class must be defined before the operator class is created. Any functions used to implement the operator class must be defined as `IMMUTABLE`.
 
@@ -45,7 +45,7 @@ CREATE OPERATOR CLASS <name> [DEFAULT] FOR TYPE <data_type>  
 
 You must be a superuser to create an operator class.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The (optionally schema-qualified) name of the operator class to be defined. Two operator classes in the same schema can have the same name only if they are for different index methods.</dd>
@@ -134,7 +134,7 @@ You must be a superuser to create an operator class.
 <dt> \<storage\_type\>   </dt>
 <dd>The data type actually stored in the index. Normally this is the same as the column data type, but the GiST index method allows it to be different. The `STORAGE` clause must be omitted unless the index method allows a different type to be used.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Because the index machinery does not check access permissions on functions before using them, including a function or operator in an operator class is the same as granting public execute permission on it. This is usually not an issue for the sorts of functions that are useful in an operator class.
 
@@ -142,7 +142,7 @@ The operators should not be defined by SQL functions. A SQL function is likely t
 
 Any functions used to implement the operator class must be defined as `IMMUTABLE`.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 The following example command defines a GiST index operator class for the data type `_int4` (array of int4):
 
@@ -163,10 +163,10 @@ CREATE OPERATOR CLASS gist__int_ops
         FUNCTION 7 g_int_same (_int4, _int4, internal);
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE OPERATOR CLASS` is a HAWQ extension. There is no `CREATE                OPERATOR CLASS` statement in the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [ALTER OPERATOR CLASS](ALTER-OPERATOR-CLASS.html), [DROP OPERATOR CLASS](DROP-OPERATOR-CLASS.html), [CREATE FUNCTION](CREATE-FUNCTION.html)

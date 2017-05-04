@@ -23,17 +23,17 @@ under the License.
 
 Empties a table of all rows.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 TRUNCATE [TABLE] <name> [, ...] [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `TRUNCATE` quickly removes all rows from a table or set of tables.This is most useful on large tables.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>Required. The name (optionally schema-qualified) of a table to be truncated.</dd>
@@ -44,7 +44,7 @@ TRUNCATE [TABLE] <name> [, ...] [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Since this key word applies to foreign key references (which are not supported in HAWQ) it has no effect.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Only the owner of a table may `TRUNCATE` it. `TRUNCATE` will not perform the following:
 
@@ -54,7 +54,7 @@ Only the owner of a table may `TRUNCATE` it. `TRUNCATE` will not perform the fol
 
 -   Truncate any tables that inherit from the named table. Only the named table is truncated, not its child tables.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Empty the table `films`:
 
@@ -62,10 +62,10 @@ Empty the table `films`:
 TRUNCATE films;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 There is no `TRUNCATE` command in the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [DROP TABLE](DROP-TABLE.html)

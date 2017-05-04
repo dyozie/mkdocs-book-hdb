@@ -23,7 +23,7 @@ under the License.
 
 Defines a new table.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [[GLOBAL | LOCAL] {TEMPORARY | TEMP}] TABLE <table_name> (
@@ -176,7 +176,7 @@ where \<storage\_parameter\> for a partition is:
    ROWGROUPSIZE={1024-1073741823}
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE TABLE` creates a new, initially empty table in the current database. The table is owned by the user issuing the command. If a schema name is given then the table is created in the specified schema. Otherwise it is created in the current schema. Temporary tables exist in a special schema, so a schema name may not be given when creating a temporary table. The name of the table must be distinct from the name of any other table, external table, sequence, or view in the same schema.
 
@@ -192,7 +192,7 @@ By default, a HASH distributed table is created with the number of hash buckets 
 
 The `PARTITION BY` clause allows you to divide the table into multiple sub-tables (or parts) that, taken together, make up the parent table and share its schema. Though the sub-tables exist as independent tables, HAWQ restricts their use in important ways. Internally, partitioning is implemented as a special form of inheritance. Each child table partition is created with a distinct `CHECK` constraint which limits the data the table can contain, based on some defining criteria. The `CHECK` constraints are also used by the query planner to determine which table partitions to scan in order to satisfy a given query predicate. These partition constraints are managed automatically by HAWQ.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>GLOBAL | LOCAL  </dt>
 <dd>These keywords are present for SQL standard compatibility, but have no effect in HAWQ.</dd>
@@ -302,7 +302,7 @@ DISTRIBUTED RANDOMLY  </dt>
 <dt>SUBPARTITION TEMPLATE  </dt>
 <dd>Instead of declaring each subpartition definition individually for each partition, you can optionally declare a subpartition template to be used to create the subpartitions. This subpartition specification would then apply to all parent partitions.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Using OIDs in new applications is not recommended. Avoid assuming that OIDs are unique across tables; if you need a database-wide unique identifier, use the combination of table OID and row OID for the purpose.
 
@@ -310,7 +310,7 @@ Primary key and foreign key constraints are not supported in HAWQ. For inherited
 
 HAWQ also supports the parquet columnar storage format. Parquet tables can be more efficient for increasing performance on large queries.
 
-## <a id="parquetset"></a>Setting Parameters for Parquet Tables
+## Setting Parameters for Parquet Tables<a id="parquetset"></a>
 
 You can set three kinds of parameters for a parquet table.
 
@@ -328,7 +328,7 @@ You can set three kinds of parameters for a parquet table.
 
     **Note:** The page size should be less than the rowgroup size. This is because rowgroup includes the metadata information of a single page even for a single column table. The parameters `PAGESIZE` and `ROWGROUPSIZE` are valid for parquet tables, while `BLOCKSIZE` is valid for append-only tables
 
-## <a id="aboutparquet"></a>About Parquet Storage
+## About Parquet Storage<a id="aboutparquet"></a>
 
 DDL and DML: Most DDL and DML operations are valid for a parquet table. The usage for DDL and DML operations is similar to append-only tables. Valid operations on parquet tables include:
 
@@ -350,7 +350,7 @@ Using `SNAPPY` compression with parquet files is recommended for best performanc
 **Bulk vs. trickle loads**
 Only bulk loads are recommended for use with parquet tables. Trickle loads can result in bloated footers and larger data files.
 
-## <a id="parquetexamples"></a>Parquet Examples
+## Parquet Examples<a id="parquetexamples"></a>
 
 **Parquet Example 1**
 
@@ -388,7 +388,7 @@ ALTER TABLE sales ADD PARTITION
     END (date '2017-02-01') EXCLUSIVE;
 ```
 
-## <a id="aoexamples"></a>AO Examples
+## AO Examples<a id="aoexamples"></a>
 
 Append-only tables support `ZLIB` and `SNAPPY` compression types.
 
@@ -450,7 +450,7 @@ WITH (bucketnum=100)
 DISTRIBUTED BY (id);
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The `CREATE TABLE` command conforms to the SQL standard, with the following exceptions:
 
@@ -469,6 +469,6 @@ The `CREATE TABLE` command conforms to the SQL standard, with the following exce
 -   **Tablespaces** — The HAWQ concept of tablespaces is not part of the SQL standard. The clauses `TABLESPACE` and `USING INDEX TABLESPACE` are extensions.
 -   **Data Distribution** — The HAWQ concept of a parallel or distributed database is not part of the SQL standard. The `DISTRIBUTED` clauses are extensions.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [ALTER TABLE](ALTER-TABLE.html), [DROP TABLE](DROP-TABLE.html), [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html), [CREATE TABLE AS](CREATE-TABLE-AS.html)

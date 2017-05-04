@@ -23,7 +23,7 @@ under the License.
 
 Starts a HAWQ system.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq start <object> [-l| --logdir <logfile_directory>] [-q| --quiet] 
@@ -39,7 +39,7 @@ hawq start -? | -h | --help
 hawq start --version
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq start` utility is used to start the HAWQ server processes. When you start a HAWQ system, you are actually starting several `postgres` database server listener processes at once (the master and all of the segment instances). The `hawq start` utility handles the startup of the individual instances. Each instance is started in parallel.
 
@@ -70,7 +70,7 @@ Before you can start a HAWQ system, you must have initialized the system or node
 <dt>allsegments  </dt>
 <dd>Start all segments.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-l , -\\\-logdir \<logfile\_directory\>  </dt>
 <dd>Specifies the log directory for logs of the management tools. The default is `~/hawq/Adminlogs/`.</dd>
@@ -107,7 +107,7 @@ $ PGOPTIONS='-c gp_role=utility' psql
 <dt>--version (show utility version)  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Start a HAWQ system:
 
@@ -133,6 +133,6 @@ Start the HAWQ master instance only and connect in utility mode:
 $ hawq start master -m PGOPTIONS='-c gp_session_role=utility' psql
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq stop](hawqstop.html#topic1), [hawq init](hawqinit.html#topic1)

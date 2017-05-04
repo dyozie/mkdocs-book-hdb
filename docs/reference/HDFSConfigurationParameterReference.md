@@ -23,7 +23,7 @@ under the License.
 
 This reference page describes HDFS configuration values that are configured for HAWQ either within `hdfs-site.xml`, `core-site.xml`, or `hdfs-client.xml`.
 
-## <a id="topic_ixj_xw1_1w"></a>HDFS Site Configuration (hdfs-site.xml and core-site.xml)
+## HDFS Site Configuration (hdfs-site.xml and core-site.xml)<a id="topic_ixj_xw1_1w"></a>
 
 This topic provides a reference of the HDFS site configuration values recommended for HAWQ installations. These parameters are located in either `hdfs-site.xml` or `core-site.xml` of your HDFS deployment.
 
@@ -49,7 +49,7 @@ This table describes the configuration parameters and values that are recommende
 | `ipc.client.connect.timeout`              | Indicates the number of milliseconds a client will wait for the socket to establish a server connection.                                                                                                           | 300000                                                                | In core-site.xml                                                                                                                                                       |
 | `ipc.server.listen.queue.size`            | Indicates the length of the listen queue for servers accepting client connections.                                                                                                                                 | 3300                                                                  | In core-site.xml                                                                                                                                                       |
 
-## <a id="topic_l1c_zw1_1w"></a>HDFS Client Configuration (hdfs-client.xml)
+## HDFS Client Configuration (hdfs-client.xml)<a id="topic_l1c_zw1_1w"></a>
 
 This topic provides a reference of the HAWQ configuration values located in `$GPHOME/etc/hdfs-client.xml`.
 

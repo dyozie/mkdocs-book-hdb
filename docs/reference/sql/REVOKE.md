@@ -23,7 +23,7 @@ under the License.
 
 Removes access privileges.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 REVOKE [GRANT OPTION FOR] { {SELECT | INSERT | UPDATE | DELETE 
@@ -71,7 +71,7 @@ REVOKE [ADMIN OPTION FOR] <parent_role> [, ...]
        [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `REVOKE` command revokes previously granted privileges from one or more roles. The key word `PUBLIC` refers to the implicitly defined group of all roles.
 
@@ -85,11 +85,11 @@ If a role holds a privilege with grant option and has granted it to other roles 
 
 When revoking membership in a role, `GRANT OPTION` is instead called `ADMIN OPTION`, but the behavior is similar.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 See [GRANT](GRANT.html).
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Revoke insert privilege for the public on table `films`:
 
@@ -109,12 +109,12 @@ Revoke membership in role `admins` from user `joe`:
 REVOKE admins FROM joe;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 The compatibility notes of the [GRANT](GRANT.html) command also apply to `REVOKE`.
 
 Either `RESTRICT` or `CASCADE` is required according to the standard, but HAWQ assumes `RESTRICT` by default.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [GRANT](GRANT.html)

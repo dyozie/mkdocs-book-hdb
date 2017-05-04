@@ -31,15 +31,15 @@ With HAWQ, fault tolerance and data availability is achieved with:
 * [Master Mirroring](#ha_master_mirroring)
 * [Dual Clusters](#ha_dual_clusters)
 
-## <a id="ha_raid"></a>Hardware Level Redundancy (RAID and JBOD) 
+## Hardware Level Redundancy (RAID and JBOD) <a id="ha_raid"></a>
 
 As a best practice, HAWQ deployments should use RAID for master nodes and JBOD for segment nodes. Using these hardware-level systems provides high performance redundancy for single disk failure without having to go into database level fault tolerance. RAID and JBOD provide a lower level of redundancy at the disk level.
 
-## <a id="ha_master_mirroring"></a>Master Mirroring 
+## Master Mirroring <a id="ha_master_mirroring"></a>
 
 There are two masters in a highly available cluster, a primary and a standby. As with segments, the master and standby should be deployed on different hosts so that the cluster can tolerate a single host failure. Clients connect to the primary master and queries can be executed only on the primary master. The secondary master is kept up-to-date by replicating the write-ahead log (WAL) from the primary to the secondary.
 
-## <a id="ha_dual_clusters"></a>Dual Clusters 
+## Dual Clusters <a id="ha_dual_clusters"></a>
 
 You can add another level of redundancy to your deployment by maintaining two HAWQ clusters, both storing the same data.
 

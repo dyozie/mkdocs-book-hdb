@@ -23,7 +23,7 @@ under the License.
 
 Changes the definition of an aggregate function.
 
-## <a id="synop"></a>Synopsis
+## Synopsis<a id="synop"></a>
 
 ```pre
 ALTER AGGREGATE <name> ( <type> [ , ... ] ) RENAME TO <new_name>
@@ -33,13 +33,13 @@ ALTER AGGREGATE <name> ( <type> [ , ... ] ) OWNER TO <new_owner>
 ALTER AGGREGATE <name> ( <type> [ , ... ] ) SET SCHEMA <new_schema>
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
 `ALTER AGGREGATE` changes the definition of an aggregate function.
 
 You must own the aggregate function to use `ALTER AGGREGATE`. To change the schema of an aggregate function, you must also have `CREATE` privilege on the new schema. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have `CREATE` privilege on the aggregate function’s schema. (These restrictions enforce that altering the owner does not do anything you could not do by dropping and recreating the aggregate function. However, a superuser can alter ownership of any aggregate function anyway.)
 
-## <a id="alteraggregate__section4"></a>Parameters
+## Parameters<a id="alteraggregate__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The name (optionally schema-qualified) of an existing aggregate function.</dd>
@@ -56,7 +56,7 @@ You must own the aggregate function to use `ALTER AGGREGATE`. To change the sche
 <dt> \<new\_schema\>   </dt>
 <dd>The new schema for the aggregate function.</dd>
 
-## <a id="alteraggregate__section5"></a>Examples
+## Examples<a id="alteraggregate__section5"></a>
 
 To rename the aggregate function `myavg` for type `integer` to `my_average`:
 
@@ -76,11 +76,11 @@ To move the aggregate function `myavg` for type `integer` into schema `myschema`
 ALTER AGGREGATE myavg(integer) SET SCHEMA myschema;
 ```
 
-## <a id="compat"></a>Compatibility
+## Compatibility<a id="compat"></a>
 
 There is no `ALTER AGGREGATE` statement in the SQL standard.
 
-## <a id="see"></a>See Also
+## See Also<a id="see"></a>
 
 [CREATE AGGREGATE](CREATE-AGGREGATE.html), [DROP AGGREGATE](DROP-AGGREGATE.html)
 

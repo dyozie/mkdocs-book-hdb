@@ -23,18 +23,18 @@ under the License.
 
 Removes a function.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP FUNCTION [IF EXISTS] <name> ( [ [<argmode>] [<argname>] <argtype> 
     [, ...] ] ) [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP FUNCTION` removes the definition of an existing function. To execute this command the user must be the owner of the function. The argument types to the function must be specified, since several different functions may exist with the same name and different argument lists.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the function does not exist. A notice is issued in this case.</dd>
@@ -57,7 +57,7 @@ DROP FUNCTION [IF EXISTS] <name> ( [ [<argmode>] [<argname>] <argtype>
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the function if any objects depend on it. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Drop the square root function:
 
@@ -65,10 +65,10 @@ Drop the square root function:
 DROP FUNCTION sqrt(integer);
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 A `DROP FUNCTION` statement is defined in the SQL standard, but it is not compatible with this command.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [ALTER FUNCTION](ALTER-FUNCTION.html), [CREATE FUNCTION](CREATE-FUNCTION.html)

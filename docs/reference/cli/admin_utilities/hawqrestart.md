@@ -23,7 +23,7 @@ under the License.
 
 Shuts down and then restarts a HAWQ system after shutdown is complete.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq restart <object> [-l|--logdir <logfile_directory>] [-q|--quiet] [-v|--verbose]    
@@ -39,7 +39,7 @@ hawq restart -? | -h | --help
 hawq restart --version
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq restart` utility is used to shut down and restart the HAWQ server processes. It is essentially equivalent to performing a `hawq stop -M                                         smart` operation followed by `hawq                                         start`.
 
@@ -64,7 +64,7 @@ When the `hawq restart` command runs, the utility uploads changes made to the ma
 <dt>allsegments  </dt>
 <dd>Restart all segments.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-a (do not prompt)  </dt>
 <dd>Do not prompt the user for confirmation.</dd>
@@ -106,7 +106,7 @@ Immediate shutdown aborts transactions in progress and kills all `postgres` proc
 <dt>-\\\-version (show utility version)  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Restart a HAWQ cluster:
 
@@ -126,6 +126,6 @@ Start the HAWQ master instance only and connect in utility mode:
 $ hawq start master -m PGOPTIONS='-c gp_session_role=utility' psql
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq stop](hawqstop.html#topic1), [hawq start](hawqstart.html#topic1)

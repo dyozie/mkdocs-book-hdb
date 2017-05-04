@@ -28,7 +28,7 @@ GPORCA includes enhancements for specific types of queries and operations.  GPOR
 -   Sort order optimization
 -   Data skew estimates included in query optimization
 
-## <a id="topic_dwy_zml_gr"></a>Queries Against Partitioned Tables
+## Queries Against Partitioned Tables<a id="topic_dwy_zml_gr"></a>
 
 GPORCA includes these enhancements for queries against partitioned tables:
 
@@ -84,7 +84,7 @@ GPORCA improves on these types of queries against partitioned tables:
        WHERE date_id IN (SELECT id FROM date_dim WHERE month=12);
     ```
 
-## <a id="topic_vph_wml_gr"></a>Queries that Contain Subqueries
+## Queries that Contain Subqueries<a id="topic_vph_wml_gr"></a>
 
 GPORCA handles subqueries more efficiently. A subquery is query that is nested inside an outer query block. In the following query, the `SELECT` in the `WHERE` clause is a subquery.
 
@@ -152,7 +152,7 @@ GPORCA generates more efficient plans for the following types of subqueries:
     FROM part p1;
     ```
 
-## <a id="topic_c3v_rml_gr"></a>Queries that Contain Common Table Expressions
+## Queries that Contain Common Table Expressions<a id="topic_c3v_rml_gr"></a>
 
 GPORCA handles queries that contain the `WITH` clause. The `WITH` clause, also known as a common table expression (CTE), generates temporary tables that exist only for the query. This example query contains a CTE.
 
@@ -201,7 +201,7 @@ GPORCA can handle these types of CTEs:
       WHERE v1.a < v2.a; 
     ```
 
-## <a id="topic_plx_mml_gr"></a>DML Operation Enhancements with GPORCA
+## DML Operation Enhancements with GPORCA<a id="topic_plx_mml_gr"></a>
 
 GPORCA contains enhancements for DML operations such as `INSERT`.
 
@@ -225,7 +225,7 @@ GPORCA contains enhancements for DML operations such as `INSERT`.
                          ->  Table Scan on dmlsource
     ```
 
-## <a id="topic_anl_t3t_pv"></a>Queries with Distinct Qualified Aggregates (DQA)
+## Queries with Distinct Qualified Aggregates (DQA)<a id="topic_anl_t3t_pv"></a>
 
 GPORCA improves performance for queries that contain distinct qualified aggregates (DQA) without a grouping column and when the table is not distributed on the columns used by the DQA. When encountering these types of queries, GPORCA uses an alternative plan that evaluates the aggregate functions in three stages (local, intermediate, and global aggregations).
 

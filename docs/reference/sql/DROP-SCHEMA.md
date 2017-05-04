@@ -23,17 +23,17 @@ under the License.
 
 Removes a schema.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP SCHEMA [IF EXISTS] <name> [, ...] [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP SCHEMA` removes schemas from the database. A schema can only be dropped by its owner or a superuser. Note that the owner can drop the schema (and thereby all contained objects) even if he does not own some of the objects within the schema.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the schema does not exist. A notice is issued in this case.</dd>
@@ -47,7 +47,7 @@ DROP SCHEMA [IF EXISTS] <name> [, ...] [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the schema if it contains any objects. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Remove the schema `mystuff` from the database, along with everything it contains:
 
@@ -55,10 +55,10 @@ Remove the schema `mystuff` from the database, along with everything it contains
 DROP SCHEMA mystuff CASCADE;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `DROP SCHEMA` is fully conforming with the SQL standard, except that the standard only allows one schema to be dropped per command. Also, the `IF           EXISTS` option is a HAWQ extension.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE SCHEMA](CREATE-SCHEMA.html)

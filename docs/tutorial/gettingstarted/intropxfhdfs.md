@@ -29,7 +29,7 @@ In this exercise, you use the PXF HDFS plug-in to:
 - Perform queries on the data you loaded into HDFS
 - Run more complex queries on HAWQ and PXF tables
 
-## <a id="tut_intropxfprereq"></a>Prerequisites
+## Prerequisites<a id="tut_intropxfprereq"></a>
 
 Ensure that you have:
 
@@ -43,7 +43,7 @@ Ensure that you have:
 
 You should also retrieve the hostname or IP address of the HDFS NameNode that you noted in [View and Update HAWQ Configuration](basichawqadmin.html#tut_ex_cmdline_cfg).
 
-## <a id="tut_excreatepxftblsteps"></a>Exercise: Create and Query PXF External Tables
+## Exercise: Create and Query PXF External Tables<a id="tut_excreatepxftblsteps"></a>
 
 Perform the following steps to create HAWQ external table definitions to read the dimension data you previously loaded into HDFS.
 
@@ -164,7 +164,7 @@ Perform the following steps to create HAWQ external table definitions to read th
     ```
 
 
-## <a id="tut_exhawqpxfquerysteps"></a>Exercise: Query HAWQ and PXF Tables
+## Exercise: Query HAWQ and PXF Tables<a id="tut_exhawqpxfquerysteps"></a>
 
 Often, data will reside in both HAWQ tables and external data sources. In these instances, you can use both HAWQ internal and PXF external tables to relate and query the data.
 
@@ -212,7 +212,7 @@ Perform the following steps to identify the names and email addresses of all cus
     hawqgsdb=# \q
     ```
 
-## <a id="tut_intropxf_summary"></a>Summary    
+## Summary    <a id="tut_intropxf_summary"></a>
 In this lesson, you created PXF external tables to access HDFS data and queried these tables. You also performed a query using this external data and the HAWQ internal fact tables created previously, executing business logic on both your managed and unmanaged data.
 
 For additional information about PXF, refer to [Using PXF with Unmanaged Data](../../pxf/HawqExtensionFrameworkPXF.html).

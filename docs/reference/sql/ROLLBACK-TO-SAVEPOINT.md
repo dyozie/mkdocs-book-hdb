@@ -23,20 +23,20 @@ under the License.
 
 Rolls back the current transaction to a savepoint.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 ROLLBACK [WORK | TRANSACTION] TO [SAVEPOINT] <savepoint_name>
 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 This command will roll back all commands that were executed after the savepoint was established. The savepoint remains valid and can be rolled back to again later, if needed.
 
 `ROLLBACK TO SAVEPOINT` implicitly destroys all savepoints that were established after the named savepoint.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>WORK  
 TRANSACTION  </dt>
@@ -45,7 +45,7 @@ TRANSACTION  </dt>
 <dt> \<savepoint\_name\>  </dt>
 <dd>The name of a savepoint to roll back to.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Use `RELEASE SAVEPOINT` to destroy a savepoint without discarding the effects of commands executed after it was established.
 
@@ -53,7 +53,7 @@ Specifying a savepoint name that has not been established is an error.
 
 Cursors have somewhat non-transactional behavior with respect to savepoints. Any cursor that is opened inside a savepoint will be closed when the savepoint is rolled back. If a previously opened cursor is affected by a `FETCH` command inside a savepoint that is later rolled back, the cursor position remains at the position that `FETCH` left it pointing to (that is, `FETCH` is not rolled back). Closing a cursor is not undone by rolling back, either. A cursor whose execution causes a transaction to abort is put in a can't-execute state, so while the transaction can be restored using `ROLLBACK TO SAVEPOINT`, the cursor can no longer be used.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To undo the effects of the commands executed after `my_savepoint` was established:
 
@@ -87,10 +87,10 @@ column
 COMMIT;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The SQL standard specifies that the key word `SAVEPOINT` is mandatory, but HAWQ (and Oracle) allow it to be omitted. SQL allows only `WORK`, not `TRANSACTION`, as a stopword after `ROLLBACK`. Also, SQL has an optional clause `AND [NO] CHAIN` which is not currently supported by HAWQ. Otherwise, this command conforms to the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [SAVEPOINT](SAVEPOINT.html), [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html), [ROLLBACK](ROLLBACK.html)

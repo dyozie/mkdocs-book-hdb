@@ -6,13 +6,13 @@ This section provides instructions for installing a HAWQ system.
 
 **Note:** Install HAWQ from the command line only if you do not use Ambari to install and manage HDFS. If you use Ambari for HDFS and management, follow the instructions in [Install HAWQ using Ambari](install-ambari.html) instead.
 
-## <a id="cliprereq"></a>Prerequisites 
+## Prerequisites <a id="cliprereq"></a>
 
 Install a compatible HDFS cluster before you attempt to install HAWQ.
 
 Select and configure all host machines that will run the HAWQ and PXF services. See [Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) and [Select HAWQ Host Machines](../../hawq/install/select-hosts.html).
 
-## <a id="topic_eqn_fc4_15"></a>Prepare Host Machines 
+## Prepare Host Machines <a id="topic_eqn_fc4_15"></a>
 
 Configure operating system parameters on each host machine before you begin to install HAWQ.
 
@@ -93,13 +93,13 @@ Configure operating system parameters on each host machine before you begin to i
 
 6.  Ensure that the `/etc/hosts` file on each cluster node contains the hostname of every other member of the  cluster. Consider creating a single, master `/etc/hosts` file and either copying it or referencing it on every host that will take part in the cluster.
 
-## <a id="20to201up_setupyum"></a>Add New HDB Software Repositories
+## Add New HDB Software Repositories<a id="20to201up_setupyum"></a>
 
 Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos.html) to set up local `yum` HDB repositories on the single system (call it `repo-node`) you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster.
 
 After repo set up, each HAWQ host will be configured to obtain the HDB software from the `repo-node` HDB repositories.
 
-## <a id="topic_ld1_bh4_15"></a>Install the HAWQ Cluster on Multiple Machines 
+## Install the HAWQ Cluster on Multiple Machines <a id="topic_ld1_bh4_15"></a>
 
 Follow this procedure to install the HAWQ cluster on multiple host machines or VMs.
 
@@ -354,7 +354,7 @@ Follow this procedure to install the HAWQ cluster on multiple host machines or V
     After the cluster starts, you can follow the instructions in [Validate the Installation](#topic_opr_3gp_15).
 
 
-## <a id="topic_uqh_wg4_15"></a>Install the HAWQ Cluster on a Single Machine 
+## Install the HAWQ Cluster on a Single Machine <a id="topic_uqh_wg4_15"></a>
 
 Follow this procedure to install HAWQ software on a single host machine.
 
@@ -429,7 +429,7 @@ Follow this procedure to install HAWQ software on a single host machine.
     After the cluster starts, you can follow the instructions in [Validate the Installation](#topic_opr_3gp_15).
 
 
-## <a id="topic_iwy_5fb_1t"></a>\(Optional\) Enable Kerberos 
+## \(Optional\) Enable Kerberos <a id="topic_iwy_5fb_1t"></a>
 
 The following additional steps are necessary only if you manage your system manually \(without using Ambari\), and you enabled Kerberos security for HDFS.
 
@@ -610,7 +610,7 @@ For manual installations, perform these additional steps after you complete the 
         ```
 
 
-## <a id="topic_opr_3gp_15"></a>Validate the Installation 
+## Validate the Installation <a id="topic_opr_3gp_15"></a>
 
 Perform these basic commands to ensure that the new  cluster is functional.
 
@@ -690,7 +690,7 @@ Perform these basic commands to ensure that the new  cluster is functional.
     ```
 
 
-## <a id="topic_pnk_4cv_25"></a>Install PXF Plug-ins 
+## Install PXF Plug-ins <a id="topic_pnk_4cv_25"></a>
 
 If you plan on accessing data in external systems such as HDFS or JSON files, Hive or HBase:
 

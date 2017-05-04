@@ -25,14 +25,14 @@ HDFS is the primary distributed storage mechanism used by Apache Hadoop applicat
 
 This section describes how to use PXF to access HDFS data, including how to create and query an external table from files in the HDFS data store.
 
-## <a id="hdfsplugin_prereq"></a>Prerequisites
+## Prerequisites<a id="hdfsplugin_prereq"></a>
 
 Before working with HDFS file data using HAWQ and PXF, ensure that:
 
 -   The HDFS plug-in is installed on all cluster nodes. See [Installing PXF Plug-ins](InstallPXFPlugins.html) for PXF plug-in installation information.
 -   All HDFS users have read permissions to HDFS services and that write permissions have been restricted to specific users.
 
-## <a id="hdfsplugin_fileformats"></a>HDFS File Formats
+## HDFS File Formats<a id="hdfsplugin_fileformats"></a>
 
 The PXF HDFS plug-in supports reading the following file formats:
 
@@ -47,7 +47,7 @@ The PXF HDFS plug-in includes the following profiles to support the file formats
 
 If you find that the pre-defined PXF HDFS profiles do not meet your needs, you may choose to create a custom HDFS profile from the existing HDFS serialization and deserialization classes. Refer to [Adding and Updating Profiles](ReadWritePXF.html#addingandupdatingprofiles) for information on creating a custom profile.
 
-## <a id="hdfsplugin_cmdline"></a>HDFS Shell Commands
+## HDFS Shell Commands<a id="hdfsplugin_cmdline"></a>
 Hadoop includes command-line tools that interact directly with HDFS.  These tools support typical file system operations including copying and listing files, changing file permissions, and so forth.
 
 The HDFS file system command syntax is `hdfs dfs <options> [<file>]`. Invoked with no options, `hdfs dfs` lists the file system options supported by the tool.
@@ -83,7 +83,7 @@ $ hdfs dfs -cat /data/exampledir/example.txt
 ```
 
 
-## <a id="hdfsplugin_queryextdata"></a>Querying External HDFS Data
+## Querying External HDFS Data<a id="hdfsplugin_queryextdata"></a>
 The PXF HDFS plug-in supports the `HdfsTextSimple`, `HdfsTextMulti`, and `Avro` profiles.
 
 Use the following syntax to create a HAWQ external table representing HDFS data: 
@@ -112,7 +112,7 @@ HDFS-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](..
 
 *Note*: When creating PXF external tables, you cannot use the `HEADER` option in your `FORMAT` specification.
 
-## <a id="profile_hdfstextsimple"></a>HdfsTextSimple Profile
+## HdfsTextSimple Profile<a id="profile_hdfstextsimple"></a>
 
 Use the `HdfsTextSimple` profile when reading plain text delimited or .csv files where each row is a single record.
 
@@ -122,7 +122,7 @@ Use the `HdfsTextSimple` profile when reading plain text delimited or .csv files
 |-------|-------------------------------------|
 | delimiter    | The delimiter character in the file. Default value is a comma `,`.|
 
-### <a id="profile_hdfstextsimple_query"></a>Example: Using the HdfsTextSimple Profile
+### Example: Using the HdfsTextSimple Profile<a id="profile_hdfstextsimple_query"></a>
 
 Perform the following steps to create a sample data file, copy the file to HDFS, and use the `HdfsTextSimple` profile to create PXF external tables to query the data:
 
@@ -185,7 +185,7 @@ Beijing,Jul,411,11600.67' > /tmp/pxf_hdfs_simple.txt
 
     When specifying `FORMAT 'CSV'` for a comma-separated value file, no `delimiter` formatter option is required, as comma is the default.
 
-## <a id="profile_hdfstextmulti"></a>HdfsTextMulti Profile
+## HdfsTextMulti Profile<a id="profile_hdfstextmulti"></a>
 
 Use the `HdfsTextMulti` profile when reading plain text files with delimited single- or multi- line records that include embedded (quoted) linefeed characters.
 
@@ -195,7 +195,7 @@ Use the `HdfsTextMulti` profile when reading plain text files with delimited sin
 |-------|-------------------------------------|
 | delimiter    | The delimiter character in the file. |
 
-### <a id="profile_hdfstextmulti_query"></a>Example: Using the HdfsTextMulti Profile
+### Example: Using the HdfsTextMulti Profile<a id="profile_hdfstextmulti_query"></a>
 
 Perform the following steps to create a sample data file, copy the file to HDFS, and use the `HdfsTextMulti` profile to create a PXF external table to query the data:
 
@@ -258,13 +258,13 @@ Perform the following steps to create a sample data file, copy the file to HDFS,
     (5 rows)
     ```
 
-## <a id="profile_hdfsavro"></a>Avro Profile
+## Avro Profile<a id="profile_hdfsavro"></a>
 
 Apache Avro is a data serialization framework where the data is serialized in a compact binary format. 
 
 Avro specifies that data types be defined in JSON. Avro format files have an independent schema, also defined in JSON. An Avro schema, together with its data, is fully self-describing.
 
-### <a id="profile_hdfsavrodatamap"></a>Data Type Mapping
+### Data Type Mapping<a id="profile_hdfsavrodatamap"></a>
 
 Avro supports both primitive and complex data types. 
 
@@ -283,7 +283,7 @@ The following table summarizes external mapping rules for Avro data.
 | Complex type: Fixed                                               | BYTEA                                                                                                                                                                                               |
 | Union                                                             | Follows the above conventions for primitive or complex data types, depending on the union; supports Null values.                                                                     |
 
-### <a id="profile_hdfsavroptipns"></a>Avro-Specific Custom Options
+### Avro-Specific Custom Options<a id="profile_hdfsavroptipns"></a>
 
 For complex types, the PXF `Avro` profile inserts default delimiters between collection items and values. You can use non-default delimiter characters by identifying values for specific `Avro` custom options in the `CREATE EXTERNAL TABLE` call. 
 
@@ -296,14 +296,14 @@ The `Avro` profile supports the following \<custom-options\>:
 | RECORDKEY_DELIM | The delimiter character(s) to place between the field name and value of a record entry when PXF maps an Avro complex data type to a text column. The default is the colon `:` character. |
 
 
-### <a id="topic_tr3_dpg_ts__section_m2p_ztg_ts"></a>Avro Schemas and Data
+### Avro Schemas and Data<a id="topic_tr3_dpg_ts__section_m2p_ztg_ts"></a>
 
 Avro schemas are defined using JSON, and composed of the same primitive and complex types identified in the data mapping section above. Avro schema files typically have a `.avsc` suffix.
 
 Fields in an Avro schema file are defined via an array of objects, each of which is specified by a name and a type.
 
 
-### <a id="topic_tr3_dpg_ts_example"></a>Example: Using the Avro Profile
+### Example: Using the Avro Profile<a id="topic_tr3_dpg_ts_example"></a>
 
 The examples in this section will operate on Avro data with the following record schema:
 
@@ -315,7 +315,7 @@ The examples in this section will operate on Avro data with the following record
 - relationship - enumerated type
 
 
-#### <a id="topic_tr3_dpg_ts__section_m2p_ztg_ts_99"></a>Create Schema
+#### Create Schema<a id="topic_tr3_dpg_ts__section_m2p_ztg_ts_99"></a>
 
 Perform the following operations to create an Avro schema to represent the example schema described above.
 
@@ -369,7 +369,7 @@ Perform the following operations to create an Avro schema to represent the examp
     }
     ```
 
-#### <a id="topic_tr3_dpgspk_15g_tsdata"></a>Create Avro Data File (JSON)
+#### Create Avro Data File (JSON)<a id="topic_tr3_dpgspk_15g_tsdata"></a>
 
 Perform the following steps to create a sample Avro data file conforming to the above schema.
 
@@ -403,7 +403,7 @@ Perform the following steps to create a sample Avro data file conforming to the 
     $ hdfs dfs -put /tmp/pxf_hdfs_avro.avro /data/pxf_examples/
     ```
     
-#### <a id="topic_avro_querydata"></a>Query With Avro Profile
+#### Query With Avro Profile<a id="topic_avro_querydata"></a>
 
 Perform the following steps to create and query an external table accessing the `pxf_hdfs_avro.avro` file you added to HDFS in the previous section. When creating the table:
 
@@ -458,7 +458,7 @@ Perform the following steps to create and query an external table accessing the 
      jim      | {number:9,street:deer creek,city:palo alto}
     ```
 
-## <a id="accessdataonahavhdfscluster"></a>Accessing HDFS Data in a High Availability HDFS Cluster
+## Accessing HDFS Data in a High Availability HDFS Cluster<a id="accessdataonahavhdfscluster"></a>
 
 To access external HDFS data in a High Availability HDFS cluster, change the `CREATE EXTERNAL TABLE` `LOCATION` clause to use \<HA-nameservice\> rather than  \<host\>[:\<port\>].
 

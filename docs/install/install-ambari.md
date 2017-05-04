@@ -2,13 +2,13 @@
 title: Install Apache HAWQ using Ambari
 ---
 
-## <a id="section_mqs_f3j_5r"></a>Prerequisites 
+## Prerequisites <a id="section_mqs_f3j_5r"></a>
 
 -   Install a compatible version of HDP and Ambari, and ensure that your HDP system is fully functional. See the [Release Notes](../releasenotes/HAWQ220ReleaseNotes.html#topic_dhh_2jx_yt) for more information about component version compatibility.
 
 -   Select and prepare all host machines that will run the HAWQ and PXF services. See [Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) and [Select HAWQ Host Machines](../../hawq/install/select-hosts.html).
 
-## <a id="section_kwy_f3j_5r"></a>Procedure 
+## Procedure <a id="section_kwy_f3j_5r"></a>
 The Ambari plug-in for HAWQ is no longer a separate download, but now included in the HDB software installation package.
 
 1.  Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos.html) to set up local `yum` HDB repositories on the single system (call it `repo-node`) you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster. This system may be your Ambari server host if you choose.
@@ -244,7 +244,7 @@ The Ambari plug-in for HAWQ is no longer a separate download, but now included i
         Time: 7.266 ms
         ```
 
-## <a id="post-install-212-req"></a>Post-Install Procedure for HDB 2.2.0 (Required)
+## Post-Install Procedure for HDB 2.2.0 (Required)<a id="post-install-212-req"></a>
 
 All HDB 2.2.0 deployments that use PXF must perform this procedure after installing/upgrading PXF to version 3.2.x. If you have not done so already, you must manually modify the `Hive*` profile definitions in the Ambari-managed `pxf-profiles.xml` configuration file to conform to new profile definitions.
 
@@ -327,11 +327,11 @@ Perform the following steps to update your Hive profile definitions:
 9. After the PXF service restarts, the Hive plug-in and associated profiles will be configured appropriately for use in your Ambari-managed HDB 2.2.0 cluster.
 
 
-## <a id="post-install-pxf"></a>Post-Install Procedure for Hive and HBase
+## Post-Install Procedure for Hive and HBase<a id="post-install-pxf"></a>
 
 If you plan to access Hive or HBase with PXF, perform the post-install procedures identified in [PXF Post-Installation Procedures for Hive/HBase](postinstall-pxf-hbasehive.html) to complete the installation and configuration of the associated PXF plug-ins.
 
-## <a id="post-install-json"></a>Post-Install Procedure for JSON
+## Post-Install Procedure for JSON<a id="post-install-json"></a>
 
 If you upgraded from Ambari 2.2.2 and plan to use the PXF JSON plug-in, you must explicitly add the JSON profile definition to the PXF service configuration:
 

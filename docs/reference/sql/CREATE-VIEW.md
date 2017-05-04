@@ -23,7 +23,7 @@ under the License.
 
 Defines a new view.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [OR REPLACE] [TEMP | TEMPORARY] VIEW <name>
@@ -32,7 +32,7 @@ CREATE [OR REPLACE] [TEMP | TEMPORARY] VIEW <name>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE VIEW` defines a view of a query. The view is not physically materialized. Instead, the query is run every time the view is referenced in a query.
 
@@ -40,7 +40,7 @@ CREATE [OR REPLACE] [TEMP | TEMPORARY] VIEW <name>
 
 If a schema name is given then the view is created in the specified schema. Otherwise it is created in the current schema. Temporary views exist in a special schema, so a schema name may not be given when creating a temporary view. The name of the view must be distinct from the name of any other view, table, sequence, or index in the same schema.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>TEMPORARY | TEMP  </dt>
 <dd>If specified, the view is created as a temporary view. Temporary views are automatically dropped at the end of the current session. Existing permanent relations with the same name are not visible to the current session while the temporary view exists, unless they are referenced with schema-qualified names. If any of the tables referenced by the view are temporary, the view is created as a temporary view (whether `TEMPORARY` is specified or not).</dd>
@@ -54,7 +54,7 @@ If a schema name is given then the view is created in the specified schema. Othe
 <dt> \<query\>   </dt>
 <dd>A [SELECT](SELECT.html) command which will provide the columns and rows of the view.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Views in HAWQ are read only. The system will not allow an insert, update, or delete on a view. You can get the effect of an updatable view by creating rewrite rules on the view into appropriate actions on other tables. For more information see `CREATE RULE`.
 
@@ -76,7 +76,7 @@ However, functions called in the view are treated the same as if they had been c
 
 If you create a view with an `ORDER BY` clause, the `ORDER           BY` clause is ignored when you do a `SELECT` from the view.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a view consisting of all comedy films:
 
@@ -92,7 +92,7 @@ CREATE VIEW topten AS SELECT name, rank, gender, year FROM
 names, rank WHERE rank < '11' AND names.id=rank.id;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The SQL standard specifies some additional capabilities for the `CREATE           VIEW` statement that are not in HAWQ. The optional clauses for the full SQL command in the standard are:
 
@@ -102,6 +102,6 @@ The SQL standard specifies some additional capabilities for the `CREATE         
 
 `CREATE OR REPLACE VIEW` is a HAWQ language extension. So is the concept of a temporary view.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [SELECT](SELECT.html), [DROP VIEW](DROP-VIEW.html)

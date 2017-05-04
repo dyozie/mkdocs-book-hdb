@@ -23,17 +23,17 @@ under the License.
 
 Removes a cast.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP CAST [IF EXISTS] (<sourcetype> AS <targettype>) [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP CAST` will delete a previously defined cast. To be able to drop a cast, you must own the source or the target data type. These are the same privileges that are required to create a cast.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS </dt>
 <dd>Do not throw an error if the cast does not exist. A notice is issued in this case.</dd>
@@ -48,7 +48,7 @@ DROP CAST [IF EXISTS] (<sourcetype> AS <targettype>) [CASCADE | RESTRICT]
 <dt>RESTRICT</dt>
 <dd>These keywords have no effect since there are no dependencies on casts.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 To drop the cast from type `text` to type `int`:
 
@@ -56,11 +56,11 @@ To drop the cast from type `text` to type `int`:
 DROP CAST (text AS int);
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 The `DROP CAST` command conforms to the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE CAST](CREATE-CAST.html)
 

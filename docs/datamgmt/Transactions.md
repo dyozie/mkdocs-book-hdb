@@ -34,7 +34,7 @@ The following are the HAWQ SQL transaction commands:
 -   `ROLLBACK TO SAVEPOINT `rolls back a transaction to a savepoint.
 -   `RELEASE SAVEPOINT `destroys a savepoint within a transaction.
 
-## <a id="topic8"></a>Transaction Isolation Levels
+## Transaction Isolation Levels<a id="topic8"></a>
 
 HAWQ accepts the standard SQL transaction levels as follows:
 

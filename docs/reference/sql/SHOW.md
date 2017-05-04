@@ -23,7 +23,7 @@ under the License.
 
 Shows the value of a system configuration parameter.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 SHOW <configuration_parameter>
@@ -31,11 +31,11 @@ SHOW <configuration_parameter>
 SHOW ALL
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `SHOW` displays the current settings of HAWQ system configuration parameters. These parameters can be set using the `SET` statement, or by editing the `hawq-site.xml` configuration file of the HAWQ master. Note that some parameters viewable by `SHOW` are read-only — their values can be viewed but not set. See [About Server Configuration Parameters](../guc/guc_config.html#topic1).
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<configuration\_parameter\>   </dt>
 <dd>The name of a system configuration parameter.</dd>
@@ -43,7 +43,7 @@ SHOW ALL
 <dt>ALL  </dt>
 <dd>Shows the current value of all configuration parameters.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Show the current setting of the parameter `search_path`:
 
@@ -57,10 +57,10 @@ Show the current setting of all parameters:
 SHOW ALL;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `SHOW` is a HAWQ extension.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [SET](SET.html), [RESET](RESET.html)

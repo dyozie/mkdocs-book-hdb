@@ -23,7 +23,7 @@ under the License.
 
 HAWQ manages resources (CPU, memory, I/O and file handles) using a variety of mechanisms including global resource management, resource queues and the enforcement of limits on resource usage.
 
-## <a id="global-env"></a>Globally Managed Environments
+## Globally Managed Environments<a id="global-env"></a>
 
 In Hadoop clusters, resources are frequently managed globally by YARN. YARN provides resources to MapReduce jobs and any other applications that are configured to work with YARN. In this type of environment, resources are allocated in units called containers. In a HAWQ environment, segments and node managers control the consumption of resources and enforce resource limits on each node.
 
@@ -35,7 +35,7 @@ When you run HAWQ natively in a Hadoop cluster, you can configure HAWQ to regist
 
 Resources obtained from YARN are then managed in a distributed fashion by HAWQ's resource manager, which is hosted on the HAWQ master.
 
-## <a id="section_w4f_vx4_15"></a>HAWQ Resource Queues 
+## HAWQ Resource Queues <a id="section_w4f_vx4_15"></a>
 
 Resource queues are the main tool for managing the degree of concurrency in a HAWQ system. Resource queues are database objects that you create with the CREATE RESOURCE QUEUE SQL statement. You can use them to manage the number of active queries that may execute concurrently, and the maximum amount of memory and CPU usage each type of query is allocated. Resource queues can also guard against queries that would consume too many resources and degrade overall system performance.
 

@@ -23,7 +23,7 @@ under the License.
 
 Creates a new database.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 
@@ -50,7 +50,7 @@ where:
     [-T <template>| --template <template>] 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `createdb` creates a new database in a HAWQ system.
 
@@ -58,7 +58,7 @@ Normally, the database user who executes this command becomes the owner of the n
 
 `createdb` is a wrapper around the SQL command `CREATE DATABASE`.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>**\<dbname\>**</dt>
 <dd>The name of the database to be created. The name must be unique among all other databases in the HAWQ system. If not specified, reads from the environment variable `PGDATABASE`, then `PGUSER` or defaults to the current system user.</dd>
@@ -109,7 +109,7 @@ Normally, the database user who executes this command becomes the owner of the n
 <dt>-\\\-version  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To create the database `testdb` using the default options:
 

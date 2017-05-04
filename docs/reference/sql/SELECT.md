@@ -23,7 +23,7 @@ under the License.
 
 Retrieves rows from a table or view.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 SELECT [ALL | DISTINCT [ON (<expression> [, ...])]]
@@ -83,7 +83,7 @@ where \<from\_item\> can be one of:
           [ON <join_condition> | USING ( <join_column> [, ...] )]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `SELECT` retrieves rows from zero or more tables. The general processing of `SELECT` is as follows:
 
@@ -99,7 +99,7 @@ where \<from\_item\> can be one of:
 
 You must have `SELECT` privilege on a table to read its values.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 **The SELECT List**
 
@@ -418,7 +418,7 @@ When using `LIMIT`, it is a good idea to use an `ORDER BY` clause that constrain
 
 The query planner takes `LIMIT` into account when generating a query plan, so you are very likely to get different plans (yielding different row orders) depending on what you use for `LIMIT` and `OFFSET`. Thus, using different `LIMIT/OFFSET` values to select different subsets of a query result will give inconsistent results unless you enforce a predictable result ordering with `ORDER BY`. This is not a defect; it is an inherent consequence of the fact that SQL does not promise to deliver the results of a query in any particular order unless `ORDER BY` is used to constrain the order.
 
-## <a id="topic1__section18"></a>Examples
+## Examples<a id="topic1__section18"></a>
 
 To join the table `films` with the table `distributors`:
 
@@ -487,7 +487,7 @@ SELECT * FROM distributors_2(111) AS (dist_id int, dist_name
 text);
 ```
 
-## <a id="topic1__section19"></a>Compatibility
+## Compatibility<a id="topic1__section19"></a>
 
 The `SELECT` statement is compatible with the SQL standard, but there are some extensions and some missing features.
 
@@ -521,6 +521,6 @@ The clauses `DISTINCT ON`, `LIMIT`, and `OFFSET` are not defined in the SQL stan
 
 To prevent data from becoming out-of-sync across the segments in HAWQ, any function classified as `STABLE` or `VOLATILE` cannot be executed at the segment database level if it contains SQL or modifies the database in any way.
 
-## <a id="topic1__section25"></a>See Also
+## See Also<a id="topic1__section25"></a>
 
 [EXPLAIN](EXPLAIN.html)

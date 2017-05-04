@@ -23,7 +23,7 @@ under the License.
 
 Serves data files to or writes data files out from HAWQ segments.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 gpfdist [-d <directory>] [-p <http_port>] [-l <log_file>] [-t <timeout>] 
@@ -34,7 +34,7 @@ gpfdist -? | --help
 gpfdist --version
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `gpfdist` is HAWQ parallel file distribution program. It is used by readable external tables and `hawq load` to serve external table files to all HAWQ segments in parallel. It is used by writable external tables to accept output streams from HAWQ segments in parallel and write them out to a file.
 
@@ -56,7 +56,7 @@ To run `gpfdist` on your ETL machines, refer to [Client-Based HAWQ Load Tools](.
 
 You can also run `gpfdist` as a Windows Service. See [Running gpfdist as a Windows Service](#topic1__section5) for more details.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-d \<directory\>  </dt>
 <dd>The directory from which `gpfdist` will serve files for readable external tables or create output files for writable external tables. If not specified, defaults to the current directory.</dd>
@@ -109,7 +109,7 @@ The root directory (`/`) cannot be specified as \<certificate\_path\>.</dd>
 <dt>-\\\-version  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section5"></a>Running gpfdist as a Windows Service
+## Running gpfdist as a Windows Service<a id="topic1__section5"></a>
 
 HAWQ Loaders allow `gpfdist` to run as a Windows Service.
 
@@ -143,7 +143,7 @@ Follow the instructions below to download, register and activate `gpfdist` as a 
 
 Repeat the above steps for each instance of `gpfdist` that you created.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To serve files from a specified directory using port 8081 (and start `gpfdist` in the background):
 
@@ -171,6 +171,6 @@ $ ps ax | grep gpfdist
 $ kill 3456
 ```
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [hawq load](hawqload.html#topic1), [CREATE EXTERNAL TABLE](../../sql/CREATE-EXTERNAL-TABLE.html)

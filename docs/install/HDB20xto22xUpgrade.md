@@ -31,7 +31,7 @@ This upgrade procedure **must** be performed in the exact order presented:
 -   [Step 8: Ambari Post-Upgrade Actions for PXF](#uphawq212_ambarimgd)
 -   [Step 9: HDB 2.0.1 Post-Upgrade Actions](#201to210hawq_final)
 
-## <a id="upgrade_ambari"></a>Step 1: Upgrade Ambari
+## Step 1: Upgrade Ambari<a id="upgrade_ambari"></a>
 
 If you use Ambari to manage your cluster and your Ambari version is older than 2.4.2:
 
@@ -39,7 +39,7 @@ If you use Ambari to manage your cluster and your Ambari version is older than 2
 
 2. Follow the instructions in [Upgrading Ambari to 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-upgrade/content/upgrading_ambari.html) in the Hortonworks Pivotal HDP documentation.  
 
-## <a id="upgrade_hdp"></a>Step 2: Upgrade HDP
+## Step 2: Upgrade HDP<a id="upgrade_hdp"></a>
 
 Perform the following steps to upgrade HDP in your Ambari-managed installation: 
 
@@ -64,14 +64,14 @@ Perform the following steps to upgrade HDP in your Ambari-managed installation:
 7. Verify all services are running (green).
 
     
-## <a id="20xto210up_setupyum"></a>Step 3: Add New HDB Software Repositories
+## Step 3: Add New HDB Software Repositories<a id="20xto210up_setupyum"></a>
 
 Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos.html) to set up local `yum` HDB repositories on the `repo-node` you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster.
    
 After you set up the repos, each HAWQ host can obtain the HDB software from the `repo-node` HDB repositories.
 
 
-## <a id="20xto210up_ambariup"></a>Step 4: Upgrade Ambari HAWQ Plug-in
+## Step 4: Upgrade Ambari HAWQ Plug-in<a id="20xto210up_ambariup"></a>
 
 If you use Ambari to manage your cluster, perform the following steps to upgrade the Ambari HAWQ plug-in software.
 
@@ -116,7 +116,7 @@ If you use Ambari to manage your cluster, perform the following steps to upgrade
 
 9. Unless directed to by these instructions, do not invoke any service actions in the Ambari management console until the upgrade procedure is complete.
 
-## <a id="201to210up_backupinst"></a>Step 5: Back up Existing HDB Installation
+## Step 5: Back up Existing HDB Installation<a id="201to210up_backupinst"></a>
 
 Backing up your HDB installation before a minor upgrade is recommended.
 
@@ -164,7 +164,7 @@ Backing up your HDB installation before a minor upgrade is recommended.
 
 7. Copy or preserve any additional folders or files (such as backup folders) that you have added in the HAWQ data directories.
 
-## <a id="201to210up_installhdb"></a>Step 6: Upgrade HDB Software
+## Step 6: Upgrade HDB Software<a id="201to210up_installhdb"></a>
 
 Perform the following steps on the HAWQ master, HAWQ standby master, and on **each** HAWQ segment node.  You may choose to update your cluster in parallel using your choice of tool such as `ssh`.
 
@@ -233,7 +233,7 @@ Perform the following steps on the HAWQ master, HAWQ standby master, and on **ea
     HAWQ version 2.2.x.0 build XXXX
     ```
 
-## <a id="201to210up_pxfup"></a>Step 7: Upgrade PXF
+## Step 7: Upgrade PXF<a id="201to210up_pxfup"></a>
 
 Perform the following steps on **each** PXF node in your HAWQ cluster to upgrade the PXF software:
 
@@ -300,13 +300,13 @@ Perform the following steps on **each** PXF node in your HAWQ cluster to upgrade
     root@pxf-node$ service pxf-service start
     ```     
 
-## <a id="uphawq212_ambarimgd"></a>Step 8: Ambari Post-Upgrade Actions for PXF
+## Step 8: Ambari Post-Upgrade Actions for PXF<a id="uphawq212_ambarimgd"></a>
 
 If you manage your HAWQ cluster with Ambari and use PXF, follow the instructions in [Ambari Post-Install Procedure for HDB 2.2.0](install-ambari.html#post-install-212-req) to manually update your Hive profile configurations.
 
 If you upgraded from Ambari 2.2.2 and plan to use the PXF JSON plug-in, follow the instructions in [Post-Install Procedure for JSON](install-ambari.html#post-install-json) to explicitly add the JSON profile definition to the PXF service configuration.
 
-## <a id="201to210hawq_final"></a>Step 9: HDB 2.0.1 Post-Upgrade Actions
+## Step 9: HDB 2.0.1 Post-Upgrade Actions<a id="201to210hawq_final"></a>
 
 After you have verified your HDB 2.2.x installation was upgraded successfully and your HAWQ cluster has been running without issues, uninstall HDB 2.0.1 by performing the following operation on **each** node in your HAWQ cluster:
 

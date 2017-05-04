@@ -23,7 +23,7 @@ under the License.
 
 Defines a new function.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [OR REPLACE] FUNCTION <name>    
@@ -42,7 +42,7 @@ CREATE [OR REPLACE] FUNCTION <name>    
            } [, ...] ) ]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE FUNCTION` defines a new function. `CREATE OR REPLACE                     FUNCTION` will either create a new function, or replace an existing definition.
 
@@ -71,7 +71,7 @@ SELECT * FROM foo();
 
 One exception to this rule are functions that return a table reference (`rangeFuncs`) or functions that use the `refCursor` data type. Note that you cannot return a `refcursor` from any kind of function in HAWQ.
 
-## <a id="topic1__section5"></a>Parameters
+## Parameters<a id="topic1__section5"></a>
 
 <dt> \<name\>  </dt>
 <dd>The name (optionally schema-qualified) of the function to create.</dd>
@@ -130,7 +130,7 @@ STRICT  </dt>
 <dt> \<describe\_function\>  </dt>
 <dd>The name of a callback function to execute when a query that calls this function is parsed. The callback function returns a tuple descriptor that indicates the result type.</dd>
 
-## <a id="topic1__section6"></a>Notes
+## Notes<a id="topic1__section6"></a>
 
 Any compiled code (shared library files) for custom functions must be placed in the same location on every host in your HAWQ array (master and all segments). This location must also be in the `LD_LIBRARY_PATH` so that the server can locate the files. Consider locating shared libraries either relative to `$libdir` (which is located at `$GPHOME/lib`) or through the dynamic library path (set by the `dynamic_library_path` server configuration parameter) on all master segment instances in the HAWQ array.
 
@@ -156,7 +156,7 @@ $$Dianne's horse$$
 $SomeTag$Dianne's horse$SomeTag$
 ```
 
-## <a id="topic1__section8"></a>Examples
+## Examples<a id="topic1__section8"></a>
 
 A very simple addition function:
 
@@ -198,12 +198,12 @@ CREATE FUNCTION dup(int) RETURNS dup_result
 SELECT * FROM dup(42);
 ```
 
-## <a id="topic1__section9"></a>Compatibility
+## Compatibility<a id="topic1__section9"></a>
 
 `CREATE FUNCTION` is defined in SQL:1999 and later. The HAWQ version of the command is similar, but not fully compatible. The attributes are not portable, neither are the different available languages.
 
 For compatibility with some other database systems, \<argmode\> can be written either before or after \<argname\>. But only the first way is standard-compliant.
 
-## <a id="topic1__section10"></a>See Also
+## See Also<a id="topic1__section10"></a>
 
 [ALTER FUNCTION](ALTER-FUNCTION.html), [DROP FUNCTION](DROP-FUNCTION.html)

@@ -23,19 +23,19 @@ under the License.
 
 Collects statistics about a database.
 
-## <a id="synopsis"></a>Synopsis
+## Synopsis<a id="synopsis"></a>
 
 ``` pre
 ANALYZE [VERBOSE] [ROOTPARTITION] <table> [ (<column> [, ...] ) ]]
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
 `ANALYZE` collects statistics about the contents of tables in the database, and stores the results in the system table `pg_statistic`. Subsequently, the query planner uses these statistics to help determine the most efficient execution plans for queries.
 
 With no parameter, `ANALYZE` examines every table in the current database. With a parameter, `ANALYZE` examines only that table. It is further possible to give a list of column names, in which case only the statistics for those columns are collected.
 
-## <a id="params"></a>Parameters
+## Parameters<a id="params"></a>
 
 <dt>VERBOSE  </dt>
 <dd>Enables display of progress messages. When specified, `ANALYZE` emits progress messages to indicate which table is currently being processed. Various statistics about the tables are printed as well.</dd>
@@ -53,7 +53,7 @@ If you use `ROOTPARTITION` on a non-root or non-partitioned table, `ANALYZE` wil
 <dt> \<column\>   </dt>
 <dd>The name of a specific column to analyze. Defaults to all columns.</dd>
 
-## <a id="notes"></a>Notes
+## Notes<a id="notes"></a>
 
 It is a good idea to run `ANALYZE` periodically, or just after making major changes in the contents of a table. Accurate statistics will help the query planner to choose the most appropriate query plan, and thereby improve the speed of query processing. A common strategy is to run `VACUUM` and `ANALYZE` once a day during a low-usage time of day.
 
@@ -75,7 +75,7 @@ When `pxf_stat_max_fragments` is false, `ANALYZE` outputs a message to warn that
 
 There may be situations where the remote statistics retrieval could fail to perform a task on a PXF table. For example, if a PXF Java component is down, the remote statistics retrieval might not occur, and the database transaction would not succeed. In these cases, the statistics remain with the default external table values.
 
-## <a id="examples"></a>Examples
+## Examples<a id="examples"></a>
 
 Collect statistics for the table `mytable`:
 
@@ -83,11 +83,11 @@ Collect statistics for the table `mytable`:
 ANALYZE mytable;
 ```
 
-## <a id="compat"></a>Compatibility
+## Compatibility<a id="compat"></a>
 
 There is no ANALYZE statement in the SQL standard.
 
-## <a id="see"></a>See Also
+## See Also<a id="see"></a>
 
 [ALTER TABLE](ALTER-TABLE.html), [EXPLAIN](EXPLAIN.html), [VACUUM](VACUUM.html)
 

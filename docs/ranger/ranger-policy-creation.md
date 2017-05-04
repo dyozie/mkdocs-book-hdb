@@ -28,7 +28,7 @@ Native HAWQ authorization provides SQL standard authorization at the database an
 **Note**: The HAWQ `GRANT` and `REVOKE` operations are not permitted when Ranger authorization is enabled for HAWQ; you must configure all user and object access using Ranger policies.
 
 
-## <a id="policydef"></a> Defining HAWQ Policies
+##  Defining HAWQ Policies<a id="policydef"></a>
 
 You configure HAWQ-Ranger authorization with the Ranger Administrative UI, which you can access at `http://<ranger-admin-node>:6080`. To configure a Ranger authorization policy for HAWQ, you:
 
@@ -40,7 +40,7 @@ You configure HAWQ-Ranger authorization with the Ranger Administrative UI, which
 ![HAWQ Policy Details](../images/hawqpolicydetails.png)
 
 
-### <a id="createpoliciesresource"></a> HAWQ Ranger Resources
+###  HAWQ Ranger Resources<a id="createpoliciesresource"></a>
 
 Configure the resources to which a HAWQ policy applies in the **Create Policy > Policy Details** page of the Ranger HAWQ Policy editor. Ranger manages access to the following HAWQ resources:
 
@@ -66,11 +66,11 @@ The HAWQ Ranger service definition supports only those combinations of resources
 
 The Ranger policy editor provides resource name look-ups. When you start entering characters into a resource field, HAWQ populates a pop-up list with all existing HAWQ object names that match your text. 
  
-### <a id="createpoliciesconditions"></a> Resource Access Conditions
+###  Resource Access Conditions<a id="createpoliciesconditions"></a>
 
 When you define a HAWQ policy using the Ranger Admin UI, you identify the Groups/Users to which the policy will permit or deny access for the specified HAWQ resource(s). You also identify the permissions for the resource(s) that you want to assign or deny to those users. Specify this information in the **Create Policy > Allow Conditions** and **Deny Conditions** panes of the Ranger HAWQ Policy editor.
 
-#### <a id="conditionusergroup"></a> HAWQ Roles
+####  HAWQ Roles<a id="conditionusergroup"></a>
 
 You create HAWQ users with the `createuser` command line utility or `CREATE ROLE` SQL command. These HAWQ users may or may not correspond to an underlying operating system user. With either HAWQ native or Ranger authorization, you identify the HAWQ database objects to which you want these users/roles to have access. 
 
@@ -87,7 +87,7 @@ You can identify one or more users and/or groups to which a policy provides or d
 
 **Note**: Group-based assignment of policies is not yet supported in HAWQ. Assign policies to users only.
 
-#### <a id="conditionperms"></a> Permissions
+####  Permissions<a id="conditionperms"></a>
 
 You can assign users the following permissions for allowing or denying access to specific HAWQ resources:
 
@@ -111,13 +111,13 @@ These permissions map closely to the privileges that you can assign using HAWQ `
 **Note**: The HAWQ Ranger policy editor always displays the complete list of HAWQ permissions. This list is not filtered by the operations that are actually supported by the resource(s) you have selected. Refer to [HAWQ Resources and Permissions](ranger-resource-perms.html) for the specific permissions supported by each HAWQ resource. Additionally, [SQL Command Permissions Summary](ranger-sqlcmd-summary.html) summarizes the policies and permissions required for some common HAWQ SQL commands.
 
 
-## <a id="policyeval"></a> Ranger Policy Evaluation
+##  Ranger Policy Evaluation<a id="policyeval"></a>
 Ranger evaluates policies from most to least restrictive, searching for a policy with sufficient privileges to allow the requesting user to access the identified resource(s). Deny conditions are evaluated before allow conditions.
 
 Refer to the [Ranger User Guide](https://cwiki.apache.org/confluence/display/RANGER/Apache+Ranger+0.5+-+User+Guide) and [Deny-conditions and excludes in Ranger policies](https://cwiki.apache.org/confluence/display/RANGER/Deny-conditions+and+excludes+in+Ranger+policies) for detailed information about the Ranger Admin UI and Ranger policy evaluation.
 
 
-## <a id="excreatepolicies"></a>Example Scenario: Creating HAWQ Policies
+## Example Scenario: Creating HAWQ Policies<a id="excreatepolicies"></a>
 
 When you enable Ranger authorization for HAWQ with the default service definition in place, the configured policies assign the `gpadmin` administrative HAWQ user all permissions on all database objects. Other HAWQ users have no privileges, *even for the objects that they own*. In this example scenario:
 
@@ -276,7 +276,7 @@ Create the policies(s) that restore `hawquser1`'s access to `testdb` and `table9
     `hawquser1` regains access to `table99` only after the `testdb-connect`, `testdb-public`, and `testdb-public-table99` policies are assigned.
 
 
-## <a id="wildcardinpolicies"></a> Wildcarding in HAWQ Policies
+##  Wildcarding in HAWQ Policies<a id="wildcardinpolicies"></a>
 
 The policy editor allows you to wildcard (`*`) resources and patterns in policy details. The permissions you provide to the leaf node resource in a  wild-carded policy scope the policy in one of the following ways:
 
@@ -297,7 +297,7 @@ Contrast this with the single policy:
 Policy 10 permits the policy holder to use the `public` schema (equivalent to Policy 1 above) and select from *any* table in the schema. In this policy, `select` is a table-level permission, and the wildcard character applies this permission to all instances of the leaf table resource.
 
 
-## <a id="bestpract"></a>Best Practices
+## Best Practices<a id="bestpract"></a>
 The following best practices are recommended when considering Ranger authorization for HAWQ:
 
 - Create policies *before* enabling HAWQ-Ranger authorization. This will ensure access is available to users without any downtime.
@@ -309,7 +309,7 @@ The following best practices are recommended when considering Ranger authorizati
     - The `VACUUM` and `TRUNCATE` operations require `usage-schema` permissions on the schema in which the table resides.
 
  
-## <a id="specialconsider"></a>Special Considerations
+## Special Considerations<a id="specialconsider"></a>
 
 Make note of the following considerations when employing Ranger authorization for HAWQ:
 

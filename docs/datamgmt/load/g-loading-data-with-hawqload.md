@@ -23,7 +23,7 @@ under the License.
 
 The HAWQ `hawq load` utility loads data using readable external tables and the HAWQ parallel file server ( `gpfdist` or `gpfdists`). It handles parallel file-based external table setup and allows users to configure their data format, external table definition, and `gpfdist` or `gpfdists` setup in a single configuration file.
 
-## <a id="topic62__du168147"></a>To use hawq load
+## To use hawq load<a id="topic62__du168147"></a>
 
 1.  Ensure that your environment is set up to run `hawq                         load`. Some dependent files from your HAWQ /&gt; installation are required, such as `gpfdist` and Python, as well as network access to the HAWQ segment hosts.
 2.  Create your load control file. This is a YAML-formatted file that specifies the HAWQ connection information, `gpfdist` configuration information, external table options, and data format.

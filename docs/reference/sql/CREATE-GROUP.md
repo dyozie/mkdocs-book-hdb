@@ -23,7 +23,7 @@ under the License.
 
 Defines a new database role.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE GROUP <name> [ [WITH] <option> [ ... ] ]
@@ -49,14 +49,14 @@ where \<option\> can be:
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE GROUP` has been replaced by [CREATE ROLE](CREATE-ROLE.html), although it is still accepted for backwards compatibility.
 
-## <a id="topic1__section4"></a>Compatibility
+## Compatibility<a id="topic1__section4"></a>
 
 There is no `CREATE GROUP` statement in the SQL standard.
 
-## <a id="topic1__section5"></a>See Also
+## See Also<a id="topic1__section5"></a>
 
 [CREATE ROLE](CREATE-ROLE.html)

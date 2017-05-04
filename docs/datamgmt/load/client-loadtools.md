@@ -24,12 +24,12 @@ HAWQ supports data loading from Red Hat Enterprise Linux 5, 6, and 7 and Windows
 
 This topic presents the instructions to install the HAWQ Load Tools on your client machine. It also includes the information necessary to configure HAWQ databases to accept remote client connections.
 
-## <a id="installloadrunrhel"></a>RHEL Load Tools
+## RHEL Load Tools<a id="installloadrunrhel"></a>
 
 The RHEL Load Tools are provided in a HAWQ distribution. 
 
 
-### <a id="installloadrunux"></a>Installing the RHEL Loader
+### Installing the RHEL Loader<a id="installloadrunux"></a>
 
 1. Download a HAWQ installer package or build HAWQ from source.
  
@@ -41,14 +41,14 @@ The RHEL Load Tools are provided in a HAWQ distribution.
     $ sudo yum install -y libevent libyaml
     ```
 
-### <a id="installrhelloadabout"></a>About the RHEL Loader Installation
+### About the RHEL Loader Installation<a id="installrhelloadabout"></a>
 
 The files/directories of interest in a HAWQ RHEL Load Tools installation include:
 
 `bin/` — data loading command-line tools ([gpfdist](../../reference/cli/admin_utilities/gpfdist.html) and [hawq load](../../reference/cli/admin_utilities/hawqload.html))   
 `greenplum_path.sh` — environment set up file
 
-### <a id="installloadrhelcfgenv"></a>Configuring the RHEL Load Environment
+### Configuring the RHEL Load Environment<a id="installloadrhelcfgenv"></a>
 
 A `greenplum_path.sh` file is located in the HAWQ base install directory following installation. Source `greenplum_path.sh` before running the HAWQ RHEL Load Tools to set up your HAWQ environment:
 
@@ -58,9 +58,9 @@ $ . /usr/local/hawq/greenplum_path.sh
 
 Continue to [Using the HAWQ File Server (gpfdist)](g-using-the-hawq-file-server--gpfdist-.html) for specific information about using the HAWQ load tools.
 
-## <a id="installloadrunwin"></a>Windows Load Tools
+## Windows Load Tools<a id="installloadrunwin"></a>
 
-### <a id="installpythonwin"></a>Installing Python 2.5
+### Installing Python 2.5<a id="installpythonwin"></a>
 The HAWQ Load Tools for Windows requires that the 32-bit version of Python 2.5 be installed on your system. 
 
 **Note**: The 64-bit version of Python is **not** compatible with the HAWQ Load Tools for Windows.
@@ -74,7 +74,7 @@ The HAWQ Load Tools for Windows requires that the 32-bit version of Python 2.5 b
 6. Click **Finish** to complete the Python installation.
 
 
-### <a id="installloadrunwin"></a>Running the Windows Installer
+### Running the Windows Installer<a id="installloadrunwin"></a>
 
 1. Download the `greenplum-loaders-4.3.x.x-build-n-WinXP-x86_32.msi` installer package from [Pivotal Network](https://network.pivotal.io/products/pivotal-gpdb). Make note of the directory to which it was downloaded.
  
@@ -87,7 +87,7 @@ The HAWQ Load Tools for Windows requires that the 32-bit version of Python 2.5 b
 8. Click **Finish** to exit the installer.
 
     
-### <a id="installloadabout"></a>About the Windows Loader Installation
+### About the Windows Loader Installation<a id="installloadabout"></a>
 Your HAWQ Windows Load Tools installation includes the following files and directories:
 
 `bin/` — data loading command-line tools ([gpfdist](http://gpdb.docs.pivotal.io/4380/client_tool_guides/load/unix/gpfdist.html) and [gpload](http://gpdb.docs.pivotal.io/4380/client_tool_guides/load/unix/gpload.html))  
@@ -95,7 +95,7 @@ Your HAWQ Windows Load Tools installation includes the following files and direc
 `greenplum_loaders_path.bat` — environment set up file
 
 
-### <a id="installloadcfgenv"></a>Configuring the Windows Load Environment
+### Configuring the Windows Load Environment<a id="installloadcfgenv"></a>
 
 A `greenplum_loaders_path.bat` file is provided in your load tools base install directory following installation. This file sets the following environment variables:
 
@@ -106,7 +106,7 @@ A `greenplum_loaders_path.bat` file is provided in your load tools base install 
 Execute `greenplum_loaders_path.bat` to set up your HAWQ environment before running the HAWQ Windows Load Tools.
  
 
-## <a id="installloadenableclientconn"></a>Enabling Remote Client Connections
+## Enabling Remote Client Connections<a id="installloadenableclientconn"></a>
 The HAWQ master database must be configured to accept remote client connections.  Specifically, you need to identify the client hosts and database users that will be connecting to the HAWQ database.
 
 1. Ensure that the HAWQ database master `pg_hba.conf` file is correctly configured to allow connections from the desired users operating on the desired database from the desired hosts, using the authentication method you choose. For details, see [Configuring Client Access](../../clientaccess/client_auth.html#topic2).

@@ -23,7 +23,7 @@ under the License.
 
 Extracts all databases in a HAWQ system to a single script file or other archive file.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 pg_dumpall [<options>] ...
@@ -65,7 +65,7 @@ where:
     
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `pg_dumpall` is a standard PostgreSQL utility for backing up all databases in a HAWQ (or PostgreSQL) instance, and is also supported in HAWQ. It creates a single (non-parallel) dump file.
 
@@ -77,7 +77,7 @@ The SQL script will be written to the standard output. Shell operators should be
 
 `pg_dumpall` needs to connect to the HAWQ master server several times (once per database). If you use password authentication, a password could be requested for each connection, so using a `~/.pgpass` file is recommended. 
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 **General Options**
 <dt>-f | -\\\-filespaces  </dt>
@@ -166,7 +166,7 @@ The SQL script will be written to the standard output. Shell operators should be
 <dt>-W | -\\\-password  </dt>
 <dd>Force a password prompt.</dd>
 
-## <a id="topic1__section7"></a>Notes
+## Notes<a id="topic1__section7"></a>
 
 Since `pg_dumpall` calls [pg\_dump](pg_dump.html#topic1) internally, some diagnostic messages will refer to `pg_dump`.
 
@@ -174,7 +174,7 @@ Once restored, it is wise to run `ANALYZE` on each database so the query planner
 
 All tablespace (filespace) directories used by `pg_dumpall` must exist before the restore. Otherwise, database creation will fail for databases in non-default locations.
 
-## <a id="topic1__section8"></a>Examples
+## Examples<a id="topic1__section8"></a>
 
 To dump all databases:
 
@@ -194,6 +194,6 @@ To dump only global objects (including filespaces and resource queues):
 $ pg_dumpall -g -f -r
 ```
 
-## <a id="topic1__section9"></a>See Also
+## See Also<a id="topic1__section9"></a>
 
 [pg\_dump](pg_dump.html#topic1)

@@ -23,7 +23,7 @@ under the License.
 
 Creates a new database role.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 createuser [<connection_options>] [<role_attribute_options>] [-e | --echo] <role_name>
@@ -53,7 +53,7 @@ where:
     
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `createuser` creates a new HAWQ role. You must be a superuser or have the `CREATEROLE` privilege to create new roles. You must connect to the database as a superuser to create new superusers.
 
@@ -61,12 +61,12 @@ Superusers can bypass all access permission checks within the database, so super
 
 `createuser` is a wrapper around the SQL command `CREATE ROLE`.
 
-## <a id="args"></a>Arguments
+## Arguments<a id="args"></a>
 
 <dt>**\<role\_name\>**</dt>
 <dd>The name of the role to be created. This name must be different from all existing roles in this HAWQ installation.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-e, -\\\-echo  </dt>
 <dd>Echo the commands that `createuser` generates and sends to the server.</dd>
@@ -142,7 +142,7 @@ Superusers can bypass all access permission checks within the database, so super
 <dt>-\\\-version  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a role named `joe` using the default options:
 

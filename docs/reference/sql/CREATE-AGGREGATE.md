@@ -23,7 +23,7 @@ under the License.
 
 Defines a new aggregate function.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [ORDERED] AGGREGATE <name> (<input_data_type> [ , ... ]) 
@@ -35,7 +35,7 @@ CREATE [ORDERED] AGGREGATE <name> (<input_data_type> [ , ... ])
         [, SORTOP = <sort_operator>] )
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE AGGREGATE` defines a new aggregate function. Some basic and commonly-used aggregate functions such as `count`, `min`, `max`, `sum`, `avg` and so on are already provided in HAWQ. If one defines new types or needs an aggregate function not already provided, then `CREATE AGGREGATE` can be used to provide the desired features.
 
@@ -95,7 +95,7 @@ An ordered aggregate is called with the following syntax.
 
 If the optional `ORDER BY` is omitted, a system-defined ordering is used. The transition function \<sfunc\> of an ordered aggregate function is called on its input arguments in the specified order and on a single segment. There is a new column `aggordered` in the `pg_aggregate` table to indicate the aggregate function is defined as an ordered aggregate.
 
-## <a id="topic1__section5"></a>Parameters
+## Parameters<a id="topic1__section5"></a>
 
 <dt> \<name\>   </dt>
 <dd>The name (optionally schema-qualified) of the aggregate function to create.</dd>
@@ -136,7 +136,7 @@ PREFUNC is optional. If defined, it is executed on master. Input to PREFUNC is p
 <dt> \<sort\_operator\>   </dt>
 <dd>The associated sort operator for a MIN- or MAX-like aggregate function. This is just an operator name (possibly schema-qualified). The operator is assumed to have the same input data types as the aggregate function (which must be a single-argument aggregate function).</dd>
 
-## <a id="topic1__section6"></a>Notes
+## Notes<a id="topic1__section6"></a>
 
 The ordinary functions used to define a new aggregate function must be defined first. Note that in this release of HAWQ, it is required that the \<sfunc\>, \<ffunc\>, and \<prefunc\> functions used to create the aggregate are defined as `IMMUTABLE`.
 
@@ -172,10 +172,10 @@ Correct answer for reference:
 SELECT sum(a*a*a) FROM x;
 ```
 
-## <a id="topic1__section8"></a>Compatibility
+## Compatibility<a id="topic1__section8"></a>
 
 `CREATE AGGREGATE` is a HAWQ language extension. The SQL standard does not provide for user-defined aggregate functions.
 
-## <a id="topic1__section9"></a>See Also
+## See Also<a id="topic1__section9"></a>
 
 [ALTER AGGREGATE](ALTER-AGGREGATE.html), [DROP AGGREGATE](DROP-AGGREGATE.html), [CREATE FUNCTION](CREATE-FUNCTION.html)

@@ -23,7 +23,7 @@ under the License.
 
 Acts as an interface to the external table parallel loading feature. Executes a load specification defined in a YAML-formatted control file to invoke the HAWQ parallel file server (`gpfdist`).
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq load -f <control_file> [-l <log_file>]   
@@ -48,7 +48,7 @@ where:
   [-W]
 ```
 
-## <a id="topic1__section3"></a>Prerequisites
+## Prerequisites<a id="topic1__section3"></a>
 
 The client machine where `hawq load` is executed must have the following:
 
@@ -59,18 +59,18 @@ The client machine where `hawq load` is executed must have the following:
 -   Network access to and from all hosts in your HAWQ array (master and segments).
 -   Network access to and from the hosts where the data to be loaded resides (ETL servers).
 
-## <a id="topic1__section4"></a>Description
+## Description<a id="topic1__section4"></a>
 
 `hawq load` is a data loading utility that acts as an interface to HAWQ's external table parallel loading feature. Using a load specification defined in a YAML formatted control file, `hawq                     load` executes a load by invoking the HAWQ parallel file server ([gpfdist](gpfdist.html#topic1)), creating an external table definition based on the source data defined, and executing an `INSERT` operation to load the source data into the target table in the database.
 
 The operation, including any SQL commands specified in the `SQL` collection of the YAML control file (see [Control File Format](#topic1__section7)), are performed as a single transaction to prevent inconsistent data when performing multiple, simultaneous load operations on a target table.
 
-## <a id="args"></a>Arguments
+## Arguments<a id="args"></a>
 
 <dt>-f &lt;control\_file&gt;  </dt>
 <dd>A YAML file that contains the load specification details. See [Control File Format](#topic1__section7).</dd>
 
-## <a id="topic1__section5"></a>Options
+## Options<a id="topic1__section5"></a>
 
 <dt>-\\\-gpfdist\_timeout &lt;seconds&gt;  </dt>
 <dd>Sets the timeout for the `gpfdist` parallel file distribution program to send a response. Enter a value from `0` to `30` seconds (entering "`0`" to disables timeouts). Note that you might need to increase this value when operating on high-traffic networks.</dd>
@@ -113,7 +113,7 @@ The operation, including any SQL commands specified in the `SQL` collection of t
 <dt>-W (force password prompt)  </dt>
 <dd>Force a password prompt. If not specified, reads the password from the environment variable `$PGPASSWORD` or from a password file specified by `$PGPASSFILE` or in `~/.pgpass`. If these are not set, then `hawq                                 load` will prompt for a password even if `-W` is not supplied.</dd>
 
-## <a id="topic1__section7"></a>Control File Format
+## Control File Format<a id="topic1__section7"></a>
 
 The `hawq load` control file uses the [YAML 1.1](http://yaml.org/spec/1.1/) document format and then implements its own schema for defining the various steps of a HAWQ load operation. The control file must be a valid YAML document.
 
@@ -365,7 +365,7 @@ OUTPUT:
    - TABLE: public.'"MyTable"'
 ```
 
-## <a id="topic1__section9"></a>Log File Format
+## Log File Format<a id="topic1__section9"></a>
 
 Log files output by `hawq load` have the following format:
 
@@ -387,7 +387,7 @@ INFO|1 bad row
 INFO|# bad rows
 ```
 
-## <a id="topic1__section10"></a>Examples
+## Examples<a id="topic1__section10"></a>
 
 Run a load job as defined in `my_load.yml`:
 
@@ -434,6 +434,6 @@ GPLOAD:
 current_timestamp)"
 ```
 
-## <a id="topic1__section11"></a>See Also
+## See Also<a id="topic1__section11"></a>
 
 [gpfdist](gpfdist.html#topic1), [CREATE EXTERNAL TABLE](../../sql/CREATE-EXTERNAL-TABLE.html#topic1)

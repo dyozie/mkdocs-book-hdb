@@ -23,17 +23,17 @@ under the License.
 
 Removes a view.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP VIEW [IF EXISTS] <name. [, ...] [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP VIEW` will remove an existing view. Only the owner of a view can remove it.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the view does not exist. A notice is issued in this case.</dd>
@@ -47,7 +47,7 @@ DROP VIEW [IF EXISTS] <name. [, ...] [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the view if any objects depend on it. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Remove the view `topten`;
 
@@ -55,10 +55,10 @@ Remove the view `topten`;
 DROP VIEW topten;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `DROP VIEW` is fully conforming with the SQL standard, except that the standard only allows one view to be dropped per command. Also, the `IF           EXISTS` option is a HAWQ extension.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE VIEW](CREATE-VIEW.html)

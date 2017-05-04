@@ -4,7 +4,7 @@ title: Analyzing Resource Manager Status
 
 You can use several queries to force the resource manager to dump more details about active resource context status, current resource queue status, and HAWQ segment status.
 
-## <a id="topic_zrh_pkc_f5"></a>Connection Track Status 
+## Connection Track Status <a id="topic_zrh_pkc_f5"></a>
 
 
 Any query execution requiring resource allocation from HAWQ resource manager has one connection track instance tracking the whole resource usage lifecycle. You can find all resource requests and allocated resources in this dump.
@@ -50,7 +50,7 @@ buffers:toclose=false:forceclose=false)
 |`MSG`|Provides the latest received message information.|
 |`COMMSTAT`|Shows current socket communication buffer status.|
 
-## <a id="resourcqueuestatus"></a>Resource Queue Status 
+## Resource Queue Status <a id="resourcqueuestatus"></a>
 
 You can get more details of the status of resource queues.
 
@@ -99,7 +99,7 @@ QUEUSE(alloc=(0 MB,0.000000 CORE):request=(0 MB,0.000000 CORE):inuse=(0 MB,0.000
 |`QUECAP`|Provides derived resource queue capacity and actual percentage of the cluster resource a queue can use.|
 |`QUEUSE`|Provides information about queue resource usage.|
 
-## <a id="segmentstatus"></a>HAWQ Segment Status 
+## HAWQ Segment Status <a id="segmentstatus"></a>
 
 Use the following query to obtain the status of a HAWQ segment.
 

@@ -23,7 +23,7 @@ under the License.
 
 Defines a new operator.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE OPERATOR <name> ( 
@@ -36,7 +36,7 @@ CREATE OPERATOR <name> (
        [, LTCMP = <less_than_op>] [, GTCMP = <greater_than_op>] )
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE OPERATOR` defines a new operator. The user who defines an operator becomes its owner.
 
@@ -57,7 +57,7 @@ The \<funcname\> procedure must have been previously defined using `CREATE FUNCT
 
 The other clauses specify optional operator optimization clauses. These clauses should be provided whenever appropriate to speed up queries that use the operator. But if you provide them, you must be sure that they are correct. Incorrect use of an optimization clause can result in server process crashes, subtly wrong output, or other unexpected results. You can always leave out an optimization clause if you are not sure about it.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The (optionally schema-qualified) name of the operator to be defined. Two operators in the same schema can have the same name if they operate on different data types.</dd>
@@ -154,11 +154,11 @@ COMMUTATOR = OPERATOR(myschema.===) ,
 ```
 </dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Any functions used to implement the operator must be defined as `IMMUTABLE`.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Here is an example of creating an operator for adding two complex numbers, assuming we have already created the definition of type `complex`. First define the function that does the work, then define the operator:
 
@@ -181,10 +181,10 @@ To use this operator in a query:
 SELECT (a + b) AS c FROM test_complex;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE OPERATOR` is a HAWQ language extension. The SQL standard does not provide for user-defined operators.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [CREATE FUNCTION](CREATE-FUNCTION.html), [CREATE TYPE](CREATE-TYPE.html), [ALTER OPERATOR](ALTER-OPERATOR.html), [DROP OPERATOR](DROP-OPERATOR.html)

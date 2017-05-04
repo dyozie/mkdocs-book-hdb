@@ -21,13 +21,13 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-## <a id="overview-topic"></a>Overview
+## Overview<a id="overview-topic"></a>
 
 To keep a HAWQ system running efficiently, the database must be regularly cleared of expired data and the table statistics must be updated so that the query optimizer has accurate information.
 
 HAWQ requires that certain tasks be performed regularly to achieve optimal performance. The tasks discussed here are required, but database administrators can automate them using standard UNIX tools such as `cron` scripts. An administrator sets up the appropriate scripts and checks that they execute successfully. See [Recommended Monitoring and Maintenance Tasks](RecommendedMonitoringTasks.html) for additional suggested maintenance activities you can implement to keep your HAWQ system running optimally.
 
-## <a id="topic10"></a>Log File Maintenance 
+## Log File Maintenance <a id="topic10"></a>
 
 Every database instance in HAWQ \(master and segments\) runs a PostgreSQL database server with its own server log file. For information about managing these log files, refer to [HAWQ Database Server Log Files](logfiles.html#topic28).
 

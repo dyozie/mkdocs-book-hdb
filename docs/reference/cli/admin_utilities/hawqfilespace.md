@@ -23,7 +23,7 @@ under the License.
 
 Creates a filespace using a configuration file that defines a file system location. Filespaces describe the physical file system resources to be used by a tablespace.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq filespace [<connection_options>] 
@@ -52,7 +52,7 @@ where:
   [-W | --password] 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 A tablespace requires a file system location to store its database files. This file system location for all components in a HAWQ system is referred to as a *filespace*. Once a filespace is defined, it can be used by one or more tablespaces.
 
@@ -64,7 +64,7 @@ Once you have a configuration file, you can run `hawq filespace` with the `-c` o
 
 **Note:** If segments are down due to a power or nic failure, you may see inconsistencies during filespace creation. You may not be able to bring up the cluster.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-o, -\\\-output &lt;output\_directory\_name&gt;  </dt>
 <dd>The directory location and file name to output the generated filespace configuration file. You will be prompted to enter a name for the filespace and file system location. The file system locations must exist on all hosts in your system prior to running the `hawq filespace` command. You will specify the number of replicas to create. The default is 3 replicas. After the utility creates the configuration file, you can manually edit the file to make any required changes to the filespace layout before creating the filespace in HAWQ.</dd>
@@ -106,7 +106,7 @@ Once you have a configuration file, you can run `hawq filespace` with the `-c` o
 <dt>-W, -\\\-password  </dt>
 <dd>Force a password prompt.</dd>
 
-## <a id="topic1__section6"></a>Example 1
+## Example 1<a id="topic1__section6"></a>
 
 Create a filespace configuration file. Depending on your system setup, you may need to specify the host and port. You will be prompted to enter a name for the filespace and a replica number. You will then be asked for the DFS location. The file system locations must exist on all hosts in your system prior to running the `hawq filespace` command:
 
@@ -161,6 +161,6 @@ $ hawq filespace --movefilespace=cdbfast_fs_a
       --location=hdfs://gphd-cluster/cdbfast_fs_a/
 ```
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE TABLESPACE](../../sql/CREATE-TABLESPACE.html)

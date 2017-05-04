@@ -23,23 +23,23 @@ under the License.
 
 Commits the current transaction.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 END [WORK | TRANSACTION]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `END` commits the current transaction. All changes made by the transaction become visible to others and are guaranteed to be durable if a crash occurs. This command is a HAWQ extension that is equivalent to [COMMIT](COMMIT.html).
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>WORK  
 TRANSACTION  </dt>
 <dd>Optional keywords. They have no effect.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Commit the current transaction:
 
@@ -47,10 +47,10 @@ Commit the current transaction:
 END;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `END` is a HAWQ extension that provides functionality equivalent to [COMMIT](COMMIT.html), which is specified in the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [BEGIN](BEGIN.html), [ROLLBACK](ROLLBACK.html), [COMMIT](COMMIT.html)

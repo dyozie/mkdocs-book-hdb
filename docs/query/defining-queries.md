@@ -24,7 +24,7 @@ under the License.
 HAWQ is based on the PostgreSQL implementation of the SQL standard. SQL commands are typically entered using the standard PostgreSQL interactive terminal `psql`, but other programs that have similar functionality can be used as well.
 
 
-## <a id="topic3"></a>SQL Lexicon
+## SQL Lexicon<a id="topic3"></a>
 
 SQL is a standard language for accessing databases. The language consists of elements that enable data storage, retrieval, analysis, viewing, and so on. You use SQL commands to construct queries and commands that the HAWQ engine understands.
 
@@ -32,7 +32,7 @@ SQL queries consist of a sequence of commands. Commands consist of a sequence of
 
 H uses PostgreSQL's structure and syntax, with some exceptions. For more information about SQL rules and concepts in PostgreSQL, see "SQL Syntax" in the PostgreSQL documentation.
 
-## <a id="topic4"></a>SQL Value Expressions
+## SQL Value Expressions<a id="topic4"></a>
 
 SQL value expressions consist of one or more values, symbols, operators, SQL functions, and data. The expressions compare data or perform calculations and return a value as the result. Calculations include logical, arithmetic, and set operations.
 
@@ -58,7 +58,7 @@ The following are value expressions:
 
 SQL constructs such as functions and operators are expressions but do not follow any general syntax rules. For more information about these constructs, see [Using Functions and Operators](functions-operators.html#topic26).
 
-### <a id="topic5"></a>Column References
+### Column References<a id="topic5"></a>
 
 A column reference has the form:
 
@@ -68,7 +68,7 @@ correlation.columnname
 
 Here, `correlation` is the name of a table (possibly qualified with a schema name) or an alias for a table defined with a `FROM` clause or one of the keywords `NEW` or `OLD`. `NEW` and `OLD` can appear only in rewrite rules, but you can use other correlation names in any SQL statement. If the column name is unique across all tables in the query, you can omit the "`correlation.`" part of the column reference.
 
-### <a id="topic6"></a>Positional Parameters
+### Positional Parameters<a id="topic6"></a>
 
 Positional parameters are arguments to SQL statements or functions that you reference by their positions in a series of arguments. For example, `$1` refers to the first argument, `$2` to the second argument, and so on. The values of positional parameters are set from arguments external to the SQL statement or supplied when SQL functions are invoked. Some client libraries support specifying data values separately from the SQL command, in which case parameters refer to the out-of-line data values. A parameter reference has the form:
 
@@ -86,7 +86,7 @@ CREATE FUNCTION dept(text) RETURNS dept
 
 Here, the `$1` references the value of the first function argument whenever the function is invoked.
 
-### <a id="topic7"></a>Subscripts
+### Subscripts<a id="topic7"></a>
 
 If an expression yields a value of an array type, you can extract a specific element of the array value as follows:
 
@@ -120,7 +120,7 @@ $1[10:42]
 (arrayfunction(a,b))[42]
 ```
 
-### <a id="topic8"></a>Field Selections
+### Field Selections<a id="topic8"></a>
 
 If an expression yields a value of a composite type (row type), you can extract a specific field of the row as follows:
 
@@ -144,7 +144,7 @@ $1.somecolumn
 
 A qualified column reference is a special case of field selection syntax.
 
-### <a id="topic9"></a>Operator Invocations
+### Operator Invocations<a id="topic9"></a>
 
 Operator invocations have the following possible syntaxes:
 
@@ -168,7 +168,7 @@ OPERATOR(schema.operatorname)
 
 Available operators and whether they are unary or binary depends on the operators that the system or user defines. For more information about built-in operators, see [Built-in Functions and Operators](functions-operators.html#topic29).
 
-### <a id="topic10"></a>Function Calls
+### Function Calls<a id="topic10"></a>
 
 The syntax for a function call is the name of a function (possibly qualified with a schema name), followed by its argument list enclosed in parentheses:
 
@@ -182,7 +182,7 @@ For example, the following function call computes the square root of 2:
 sqrt(2)
 ```
 
-### <a id="topic11"></a>Aggregate Expressions
+### Aggregate Expressions<a id="topic11"></a>
 
 An aggregate expression applies an aggregate function across the rows that a query selects. An aggregate function performs a calculation on a set of values and returns a single value, such as the sum or average of the set of values. The syntax of an aggregate expression is one of the following:
 
@@ -217,7 +217,7 @@ PERCENTILE_DISC(_percentage_) WITHIN GROUP (ORDER BY _expression_)
 
 Currently you can use only these two expressions with the keyword `WITHIN             GROUP`.
 
-#### <a id="topic12"></a>Limitations of Aggregate Expressions
+#### Limitations of Aggregate Expressions<a id="topic12"></a>
 
 The following are current limitations of the aggregate expressions:
 
@@ -226,7 +226,7 @@ The following are current limitations of the aggregate expressions:
 -   When an aggregate expression appears in a subquery, the aggregate is normally evaluated over the rows of the subquery. If the aggregate's arguments contain only outer-level variables, the aggregate belongs to the nearest such outer level and evaluates over the rows of that query. The aggregate expression as a whole is then an outer reference for the subquery in which it appears, and the aggregate expression acts as a constant over any one evaluation of that subquery. See [Scalar Subqueries](#topic15) and [Built-in functions and operators](functions-operators.html#topic29__in204913).
 -   HAWQ does not support DISTINCT with multiple input expressions.
 
-### <a id="topic13"></a>Window Expressions
+### Window Expressions<a id="topic13"></a>
 
 Window expressions allow application developers to more easily compose complex online analytical processing (OLAP) queries using standard SQL commands. For example, with window expressions, users can calculate moving averages or sums over various intervals, reset aggregations and ranks as selected column values change, and express complex ratios in simple terms.
 
@@ -276,7 +276,7 @@ The `OVER` clause differentiates window functions from other aggregate or report
 
 -   The `ROWS/RANGE` clause defines a window frame for aggregate (non-ranking) window functions. A window frame defines a set of rows within a window partition. When a window frame is defined, the window function computes on the contents of this moving frame rather than the fixed contents of the entire window partition. Window frames are row-based (`ROWS`) or value-based (`RANGE`).
 
-### <a id="topic14"></a>Type Casts
+### Type Casts<a id="topic14"></a>
 
 A type cast specifies a conversion from one data type to another. HAWQ accepts two equivalent syntaxes for type casts:
 
@@ -291,24 +291,24 @@ A cast applied to a value expression of a known type is a run-time type conversi
 
 You can usually omit an explicit type cast if there is no ambiguity about the type a value expression must produce; for example, when it is assigned to a table column, the system automatically applies a type cast. The system applies automatic casting only to casts marked "OK to apply implicitly" in system catalogs. Other casts must be invoked with explicit casting syntax to prevent unexpected conversions from being applied without the user's knowledge.
 
-### <a id="topic15"></a>Scalar Subqueries
+### Scalar Subqueries<a id="topic15"></a>
 
 A scalar subquery is a `SELECT` query in parentheses that returns exactly one row with one column. Do not use a `SELECT` query that returns multiple rows or columns as a scalar subquery. The query runs and uses the returned value in the surrounding value expression. A correlated scalar subquery contains references to the outer query block.
 
-### <a id="topic16"></a>Correlated Subqueries
+### Correlated Subqueries<a id="topic16"></a>
 
 A correlated subquery (CSQ) is a `SELECT` query with a `WHERE` clause or target list that contains references to the parent outer clause. CSQs efficiently express results in terms of results of another query. HAWQ supports correlated subqueries that provide compatibility with many existing applications. A CSQ is a scalar or table subquery, depending on whether it returns one or multiple rows. HAWQ does not support correlated subqueries with skip-level correlations.
 
-### <a id="topic17"></a>Correlated Subquery Examples
+### Correlated Subquery Examples<a id="topic17"></a>
 
-#### <a id="topic18"></a>Example 1 – Scalar correlated subquery
+#### Example 1 – Scalar correlated subquery<a id="topic18"></a>
 
 ``` sql
 SELECT * FROM t1 WHERE t1.x 
 > (SELECT MAX(t2.x) FROM t2 WHERE t2.y = t1.y);
 ```
 
-#### <a id="topic19"></a>Example 2 – Correlated EXISTS subquery
+#### Example 2 – Correlated EXISTS subquery<a id="topic19"></a>
 
 ``` sql
 SELECT * FROM t1 WHERE 
@@ -322,7 +322,7 @@ HAWQ uses one of the following methods to run CSQs:
 
 The following examples illustrate how to rewrite some of these types of queries to improve performance.
 
-#### <a id="topic20"></a>Example 3 - CSQ in the Select List
+#### Example 3 - CSQ in the Select List<a id="topic20"></a>
 
 *Original Query*
 
@@ -345,7 +345,7 @@ GROUP BY t1.x)
 ON (t1.x = csq_y);
 ```
 
-### <a id="topic21"></a>Example 4 - CSQs connected by OR Clauses
+### Example 4 - CSQs connected by OR Clauses<a id="topic21"></a>
 
 *Original Query*
 
@@ -370,14 +370,14 @@ WHERE x < (SELECT count(*) FROM t3 WHERE t1.y = t3.y)
 
 To view the query plan, use `EXPLAIN SELECT` or `EXPLAIN ANALYZE             SELECT`. Subplan nodes in the query plan indicate that the query will run on every row of the outer query, and the query is a candidate for rewriting. For more information about these statements, see [Query Profiling](query-profiling.html#topic39).
 
-### <a id="topic22"></a>Advanced Table Functions
+### Advanced Table Functions<a id="topic22"></a>
 
 HAWQ supports table functions with `TABLE` value expressions. You can sort input rows for advanced table functions with an `ORDER BY` clause. You can redistribute them with a `SCATTER BY` clause to specify one or more columns or an expression for which rows with the specified characteristics are available to the same process. This usage is similar to using a `DISTRIBUTED BY` clause when creating a table, but the redistribution occurs when the query runs.
 
 **Note:**
 Based on the distribution of data, HAWQ automatically parallelizes table functions with `TABLE` value parameters over the nodes of the cluster.
 
-### <a id="topic23"></a>Array Constructors
+### Array Constructors<a id="topic23"></a>
 
 An array constructor is an expression that builds an array value from values for its member elements. A simple array constructor consists of the key word `ARRAY`, a left square bracket `[`, one or more expressions separated by commas for the array element values, and a right square bracket `]`. For example,
 
@@ -437,7 +437,7 @@ SELECT ARRAY(SELECT oid FROM pg_proc WHERE proname LIKE 'bytea%');
 
 The subquery must return a single column. The resulting one-dimensional array has an element for each row in the subquery result, with an element type matching that of the subquery's output column. The subscripts of an array value built with `ARRAY` always begin with `1`.
 
-### <a id="topic24"></a>Row Constructors
+### Row Constructors<a id="topic24"></a>
 
 A row constructor is an expression that builds a row value (also called a composite value) from values for its member fields. For example,
 
@@ -509,7 +509,7 @@ SELECT getf1(CAST(ROW(11,'this is a test',2.5) AS myrowtype));
 
 You can use row constructors to build composite values to be stored in a composite-type table column or to be passed to a function that accepts a composite parameter.
 
-### <a id="topic25"></a>Expression Evaluation Rules
+### Expression Evaluation Rules<a id="topic25"></a>
 
 The order of evaluation of subexpressions is undefined. The inputs of an operator or function are not necessarily evaluated left-to-right or in any other fixed order.
 

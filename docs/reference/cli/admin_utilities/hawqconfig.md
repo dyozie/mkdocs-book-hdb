@@ -25,7 +25,7 @@ Sets server configuration parameters on all nodes (master and segments) for HAWQ
 
 **Note:** If you install and manage HAWQ using Ambari, do not use `hawq config` to configure HAWQ properties. Ambari will overwrite any changes that were made by `hawq config` when it restarts the cluster. For Ambari-managed HAWQ clusters, always use the Ambari administration interface to set or change HAWQ configuration properties.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq config -c <hawq_property> | --change <hawq_property> 
@@ -44,7 +44,7 @@ hawq config -s <hawq_property> | --show <hawq_property>
 hawq config --help
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq config` utility allows you to set, unset, or view configuration properties from the `hawq-site.xml` files of all instances in your HAWQ system.
 
@@ -66,7 +66,7 @@ To show the currently set values for a property across the system, use the `-s` 
 -   `PGPASSWORD`
 -   `PGDATABASE`
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>
 -c, -\\\-change \<hawq\_property\>
@@ -122,7 +122,7 @@ Overrides copying configuration files to a host on which SSH validation fails. I
 Displays the online help.
 </dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Set the `max_connections` setting to 100:
 
@@ -148,6 +148,6 @@ Show the values of a particular property across the system:
 $ hawq config -s max_connections
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq stop](hawqstop.html#topic1)

@@ -25,12 +25,12 @@ The HAWQ `gpadmin` user and other users who are granted the necessary privileges
 
 This lesson introduces basic HAWQ database administration commands and tasks using `psql`. You will create a database and a simple table, and add data to and query the table.
 
-## <a id="tut_adminprereq"></a> Prerequisites
+##  Prerequisites<a id="tut_adminprereq"></a>
 
 Ensure that you have [Set Up your HAWQ Runtime Environment](introhawqenv.html#tut_runtime_setup) and that your HAWQ cluster is up and running.
 
 
-## <a id="tut_ex_createdb"></a>Exercise: Create the HAWQ Tutorial Database
+## Exercise: Create the HAWQ Tutorial Database<a id="tut_ex_createdb"></a>
 
 In this exercise, you use the `psql` command line utility to create a HAWQ database.
 
@@ -90,7 +90,7 @@ In this exercise, you use the `psql` command line utility to create a HAWQ datab
     hawqgsdb=# \q
     ```
 
-## <a id="tut_ex_usepsql"></a>Exercise: Use psql for Table Operations
+## Exercise: Use psql for Table Operations<a id="tut_ex_usepsql"></a>
 
 You manage and access HAWQ databases and tables via the `psql` utility, an interactive front-end to the HAWQ database. In this exercise, you use `psql` to create, add data to, and query a simple HAWQ table.
 
@@ -213,7 +213,7 @@ You manage and access HAWQ databases and tables via the `psql` utility, an inter
     ```  
 
     
-## <a id="tut_dbadmin_summary"></a>Summary
+## Summary<a id="tut_dbadmin_summary"></a>
 You created the database you will use in later lessons. You also created, inserted data into, and queried a simple HAWQ table using`psql`.
 
 For information on SQL command support in HAWQ, refer to the [SQL Command](../../reference/SQLCommandReference.html) reference. 

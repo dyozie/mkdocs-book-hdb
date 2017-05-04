@@ -23,7 +23,7 @@ under the License.
 
 Verifies the baseline hardware performance of the specified hosts.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq checkperf -d <test_directory> [-d <test_directory> ...] 
@@ -45,7 +45,7 @@ hawq checkperf --version
 hawq checkperf -?
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq checkperf` utility starts a session on the specified hosts and runs the following performance tests:
 
@@ -59,7 +59,7 @@ You must also specify at least one test directory (with `-d`). The user who runs
 
 Before using `hawq checkperf`, you must have a trusted host setup between the hosts involved in the performance test. You can use the utility `hawq           ssh-exkeys` to update the known host files and exchange public keys between hosts if you have not done so already. Note that `hawq checkperf` calls to `hawq ssh` and `hawq scp`, so these HAWQ utilities must also be in your `$PATH`.
 
-## <a id="args"></a>Arguments
+## Arguments<a id="args"></a>
 
 <dt>-d \<test\_directory\> </dt>
 <dd>For the disk I/O test, specifies the file system directory locations to test. You must have write access to the test directory on all hosts involved in the performance test. You can use the `-d` option multiple times to specify multiple test directories (for example, to test disk I/O of your data directories).</dd>
@@ -88,7 +88,7 @@ sdw3-1
 <dt>-h \<hostname\>  </dt>
 <dd>Specifies a single host name (or host address) that will participate in the performance test. You can use the `-h` option multiple times to specify multiple host names.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-r ds{n|N|M}  </dt>
 <dd>Specifies which performance tests to run. The default is `dsn`:
@@ -123,7 +123,7 @@ sdw3-1
 <dt>-? (help)  </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Run the disk I/O and memory bandwidth tests on all the hosts in the file *host\_file* using the test directory of */data1* and */data2*:
 
@@ -151,6 +151,6 @@ $ hawq checkperf -f hostfile_checknet_ic1 -r N --netperf -d /tmp
 $ hawq checkperf -f hostfile_checknet_ic2 -r N --netperf -d /tmp
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq ssh](hawqssh.html#topic1), [hawq scp](hawqscp.html#topic1)

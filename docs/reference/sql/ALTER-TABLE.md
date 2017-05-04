@@ -23,7 +23,7 @@ under the License.
 
 Changes the definition of a table.
 
-## <a id="altertable__section2"></a>Synopsis
+## Synopsis<a id="altertable__section2"></a>
 
 ```pre
 ALTER TABLE [ONLY] <name> RENAME [COLUMN] <column> TO <new_column>
@@ -171,11 +171,11 @@ When using multi-level partition designs, the following operations are not suppo
 -   SPLIT PARTITION
 -   All operations that involve modifying subpartitions.
 
-## <a id="limitations"></a>Limitations
+## Limitations<a id="limitations"></a>
 
 HAWQ does not support using `ALTER TABLE` to `ADD` or `DROP` a column in an existing Parquet table.
 
-## <a id="altertable__section4"></a>Parameters
+## Parameters<a id="altertable__section4"></a>
 
 
 <dt>ONLY  </dt>
@@ -321,7 +321,7 @@ ALTER TABLE name ALTER PARTITION FOR ('2008-10-01') DROP PARTITION FOR ('2008-10
 ```
 </dd>
 
-## <a id="notes"></a>Notes
+## Notes<a id="notes"></a>
 
 Take special care when altering or dropping columns that are part of the HAWQ distribution key as this can change the distribution policy for the table. HAWQ does not currently support foreign key constraints.
 
@@ -345,7 +345,7 @@ The `OWNER` action never recurse to descendant tables; that is, they always act 
 
 Changing any part of a system catalog table is not permitted.
 
-## <a id="examples"></a>Examples
+## Examples<a id="examples"></a>
 
 Add a column to a table:
 
@@ -432,10 +432,10 @@ ALTER TABLE sales SPLIT PARTITION FOR ('2008-01-01')
     INTO (PARTITION jan081to15, PARTITION jan0816to31);
 ```
 
-## <a id="compat"></a>Compatibility
+## Compatibility<a id="compat"></a>
 
 The `ADD`, `DROP`, and `SET DEFAULT` forms conform with the SQL standard. The other forms are HAWQ extensions of the SQL standard. Also, the ability to specify more than one manipulation in a single `ALTER                TABLE` command is an extension. `ALTER TABLE DROP COLUMN` can be used to drop the only column of a table, leaving a zero-column table. This is an extension of SQL, which disallows zero-column tables.
 
-## <a id="altertable__section8"></a>See Also
+## See Also<a id="altertable__section8"></a>
 
 [CREATE TABLE](CREATE-TABLE.html), [DROP TABLE](DROP-TABLE.html)

@@ -7,7 +7,7 @@ PL/R is available as a package that you can download from the Pivotal Network an
 <p class="note"><b>Note:</b> For details on how to use PL/R, see <a href="../../hawq/plext/using_plr.html">Using PL/R</a>.</p>
 
 
-## <a id="plrprereq"></a>Prerequisites 
+## Prerequisites <a id="plrprereq"></a>
 
 Before you install the PL/R software extension, ensure:
 
@@ -19,7 +19,7 @@ Before you install the PL/R software extension, ensure:
     root@hawq-node$ yum install epel-release
     ```
 
-## <a id="installplr"></a>Install PL/R 
+## Install PL/R <a id="installplr"></a>
 
 The PL/R package RPM file is available from the HDB Add-On repository.
 
@@ -43,7 +43,7 @@ The PL/R package RPM file is available from the HDB Add-On repository.
     ```
  
  
-## <a id="enableplr"></a>Enable PL/R Language Support 
+## Enable PL/R Language Support <a id="enableplr"></a>
 
 For each database that requires its use, register the PL/R language with the `CREATE LANGUAGE` SQL command.
 
@@ -62,7 +62,7 @@ testdb=# CREATE LANGUAGE plr;
 
 You are now ready to create new or add existing PL/R functions.
 
-### <a id="installplrfunctions"></a>Install PL/R Functions 
+### Install PL/R Functions <a id="installplrfunctions"></a>
 
 Once PL/R is installed, HAWQ nodes have access to a library of PL/R convenience functions.  These are located in the `/usr/local/hawq/share/postgresql/contrib/plr.sql` file. 
 
@@ -75,7 +75,7 @@ Replace \<dbname\> with the name of the target database.
 
 **Note**: This script also adds PL/R language support to the database.
 
-## <a id="downloadinstallplrlibries"></a>Downloading and Installing R Packages 
+## Downloading and Installing R Packages <a id="downloadinstallplrlibries"></a>
 
 R packages are modules that contain R functions and data sets. You can install R packages to extend R and PL/R functionality in HAWQ.
 
@@ -84,12 +84,12 @@ See [Downloading and Installing R Packages](../../hawq/plext/using_plr.html#down
 **Note**: If you expand HAWQ and add segment hosts, you must install R, the PL/R rpm, and the R packages in the R installation of *each* of the new hosts.</p>
 
 
-## <a id="uninstallplr"></a>Uninstall PL/R 
+## Uninstall PL/R <a id="uninstallplr"></a>
 
 
 When you remove PL/R language support from a database, the PL/R routines that you created in the database will no longer work.
 
-### <a id="removeplr"></a>Remove PL/R Support for a Database 
+### Remove PL/R Support for a Database <a id="removeplr"></a>
 
 
 For a database that no longer requires the PL/R language, remove support for PL/R with the SQL command `DROP LANGUAGE`. 
@@ -112,7 +112,7 @@ or
 testdb=# DROP LANGUAGE plr CASCADE;
 ```
 
-### <a id="removeplrpackage"></a>Uninstall PL/R RPM 
+### Uninstall PL/R RPM <a id="removeplrpackage"></a>
 
 Every database must unregister PL/R support before you can uninstall the PL/R extension package. 
 

@@ -45,7 +45,7 @@ under the License.
 
     To disable automatic query detection and termination, set the value of `runaway_detector_activation_percent` to 100.
 
-## <a id="id_xkg_znj_f5"></a>How to Investigate Query Performance Issues
+## How to Investigate Query Performance Issues<a id="id_xkg_znj_f5"></a>
 
 A query is not executing as quickly as you would expect. Here is how to investigate possible causes of slowdown:
 
@@ -61,7 +61,7 @@ A query is not executing as quickly as you would expect. Here is how to investig
 5.  Check resource queue status. You can query view `pg_resqueue_status` to check if the target queue has already dispatched some resource to the queries, or if the target queue is lacking resources. See [Checking Existing Resource Queues](../resourcemgmt/ResourceQueues.html#topic_lqy_gls_zt).
 6.  Analyze a dump of the resource manager's status to see more resource queue status. See [Analyzing Resource Manager Status](../resourcemgmt/ResourceQueues.html#topic_zrh_pkc_f5).
 
-## <a id="topic_amk_drc_d5"></a>Data Locality Statistics
+## Data Locality Statistics<a id="topic_amk_drc_d5"></a>
 
 For visibility into query performance, use the EXPLAIN ANALYZE to obtain data locality statistics. For example:
 
@@ -135,11 +135,11 @@ The following table describes the metrics related to data locality. Use these me
 </tbody>
 </table>
 
-## <a id="topic_wv3_gzc_d5"></a>Number of Virtual Segments
+## Number of Virtual Segments<a id="topic_wv3_gzc_d5"></a>
 
 To obtain the best results when querying data in HAWQ, review the best practices described in this topic.
 
-### <a id="virtual_seg_performance"></a>Factors Impacting Query Performance
+### Factors Impacting Query Performance<a id="virtual_seg_performance"></a>
 
 The number of virtual segments used for a query directly impacts the query's performance. The following factors can impact the degree of parallelism of a query:
 

@@ -23,7 +23,7 @@ under the License.
 
 Defines a new cast.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE CAST (<sourcetype> AS <targettype>) 
@@ -34,7 +34,7 @@ CREATE CAST (<sourcetype> AS <targettype>) WITHOUT FUNCTION
        [AS ASSIGNMENT | AS IMPLICIT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE CAST` defines a new cast. A cast specifies how to perform a conversion between two data types. For example,
 
@@ -65,7 +65,7 @@ It is wise to be conservative about marking casts `AS IMPLICIT`. An overabundanc
 To be able to create a cast, you must own the source or the target data type. To create a binary-compatible cast, you must be superuser.
 
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<sourcetype\>  </dt>
 <dd>The name of the source data type of the cast.</dd>
@@ -89,7 +89,7 @@ When a cast has different source and target types and a function that takes more
 <dt>AS IMPLICIT  </dt>
 <dd>Indicates that the cast may be invoked implicitly in any context.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 For this release of HAWQ, user-defined functions used in a user-defined cast must be defined as `IMMUTABLE`. Any compiled code (shared library files) for custom functions must be placed in the same location on every host in your HAWQ array (master and all segments). This location must also be in the `LD_LIBRARY_PATH` so that the server can locate the files.
 
@@ -97,7 +97,7 @@ Remember that if you want to be able to convert types both ways, you need to dec
 
 We recommend that you follow the convention of naming cast implementation functions after the target data type, as the built-in cast implementation functions are named. Many users are used to being able to cast data types using a function-style notation, that is `typename(x)`.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a cast from type `text` to type `int4` using the function `int4(text)`. (This cast is already predefined in the system.):
 
@@ -105,11 +105,11 @@ Create a cast from type `text` to type `int4` using the function `int4(text)`. (
 CREATE CAST (text AS int4) WITH FUNCTION int4(text);
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The `CREATE CAST` command conforms to the SQL standard, except that SQL does not make provisions for binary-compatible types or extra arguments to implementation functions. `AS IMPLICIT` is also a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [DROP CAST](DROP-CAST.html),  [CREATE FUNCTION](CREATE-FUNCTION.html)
 

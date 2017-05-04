@@ -2,7 +2,7 @@
 title: PXF Post-Installation Procedures for Hive/HBase
 ---
 
-## <a id="post-install-pxf-hbasehive"></a>Post-Install Procedures for Hive and HBase
+## Post-Install Procedures for Hive and HBase<a id="post-install-pxf-hbasehive"></a>
 
 Perform the following post-install procedures if you plan to use PXF to access HBase and Hive. Differing procedures may be required for Ambari- vs. command-line-managed clusters.
 
@@ -31,7 +31,7 @@ Perform the following post-install procedures if you plan to use PXF to access H
    2. Restart HBase.  
 
 
-### <a id="pxf-hivehbase-kerberos"></a>Kerberos Configuration (Optional)
+### Kerberos Configuration (Optional)<a id="pxf-hivehbase-kerberos"></a>
 
 If you are using Kerberos to secure Hive and HBase, you must configure proxy users, enable user impersonation, and configure PXF access to tables.
 

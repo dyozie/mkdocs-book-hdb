@@ -23,7 +23,7 @@ under the License.
 
 Defines a new external table.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [READABLE] EXTERNAL TABLE <table_name>     
@@ -126,7 +126,7 @@ where \<pxf parameters\> is:
  | ?PROFILE=<profile-name>[&<custom-option>=<value>...]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE EXTERNAL TABLE` or `CREATE EXTERNAL WEB TABLE` creates a new readable external table definition in HAWQ. Readable external tables are typically used for fast, parallel data loading. Once an external table is defined, you can query its data directly (and in parallel) using SQL commands. For example, you can select, join, or sort external table data. You can also create views for external tables. DML operations (`UPDATE`, `INSERT`, `DELETE`, or `TRUNCATE`) are not permitted on readable external tables.
 
@@ -144,7 +144,7 @@ The LOCATION clause specifies the location of the external data. The location st
 
 The `FORMAT` clause is used to describe how external table files are formatted. Valid flat file formats, including files in HDFS, are delimited text (`TEXT`) and comma separated values (`CSV`) format for `gpfdist` protocols. If the data in the file does not use the default column delimiter, escape character, null string, and so on, you must specify the additional formatting options so that the data in the external file is read correctly by HAWQ.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>READABLE | WRITABLE  </dt>
 <dd>Specifiies the type of external table, readable being the default. Readable external tables are used for loading data into HAWQ. Writable external tables are used for unloading data.</dd>
@@ -244,7 +244,7 @@ For CSV files or other files that include a header line, use an error table inst
 <dt>DISTRIBUTED RANDOMLY  </dt>
 <dd>Used to declare the HAWQ distribution policy for a writable external table. By default, writable external tables are distributed randomly. If the source table you are exporting data from has a hash distribution policy, defining the same distribution key column(s) for the writable external table will improve unload performance by eliminating the need to move rows over the interconnect. When you issue an unload command such as `INSERT INTO wex_table SELECT * FROM                 source_table             `, the rows that are unloaded can be sent directly from the segments to the output location if the two tables have the same hash distribution policy.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Start the `gpfdist` file server program in the background on port `8081` serving files from directory `/var/data/staging`:
 
@@ -343,10 +343,10 @@ INSERT INTO campaign_out
     SELECT * FROM campaign WHERE customer_id=123;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `CREATE EXTERNAL TABLE` is a HAWQ extension. The SQL standard makes no provisions for external tables.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE TABLE](CREATE-TABLE.html), [CREATE TABLE AS](CREATE-TABLE-AS.html), [COPY](COPY.html), [INSERT](INSERT.html), [SELECT INTO](SELECT-INTO.html)

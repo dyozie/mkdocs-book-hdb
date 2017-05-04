@@ -23,17 +23,17 @@ under the License.
 
 Removes an aggregate function.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP AGGREGATE [IF EXISTS] <name> ( <type> [, ...] ) [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP AGGREGATE` will delete an existing aggregate function. To execute this command the current user must be the owner of the aggregate function.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the aggregate does not exist. A notice is issued in this case.</dd>
@@ -50,7 +50,7 @@ DROP AGGREGATE [IF EXISTS] <name> ( <type> [, ...] ) [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the aggregate function if any objects depend on it. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 To remove the aggregate function `myavg` for type `integer`:
 
@@ -58,10 +58,10 @@ To remove the aggregate function `myavg` for type `integer`:
 DROP AGGREGATE myavg(integer);
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 There is no `DROP AGGREGATE` statement in the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [ALTER AGGREGATE](ALTER-AGGREGATE.html), [CREATE AGGREGATE](CREATE-AGGREGATE.html)

@@ -27,7 +27,7 @@ To use HAWQ InputFormat, you need only to provide the URL of the database to con
 
 This chapter describes the document format and schema for defining HAWQ MapReduce jobs.
 
-## <a id="supporteddatatypes"></a>Supported Data Types
+## Supported Data Types<a id="supporteddatatypes"></a>
 
 HAWQ InputFormat supports the following data types:
 
@@ -58,7 +58,7 @@ HAWQ InputFormat supports the following data types:
 | INET                    | com.pivotal.hawq.mapreduce.datatype.HAWQInet     | setInet       | getInet       |
 | CIDR                    | com.pivotal.hawq.mapreduce.datatype.HAWQCIDR     | setCIDR       | getCIDR       |
 
-## <a id="hawqinputformatexample"></a>HAWQ InputFormat Example
+## HAWQ InputFormat Example<a id="hawqinputformatexample"></a>
 
 The following example shows how you can use the `HAWQInputFormat` class to access HAWQ table data from MapReduce jobs.
 
@@ -262,14 +262,14 @@ implements Tool {
     $ sudo -u hdfs hdfs dfs -rmdir /tmp/employees
     ```
 
-## <a id="accessinghawqdata"></a>Accessing HAWQ Data
+## Accessing HAWQ Data<a id="accessinghawqdata"></a>
 
 You can access HAWQ data using the `HAWQInputFormat.setInput()` interface.  You will use a different API signature depending on whether HAWQ is running or not.
 
 -   When HAWQ is running, use `HAWQInputFormat.setInput(Configuration conf, String db_url, String username, String password, String tableName)`.
 -   When HAWQ is not running, first extract the table metadata to a file with the Metadata Export Tool and then use `HAWQInputFormat.setInput(Configuration conf, String pathStr)`.
 
-### <a id="hawqinputformatsetinput"></a>HAWQ is Running
+### HAWQ is Running<a id="hawqinputformatsetinput"></a>
 
 ``` java
   /**
@@ -293,7 +293,7 @@ public static void setInput(Configuration conf, String db_url,
 throws Exception;
 ```
 
-### <a id="metadataexporttool"></a>HAWQ is not Running
+### HAWQ is not Running<a id="metadataexporttool"></a>
 
 Use the metadata export tool, `hawq extract`, to export the metadata of the target table into a local YAML file:
 

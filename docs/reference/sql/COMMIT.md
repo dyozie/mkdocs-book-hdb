@@ -23,29 +23,29 @@ under the License.
 
 Commits the current transaction.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 COMMIT [WORK | TRANSACTION]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `COMMIT` commits the current transaction. All changes made by the transaction become visible to others and are guaranteed to be durable if a crash occurs.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>WORK  
 TRANSACTION  </dt>
 <dd>Optional key words. They have no effect.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Use [ROLLBACK](ROLLBACK.html) to abort a transaction.
 
 Issuing `COMMIT` when not inside a transaction does no harm, but it will provoke a warning message.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To commit the current transaction and make all changes permanent:
 
@@ -53,10 +53,10 @@ To commit the current transaction and make all changes permanent:
 COMMIT;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The SQL standard only specifies the two forms `COMMIT` and `COMMIT           WORK`. Otherwise, this command is fully conforming.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [BEGIN](BEGIN.html), [END](END.html), [ROLLBACK](ROLLBACK.html)

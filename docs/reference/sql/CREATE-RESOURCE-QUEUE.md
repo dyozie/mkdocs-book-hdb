@@ -23,7 +23,7 @@ under the License.
 
 Defines a new resource queue.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE RESOURCE QUEUE <name> WITH (<queue_attribute>=<value> [, ... ])
@@ -50,7 +50,7 @@ where \<queue\_attribute\> is:
     <percentage> ::= <integer>%
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 Creates a new resource queue for HAWQ workload management. A resource queue must specify a parent queue. Only a superuser can create a resource queue.
 
@@ -64,7 +64,7 @@ After defining a resource queue, you can assign a role to the queue by using the
 
 See also [Best Practices for Using Resource Queues](../../bestpractices/managing_resources_bestpractices.html#topic_hvd_pls_wv).
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<name\> </dt>
 <dd>Required. The name of the resource queue. The name must not already be in use and must not be `pg_default` or `pg_root`.</dd>
@@ -125,7 +125,7 @@ By default, both limits are set to **-1**, which means the limits are disabled. 
 
 **Note:** If the actual lower limit of the number of virtual segments becomes greater than the upper limit, then the lower limit is automatically reduced to be equal to the upper limit. This situation is possible when user sets both `NVSEG_UPPER_LIMIT `and `NVSEG_LOWER_LIMIT_PERSEG`. After expanding the cluster, the dynamic lower limit may become greater than the value set for the fixed upper limit. </dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 To check on the configuration of a resource queue, you can query the `pg_resqueue` catalog table. To see the runtime status of all resource queues, you can use the `pg_resqueue_status`. See [Checking Existing Resource Queues](../../resourcemgmt/ResourceQueues.html#topic_lqy_gls_zt).
 
@@ -133,7 +133,7 @@ To check on the configuration of a resource queue, you can query the `pg_resqueu
 
 To see the status of a resource queue, see [Checking Existing Resource Queues](../../resourcemgmt/ResourceQueues.html#topic_lqy_gls_zt).
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a resource queue as a child of `pg_root` with an active query limit of 20 and memory and core limits of 50%:
 
@@ -149,10 +149,10 @@ CREATE RESOURCE QUEUE test_queue_1 WITH (PARENT='pg_root',
 MEMORY_LIMIT_CLUSTER=50%, CORE_LIMIT_CLUSTER=50%, RESOURCE_OVERCOMMIT_FACTOR=2);
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE RESOURCE QUEUE` is a HAWQ extension. There is no provision for resource queues or workload management in the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [ALTER RESOURCE QUEUE](ALTER-RESOURCE-QUEUE.html)[ALTER ROLE](ALTER-ROLE.html), [CREATE ROLE](CREATE-ROLE.html), [DROP RESOURCE QUEUE](DROP-RESOURCE-QUEUE.html)

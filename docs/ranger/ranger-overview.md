@@ -25,7 +25,7 @@ HAWQ supports using Apache Ranger for authorizing user access to HAWQ resources.
 
 See the [Apache Ranger documentation](http://ranger.apache.org/) for more information about the core functionality of Ranger.
 
-## <a id="arch"></a>Policy Management Architecture
+## Policy Management Architecture<a id="arch"></a>
 
 ![HAWQ Ranger Authorization](../images/hawq-ranger-arch.png "HAWQ Ranger Authorization")
 
@@ -37,7 +37,7 @@ A single configuration parameter, `hawq_acl_type` determines whether HAWQ defers
 
 The Ranger plug-in service caches Ranger policies locally on each HAWQ node to avoid unnecessary round trips between the HAWQ node and the Ranger Policy Manager server.
 
-## <a id="limitations"></a>Limitations of Ranger Policy Management
+## Limitations of Ranger Policy Management<a id="limitations"></a>
 
 In this release, HAWQ integration with Ranger has several limitations:
 

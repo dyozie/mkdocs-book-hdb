@@ -23,7 +23,7 @@ under the License.
 
 This section provides an overview of the HAWQ PL/Python procedural language extension.
 
-## <a id="abouthawqplpython"></a>About HAWQ PL/Python 
+## About HAWQ PL/Python <a id="abouthawqplpython"></a>
 
 PL/Python is embedded in your HAWQ product distribution or within your HAWQ build if you chose to enable it as a build option. 
 
@@ -31,12 +31,12 @@ With the HAWQ PL/Python extension, you can write user-defined functions in Pytho
 
 HAWQ uses the system Python installation.
 
-### <a id="hawqlimitations"></a>HAWQ PL/Python Limitations 
+### HAWQ PL/Python Limitations <a id="hawqlimitations"></a>
 
 - HAWQ does not support PL/Python trigger functions.
 - PL/Python is available only as a HAWQ untrusted language.
  
-## <a id="enableplpython"></a>Enabling and Removing PL/Python Support 
+## Enabling and Removing PL/Python Support <a id="enableplpython"></a>
 
 To use PL/Python in HAWQ, you must either install a binary version of HAWQ that includes PL/Python or specify PL/Python as a build option when you compile HAWQ from source.
 
@@ -66,7 +66,7 @@ To remove support for `plpythonu` from a database, run the following SQL command
 dbname=# DROP LANGUAGE plpythonu;
 ```
 
-## <a id="developfunctions"></a>Developing Functions with PL/Python 
+## Developing Functions with PL/Python <a id="developfunctions"></a>
 
 PL/Python functions are defined using the standard SQL [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION.html) syntax.
 
@@ -119,7 +119,7 @@ The following example uses an unnamed argument, the built-in Python `max()` func
 (1 row)
 ```
 
-## <a id="example_createtbl"></a>Creating the Sample Data
+## Creating the Sample Data<a id="example_createtbl"></a>
 
 Perform the following steps to create, and insert data into, a simple table. This table will be used in later exercises.
 
@@ -152,27 +152,27 @@ Perform the following steps to create, and insert data into, a simple table. Thi
      (7, 2002, 3,7, 'usa') ;
     ```
 
-## <a id="pymod_intro"></a>Python Modules 
+## Python Modules <a id="pymod_intro"></a>
 A Python module is a text file containing Python statements and definitions. Python modules are named, with the file name for a module following the `<python-module-name>.py` naming convention.
 
 Should you need to build a Python module, ensure that the appropriate software is installed on the build system. Also be sure that you are building for the correct deployment architecture, i.e. 64-bit.
 
-### <a id="pymod_intro_hawq"></a>HAWQ Considerations 
+### HAWQ Considerations <a id="pymod_intro_hawq"></a>
 
 When installing a Python module in HAWQ, you must add the module to all segment nodes in the cluster. You must also add all Python modules to any new segment hosts when you expand your HAWQ cluster.
 
 PL/Python supports the built-in HAWQ Python module named `plpy`.  You can also install 3rd party Python modules.
 
 
-## <a id="modules_plpy"></a>plpy Module 
+## plpy Module <a id="modules_plpy"></a>
 
 The HAWQ PL/Python procedural language extension automatically imports the Python module `plpy`. `plpy` implements functions to execute SQL queries and prepare execution plans for queries.  The `plpy` module also includes functions to manage errors and messages.
    
-### <a id="executepreparesql"></a>Executing and Preparing SQL Queries 
+### Executing and Preparing SQL Queries <a id="executepreparesql"></a>
 
 Use the PL/Python `plpy` module `plpy.execute()` function to execute a SQL query. Use the `plpy.prepare()` function to prepare an execution plan for a query. Preparing the execution plan for a query is useful if you want to run the query from multiple Python functions.
 
-#### <a id="plpyexecute"></a>plpy.execute() 
+#### plpy.execute() <a id="plpyexecute"></a>
 
 Invoking `plpy.execute()` with a query string and an optional limit argument runs the query, returning the result in a Python result object. This result object:
 
@@ -198,7 +198,7 @@ my_col_data = rv[i]["my_column"]
 
 You specified that the function return a maximum of 3 rows in the `plpy.execute()` command above. As such, the index `i` used to access the result value `rv` must specify an integer between 0 and 2, inclusive.
 
-##### <a id="plpyexecute_example"></a>Example: plpy.execute()
+##### Example: plpy.execute()<a id="plpyexecute_example"></a>
 
 Example: Use `plpy.execute()` to run a similar query on the `sales` table you created in an earlier section:
 
@@ -234,7 +234,7 @@ Example: Use `plpy.execute()` to run a similar query on the `sales` table you cr
     
 Note: This example demonstrates some of the concepts discussed previously. It may not be the ideal way to return a specific column value.
 
-#### <a id="plpyprepare"></a>plpy.prepare() 
+#### plpy.prepare() <a id="plpyprepare"></a>
 
 The function `plpy.prepare()` prepares the execution plan for a query. Preparing the execution plan for a query is useful if you plan to run the query from multiple Python functions.
 
@@ -257,7 +257,7 @@ When executed, `rv` will include all rows in the `sales` table where `region = u
 
 Read on for a description of how one passes data between PL/Python function calls.
 
-##### <a id="plpyprepare_dictionaries"></a>Saving Execution Plans
+##### Saving Execution Plans<a id="plpyprepare_dictionaries"></a>
 
 When you prepare an execution plan using the PL/Python module, the plan is automatically saved. See the [Postgres Server Programming Interface (SPI)](http://www.postgresql.org/docs/8.2/static/spi.html) documentation for information about execution plans.
 
@@ -281,7 +281,7 @@ This example saves an execution plan to the SD dictionary and then executes the 
 =# SELECT usesavedplan();
 ```
 
-##### <a id="plpyprepare_example"></a>Example: plpy.prepare()
+##### Example: plpy.prepare()<a id="plpyprepare_example"></a>
 
 Example: Use `plpy.prepare()` and `plpy.execute()` to prepare and run an execution plan using the GD dictionary:
 
@@ -323,7 +323,7 @@ Example: Use `plpy.prepare()` and `plpy.execute()` to prepare and run an executi
     (1 row)
     ```
 
-### <a id="pythonerrors"></a>Handling Python Errors and Messages 
+### Handling Python Errors and Messages <a id="pythonerrors"></a>
 
 The `plpy` module implements the following message- and error-related functions, each of which takes a message string as an argument:
 
@@ -339,7 +339,7 @@ The `plpy` module implements the following message- and error-related functions,
 
 Messages may be reported to the client and/or written to the HAWQ server log file.  The HAWQ server configuration parameters [`log_min_messages`](../reference/guc/parameter_definitions.html#log_min_messages) and [`client_min_messages`](../reference/guc/parameter_definitions.html#client_min_messages) control where messages are reported.
 
-#### <a id="plpymessages_example"></a>Example: Generating Messages
+#### Example: Generating Messages<a id="plpymessages_example"></a>
 
 In this example, you will create a PL/Python UDF that includes some debug log messages. You will also configure your `psql` session to enable debug-level client logging.
 
@@ -392,13 +392,13 @@ In this example, you will create a PL/Python UDF that includes some debug log me
     =# SET client_min_messages=NOTICE;
     ```
 
-## <a id="pythonmodules-3rdparty"></a>3rd-Party Python Modules 
+## 3rd-Party Python Modules <a id="pythonmodules-3rdparty"></a>
 
 PL/Python supports installation and use of 3rd-party Python Modules. This section includes examples for installing the `setuptools` and NumPy Python modules.
 
 **Note**: You must have superuser privileges to install Python modules to the system Python directories.
 
-### <a id="simpleinstall"></a>Example: Installing setuptools 
+### Example: Installing setuptools <a id="simpleinstall"></a>
 
 In this example, you will manually install the Python `setuptools` module from the Python Package Index repository. `setuptools` enables you to easily download, build, install, upgrade, and uninstall Python packages.
 
@@ -464,13 +464,13 @@ You will first build the module from the downloaded package, installing it on a 
     >>> exit
     ```
 
-### <a id="complexinstall"></a>Example: Installing NumPy 
+### Example: Installing NumPy <a id="complexinstall"></a>
 
 In this example, you will build and install the Python module NumPy. NumPy is a module for scientific computing with Python. For additional information about NumPy, refer to [http://www.numpy.org/](http://www.numpy.org/).
 
 This example assumes `yum` is installed on all HAWQ segment nodes and that the `gpadmin` user is a member of `sudoers` with `root` privileges on the nodes.
 
-#### <a id="complexinstall_prereq"></a>Prerequisites
+#### Prerequisites<a id="complexinstall_prereq"></a>
 Building the NumPy package requires the following software:
 
 - OpenBLAS libraries - an open source implementation of BLAS (Basic Linear Algebra Subprograms)
@@ -498,7 +498,7 @@ Perform the following steps to set up the OpenBLAS compilation environment on ea
 4. You can use the `hawq scp` utility to copy files to HAWQ hosts and the `hawq ssh` utility to run commands on those hosts.
 
 
-#### <a id="complexinstall_downdist"></a>Obtaining Packages
+#### Obtaining Packages<a id="complexinstall_downdist"></a>
 
 Perform the following steps to download and distribute the OpenBLAS and NumPy source packages:
 
@@ -517,7 +517,7 @@ Perform the following steps to download and distribute the OpenBLAS and NumPy so
     gpadmin@hawq-node$ hawq scp -f hawq-hosts packages/* =:/home/gpadmin/packages
     ```
 
-#### <a id="buildopenblas"></a>Build and Install OpenBLAS Libraries 
+#### Build and Install OpenBLAS Libraries <a id="buildopenblas"></a>
 
 Before building and installing the NumPy module, you must first build and install the OpenBLAS libraries. This section describes how to build and install the libraries on a single HAWQ node.
 
@@ -664,7 +664,7 @@ After you have installed the OpenBLAS libraries, you can build and install NumPy
 
     You can use the `hawq ssh` utility with these `echo` commands to add the environment variables to the `.bashrc` file on all nodes in your HAWQ cluster.
 
-### <a id="testingpythonmodules"></a>Testing Installed Python Modules 
+### Testing Installed Python Modules <a id="testingpythonmodules"></a>
 
 You can create a simple PL/Python user-defined function (UDF) to validate that a Python module is available in HAWQ. This example tests the NumPy module.
 
@@ -707,7 +707,7 @@ You can create a simple PL/Python user-defined function (UDF) to validate that a
     The `SELECT` command returns SUCCESS if the UDF imported the Python module on the HAWQ segment instance. FAILURE is returned if the Python module could not be imported.
    
 
-#### <a id="testingpythonmodules"></a>Troubleshooting Python Module Import Failures
+#### Troubleshooting Python Module Import Failures<a id="testingpythonmodules"></a>
 
 Possible causes of a Python module import failure include:
 
@@ -734,7 +734,7 @@ Possible causes of a Python module import failure include:
 	gpadmin@master$ hawq restart cluster
 	```
 
-## <a id="dictionarygd"></a>Using the GD Dictionary to Improve PL/Python Performance 
+## Using the GD Dictionary to Improve PL/Python Performance <a id="dictionarygd"></a>
 
 Importing a Python module is an expensive operation that can adversely affect performance. If you are importing the same module frequently, you can use Python global variables to import the module on the first invocation and forego loading the module on subsequent imports. 
 
@@ -768,11 +768,11 @@ CONTEXT:  PL/Python function "mypy_import2gd"
 
 The second `SELECT` call does not include the `NOTICE` message, indicating that the module was obtained from the GD.
 
-## <a id="references"></a>References 
+## References <a id="references"></a>
 
 This section lists references for using PL/Python.
 
-### <a id="technicalreferences"></a>Technical References 
+### Technical References <a id="technicalreferences"></a>
 
 For information about PL/Python in HAWQ, see the [PL/Python - Python Procedural Language](http://www.postgresql.org/docs/8.2/static/plpython.html) PostgreSQL documentation.
 
@@ -800,7 +800,7 @@ The following Python modules may be of interest:
     hawq-node$ wget http://pypi.python.org/packages/source/n/nltk/nltk-2.0.2.tar.gz#md5=6e714ff74c3398e88be084748df4e657
     ```
 
-### <a id="usefulreading"></a>Useful Reading 
+### Useful Reading <a id="usefulreading"></a>
 
 For information about the Python language, see [http://www.python.org/](http://www.python.org/).
 

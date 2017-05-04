@@ -26,11 +26,11 @@ This section provides an introduction to using the HAWQ built-in languages.
 HAWQ supports user-defined functions created with the SQL and C built-in languages. HAWQ also supports user-defined aliases for internal functions.
 
 
-## <a id="enablebuiltin"></a>Enabling Built-in Language Support
+## Enabling Built-in Language Support<a id="enablebuiltin"></a>
 
 Support for SQL and C language user-defined functions and aliasing of internal functions is enabled by default for all HAWQ databases.
 
-## <a id="builtinsql"></a>Defining SQL Functions
+## Defining SQL Functions<a id="builtinsql"></a>
 
 SQL functions execute an arbitrary list of SQL statements. The SQL statements in the body of a SQL function must be separated by semicolons. The final statement in a non-void-returning SQL function must be a [SELECT](../reference/sql/SELECT.html) that returns data of the type specified by the function's return type. The function will return a single or set of rows corresponding to this last SQL query.
 
@@ -50,7 +50,7 @@ gpadmin=# SELECT count_orders();
 
 For additional information about creating SQL functions, refer to [Query Language (SQL) Functions](https://www.postgresql.org/docs/8.2/static/xfunc-sql.html) in the PostgreSQL documentation.
 
-## <a id="builtininternal"></a>Aliasing Internal Functions
+## Aliasing Internal Functions<a id="builtininternal"></a>
 
 Many HAWQ internal functions are written in C. These functions are declared during initialization of the database cluster and statically linked to the HAWQ server. See [Built-in Functions and Operators](../query/functions-operators.html#topic29) for detailed information about HAWQ internal functions.
 
@@ -73,7 +73,7 @@ gpadmin=# SELECT all_caps('change me');
 
 For more information about aliasing internal functions, refer to [Internal Functions](https://www.postgresql.org/docs/8.2/static/xfunc-internal.html) in the PostgreSQL documentation.
 
-## <a id="builtinc_lang"></a>Defining C Functions
+## Defining C Functions<a id="builtinc_lang"></a>
 
 You must compile user-defined functions written in C into shared libraries so that the HAWQ server can load them on demand. This dynamic loading distinguishes C language functions from internal functions that are written in C.
 

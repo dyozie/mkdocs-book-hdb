@@ -21,7 +21,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-## <a id="pxerrortbl"></a>PXF Errors
+## PXF Errors<a id="pxerrortbl"></a>
 
 The following table lists some common errors encountered while using PXF:
 
@@ -153,12 +153,12 @@ The following table lists some common errors encountered while using PXF:
 </table>
 
 
-## <a id="pxflogging"></a>PXF Logging
+## PXF Logging<a id="pxflogging"></a>
 Enabling more verbose logging may aid PXF troubleshooting efforts.
 
 PXF provides two categories of message logging - service-level and database-level.
 
-### <a id="pxfsvclogmsg"></a>Service-Level Logging
+### Service-Level Logging<a id="pxfsvclogmsg"></a>
 
 PXF utilizes `log4j` for service-level logging. PXF-service-related log messages are captured in a log file specified by PXF's `log4j` properties file, `/etc/pxf/conf/pxf-log4j.properties`. The default PXF logging configuration will write `INFO` and more severe level logs to `/var/log/pxf/pxf-service.log`.
 
@@ -193,7 +193,7 @@ Examine/collect the log messages from `pxf-service.log`.
 **Note**: `DEBUG` logging is verbose and has a performance impact.  Remember to turn off PXF service `DEBUG` logging after you have collected the desired information.
  
 
-### <a id="pxfdblogmsg"></a>Database-Level Logging
+### Database-Level Logging<a id="pxfdblogmsg"></a>
 
 Database-level logging may provide insight into internal PXF service operations. Additionally, when you access Hive tables using `hcatalog` or the `Hive*` profiles, log messages identify the underlying `Hive*` profile(s) employed to access the data.
 
@@ -226,7 +226,7 @@ gpadmin=# SET client_min_messages=NOTICE
 ```
 
 
-## <a id="pxf-memcfg"></a>Addressing PXF Memory Issues
+## Addressing PXF Memory Issues<a id="pxf-memcfg"></a>
 
 The Java heap size can be a limiting factor in PXF’s ability to serve many concurrent requests or to run queries against large tables.
 
@@ -236,7 +236,7 @@ You may run into situations where a query will hang or fail with an Out of Memor
 
 You will need to re-apply these configuration changes after any PXF version upgrades.
 
-### <a id="pxf-heapcfg"></a>Increasing the Maximum Heap Size
+### Increasing the Maximum Heap Size<a id="pxf-heapcfg"></a>
 
 Each PXF node is configured with a default Java heap size of 512MB. If the nodes in your cluster have an ample amount of memory, increasing the amount allocated to the PXF agents is the best approach. Pivotal recommends a heap size value between 1-2GB.
 
@@ -263,7 +263,7 @@ Perform the following steps to increase the PXF agent heap size in your HAWQ  de
         root@pxf-node$ service pxf-service restart
         ```
 
-### <a id="pxf-heapcfg"></a>Decreasing the Maximum Number of  Threads
+### Decreasing the Maximum Number of  Threads<a id="pxf-heapcfg"></a>
 
 If increasing the maximum heap size is not suitable for your HAWQ cluster, try decreasing the number of concurrent working threads configured for the underlying Tomcat web application. A decrease in the number of running threads will prevent any PXF node from exhausting its memory, while ensuring that current queries run to completion (albeit a bit slower). As Tomcat's default behavior is to queue requests until a thread is free, decreasing this value will not result in denied requests.
 

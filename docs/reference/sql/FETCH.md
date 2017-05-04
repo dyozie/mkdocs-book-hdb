@@ -23,7 +23,7 @@ under the License.
 
 Retrieves rows from a query using a cursor.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 FETCH [ <forward_direction> { FROM | IN } ] <cursorname>
@@ -45,7 +45,7 @@ where *forward\_direction* can be empty or one of:
     FORWARD ALL
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `FETCH` retrieves rows using a previously-created cursor.
 
@@ -68,7 +68,7 @@ FETCH count
 
 The count is the number of rows fetched (possibly zero). Note that in `psql`, the command tag will not actually be displayed, since `psql` displays the fetched rows instead.
 
-## <a id="topic1__section5"></a>Parameters
+## Parameters<a id="topic1__section5"></a>
 
 <dt>\<forward\_direction\>  </dt>
 <dd>Defines the fetch direction and number of rows to fetch. Only forward fetches are allowed in HAWQ. It can be one of the following:</dd>
@@ -106,7 +106,7 @@ The count is the number of rows fetched (possibly zero). Note that in `psql`, th
 <dt>\<cursorname\> </dt>
 <dd>The name of an open cursor.</dd>
 
-## <a id="topic1__section6"></a>Notes
+## Notes<a id="topic1__section6"></a>
 
 HAWQ does not support scrollable cursors, so you can only use `FETCH` to move the cursor position forward.
 
@@ -116,7 +116,7 @@ Updating data via a cursor is currently not supported by HAWQ.
 
 `DECLARE` is used to define a cursor. Use `MOVE` to change cursor position without retrieving data.
 
-## <a id="topic1__section7"></a>Examples
+## Examples<a id="topic1__section7"></a>
 
 -- Start the transaction:
 
@@ -150,7 +150,7 @@ CLOSE mycursor;
 COMMIT;
 ```
 
-## <a id="topic1__section8"></a>Compatibility
+## Compatibility<a id="topic1__section8"></a>
 
 SQL standard allows cursors only in embedded SQL and in modules. HAWQ permits cursors to be used interactively.
 
@@ -160,6 +160,6 @@ The `FETCH` forms involving `FORWARD`, as well as the forms `FETCH` count and `F
 
 The SQL standard allows only `FROM` preceding the cursor name; the option to use `IN` is an extension.
 
-## <a id="topic1__section9"></a>See Also
+## See Also<a id="topic1__section9"></a>
 
 [DECLARE](DECLARE.html), [CLOSE](CLOSE.html)

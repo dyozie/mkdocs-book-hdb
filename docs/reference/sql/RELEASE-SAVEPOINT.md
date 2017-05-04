@@ -23,14 +23,14 @@ under the License.
 
 Destroys a previously defined savepoint.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 RELEASE [SAVEPOINT] <savepoint_name>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `RELEASE SAVEPOINT` destroys a savepoint previously defined in the current transaction.
 
@@ -38,12 +38,12 @@ Destroying a savepoint makes it unavailable as a rollback point, but it has no o
 
 `RELEASE SAVEPOINT` also destroys all savepoints that were established *after* the named savepoint was established.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<savepoint\_name\>   </dt>
 <dd>The name of the savepoint to destroy.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 To establish and later destroy a savepoint:
 
@@ -58,10 +58,10 @@ COMMIT;
 
 The above transaction will insert both 3 and 4.
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 This command conforms to the SQL standard. The standard specifies that the key word `SAVEPOINT` is mandatory, but HAWQ allows it to be omitted.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [BEGIN](BEGIN.html), [SAVEPOINT](SAVEPOINT.html), [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html), [COMMIT](COMMIT.html)

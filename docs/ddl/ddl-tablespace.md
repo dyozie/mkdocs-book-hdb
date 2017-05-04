@@ -25,13 +25,13 @@ Tablespaces allow database administrators to have multiple file systems per mach
 
 A tablespace requires a file system location to store its database files. In HAWQ, the master and each segment require a distinct storage location. The collection of file system locations for all components in a HAWQ system is a *filespace*. Filespaces can be used by one or more tablespaces.
 
-## <a id="topic10"></a>Creating a Filespace 
+## Creating a Filespace <a id="topic10"></a>
 
 A filespace sets aside storage for your HAWQ system. A filespace is a symbolic storage identifier that maps onto a set of locations in your HAWQ hosts' file systems. To create a filespace, prepare the logical file systems on all of your HAWQ hosts, then use the `hawq filespace` utility to define the filespace. You must be a database superuser to create a filespace.
 
 **Note:** HAWQ is not directly aware of the file system boundaries on your underlying systems. It stores files in the directories that you tell it to use. You cannot control the location on disk of individual files within a logical file system.
 
-### <a id="im178954"></a>To create a filespace using hawq filespace 
+### To create a filespace using hawq filespace <a id="im178954"></a>
 
 1.  Log in to the HAWQ master as the `gpadmin` user.
 
@@ -102,7 +102,7 @@ A filespace sets aside storage for your HAWQ system. A filespace is a symbolic s
     ```
 
 
-## <a id="topic13"></a>Creating a Tablespace 
+## Creating a Tablespace <a id="topic13"></a>
 
 After you create a filespace, use the `CREATE TABLESPACE` command to define a tablespace that uses that filespace. For example:
 
@@ -116,7 +116,7 @@ Database superusers define tablespaces and grant access to database users with t
 =# GRANT CREATE ON TABLESPACE fastspace TO admin;
 ```
 
-## <a id="topic14"></a>Using a Tablespace to Store Database Objects 
+## Using a Tablespace to Store Database Objects <a id="topic14"></a>
 
 Users with the `CREATE` privilege on a tablespace can create database objects in that tablespace, such as tables, indexes, and databases. The command is:
 
@@ -141,7 +141,7 @@ The tablespace associated with a database stores that database's system catalogs
 
 You can use a tablespace from any database if you have appropriate privileges.
 
-## <a id="topic15"></a>Viewing Existing Tablespaces and Filespaces 
+## Viewing Existing Tablespaces and Filespaces <a id="topic15"></a>
 
 Every HAWQ system has the following default tablespaces.
 
@@ -162,7 +162,7 @@ To see filespace information, look in the *pg\_filespace* and *pg\_filespace\_en
    ORDER BY tblspc, seg_dbid;
 ```
 
-## <a id="topic16"></a>Dropping Tablespaces and Filespaces 
+## Dropping Tablespaces and Filespaces <a id="topic16"></a>
 
 To drop a tablespace, you must be the tablespace owner or a superuser. You cannot drop a tablespace until all objects in all databases using the tablespace are removed.
 

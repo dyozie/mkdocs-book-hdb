@@ -9,17 +9,17 @@ MADlib provides a suite of SQL-based algorithms for machine learning, data minin
 For additional information on MADlib, refer to the [Apache MADlib (Incubating)](http://madlib.incubator.apache.org/) project page.
 
 
-## <a id="plrprereq"></a>Prerequisites 
+## Prerequisites <a id="plrprereq"></a>
 
 Before you install the MADlib extension for HAWQ, ensure that your HAWQ cluster is up and running.
 
 The MADlib [Installation Guide](https://cwiki.apache.org/confluence/display/MADLIB/Installation+Guide) has additional details on the MADlib install process.
 
-## <a id="installmadlib"></a>Installing MADlib 
+## Installing MADlib <a id="installmadlib"></a>
 
 Installing the MADlib extension for HAWQ involves installing the MADlib package in your HAWQ cluster and registering MADlib support in any databases in which you want to use MADlib analytic functions.
 
-### <a id="installmadlibpkg"></a>Install the MADlib Package
+### Install the MADlib Package<a id="installmadlibpkg"></a>
 The MADlib extension for HAWQ is available in `.gppkg` format from [Pivotal Network](https://network.pivotal.io/products/pivotal-hdb).
 
 Perform the following steps to install MADlib in your HAWQ cluster:
@@ -43,7 +43,7 @@ Perform the following steps to install MADlib in your HAWQ cluster:
 	`gppkg` installs version 1.10 of the HAWQ MADlib extension to the `$GPHOME/madlib/` directory on all hosts in your HAWQ cluster.
 
  
-### <a id="enablemadlibdb"></a>Register MADlib
+### Register MADlib<a id="enablemadlibdb"></a>
 
 You must explicitly register MADlib support for a HAWQ database with the `madpack` command. `madpack` is located in `$GPHOME/madlib/bin`.
 
@@ -89,12 +89,12 @@ Perform the following steps to register MADlib for a database:
 3. Assign the appropriate users privileges to the MADlib install schema in \<database-name\>.
 
 
-## <a id="upgrademadlib"></a>Upgrading MADlib 
+## Upgrading MADlib <a id="upgrademadlib"></a>
 
 Upgrading MADlib involves upgrading the MADlib package and upgrading MADlib support in every database in which it was registered.
 
 
-### <a id="upgrademadlibpkg"></a>Upgrade the MADlib Package
+### Upgrade the MADlib Package<a id="upgrademadlibpkg"></a>
 
 Perform the following steps to upgrade MADlib in your HAWQ cluster:
 
@@ -114,7 +114,7 @@ Perform the following steps to upgrade MADlib in your HAWQ cluster:
 	This `gppkg` command upgrades the HAWQ MADlib extension on all hosts in your HAWQ cluster to MADlib version 1.10.
 
  
-### <a id="upgrademadlibdb"></a>Upgrade MADlib Database Registration
+### Upgrade MADlib Database Registration<a id="upgrademadlibdb"></a>
 
 Perform the following steps to upgrade MADlib support in a database in which MADlib was previously registered:
 
@@ -136,11 +136,11 @@ Perform the following steps to upgrade MADlib support in a database in which MAD
     MADlib support is upgraded in the database in the MADlib schema named `madlib`.
 
 
-## <a id="uninstallmadlib"></a>Uninstalling MADlib 
+## Uninstalling MADlib <a id="uninstallmadlib"></a>
 
 Uninstalling MADlib involves removing MADlib support from any databases in which it was registered, and then removing the MADlib package from your HAWQ cluster.
 
-### <a id="removemadlibdb"></a>Remove MADlib Registration
+### Remove MADlib Registration<a id="removemadlibdb"></a>
 
 Use the `madpack uninstall` command to remove MADlib objects from a HAWQ database in which they were previously registered. When you remove MADlib support from a database, any functions that you created that use MADlib functionality will no longer work.
 
@@ -159,7 +159,7 @@ Use the `madpack uninstall` command to remove MADlib objects from a HAWQ databas
     
     MADlib support is removed from the MADlib schema named `madlib`.
 
-### <a id="removemadlibppkg"></a>Uninstall MADlib Package
+### Uninstall MADlib Package<a id="removemadlibppkg"></a>
 
 Perform the following steps to uninstall the MADlib extension from your HAWQ cluster:
 

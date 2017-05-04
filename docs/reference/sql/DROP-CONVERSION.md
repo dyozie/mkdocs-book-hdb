@@ -23,17 +23,17 @@ under the License.
 
 Removes a CONVERSION.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP CONVERSION [IF EXISTS] <name> [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP CONVERSION` removes a previously defined conversion. To be able to drop a conversion, you must own the conversion.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the conversion does not exist. A notice is issued in this case.</dd>
@@ -45,7 +45,7 @@ DROP CONVERSION [IF EXISTS] <name> [CASCADE | RESTRICT]
 <dt>RESTRICT</dt>
 <dd>These keywords have no effect since there are no dependencies on conversions.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Drop the conversion named `myname`:
 
@@ -53,11 +53,11 @@ Drop the conversion named `myname`:
 DROP CONVERSION myname;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 There is no `DROP CONVERSION` statement in the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE CONVERSION](CREATE-CONVERSION.html), [ALTER CONVERSION](ALTER-CONVERSION.html)
 

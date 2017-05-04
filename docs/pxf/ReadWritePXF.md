@@ -25,7 +25,7 @@ PXF profiles are collections of common metadata attributes that can be used to s
 
 For example, if you are writing single line records to text files on HDFS, you could use the built-in HdfsTextSimple profile. You specify this profile when you create the PXF external table used to write the data to HDFS.
 
-## <a id="built-inprofiles"></a>Built-In Profiles
+## Built-In Profiles<a id="built-inprofiles"></a>
 
 PXF comes with a number of built-in profiles that group together a collection of metadata attributes. PXF built-in profiles simplify access to the following types of data storage systems:
 
@@ -151,7 +151,7 @@ Note: The <code class="ph codeph">DELIMITER</code> parameter is mandatory.
 
 **Notes**: Metadata identifies the Java class that provides field definitions in the relation. OutputFormat identifies the output serialization format (text or binary) for which a specific profile is optimized. While the built-in `Hive*` profiles provide Metadata and OutputFormat classes, other profiles may have no need to implement or specify these classes.
 
-## <a id="addingandupdatingprofiles"></a>Adding and Updating Profiles
+## Adding and Updating Profiles<a id="addingandupdatingprofiles"></a>
 
 Each profile has a mandatory unique name and an optional description. In addition, each profile contains a set of plug-ins that are an extensible set of metadata attributes.  Administrators can add new profiles or edit the built-in profiles defined in `/etc/pxf/conf/pxf-profiles.xml`. 
 

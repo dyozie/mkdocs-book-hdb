@@ -23,7 +23,7 @@ under the License.
 
 Change the definition of a sequence generator.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 ALTER SEQUENCE <name>
@@ -36,14 +36,14 @@ ALTER SEQUENCE <name>
        [OWNED BY { <table>.<column> | NONE }]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `ALTER SEQUENCE` changes the parameters of an existing sequence generator. Any parameters not specifically set in the `ALTER SEQUENCE` command retain their prior setting.
 
 You must own the sequence to use `ALTER SEQUENCE`. 
 
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<name\>  </dt>
 <dd>The name (optionally schema-qualified) of the sequence to be altered.</dd>
@@ -73,13 +73,13 @@ NO CYCLE  </dt>
 OWNED BY NONE  </dt>
 <dd>Causes the sequence to be associated with a specific table column, such that if that column (or its whole table) is dropped, the sequence will be automatically dropped as well. If specified, this association replaces any previously specified assocation for the sequence. The specified table must have the same owner and be in the same schema as the sequence. `OWNED BY NONE` removes any existing association.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 `ALTER SEQUENCE` will not immediately affect `nextval()` results in backends, other than the current one, that have preallocated (cached) sequence values. They will use up all cached values prior to noticing the changed sequence generation parameters. The current backend will be affected immediately.
 
 Some variants of `ALTER TABLE` can be used with sequences as well; for example, to rename a sequence use `ALTER TABLE RENAME`.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Restart the sequence named `myseq`:
 
@@ -93,10 +93,10 @@ Change the increment value for the sequence named `myseq`:
 ALTER SEQUENCE myseq INCREMENT BY 3;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE SEQUENCE` conforms to the SQL standard, with the exception that the `OWNED BY` clause is a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [CREATE SEQUENCE](CREATE-SEQUENCE.html), [DROP SEQUENCE](DROP-SEQUENCE.html)

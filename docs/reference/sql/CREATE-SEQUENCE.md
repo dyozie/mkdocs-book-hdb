@@ -23,7 +23,7 @@ under the License.
 
 Defines a new sequence generator.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [TEMPORARY | TEMP] SEQUENCE <name>
@@ -36,7 +36,7 @@ CREATE [TEMPORARY | TEMP] SEQUENCE <name>
        [OWNED BY { <table>.<column> | NONE }]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE SEQUENCE` creates a new sequence number generator. This involves creating and initializing a new special single-row table. The generator will be owned by the user issuing the command.
 
@@ -76,7 +76,7 @@ SELECT * FROM <sequence_name>;
 
 to examine the parameters and current state of a sequence. In particular, the `last_value` field of the sequence shows the last value allocated by any session.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>TEMPORARY | TEMP  </dt>
 <dd>If specified, the sequence object is created only for this session, and is automatically dropped on session exit. Existing permanent sequences with the same name are not visible (in this session) while the temporary sequence exists, unless they are referenced with schema-qualified names.</dd>
@@ -109,13 +109,13 @@ NO CYCLE  </dt>
 OWNED BY NONE  </dt>
 <dd>Causes the sequence to be associated with a specific table column, such that if that column (or its whole table) is dropped, the sequence will be automatically dropped as well. The specified table must have the same owner and be in the same schema as the sequence. `OWNED BY NONE`, the default, specifies that there is no such association.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 Sequences are based on bigint arithmetic, so the range cannot exceed the range of an eight-byte integer (-9223372036854775808 to 9223372036854775807).
 
 Although multiple sessions are guaranteed to allocate distinct sequence values, the values may be generated out of sequence when all the sessions are considered. For example, session A might reserve values 1..10 and return `nextval=1`, then session B might reserve values 11..20 and return `nextval=11` before session A has generated `nextval=2`. Thus, you should only assume that the `nextval()` values are all distinct, not that they are generated purely sequentially. Also,`last_value` will reflect the latest value reserved by any session, whether or not it has yet been returned by `nextval()`.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a sequence named `myseq`:
 
@@ -141,7 +141,7 @@ Illegal use of `setval()` in HAWQ (setting sequence values on distributed data):
 INSERT INTO product VALUES (setval('myseq', 201), 'gizmo');
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE SEQUENCE` conforms to the SQL standard, with the following exceptions:
 
@@ -149,6 +149,6 @@ INSERT INTO product VALUES (setval('myseq', 201), 'gizmo');
 -   Obtaining the next value is done using the `nextval()` function instead of the `NEXT VALUE FOR` expression specified in the SQL standard.
 -   The `OWNED BY` clause is a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [ALTER SEQUENCE](ALTER-SEQUENCE.html), [DROP SEQUENCE](DROP-SEQUENCE.html)

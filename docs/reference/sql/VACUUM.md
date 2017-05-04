@@ -25,7 +25,7 @@ Garbage-collects and optionally analyzes a database.
 
 **Note**: HAWQ `VACUUM` support is provided only for system catalog tables.  `VACUUM`ing a HAWQ user table has no effect.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 VACUUM [FULL] [FREEZE] [VERBOSE] <table>
@@ -33,7 +33,7 @@ VACUUM [FULL] [FREEZE] [VERBOSE] ANALYZE
               [<table> [(<column> [, ...] )]]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `VACUUM` reclaims storage occupied by deleted tuples. In normal HAWQ operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present on disk until a `VACUUM` is done. Therefore it is necessary to do `VACUUM` periodically, especially on frequently-updated catalog tables. (`VACUUM` has no effect on a normal HAWQ table, since the delete or update operations are not supported on normal HAWQ table.)
 
@@ -47,7 +47,7 @@ Plain `VACUUM` (without `FULL`) simply reclaims space and makes it available for
 
 When `VERBOSE` is specified, `VACUUM` emits progress messages to indicate which table is currently being processed. Various statistics about the tables are printed as well.
 
-## <a id="topic1__section5"></a>Parameters
+## Parameters<a id="topic1__section5"></a>
 
 <dt>FULL  </dt>
 <dd>Selects a full vacuum, which may reclaim more space but takes much longer and exclusively locks the table.
@@ -69,7 +69,7 @@ When `VERBOSE` is specified, `VACUUM` emits progress messages to indicate which 
 <dt> \<column\>   </dt>
 <dd>The name of a specific column to analyze. Defaults to all columns.</dd>
 
-## <a id="topic1__section6"></a>Notes
+## Notes<a id="topic1__section6"></a>
 
 `VACUUM` cannot be executed inside a transaction block.
 
@@ -86,7 +86,7 @@ Expired rows are held in what is called the *free space map*. The free space map
 -   `max_fsm_pages`
 -   `max_fsm_relations`
 
-## <a id="topic1__section7"></a>Examples
+## Examples<a id="topic1__section7"></a>
 
 Vacuum all tables in the current database:
 
@@ -106,10 +106,10 @@ Vacuum all tables in the current database and collect statistics for the query p
 VACUUM ANALYZE;
 ```
 
-## <a id="topic1__section8"></a>Compatibility
+## Compatibility<a id="topic1__section8"></a>
 
 There is no `VACUUM` statement in the SQL standard.
 
-## <a id="topic1__section9"></a>See Also
+## See Also<a id="topic1__section9"></a>
 
 [ANALYZE](ANALYZE.html)

@@ -23,7 +23,7 @@ under the License.
 
 This section introduces you to the HAWQ runtime environment. You will examine your HAWQ installation, set up your HAWQ environment, and execute HAWQ management commands. If installed in your environment, you will also explore the Ambari management console.
 
-## <a id="tut_runtime_usercred"></a>Prerequisites
+## Prerequisites<a id="tut_runtime_usercred"></a>
 
 - Install a HAWQ commercial product distribution or HAWQ sandbox virtual machine or docker environment, or build and install HAWQ from source. Ensure that your HAWQ installation is configured appropriately.
 
@@ -37,7 +37,7 @@ This section introduces you to the HAWQ runtime environment. You will examine yo
 
     - Obtain the Ambari UI user name and password (optional, if Ambari is installed in your HAWQ deployment). The default Ambari user name and password are both `admin`.
 
-## <a id="tut_runtime_setup"></a> Exercise: Set Up your HAWQ Runtime Environment
+##  Exercise: Set Up your HAWQ Runtime Environment<a id="tut_runtime_setup"></a>
 
 HAWQ installs a script that you can use to set up your HAWQ cluster environment. The `greenplum_path.sh` script, located in your HAWQ root install directory, sets `$PATH` and other environment variables to find HAWQ files.  Most importantly, `greenplum_path.sh` sets the `$GPHOME` environment variable to point to the root directory of the HAWQ installation.  If you installed HAWQ from a product distribution or are running a HAWQ sandbox environment, the HAWQ root is typically `/usr/local/hawq`. If you built HAWQ from source or downloaded the tarball, your `$GPHOME` may differ.
 
@@ -176,7 +176,7 @@ Perform the following steps to set up your HAWQ runtime environment:
 
     4. Log out of the Ambari console by clicking the **admin** button and selecting the **Sign out** drop down menu item.
 
-## <a id="tut_runtime_sumary"></a>Summary
+## Summary<a id="tut_runtime_sumary"></a>
 Your HAWQ cluster is now running. For additional information:
 
 - [HAWQ Files and Directories](../../admin/setuphawqopenv.html#hawq_env_files_and_dirs) identifies HAWQ files and directories and their install locations.

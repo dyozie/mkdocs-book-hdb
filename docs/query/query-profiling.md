@@ -49,7 +49,7 @@ SET gp_log_dynamic_partition_pruning = on;
 
 For information about GPORCA, see [Querying Data](query.html#topic1).
 
-## <a id="topic40"></a>Reading EXPLAIN Output
+## Reading EXPLAIN Output<a id="topic40"></a>
 
 A query plan is a tree of nodes. Each node in the plan represents a single operation, such as a table scan, join, aggregation, or sort.
 
@@ -66,7 +66,7 @@ Note the following:
 -   The cost of a node includes the cost of its child nodes. The topmost plan node has the estimated total execution cost for the plan. This is the number the optimizer intends to minimize.
 -   The cost reflects only the aspects of plan execution that the query optimizer takes into consideration. For example, the cost does not reflect time spent transmitting result rows to the client.
 
-### <a id="topic41"></a>EXPLAIN Example
+### EXPLAIN Example<a id="topic41"></a>
 
 The following example describes how to read an `EXPLAIN` query plan for a query:
 
@@ -89,7 +89,7 @@ The results of the scan operation are passed to a *gather motion* operation. In 
 
 The estimated startup cost for this plan is `00.00` (no cost) and a total cost of `1.01` disk page fetches. The optimizer estimates this query will return one row.
 
-## <a id="topic42"></a>Reading EXPLAIN ANALYZE Output
+## Reading EXPLAIN ANALYZE Output<a id="topic42"></a>
 
 `EXPLAIN ANALYZE` plans and runs the statement. The `EXPLAIN           ANALYZE` plan shows the actual execution cost along with the optimizer's estimates. This allows you to see if the optimizer's estimates are close to reality. `EXPLAIN ANALYZE` also shows the following:
 
@@ -111,7 +111,7 @@ The estimated startup cost for this plan is `00.00` (no cost) and a total cost o
 
 -   The time (in milliseconds) in which the segment that produced the most rows retrieved the first row, and the time taken for that segment to retrieve all rows. The result may omit *&lt;time&gt; to first row* if it is the same as the *&lt;time&gt; to end*.
 
-### <a id="topic43"></a>EXPLAIN ANALYZE Example
+### EXPLAIN ANALYZE Example<a id="topic43"></a>
 
 This example describes how to read an `EXPLAIN ANALYZE` query plan using the same query. The `bold` parts of the plan show actual timing and rows returned for each plan node, as well as memory and time statistics for the whole query.
 
@@ -145,7 +145,7 @@ Read the plan from the bottom to the top. The total elapsed time to run this que
 
 The *Append-only scan* operation had only one segment (*seg0*) that returned rows, and it returned just *1 row*. The Max/Last statistics are identical in this example because only one segment returned rows. It took *7.053* milliseconds to find the first row and *7.089* milliseconds to scan all rows. This result is close to the optimizer's estimate: the query optimizer estimated it would return one row for this query. The *gather motion* (segments sending data to the master) received 1 row. The total elapsed time for this operation was *19.690* milliseconds.
 
-## <a id="topic44"></a>Examining Query Plans to Solve Problems
+## Examining Query Plans to Solve Problems<a id="topic44"></a>
 
 If a query performs poorly, examine its query plan and ask the following questions:
 
@@ -163,7 +163,7 @@ If a query performs poorly, examine its query plan and ask the following questio
 
     The "bytes wanted" message from `EXPLAIN ANALYZE` is based on the amount of data written to work files and is not exact. The minimum `work_mem` needed can differ from the suggested value.
 
-## <a id="explainplan_plpgsql"></a>Generating EXPLAIN Plan from a PL/pgSQL Function
+## Generating EXPLAIN Plan from a PL/pgSQL Function<a id="explainplan_plpgsql"></a>
 
 User-defined PL/pgSQL functions often include dynamically created queries.  You may find it useful to generate the `EXPLAIN` plan for such queries for query performance optimization and tuning. 
 

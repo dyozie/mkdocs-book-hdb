@@ -23,7 +23,7 @@ under the License.
 
 This section contains an overview of the HAWQ PL/Perl language extension.
 
-## <a id="enableplperl"></a>Enabling PL/Perl
+## Enabling PL/Perl<a id="enableplperl"></a>
 
 If PL/Perl is enabled during HAWQ build time, HAWQ installs the PL/Perl language extension automatically. To use PL/Perl, you must enable it on specific databases.
 
@@ -41,6 +41,6 @@ Then, run the following SQL command:
 psql# CREATE LANGUAGE plperl;
 ```
 
-## <a id="references"></a>References 
+## References <a id="references"></a>
 
 For more information on using PL/Perl, see the PostgreSQL PL/Perl documentation at [https://www.postgresql.org/docs/8.2/static/plperl.html](https://www.postgresql.org/docs/8.2/static/plperl.html).

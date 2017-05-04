@@ -23,7 +23,7 @@ under the License.
 
 Amazon Elastic Compute Cloud (EC2) is a service provided by Amazon Web Services (AWS).  You can install and configure HAWQ on virtual servers provided by Amazon EC2. The following information describes some considerations when deploying a HAWQ cluster in an Amazon EC2 environment.
 
-## <a id="topic_wqv_yfx_y5"></a>About Amazon EC2 
+## About Amazon EC2 <a id="topic_wqv_yfx_y5"></a>
 
 Amazon EC2 can be used to launch as many virtual servers as you need, configure security and networking, and manage storage. An EC2 *instance* is a virtual server in the AWS cloud virtual computing environment.
 
@@ -31,33 +31,33 @@ EC2 instances are managed by AWS. AWS isolates your EC2 instances from other use
 
 For information about Amazon EC2, see the [EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html).
 
-## <a id="topic_nhk_df4_2v"></a>Create and Launch HAWQ Instances
+## Create and Launch HAWQ Instances<a id="topic_nhk_df4_2v"></a>
 
 Use the **Amazon EC2 Console** to launch instances and configure, start, stop, and terminate (delete) virtual servers. When you launch a HAWQ instance, you select and configure key attributes via the EC2 Console.
 
 
-### <a id="topic_amitype"></a>Choose AMI Type
+### Choose AMI Type<a id="topic_amitype"></a>
 
 An Amazon Machine Image (AMI) is a template that contains a specific software configuration including the operating system, application server, and applications that best suit your purpose. When configuring a HAWQ virtual instance, use a *hardware virtualized* (HVM) AMI supporting enhanced 10Gbps networking. Ensure the AMI is running 64-bit Red Hat Enterprise Linux version 6.4 or 6.5 or 64-bit CentOS 6.4 or 6.5.  Obtain the licenses and instances directly from the OS provider.
 
-### <a id="topic_selcfgstorage"></a>Consider Storage
+### Consider Storage<a id="topic_selcfgstorage"></a>
 You can launch EC2 instances as either Elastic Block Store (EBS)-backed or instance store-backed. Choose the storage type based on the expected lifetime of your cluster and data.
 
-#### <a id="topic_selcfgstorage_instance"></a>Instance Store-Backed
+#### Instance Store-Backed<a id="topic_selcfgstorage_instance"></a>
 
 Use instance store-backed storage for short lived or transient clusters that do not require long-term persistence of data. While instance store-backed storage is generally better performing than EBS, it is not recommended for use in a production environment.
 
 **Warning**: EC2 instance store-backed storage provides *temporary* block-level storage. This storage is located on disks that are physically attached to the host computer. You will lose all instance store data when the AMI instance is powered off.
 
 
-#### <a id="topic_selcfgstorage_ebs"></a>EBS-Backed
+#### EBS-Backed<a id="topic_selcfgstorage_ebs"></a>
 EBS volumes are reliable and highly-available. Use EBS-backed storage for longer running clusters where data must be quickly accessible and must remain available for a long period of time.
 
 
-#### <a id="topic_selcfgstorage_volume"></a>Volume Types
+#### Volume Types<a id="topic_selcfgstorage_volume"></a>
 When selecting between HDD and SSD volume types, the trade-offs are between speed, capacity, and cost. HDD volumes are less expensive and have greater disk capacity, but may be less performant. SSD (solid state drive) volumes are more performant, but costlier and typically have less disk capacity.
 
-### <a id="topic_cfgplacegrp"></a>Configure Placement Group 
+### Configure Placement Group <a id="topic_cfgplacegrp"></a>
 
 A placement group is a logical grouping of instances within a single availability zone that participate in a low-latency, 10 Gbps network. Your HAWQ master and segment cluster instances should support enhanced networking and reside in a single placement group (and subnet) for optimal network performance.
 
@@ -69,7 +69,7 @@ Membership in a placement group has some implications for your HAWQ cluster.  Sp
 
 **Note**: If cluster down time during expansion is not acceptable for your HAWQ deployment, do not use placement groups.
 
-### <a id="topic_selinsttype"></a>Select EC2 Instance Type
+### Select EC2 Instance Type<a id="topic_selinsttype"></a>
 
 An EC2 instance type is a specific combination of CPU, memory, default storage, and networking capacity.  
 
@@ -89,7 +89,7 @@ Several instance store-backed EC2 instance types have shown acceptable performan
 For optimal network performance, the chosen HAWQ instance type should support EC2 enhanced networking. Enhanced networking results in higher performance, lower latency, and lower jitter. Refer to [Enhanced Networking on Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html) for detailed information on enabling enhanced networking in supported EC2 instance types.
 
 
-### <a id="topic_cfgnetw"></a>Configure Networking and VPC
+### Configure Networking and VPC<a id="topic_cfgnetw"></a>
 
 Place your HAWQ cluster instances in a single VPC and on the same subnet. Instances are always assigned a VPC internal IP address. Use this internal IP address for HAWQ communication between hosts. You can also use the internal IP address to access an instance from another instance within the HAWQ VPC.
 

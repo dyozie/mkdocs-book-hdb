@@ -23,7 +23,7 @@ under the License.
 
 Creates a new database.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE DATABASE <database_name> [s[WITH] <database_attribute>=<value> [ ... ]]
@@ -38,7 +38,7 @@ where \<database\_attribute\> is:
     [CONNECTION LIMIT=<connection_limit>]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE DATABASE` creates a new database. To create a database, you must be a superuser or have the special `CREATEDB` privilege.
 
@@ -46,7 +46,7 @@ The creator becomes the owner of the new database by default. Superusers can cre
 
 By default, the new database is created by cloning the standard system database template named `template1`. You can specify a different template by including the `WITH TEMPLATE=<template>` clause in the `CREATE DATABASE` command. In particular, specifying `WITH TEMPLATE=template0` creates a clean database containing only the standard objects predefined by HAWQ. This is useful if you wish to avoid copying any installation-local objects that may have been added to `template1`.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<database_name\></dt>
 <dd>The name of a database to create.
@@ -68,7 +68,7 @@ By default, the new database is created by cloning the standard system database 
 <dt>CONNECTION LIMIT=\<connection_limit\></dt>
 <dd>The maximum number of concurrent connections possible. The default of -1 means there is no limitation.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 `CREATE DATABASE` cannot be executed inside a transaction block.
 
@@ -76,7 +76,7 @@ Only template databases may be specified in the `WITH TEMPLATE=<template>` claus
 
 The `CONNECTION LIMIT` is not enforced against superusers.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To create a new database using the default template:
 
@@ -96,10 +96,10 @@ To create a database named `music` which supports the ISO-8859-1 character set:
 CREATE DATABASE music ENCODING='LATIN1';
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 There is no `CREATE DATABASE` statement in the SQL standard. Databases are equivalent to catalogs, whose creation is implementation-defined.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [DROP DATABASE](DROP-DATABASE.html)

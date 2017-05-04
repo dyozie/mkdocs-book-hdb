@@ -24,7 +24,7 @@ under the License.
 <span class="shortdesc">There are limitations in HAWQ when GPORCA is enabled. GPORCA and the legacy query optimizer currently coexist in HAWQ because GPORCA does not support all HAWQ features. </span>
 
 
-## <a id="topic_kgn_vxl_vp"></a>Unsupported SQL Query Features
+## Unsupported SQL Query Features<a id="topic_kgn_vxl_vp"></a>
 
 These HAWQ features are unsupported when GPORCA is enabled:
 
@@ -43,7 +43,7 @@ These HAWQ features are unsupported when GPORCA is enabled:
 -   Multiple `DISTINCT` qualified aggregate functions
 -   Inverse distribution functions
 
-## <a id="topic_u4t_vxl_vp"></a>Performance Regressions
+## Performance Regressions<a id="topic_u4t_vxl_vp"></a>
 
 When GPORCA is enabled in HAWQ, the following features are known performance regressions:
 

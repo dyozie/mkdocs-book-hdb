@@ -23,18 +23,18 @@ under the License.
 
 Removes a procedural language.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP [PROCEDURAL] LANGUAGE [IF EXISTS] <name> [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP LANGUAGE` will remove the definition of the previously registered procedural language \<name\>. You must have superuser privileges to drop a language.
 
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>PROCEDURAL  </dt>
 <dd>(Optional, no effect) Indicates that this is a procedural language.</dd>
@@ -51,7 +51,7 @@ DROP [PROCEDURAL] LANGUAGE [IF EXISTS] <name> [CASCADE | RESTRICT]
 <dt>RESTRICT</dt>
 <dd>Refuse to drop the language if any objects depend on it. This is the default behavior.</dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Remove the procedural language `plsample`:
 
@@ -59,10 +59,10 @@ Remove the procedural language `plsample`:
 DROP LANGUAGE plsample;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `DROP LANGUAGE` is a HAWQ extension; there is no `DROP LANGUAGE` statement in the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [CREATE LANGUAGE](CREATE-LANGUAGE.html)

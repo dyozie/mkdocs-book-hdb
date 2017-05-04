@@ -23,7 +23,7 @@ under the License.
 
 Searches through HAWQ log files for specified entries.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 gplogfilter [<timestamp_options>] [<pattern_matching_options>] 
@@ -62,7 +62,7 @@ where:
 ```
 
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `gplogfilter` utility can be used to search through a HAWQ log file for entries matching the specified criteria. To read from standard input, use a dash (`-`) as the input file name. Input files may be compressed using `gzip`. In an input file, a log entry is identified by its timestamp in `YYYY-MM-DD [hh:mm[:ss]]` format.
 
@@ -76,7 +76,7 @@ $ hawq ssh -f seg_hostfile_hawqssh
 
 By default, the output of `gplogfilter` is sent to standard output. Use the `-o` option to send the output to a file or a directory. If you supply an output file name ending in `.gz`, the output file will be compressed by default using maximum compression. If the output destination is a directory, the output file is given the same name as the input file.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 
 **\<input_options\>**
@@ -161,7 +161,7 @@ $ gplogfilter -e '2016-02-13 14:23'
 <dt>-\\\-version  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section9"></a>Examples
+## Examples<a id="topic1__section9"></a>
 
 Display the last three error messages in the identified log file:
 
@@ -194,6 +194,6 @@ $ hawq ssh -f /data/hawq-2.x/segmentdd/pg_hba.conf -e 'source /usr/local/hawq/gr
 gplogfilter -f con6 /data/hawq-2.x/pg_log/hawq*.csv' > seglog.out
 ```
 
-## <a id="topic1__section10"></a>See Also
+## See Also<a id="topic1__section10"></a>
 
 [hawq ssh](hawqssh.html#topic1)

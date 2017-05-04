@@ -23,7 +23,7 @@ under the License.
 
 HAWQ evaluates functions and operators used in SQL expressions.
 
-## <a id="topic27"></a>Using Functions in HAWQ
+## Using Functions in HAWQ<a id="topic27"></a>
 
 In HAWQ, functions can only be run on master.
 
@@ -40,7 +40,7 @@ In HAWQ, functions can only be run on master.
 
 HAWQ does not support functions that return a table reference (`rangeFuncs`) or functions that use the `refCursor` datatype.
 
-## <a id="topic28"></a>User-Defined Functions
+## User-Defined Functions<a id="topic28"></a>
 
 HAWQ supports user-defined functions. See [Extending SQL](http://www.postgresql.org/docs/8.2/static/extend.html) in the PostgreSQL documentation for more information.
 
@@ -55,7 +55,7 @@ HAWQ does not support the following:
 
 Use the `CREATE FUNCTION` statement to register user-defined functions that are used as described in [Using Functions in HAWQ](#topic27). By default, user-defined functions are declared as `VOLATILE`, so if your user-defined function is `IMMUTABLE` or `STABLE`, you must specify the correct volatility level when you register your function.
 
-### <a id="functionvolatility"></a>Function Volatility
+### Function Volatility<a id="functionvolatility"></a>
 
 Every function has a **volatility** classification, with the possibilities being VOLATILE, STABLE, or IMMUTABLE. VOLATILE is the default if the [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION.html) command does not specify a category. The volatility category is a promise to the optimizer about the behavior of the function:
 
@@ -81,7 +81,7 @@ A common error is to label a function IMMUTABLE when its results depend on a c
 
 When you create user defined functions, avoid using fatal errors or destructive calls. HAWQ may respond to such errors with a sudden shutdown or restart.
 
-### <a id="nestedUDFs"></a>Nested Function Query Limitations
+### Nested Function Query Limitations<a id="nestedUDFs"></a>
 
 HAWQ queries employing nested user-defined functions will fail when dispatched to segment node(s). 
 
@@ -89,7 +89,7 @@ HAWQ stores the system catalog only on the master node. User-defined functions a
 
 This behavior may be problematic in queries where a user-defined function includes a nested function(s). When a query includes a user-defined function, metadata passed to the query executor includes function invocation information.  If run on the HAWQ master node, the nested function will be recognized. If such a query is dispatched to a segment, the nested function will not be found and the query will throw an error.
 
-## <a id="userdefinedtypes"></a>User Defined Types
+## User Defined Types<a id="userdefinedtypes"></a>
 
 HAWQ can be extended to support new data types. This section describes how to define new base types, which are data types defined below the level of the SQL language. Creating a new base type requires implementing functions to operate on the type in a low-level language, usually C.
 
@@ -148,7 +148,7 @@ Once the data type exists, we can declare additional functions to provide useful
 
 For further details, see the description of the [CREATE TYPE](../reference/sql/CREATE-TYPE.html) command.
 
-## <a id="userdefinedoperators"></a>User Defined Operators
+## User Defined Operators<a id="userdefinedoperators"></a>
 
 Every operator is "syntactic sugar" for a call to an underlying function that does the real work; so you must first create the underlying function before you can create the operator. However, an operator is not merely syntactic sugar, because it carries additional information that helps the query planner optimize queries that use the operator. The next section will be devoted to explaining that additional information.
 
@@ -185,7 +185,7 @@ SELECT (a + b) AS c FROM test_complex;
 
 We've shown how to create a binary operator here. To create unary operators, just omit one of leftarg (for left unary) or rightarg (for right unary). The procedure clause and the argument clauses are the only required items in CREATE OPERATOR. The commutator clause shown in the example is an optional hint to the query optimizer. Further details aboutcommutator and other optimizer hints appear in the next section.
 
-## <a id="topic29"></a>Built-in Functions and Operators
+## Built-in Functions and Operators<a id="topic29"></a>
 
 The following table lists the categories of built-in functions and operators supported by PostgreSQL. All functions and operators are supported in HAWQ as in PostgreSQL with the exception of `STABLE` and `VOLATILE` functions, which are subject to the restrictions noted in [Using Functions in HAWQ](#topic27). See the [Functions and Operators](http://www.postgresql.org/docs/8.2/static/functions.html) section of the PostgreSQL documentation for more information about these built-in functions and operators.
 
@@ -352,7 +352,7 @@ The following table lists the categories of built-in functions and operators sup
 </tbody>
 </table>
 
-## <a id="topic30"></a>Window Functions
+## Window Functions<a id="topic30"></a>
 
 The following built-in window functions are HAWQ extensions to the PostgreSQL database. All window functions are *immutable*. For more information about window functions, see [Window Expressions](defining-queries.html#topic13).
 
@@ -374,7 +374,7 @@ The following built-in window functions are HAWQ extensions to the PostgreSQL da
 | `row_number(`)                                       | `bigint`                  | `ROW_NUMBER () OVER ( [PARTITION BY expr] ORDER BY expr                   )`                              | Assigns a unique number to each row to which it is applied (either each row in a window partition or each row of the query).                                                                                                                                                                                                                                                                                                                               |
 
 
-## <a id="topic31"></a>Advanced Aggregate Functions
+## Advanced Aggregate Functions<a id="topic31"></a>
 
 The following built-in advanced aggregate functions are HAWQ extensions of the PostgreSQL database.
 

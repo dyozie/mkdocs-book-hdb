@@ -23,7 +23,7 @@ under the License.
 
 Defines a new schema.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE SCHEMA <schema_name> [AUTHORIZATION <username>] 
@@ -32,7 +32,7 @@ CREATE SCHEMA <schema_name> [AUTHORIZATION <username>]
 CREATE SCHEMA AUTHORIZATION <rolename> [<schema_element> [ ... ]]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE SCHEMA` enters a new schema into the current database. The schema name must be distinct from the name of any existing schema in the current database.
 
@@ -40,7 +40,7 @@ A schema is essentially a namespace: it contains named objects (tables, data typ
 
 Optionally, `CREATE SCHEMA` can include subcommands to create objects within the new schema. The subcommands are treated essentially the same as separate commands issued after creating the schema, except that if the `AUTHORIZATION` clause is used, all the created objects will be owned by that role.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<schema\_name\>   </dt>
 <dd>The name of a schema to be created. If this is omitted, the user name is used as the schema name. The name cannot begin with `pg_`, as such names are reserved for system catalog schemas.</dd>
@@ -51,11 +51,11 @@ Optionally, `CREATE SCHEMA` can include subcommands to create objects within the
 <dt> \<schema\_element\>   </dt>
 <dd>An SQL statement defining an object to be created within the schema. Currently, only `CREATE TABLE`, `CREATE VIEW`, `CREATE               INDEX`, `CREATE SEQUENCE`, and `GRANT` are accepted as clauses within `CREATE SCHEMA`. Other kinds of objects may be created in separate commands after the schema is created.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 To create a schema, the invoking user must have the `CREATE` privilege for the current database or be a superuser.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a schema:
 
@@ -69,7 +69,7 @@ Create a schema for role `joe` (the schema will also be named `joe`):
 CREATE SCHEMA AUTHORIZATION joe;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The SQL standard allows a `DEFAULT CHARACTER SET` clause in `CREATE           SCHEMA`, as well as more subcommand types than are presently accepted by HAWQ.
 
@@ -77,6 +77,6 @@ The SQL standard specifies that the subcommands in `CREATE SCHEMA` may appear in
 
 According to the SQL standard, the owner of a schema always owns all objects within it. HAWQ allows schemas to contain objects owned by users other than the schema owner. This can happen only if the schema owner grants the `CREATE` privilege on the schema to someone else.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [DROP SCHEMA](DROP-SCHEMA.html)

@@ -23,7 +23,7 @@ under the License.
 
 Before invoking operations on a HAWQ cluster, you must set up your HAWQ environment. This set up is required for both administrative and non-administrative HAWQ users.
 
-## <a id="hawq_setupenv"></a>Procedure: Setting Up Your HAWQ Operating Environment
+## Procedure: Setting Up Your HAWQ Operating Environment<a id="hawq_setupenv"></a>
 
 HAWQ installs a script that you can use to set up your HAWQ cluster environment. The `greenplum_path.sh` script, located in your HAWQ root install directory, sets `$PATH` and other environment variables to find HAWQ files.  Most importantly, `greenplum_path.sh` sets the `$GPHOME` environment variable to point to the root directory of the HAWQ installation.  If you installed HAWQ from a product distribution, the HAWQ root is typically `/usr/local/hawq`. If you built HAWQ from source or downloaded the tarball, you will have selected an install root directory on your own.
 
@@ -79,7 +79,7 @@ Perform the following steps to set up your HAWQ operating environment:
 
     You may choose to set additional HAWQ deployment-specific environment variables. See [Environment Variables](../reference/HAWQEnvironmentVariables.html#optionalenvironmentvariables).
 
-## <a id="hawq_env_files_and_dirs"></a>HAWQ Files and Directories
+## HAWQ Files and Directories<a id="hawq_env_files_and_dirs"></a>
 
 The following table identifies some files and directories of interest in a default HAWQ installation.  Unless otherwise specified, the table entries are relative to `$GPHOME`.
 

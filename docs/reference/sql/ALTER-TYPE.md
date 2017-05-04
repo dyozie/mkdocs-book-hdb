@@ -23,7 +23,7 @@ under the License.
 
 Changes the definition of a data type.
 
-## <a id="synopsis"></a>Synopsis
+## Synopsis<a id="synopsis"></a>
 
 ``` pre
 ALTER TYPE <name>
@@ -31,13 +31,13 @@ ALTER TYPE <name>
          
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
  `ALTER TYPE` changes the definition of an existing type. You can change the owner and the schema of a type.
 
 You must own the type to use `ALTER TYPE`. To change the schema of a type, you must also have `CREATE` privilege on the new schema. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have `CREATE` privilege on the type's schema. (These restrictions enforce that altering the owner does not do anything that could be done by dropping and recreating the type. However, a superuser can alter ownership of any type.)
 
-## <a id="altertype__section4"></a>Parameters
+## Parameters<a id="altertype__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The name (optionally schema-qualified) of an existing type to alter.</dd>
@@ -48,7 +48,7 @@ You must own the type to use `ALTER TYPE`. To change the schema of a type, you m
 <dt> \<new\_schema\>   </dt>
 <dd>The new schema for the type.</dd>
 
-## <a id="altertype__section5"></a>Examples
+## Examples<a id="altertype__section5"></a>
 
 To change the owner of the user-defined type `email` to `joe`:
 
@@ -62,11 +62,11 @@ To change the schema of the user-defined type `email` to `customers`:
 ALTER TYPE email SET SCHEMA customers;
 ```
 
-## <a id="altertype__section6"></a>Compatibility
+## Compatibility<a id="altertype__section6"></a>
 
 There is no `ALTER TYPE` statement in the SQL standard.
 
-## <a id="see"></a>See Also
+## See Also<a id="see"></a>
 
 [CREATE TYPE](CREATE-TYPE.html), [DROP TYPE](DROP-TYPE.html)
 

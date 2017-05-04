@@ -27,7 +27,7 @@ The number of HDFS data files associated with a HAWQ table is determined by the 
 
 Only an HDFS or HAWQ superuser may access HAWQ table HDFS files.
 
-## <a id="idhdfsloc"></a> HDFS Location
+##  HDFS Location<a id="idhdfsloc"></a>
 
 The format of the HDFS file path for a HAWQ table is:
 
@@ -62,7 +62,7 @@ or view the **HAWQ** service **Configs > Advanced**, **General** pane, in your A
 You can determine the tablespace, database, and table object identifiers through HAWQ catalog queries. See the [Example](#ex_hdfslochash) below.
 
 
-## <a id="idnumfiles"></a> Number of Data Files
+##  Number of Data Files<a id="idnumfiles"></a>
 
 The number of data files that are created for a HAWQ table differs for hash-distributed and randomly-distributed HAWQ tables.
 
@@ -71,7 +71,7 @@ Hash-distributed HAWQ tables use a fixed number of virtual segments (vsegs). Thi
 The number of HDFS files generated for a randomly-distributed HAWQ table varies depending on the total number of virtual segments that have written data to the table.
 
 
-## <a id="ex_hdfslochash"></a> Example: Locating HDFS Files for a HAWQ Table
+##  Example: Locating HDFS Files for a HAWQ Table<a id="ex_hdfslochash"></a>
 
 Perform the following steps to identify the HDFS location of the data files associated with a hash-distributed HAWQ table. The SQL queries used in this example are applicable to randomly-distributed HAWQ tables as well.
 

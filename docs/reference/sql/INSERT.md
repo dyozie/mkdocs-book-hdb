@@ -23,7 +23,7 @@ under the License.
 
 Creates new rows in a table.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 INSERT INTO <table> [( <column> [, ...] )]
@@ -31,7 +31,7 @@ INSERT INTO <table> [( <column> [, ...] )]
    [, ...] | <query>}
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `INSERT` inserts new rows into a table. One can insert one or more rows specified by value expressions, or zero or more rows resulting from a query.
 
@@ -55,7 +55,7 @@ INSERT oid
 
 The *count* is the number of rows inserted. If count is exactly one, and the target table has OIDs, then *oid* is the OID assigned to the inserted row. Otherwise *oid* is zero.
 
-## <a id="topic1__section5"></a>Parameters
+## Parameters<a id="topic1__section5"></a>
 
 <dt> \<table\>   </dt>
 <dd>The name (optionally schema-qualified) of an existing table.</dd>
@@ -75,7 +75,7 @@ The *count* is the number of rows inserted. If count is exactly one, and the tar
 <dt> \<query\>   </dt>
 <dd>A query (`SELECT` statement) that supplies the rows to be inserted. Refer to the [SELECT](SELECT.html) statement for a description of the syntax.</dd>
 
-## <a id="topic1__section7"></a>Examples
+## Examples<a id="topic1__section7"></a>
 
 Insert a single row into table `films`:
 
@@ -119,12 +119,12 @@ INSERT INTO films SELECT * FROM tmp_films WHERE date_prod <
 '2004-05-07';
 ```
 
-## <a id="topic1__section8"></a>Compatibility
+## Compatibility<a id="topic1__section8"></a>
 
 `INSERT` conforms to the SQL standard. The case in which a column name list is omitted, but not all the columns are filled from the `VALUES` clause or query, is disallowed by the standard.
 
 Possible limitations of the *query* clause are documented under `SELECT`.
 
-## <a id="topic1__section9"></a>See Also
+## See Also<a id="topic1__section9"></a>
 
 [COPY](COPY.html), [SELECT](SELECT.html), [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html)

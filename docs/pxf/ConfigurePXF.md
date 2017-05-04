@@ -25,7 +25,7 @@ This topic describes how to configure the PXF service.
 
 **Note:** After you make any changes to a PXF configuration file (such as `pxf-profiles.xml` for adding custom profiles), propagate the changes to all nodes with PXF installed, and then restart the PXF service on all nodes.
 
-## <a id="settingupthejavaclasspath"></a>Setting up the Java Classpath
+## Setting up the Java Classpath<a id="settingupthejavaclasspath"></a>
 
 The classpath for the PXF service is set during the plug-in installation process. Administrators should only modify it when adding new PXF connectors. The classpath is defined in two files:
 
@@ -34,7 +34,7 @@ The classpath for the PXF service is set during the plug-in installation process
 
 After changing the classpath files, the PXF service must be restarted. 
 
-## <a id="settingupthejvmcommandlineoptionsforpxfservice"></a>Setting up the JVM Command Line Options for the PXF Service
+## Setting up the JVM Command Line Options for the PXF Service<a id="settingupthejvmcommandlineoptionsforpxfservice"></a>
 
 The PXF service JVM command line options can be added or modified for each pxf-service instance in the `/var/pxf/pxf-service/bin/setenv.sh` file:
 
@@ -48,22 +48,22 @@ After adding or modifying the JVM command line options, the PXF service must be
 
 (Refer to [Addressing PXF Memory Issues](TroubleshootingPXF.html#pxf-memcfg) for a related discussion of the configuration options available to address memory issues in your PXF deployment.)
 
-## <a id="topic_i3f_hvm_ss"></a>Using PXF on a Secure HDFS Cluster
+## Using PXF on a Secure HDFS Cluster<a id="topic_i3f_hvm_ss"></a>
 
 You can use PXF on a secure HDFS cluster. Read, write, and analyze operations for PXF tables on HDFS files are enabled. It requires no changes to preexisting PXF tables from a previous version.
 
-### <a id="requirements"></a>Requirements
+### Requirements<a id="requirements"></a>
 
 -   Both HDFS and YARN principals are created and are properly configured.
 -   HAWQ is correctly configured to work in secure mode.
 
 Please refer to [Troubleshooting PXF](TroubleshootingPXF.html) for common errors related to PXF security and their meaning.
 
-## <a id="credentialsforremoteservices"></a>Credentials for Remote Services
+## Credentials for Remote Services<a id="credentialsforremoteservices"></a>
 
 Credentials for remote services allows a PXF plug-in to access a remote service that requires credentials.
 
-### <a id="inhawq"></a>In HAWQ
+### In HAWQ<a id="inhawq"></a>
 
 Two parameters for credentials are implemented in HAWQ:
 
@@ -74,7 +74,7 @@ Currently, the contents of the two parameters are stored in memory, without any 
 
 **Important:** These parameters are temporary and could soon be deprecated, in favor of a complete solution for managing credentials for remote services in PXF.
 
-### <a id="inapxfplugin"></a>In a PXF Plug-in
+### In a PXF Plug-in<a id="inapxfplugin"></a>
 
 In a PXF plug-in, the contents of the two credentials parameters is available through the following InputData API functions:
 

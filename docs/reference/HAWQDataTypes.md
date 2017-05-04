@@ -96,7 +96,7 @@ For variable length data types (such as char, varchar, text, xml, etc.) if the d
 
 **Note**: Use these documented built-in types when creating user tables.  Any other data types that might be visible in the source code are for internal use only.
 
-## <a id="timezones"></a>Time Zones
+## Time Zones<a id="timezones"></a>
 
 Time zones, and time-zone conventions, are influenced by political decisions, not just earth geometry. Time zones around the world became somewhat standardized during the 1900's, but continue to be prone to arbitrary changes, particularly with respect to daylight-savings rules. HAWQ uses the widely-used zoneinfo time zone database for information about historical time zone rules. For times in the future, the assumption is that the latest known rules for a given time zone will continue to be observed indefinitely far into the future.
 
@@ -129,7 +129,7 @@ The timezone configuration parameter can be set in the file `hawq-site.xml`. 
 -   The SQL command SET TIME ZONE sets the time zone for the session. This is an alternative spelling of SET TIMEZONE TO with a more SQL-spec-compatible syntax.
 -   The PGTZ environment variable is used by libpq clients to send a SET TIME ZONE command to the server upon connection.
 
-## <a id="dateandtimeconfigurationfiles"></a>Date and Time Configuration Files
+## Date and Time Configuration Files<a id="dateandtimeconfigurationfiles"></a>
 
 Since timezone abbreviations are not well standardized, HAWQ /&gt; provides a means to customize the set of abbreviations accepted by the server. The timezone\_abbreviations run-time parameter determines the active set of abbreviations. While this parameter can be altered by any database user, the possible values for it are under the control of the database administrator — they are in fact names of configuration files stored in .../share/timezonesets/ of the installation directory. By adding or altering files in that directory, the administrator can set local policy for timezone abbreviations.
 
@@ -155,7 +155,7 @@ For reference purposes, a standard installation also contains files Africa.txt,
 
 **Note:** These files cannot be directly referenced as timezone\_abbreviations settings, because of the dot embedded in their names.
 
-## <a id="polymorphictypes"></a>Polymorphic Types 
+## Polymorphic Types <a id="polymorphictypes"></a>
 
 Two pseudo-types of special interest are `anyelement` and `anyarray`, which are collectively called *polymorphic types*. Any function declared using these types is said to be a *polymorphic function*. A polymorphic function can operate on many different data types, with the specific data type(s) being determined by the data types actually passed to it in a particular call.
 

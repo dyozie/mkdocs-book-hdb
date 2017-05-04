@@ -29,11 +29,11 @@ This lesson introduces basic HAWQ cluster administration tasks. You will view an
 
 **Note**: Before installing HAWQ, you or your administrator choose to configure and manage the HAWQ cluster either using the command line or using the Ambari UI. You will perform command line and Ambari exercises for managing your HAWQ cluster in this lesson. Although you are introduced to both, command line and Ambari HAWQ cluster management modes should not be mixed.
 
-## <a id="tut_adminprereq"></a> Prerequisites
+##  Prerequisites<a id="tut_adminprereq"></a>
 
 Ensure that you have [Set Up your HAWQ Runtime Environment](introhawqenv.html#tut_runtime_setup) and that your HAWQ cluster is up and running.
 
-## <a id="tut_ex_cmdline_cfg"></a>Exercise: View and Update HAWQ Configuration from the Command Line
+## Exercise: View and Update HAWQ Configuration from the Command Line<a id="tut_ex_cmdline_cfg"></a>
 
 If you choose to manage your HAWQ cluster from the command line, you will perform many administrative functions using the `hawq` utility. The `hawq` command line utility provides subcommands including `start`, `stop`, `config`, and `state`.
 
@@ -110,7 +110,7 @@ Perform the following steps to view the HAWQ HDFS filespace URL and set the `plj
     Configuration parameter value changes made by `hawq config` are system-wide; they are propagated to all segments across the cluster.
 
 
-## <a id="tut_ex_hawqstatecmdline"></a>Exercise: View the State of Your HAWQ Cluster via Ambari
+## Exercise: View the State of Your HAWQ Cluster via Ambari<a id="tut_ex_hawqstatecmdline"></a>
 
 You may choose to use Ambari to manage the HAWQ deployment. The Ambari Web UI provides a graphical front-end to HAWQ cluster management activities.
 
@@ -147,7 +147,7 @@ Perform the following steps to view the state of your HAWQ cluster via the Ambar
     The **Check HAWQ** task dialog displays the output of the service check operation. This operation returns the state of your HAWQ cluster, as well as the results of HAWQ database operation tests performed by Ambari.
 
 
-## <a id="tut_ex_ambari_cfg"></a>Exercise: View and Update HAWQ Configuration via Ambari
+## Exercise: View and Update HAWQ Configuration via Ambari<a id="tut_ex_ambari_cfg"></a>
 
 Perform the following steps to view the HDFS NodeName and set the HAWQ PL/Java `pljava_classpath` configuration parameter and value via Ambari:
 
@@ -200,7 +200,7 @@ Perform the following steps to view the HDFS NodeName and set the HAWQ PL/Java `
 
 10. When the restart operation completes, log out of the Ambari console by clicking the **admin** button and selecting the **Sign out** drop down menu item.
 
-## <a id="tut_hawqadmin_summary"></a>Summary
+## Summary<a id="tut_hawqadmin_summary"></a>
 
 In this lesson, you viewed the state of the HAWQ cluster and learned how to change cluster configuration parameters. 
 

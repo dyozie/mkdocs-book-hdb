@@ -29,7 +29,7 @@ This documentation describes the most useful views in `hawq_toolkit`. You may no
 
 **Warning:** Do not change database objects in the `hawq_toolkit` schema. Do not create database objects in the schema. Changes to objects in the schema might affect the accuracy of administrative information returned by schema objects.
 
-## <a id="topic2"></a>Checking for Tables that Need Routine Maintenance
+## Checking for Tables that Need Routine Maintenance<a id="topic2"></a>
 
 The following views can help identify tables that need routine table maintenance (`VACUUM` and/or `ANALYZE`).
 
@@ -41,7 +41,7 @@ The `VACUUM` command is applicable only to system catalog tables. The `VACUUM` c
 
 The `ANALYZE` command collects column-level statistics needed by the query optimizer. HAWQ uses a cost-based query optimizer that relies on database statistics. Accurate statistics allow the query optimizer to better estimate selectivity and the number of rows retrieved by a query operation in order to choose the most efficient query plan.
 
-### <a id="topic4"></a>hawq\_stats\_missing
+### hawq\_stats\_missing<a id="topic4"></a>
 
 This view shows tables that do not have statistics and therefore may require an `ANALYZE` be run on the table.
 
@@ -58,14 +58,14 @@ This view shows tables that do not have statistics and therefore may require an 
 | smirecs   | Number of rows in the table.                                                                                                                                                                                                                                                                                                                                               |
 
 
-## <a id="topic16"></a>Viewing HAWQ Server Log Files
+## Viewing HAWQ Server Log Files<a id="topic16"></a>
 
 Each component of a HAWQ system (master, standby master, and segments) keeps its own server log files. The `hawq_log_*` family of views allows you to issue SQL queries against the server log files to find particular entries of interest. The use of these views requires superuser permissions.
 
 -   [hawq\_log\_command\_timings](#topic17)
 -   [hawq\_log\_master\_concise](#topic19)
 
-### <a id="topic17"></a>hawq\_log\_command\_timings
+### hawq\_log\_command\_timings<a id="topic17"></a>
 
 This view uses an external table to read the log files on the master and report the execution time of SQL commands executed in a database session. The use of this view requires superuser permissions.
 
@@ -85,7 +85,7 @@ This view uses an external table to read the log files on the master and report 
 | logduration | Statement duration from start to end time.                 |
 
 
-### <a id="topic19"></a>hawq\_log\_master\_concise
+### hawq\_log\_master\_concise<a id="topic19"></a>
 
 This view uses an external table to read a subset of the log fields from the master log file. The use of this view requires superuser permissions.
 
@@ -103,7 +103,7 @@ This view uses an external table to read a subset of the log fields from the mas
 | logmessage  | Log or error message text.                                 |
 
 
-## <a id="topic38"></a>Checking Database Object Sizes and Disk Space
+## Checking Database Object Sizes and Disk Space<a id="topic38"></a>
 
 The `hawq_size_*` family of views can be used to determine the disk space usage for a distributed HAWQ, schema, table, or index. The following views calculate the total size of an object across all segments.
 
@@ -126,7 +126,7 @@ FROM hawq_size_of_table_disk AS sotd, pg_class
 WHERE sotd.sotdoid=pg_class.oid ORDER BY relname;
 ```
 
-### <a id="topic39"></a>hawq\_size\_of\_all\_table\_indexes
+### hawq\_size\_of\_all\_table\_indexes<a id="topic39"></a>
 
 This view shows the total size of all indexes for a table. This view is accessible to all users, however non-superusers will only be able to see relations that they have permission to access.
 
@@ -142,7 +142,7 @@ This view shows the total size of all indexes for a table. This view is accessib
 | soatitablename  | The table name                               |
 
 
-### <a id="topic40"></a>hawq\_size\_of\_database
+### hawq\_size\_of\_database<a id="topic40"></a>
 
 This view shows the total size of a database. This view is accessible to all users, however non-superusers will only be able to see databases that they have permission to access.
 
@@ -156,7 +156,7 @@ This view shows the total size of a database. This view is accessible to all use
 | sodddatsize | The size of the database in bytes |
 
 
-### <a id="topic41"></a>hawq\_size\_of\_index
+### hawq\_size\_of\_index<a id="topic41"></a>
 
 This view shows the total size of an index. This view is accessible to all users, however non-superusers will only be able to see relations that they have permission to access.
 
@@ -175,7 +175,7 @@ This view shows the total size of an index. This view is accessible to all users
 | soitablename       | The name of the table                                 |
 
 
-### <a id="topic42"></a>hawq\_size\_of\_partition\_and\_indexes\_disk
+### hawq\_size\_of\_partition\_and\_indexes\_disk<a id="topic42"></a>
 
 This view shows the size on disk of partitioned child tables and their indexes. This view is accessible to all users, however non-superusers will only be able to see relations that they have permission to access.
 
@@ -195,7 +195,7 @@ This view shows the size on disk of partitioned child tables and their indexes. 
 | sopaidpartitiontablename   | The name of the partition table                 |
 
 
-### <a id="topic43"></a>hawq\_size\_of\_schema\_disk
+### hawq\_size\_of\_schema\_disk<a id="topic43"></a>
 
 This view shows schema sizes for the public schema and the user-created schemas in the current database. This view is accessible to all users, however non-superusers will be able to see only the schemas that they have permission to access.
 
@@ -210,7 +210,7 @@ This view shows schema sizes for the public schema and the user-created schemas 
 | sosdschemaidxsize   | The total size of indexes in the schema in bytes |
 
 
-### <a id="topic44"></a>hawq\_size\_of\_table\_and\_indexes\_disk
+### hawq\_size\_of\_table\_and\_indexes\_disk<a id="topic44"></a>
 
 This view shows the size on disk of tables and their indexes. This view is accessible to all users, however non-superusers will only be able to see relations that they have permission to access.
 
@@ -227,7 +227,7 @@ This view shows the size on disk of tables and their indexes. This view is acces
 | sotaidtablename  | The name of the table                      |
 
 
-### <a id="topic45"></a>hawq\_size\_of\_table\_and\_indexes\_licensing
+### hawq\_size\_of\_table\_and\_indexes\_licensing<a id="topic45"></a>
 
 This view shows the total size of tables and their indexes for licensing purposes. The use of this view requires superuser permissions.
 
@@ -245,7 +245,7 @@ This view shows the total size of tables and their indexes for licensing purpose
 | sotailtablename             | The table name                                                                              |
 
 
-### <a id="topic46"></a>hawq\_size\_of\_table\_disk
+### hawq\_size\_of\_table\_disk<a id="topic46"></a>
 
 This view shows the size of a table on disk. This view is accessible to all users, however non-superusers will only be able to see tables that they have permission to access
 
@@ -263,7 +263,7 @@ This view shows the size of a table on disk. This view is accessible to all user
 | sotdtablename      | The table name                                                                                                                                                                                       |
 
 
-### <a id="topic47"></a>hawq\_size\_of\_table\_uncompressed
+### hawq\_size\_of\_table\_uncompressed<a id="topic47"></a>
 
 This view shows the uncompressed table size for append-only (AO) tables. Otherwise, the table size on disk is shown. The use of this view requires superuser permissions.
 

@@ -23,7 +23,7 @@ under the License.
 
 Exchanges SSH public keys between hosts.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq ssh-exkeys -f <hostfile_exkeys> | - h <hostname> [-h <hostname> ...] [-p <password>]
@@ -35,7 +35,7 @@ hawq ssh-exkeys --version
 hawq ssh-exkeys [-? | --help]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq ssh-exkeys` utility exchanges SSH keys between the specified host names (or host addresses). This allows SSH connections between HAWQ hosts and network interfaces without a password prompt. The utility is used to initially prepare a HAWQ system for password-free SSH access, and also to add additional ssh keys when expanding a HAWQ system.
 
@@ -53,7 +53,7 @@ The `hawq ssh-exkeys` utility performs key exchange using the following steps:
 -   Adds keys from the `id_rsa.pub` files obtained from each host to the `authorized_keys` file of the current user.
 -   Updates the `authorized_keys`, `known_hosts`, and `id_rsa.pub` files on all hosts with new host information (if any).
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-e \<hostfile\_exkeys\>  </dt>
 <dd>When doing a system expansion, this is the name and location of a file containing all configured host names and host addresses (interface names) for each host in your *current* HAWQ system (master, standby master and segments), one name per line without blank lines or extra spaces. Hosts specified in this file cannot be specified in the host file used with `-x`.</dd>
@@ -76,7 +76,7 @@ The `hawq ssh-exkeys` utility performs key exchange using the following steps:
 <dt>-?, --help (help)  </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Exchange SSH keys between all host names and addresses listed in the file `hostfile_exkeys`:
 
@@ -119,6 +119,6 @@ sdw5-2
 $ hawq ssh-exkeys -e hostfile_exkeys -x hostfile_hawqexpand
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq ssh](hawqssh.html#topic1), [hawq scp](hawqscp.html#topic1)

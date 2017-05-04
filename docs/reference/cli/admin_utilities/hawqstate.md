@@ -23,7 +23,7 @@ under the License.
 
 Shows the status of a running HAWQ system.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq state 
@@ -34,7 +34,7 @@ hawq state
 hawq state [-h | --help]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq state` utility displays information about a running HAWQ instance. A HAWQ system is comprised of multiple PostgreSQL database instances (segments) spanning multiple machines, and the `hawq state` utility can provide additional status information, such as:
 
@@ -45,7 +45,7 @@ The `hawq state` utility displays information about a running HAWQ instance. A H
 -   Whether a standby master is present, and if it is active.
 -   Whether Ranger authorization is enabled for HAWQ, and if so, the status of the HAWQ Ranger Plug-in Service.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-b (brief status)  </dt>
 <dd>Display a brief summary of the state of the HAWQ system. This is the default mode.</dd>
@@ -64,7 +64,7 @@ Log files within the directory are named according to the command being invoked,
 <dt>-h, -\\\-help (help)  </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Show brief status information of a HAWQ system:
 
@@ -80,6 +80,6 @@ $ ls TodaysLogs
 hawq_config_20160707.log  hawq_init_20160707.log   master.initdb
 ```
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [hawq start](hawqstart.html#topic1), [gplogfilter](gplogfilter.html#topic1)

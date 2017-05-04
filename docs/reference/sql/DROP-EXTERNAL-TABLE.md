@@ -23,17 +23,17 @@ under the License.
 
 Removes an external table definition.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP EXTERNAL [WEB] TABLE [IF EXISTS] <name> [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP EXTERNAL TABLE` drops an existing external table definition from the database system. The external data sources or files are not deleted. To execute this command you must be the owner of the external table.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>WEB  </dt>
 <dd>Optional keyword for dropping external web tables.</dd>
@@ -50,7 +50,7 @@ DROP EXTERNAL [WEB] TABLE [IF EXISTS] <name> [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the external table if any objects depend on it. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Remove the external table named `staging` if it exists:
 
@@ -58,10 +58,10 @@ Remove the external table named `staging` if it exists:
 DROP EXTERNAL TABLE IF EXISTS staging;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 There is no `DROP EXTERNAL TABLE` statement in the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html)

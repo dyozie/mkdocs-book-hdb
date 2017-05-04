@@ -27,7 +27,7 @@ Use the `hawq init master` and `hawq init segment` commands to individually init
 
 Use the `hawq init <object> --standby-host` option to define the host for a standby at initialization.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq init <object> [--options]
@@ -55,7 +55,7 @@ where:
   [--shared_buffers <number>]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq init <object>` utility creates a HAWQ instance using configuration parameters defined in `$GPHOME/etc/hawq-site.xml`. Before running this utility, verify that you have installed the HAWQ software on all the hosts in the array.
 
@@ -109,7 +109,7 @@ If the primary master fails, the log replication process is shut down. Run the `
 <dt>standby  </dt>
 <dd>Start a HAWQ standby master.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-a, (do not prompt)  </dt>
 <dd>Do not prompt the user for confirmation.</dd>
@@ -166,7 +166,7 @@ If the primary master fails, the log replication process is shut down. Run the `
 <dt>-?, -\\\-help  </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Initialize a HAWQ array with an optional standby master host:
 

@@ -21,12 +21,12 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-## <a id="tut_getstartov"></a>Overview
+## Overview<a id="tut_getstartov"></a>
 
 This tutorial provides a quick introduction to get you up and running with your HAWQ installation.  You will be introduced to basic HAWQ functionality, including cluster management, database creation, and simple querying. You will also become acquainted with using the HAWQ Extension Framework (PXF) to access and query external HDFS data sources.
 
 
-## <a id="tut_getstartov_prereq"></a>Prerequisites
+## Prerequisites<a id="tut_getstartov_prereq"></a>
 
 Ensure that you have a running HAWQ 2.x single or multi-node cluster. You may choose to use a:
 
@@ -34,7 +34,7 @@ Ensure that you have a running HAWQ 2.x single or multi-node cluster. You may ch
 - [HAWQ sandbox virtual machine](https://network.pivotal.io/products/pivotal-hdb) or [HAWQ docker environment](https://github.com/apache/incubator-hawq/tree/master/contrib/hawq-docker).
 - HAWQ installation you built from [source](https://cwiki.apache.org/confluence/display/HAWQ/Build+and+Install).
 
-## <a id="tut_hawqexlist"></a>Lessons 
+## Lessons <a id="tut_hawqexlist"></a>
 
 This guide includes the following content and exercises:
 

@@ -23,18 +23,18 @@ under the License.
 
 Changes the ownership of database objects owned by a database role.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 REASSIGN OWNED BY <old_role> [, ...] TO <new_role>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `REASSIGN OWNED` reassigns all the objects in the current database that are owned by \<old\_role\> to \<new\_role\>. Note that it does not change the ownership of the database itself.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<old\_role\>   </dt>
 <dd>The name of a role. The ownership of all the objects in the current database owned by this role will be reassigned to \<new\_role\>.</dd>
@@ -42,7 +42,7 @@ REASSIGN OWNED BY <old_role> [, ...] TO <new_role>
 <dt> \<new\_role\>   </dt>
 <dd>The name of the role that will be made the new owner of the affected objects.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 `REASSIGN OWNED` is often used to prepare for the removal of one or more roles. Because `REASSIGN OWNED` only affects the objects in the current database, it is usually necessary to execute this command in each database that contains objects owned by a role that is to be removed.
 
@@ -50,7 +50,7 @@ The `DROP OWNED` command is an alternative that drops all the database objects o
 
 The `REASSIGN OWNED` command does not affect the privileges granted to the old roles in objects that are not owned by them. Use `DROP OWNED` to revoke those privileges.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Reassign any database objects owned by the role named `sally` and `bob` to `admin`;
 
@@ -58,10 +58,10 @@ Reassign any database objects owned by the role named `sally` and `bob` to `admi
 REASSIGN OWNED BY sally, bob TO admin;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The `REASSIGN OWNED` statement is a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [DROP OWNED](DROP-OWNED.html), [DROP ROLE](DROP-ROLE.html)

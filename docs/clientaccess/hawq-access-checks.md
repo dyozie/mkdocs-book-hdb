@@ -28,11 +28,11 @@ Native HAWQ and Ranger authorization are mutually exclusive.
 Native HAWQ and Ranger authorization share `pg_hba.conf`-based user authentication. Native HAWQ authorization is used for certain database operations, even when Ranger is enabled. Additionally, HAWQ always verifies superuser privileges.
 
 
-## <a id="pghbaconf"></a> pg_hba.conf
+##  pg_hba.conf<a id="pghbaconf"></a>
 The `pg_hba.conf` file on the HAWQ master node identifies the users you permit to access the HAWQ cluster, and the hosts from which the access may be initiated. This authentication is the first line of defense for both HAWQ-Native and HAWQ-Ranger authorization.
 
 
-## <a id="alwaysnative"></a> HAWQ Native Authorization
+##  HAWQ Native Authorization<a id="alwaysnative"></a>
 HAWQ *always* employs its native authorization for operations on its catalog. HAWQ also uses only native authorization for the following HAWQ operations, *even when Ranger is enabled*. These operations are available to superusers and may be available those non-admin users to which access was specifically configured:
 
 - operations on HAWQ catalog
@@ -51,7 +51,7 @@ The following SQL operations do not require any authorization checks:
 - `SET`, `RESET`
 
 
-## <a id="rangersuperuser"></a> Ranger Authorization
+##  Ranger Authorization<a id="rangersuperuser"></a>
 When Ranger authorization is enabled, HAWQ uses Ranger policies to determine access to all user database objects, apart from the operations listed above. HAWQ denies a user operation if no policy exists to provide the necessary permissions for the requesting user to access the specific resource(s). 
 
 In cases where an operation requires super-user privileges, HAWQ first performs a super-user check, and then requests the Ranger policy check. Operations that require super-user checks include:
@@ -64,7 +64,7 @@ In cases where an operation requires super-user privileges, HAWQ first performs 
 - `COPY` command. Using `COPY` is always limited to the super-user. When Ranger policy management is enabled, the super-user must have `SELECT` or `INSERT` privileges on a table in order to `COPY` from or to that table.
 
 
-## <a id="authalgorithm"></a> Access Check Summary
+##  Access Check Summary<a id="authalgorithm"></a>
 
 When determining if a database operation is supported for a specific user, HAWQ:
 

@@ -25,7 +25,7 @@ This topic describes how to install the built-in PXF service plug-ins that are r
 
 **Note:** PXF requires that you run Tomcat on the host machine. Tomcat reserves ports 8005, 8080, and 8009. If you have configured Oozie JXM reporting on a host that will run PXF, make sure that the reporting service uses a port other than 8005. This helps to prevent port conflict errors from occurring when you start the PXF service.
 
-## <a id="directories_and_logs"></a>PXF Installation and Log File Directories
+## PXF Installation and Log File Directories<a id="directories_and_logs"></a>
 
 Installing PXF plug-ins, regardless of method, creates directories and log files on each node receiving the plug-in installation:
 
@@ -38,11 +38,11 @@ Installing PXF plug-ins, regardless of method, creates directories and log files
 | `/var/run/pxf/catalina.pid`    | PXF Tomcat container PID location                                                                                                                                                                                                          |
 
 
-## <a id="install_pxf_plug_ambari"></a>Installing PXF Using Ambari
+## Installing PXF Using Ambari<a id="install_pxf_plug_ambari"></a>
 
 If you are using Ambari to install and manage your HAWQ cluster, you do *not* need to follow the manual installation steps in this topic. Installing using the Ambari web interface installs all of the necessary PXF plug-in components.
 
-## <a id="install_pxf_plug_cmdline"></a>Installing PXF from the Command Line
+## Installing PXF from the Command Line<a id="install_pxf_plug_cmdline"></a>
 
 Each PXF service plug-in resides in its own RPM.  You may have built these RPMs in the Apache HAWQ open source project repository (see [PXF Build Instructions](https://github.com/apache/incubator-hawq/blob/master/pxf/README.md)), or these RPMs may have been included in a commercial product download package.
 

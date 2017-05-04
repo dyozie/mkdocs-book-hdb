@@ -23,7 +23,7 @@ under the License.
 
 Defines a new procedural language.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [PROCEDURAL] LANGUAGE <name>
@@ -32,7 +32,7 @@ CREATE [TRUSTED] [PROCEDURAL] LANGUAGE <name>
        HANDLER <call_handler> [VALIDATOR <valfunction>]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE LANGUAGE` registers a new procedural language with a HAWQ database. Subsequently, functions can be defined in this new language. You must be a superuser to register a new language.
 
@@ -42,7 +42,7 @@ There are two forms of the `CREATE LANGUAGE` command. In the first form, the use
 
 When the server finds an entry in the `pg_pltemplate` catalog for the given language name, it will use the catalog data even if the command includes language parameters. This behavior simplifies loading of old dump files, which are likely to contain out-of-date information about language support functions.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>TRUSTED  </dt>
 <dd>Ignored if the server has an entry for the specified language name in *pg\_pltemplate*. Specifies that the call handler for the language is safe and does not offer an unprivileged user any functionality to bypass access restrictions. If this key word is omitted when registering the language, only users with the superuser privilege can use this language to create new functions.</dd>
@@ -61,7 +61,7 @@ When the server finds an entry in the `pg_pltemplate` catalog for the given lang
 
 A validator function would typically inspect the function body for syntactical correctness, but it can also look at other properties of the function, for example if the language cannot handle certain argument types. To signal an error, the validator function should use the `ereport()` function. The return value of the function is ignored.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 The procedural language packages included in the standard HAWQ distribution are:
 
@@ -82,7 +82,7 @@ The call handler function and the validator function (if any) must already exist
 
 Any shared library that implements a language must be located in the same `LD_LIBRARY_PATH` location on all segment hosts in your HAWQ array.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 The preferred way of creating any of the standard procedural languages in a database:
 
@@ -103,10 +103,10 @@ CREATE LANGUAGE plsample
     HANDLER plsample_call_handler;
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE LANGUAGE` is a HAWQ extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [CREATE FUNCTION](CREATE-FUNCTION.html), [DROP LANGUAGE](DROP-LANGUAGE.html)

@@ -23,20 +23,20 @@ under the License.
 
 Removes a tablespace.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP TABLESPACE [IF EXISTS] <tablespacename>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP TABLESPACE` removes a tablespace from the system.
 
 A tablespace can only be dropped by its owner or a superuser. The tablespace must be empty of all database objects before it can be dropped. It is possible that objects in other databases may still reside in the tablespace even if no objects in the current database are using the tablespace.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the tablespace does not exist. A notice is issued in this case.</dd>
@@ -44,7 +44,7 @@ A tablespace can only be dropped by its owner or a superuser. The tablespace mus
 <dt>\<tablespacename\>  </dt>
 <dd>The name of the tablespace to remove.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Remove the tablespace `mystuff`:
 
@@ -52,10 +52,10 @@ Remove the tablespace `mystuff`:
 DROP TABLESPACE mystuff;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `DROP TABLESPACE` is a HAWQ extension.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [CREATE TABLESPACE](CREATE-TABLESPACE.html), [ALTER TABLESPACE](ALTER-TABLESPACE.html)

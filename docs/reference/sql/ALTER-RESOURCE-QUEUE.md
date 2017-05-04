@@ -23,7 +23,7 @@ under the License.
 
 Modify an existing resource queue.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ```pre
 ALTER RESOURCE QUEUE <name> WITH (<queue_attribute>=<value> [, ... ])
@@ -49,7 +49,7 @@ where \<queue\_attribute\> is:
    <percentage> ::= <integer>%
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 Changes attributes for an existing resource queue in HAWQ. You cannot change the parent of an existing resource queue, and you cannot change a resource queue while it is active. Only a superuser can modify a resource queue.
 
@@ -65,7 +65,7 @@ To see the status of a resource queue, see [Checking Existing Resource Queues](.
 
 See also [Best Practices for Using Resource Queues](../../bestpractices/managing_resources_bestpractices.html#topic_hvd_pls_wv).
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>Required. The name of the resource queue you wish to modify.</dd>
@@ -127,7 +127,7 @@ By default, both limits are set to **-1**, which means the limits are disabled. 
 
 **Note:** If the actual lower limit of the number of virtual segments becomes greater than the upper limit, then the lower limit is automatically reduced to be equal to the upper limit. This situation is possible when user sets both `NVSEG_UPPER_LIMIT `and `NVSEG_LOWER_LIMIT_PERSEG`. After expanding the cluster, the dynamic lower limit may become greater than the value set for the fixed upper limit. </dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Change the memory and core limit of a resource queue:
 
@@ -142,10 +142,10 @@ Change the active statements maximum for the resource queue:
 ALTER RESOURCE QUEUE test_queue_1 WITH (ACTIVE_STATEMENTS=50);
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `ALTER RESOURCE QUEUE` is a HAWQ extension. There is no provision for resource queues or workload management in the SQL standard.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [ALTER ROLE](ALTER-ROLE.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html), [CREATE ROLE](CREATE-ROLE.html), [DROP RESOURCE QUEUE](DROP-RESOURCE-QUEUE.html)

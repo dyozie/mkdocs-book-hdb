@@ -23,20 +23,20 @@ under the License.
 
 Deallocates a prepared statement.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DEALLOCATE [PREPARE] <name>
          
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DEALLOCATE` is used to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends.
 
 For more information on prepared statements, see [PREPARE](PREPARE.html).
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>PREPARE  </dt>
 <dd>Optional key word which is ignored.</dd>
@@ -44,7 +44,7 @@ For more information on prepared statements, see [PREPARE](PREPARE.html).
 <dt>\<name\>  </dt>
 <dd>The name of the prepared statement to deallocate.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Deallocated the previously prepared statement named `insert_names`:
 
@@ -52,10 +52,10 @@ Deallocated the previously prepared statement named `insert_names`:
 DEALLOCATE insert_names;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 The SQL standard includes a `DEALLOCATE` statement, but it is only for use in embedded SQL.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [EXECUTE](EXECUTE.html), [PREPARE](PREPARE.html)

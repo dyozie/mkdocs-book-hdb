@@ -23,20 +23,20 @@ under the License.
 
 Changes the definition of an operator.
 
-## <a id="synop"></a>Synopsis
+## Synopsis<a id="synop"></a>
 
 ```pre
 ALTER OPERATOR <name> ( {<lefttype> | NONE} , {<righttype> | NONE} ) 
    OWNER TO <newowner>        
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
 `ALTER OPERATOR` changes the definition of an operator. The only currently available functionality is to change the owner of the operator. 
 
 You must own the operator to use `ALTER OPERATOR`. To alter the owner, you must also be a direct or indirect member of the new owning role, and that role must have `CREATE` privilege on the operator’s schema. (These restrictions enforce that altering the owner does not do anything you could not do by dropping and recreating the operator. However, a superuser can alter ownership of any operator anyway.)
 
-## <a id="alteroperator__section4"></a>Parameters
+## Parameters<a id="alteroperator__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The name (optionally schema-qualified) of an existing operator.</dd>
@@ -50,7 +50,7 @@ You must own the operator to use `ALTER OPERATOR`. To alter the owner, you must 
 <dt> \<newowner\>   </dt>
 <dd>The new owner of the operator.</dd>
 
-## <a id="example"></a>Example
+## Example<a id="example"></a>
 
 Change the owner of a custom operator `a @@ b` for type `text`:
 
@@ -58,11 +58,11 @@ Change the owner of a custom operator `a @@ b` for type `text`:
 ALTER OPERATOR @@ (text, text) OWNER TO joe;
 ```
 
-## <a id="compat"></a>Compatibility
+## Compatibility<a id="compat"></a>
 
 There is no `ALTER OPERATOR` statement in the SQL standard.
 
-## <a id="see"></a>See Also
+## See Also<a id="see"></a>
 
 [CREATE OPERATOR](CREATE-OPERATOR.html), [DROP OPERATOR](DROP-OPERATOR.html)
 

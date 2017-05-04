@@ -23,7 +23,7 @@ under the License.
 
 Copies files between multiple hosts at once.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq scp -f <hostfile_hawqssh> | -h <hostname> [-h <hostname> ...] 
@@ -36,7 +36,7 @@ hawq scp -?
 hawq scp --version
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq scp` utility allows you to copy one or more files from the specified hosts to other specified hosts in one command using SCP (secure copy). For example, you can copy a file from the HAWQ master host to all of the segment hosts at the same time.
 
@@ -50,7 +50,7 @@ If a user name is not specified in the host list or with *user*`@` in the file p
 
 Before using `hawq scp`, you must have a trusted host setup between the hosts involved in the SCP session. You can use the utility `hawq ssh-exkeys` to update the known host files and exchange public keys between hosts if you have not done so already.
 
-## <a id="topic1__section9"></a>Arguments
+## Arguments<a id="topic1__section9"></a>
 <dt>-f \<hostfile\_hawqssh\>  </dt>
 <dd>Specifies the name of a file that contains a list of hosts that will participate in this SCP session. The syntax of the host file is one host per line as follows:
 
@@ -68,7 +68,7 @@ Before using `hawq scp`, you must have a trusted host setup between the hosts in
 <dt>\<copy\_to\_path\>  </dt>
 <dd>The path where you want the file(s) to be copied on the named hosts. If an absolute path is not used, the file will be copied relative to `$HOME` of the session user. You can also use the equal sign '`=`' (or another character that you specify with the `-J` option) in place of a \<hostname\>. This will then substitute in each host name as specified in the supplied host file (`-f`) or with the `-h` option.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>
 -\\\-ignore-bad-hosts 
@@ -93,7 +93,7 @@ Overrides copying configuration files to a host on which SSH validation fails. I
 <dt>-\\\-version  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Copy the file named `installer.tar` to `/` on all the hosts in the file `hostfile_hawqssh`.
 

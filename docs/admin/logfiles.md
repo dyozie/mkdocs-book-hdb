@@ -29,16 +29,16 @@ Configurable logging parameters may affect what, when, and where messages are lo
 
 Log files may be created and/or rotated at pre-defined or configured intervals.   Note that administrative log files are not automatically truncated or deleted. The administrator must implement and periodically run scripts to clean up these log files.
 
-## <a id="topic28"></a>HAWQ Database Server Log Files
+## HAWQ Database Server Log Files<a id="topic28"></a>
 
 
-### <a id="logfile_locate_db"></a>Locating HAWQ Log Files 
+### Locating HAWQ Log Files <a id="logfile_locate_db"></a>
 
 Each HAWQ master, standby, and segment database instance has its own server log file. Daily log files are created in the `pg_log` subdirectory of the master and segment data directory on the respective HAWQ node. You can obtain the master data directory location from the `hawq_master_directory` property value set in the `$GPHOME/etc/`[`hawq-site.xml`](../reference/HAWQSampleSiteConfig.html) configuration file. Similarly, you can obtain the segment data directory location from the `hawq_segment_directory` property value from `hawq-site.xml`.
 
 The naming convention for HAWQ database server log files is `hawq-<date>_<time>.[csv|log]`. For example, `hawq-2017-01-02_061611.csv` or `hawq-2017-01-03_001704.log`. The number and size of log files present for a given \<date\> is dependent upon the values of certain HAWQ server configuration parameters (discussed later in this document).
 
-### <a id="logfile_format_db"></a>HAWQ Log Format
+### HAWQ Log Format<a id="logfile_format_db"></a>
 
 The HAWQ server log files are written in text or comma-separated values \(CSV\) format.
 
@@ -95,7 +95,7 @@ Example HAWQ server log file entries in a `.log` file:
 2017-01-03 00:17:04.990520 PST|||706432|master resource manager||:-LOG:  Resource manager successfully loaded role specifications.
 ```
 
-### <a id="logfile_examine_db"></a>Examining HAWQ Log Files 
+### Examining HAWQ Log Files <a id="logfile_examine_db"></a>
 
 You will examine the HAWQ log files to obtain information about your HAWQ deployment, as well as diagnose problems.
 
@@ -110,7 +110,7 @@ For example, the following `hawq_toolkit` query displays the time and message fo
      WHERE logdatabase='testdb' AND logseverity='ERROR';
 ```
 
-### <a id="topic30"></a>Searching HAWQ Log Files 
+### Searching HAWQ Log Files <a id="topic30"></a>
 
 Use the [`gplogfilter`](../reference/cli/admin_utilities/gplogfilter.html) HAWQ utility to search through a HAWQ log file for entries matching specific criteria. By default, this utility searches through the HAWQ master log file in the default location.
 
@@ -128,7 +128,7 @@ $ hawq ssh -f <seg_hosts>
 => gplogfilter -n 3 /data/hawq/segment/pg_log/hawq*.csv
 ```
 
-### <a id="logging_config"></a>Configuring HAWQ Logging 
+### Configuring HAWQ Logging <a id="logging_config"></a>
 
 You can configure the logging characteristics of HAWQ server operations using HAWQ server configuration [Logging Parameters](../reference/guc/guc_category-list.html#topic29). These configuration parameters work in conjunction with each other to determine what information is logged to the HAWQ server log file, and when.
 
@@ -154,7 +154,7 @@ HAWQ server logging-related configuration parameters include:
 | [`log_timezone`](../reference/guc/parameter_definitions.html#log_timezone)|  Set the timezone used in log file timestamps |
 
 
-#### <a id="logging_config_query"></a>Configuring Log Rotation
+#### Configuring Log Rotation<a id="logging_config_query"></a>
 
 When log file rotation is enabled, you can control the rotation options with these HAWQ server configuration parameters:
 
@@ -164,7 +164,7 @@ When log file rotation is enabled, you can control the rotation options with the
 | [`log_rotation_size`](../reference/guc/parameter_definitions.html#log_rotation_size) |  Configure the maximum size of log file |
 | [`log_truncate_on_rotation`](../reference/guc/parameter_definitions.html#log_truncate_on_rotation) |  Identify whether to truncate or append to the log file |
 
-#### <a id="logging_config_query"></a>Configuring Query Logging
+#### Configuring Query Logging<a id="logging_config_query"></a>
 
 HAWQ exposes a set of server configuration parameters dealing exclusively with GPORCA query executor and optimizer logging.  These include:
 
@@ -182,27 +182,27 @@ HAWQ exposes a set of server configuration parameters dealing exclusively with G
 
 [Query Minidump Log Files](#query_log) identifies configuration options and additional information related to generating query optimizer minidump log files.
 
-### <a id="logfile_manage_db"></a>Managing HAWQ Log Files 
+### Managing HAWQ Log Files <a id="logfile_manage_db"></a>
 
 HAWQ log output tends to be voluminous, especially at higher debug levels. You should not need to save this information indefinitely. HAWQ administrators typically configure HAWQ to rotate the log files periodically so new log files are created.
 
 Daily log files are created in the `pg_log` subdirectory of the master and each segment data directory. Although log files are rolled over daily, they are not automatically truncated or deleted. Administrators must implement and run scripts to periodically clean up old log files in the `pg_log` directory of the master, standby, and every segment instance.
 
 
-## <a id="mgmtutil_log"></a>Management Utility Log Files 
+## Management Utility Log Files <a id="mgmtutil_log"></a>
 You invoke HAWQ management utilities both from the command line and when you perform cluster management activities using the Ambari user interface. Regardless of source, these utilities log information about command execution status and results. The messages are logged to both `stdout` and a log file.
 
 Each management utility, when invoked, creates/manages a daily log file.  The logs for a particular execution of a utility are added or appended to its daily log file each time that utility is run that day.
 
 **Note**: Some management utilities are aliases for invoking one or more other management utilities. For example, `hawq restart` invokes `hawq stop` and `hawq start`. Logs are written to the daily log files associated with the two invoked utilities.
 
-### <a id="logfile_locate_mu"></a>Locating Management Utility Log Files
+### Locating Management Utility Log Files<a id="logfile_locate_mu"></a>
 
 The default location of HAWQ management utility log files is `/home/gpadmin/hawqAdminLogs/`. You may choose to specify an alternate log file directory.
 
 The naming convention for HAWQ management utility log files is  `<cmdname>_<date>.log`. For example, `hawq_state_20170102.log` or `hawq_start_20161228.log`.
 
-### <a id="logfile_format_mu"></a>Management Utility Log Format
+### Management Utility Log Format<a id="logfile_format_mu"></a>
 
 HAWQ management utility log files are written in text format.
 
@@ -234,12 +234,12 @@ Example management utility log entries:
 **Note**: The log files for certain management utility commands, for example `hawq init`, diverge from these conventions.
 
 
-### <a id="logfile_examine_mu"></a>Examining Management Utility Log Entries
+### Examining Management Utility Log Entries<a id="logfile_examine_mu"></a>
 
 You will examine the HAWQ management utility log files to get more detailed information about the execution of the command. Additionally, the most recent log file for a particular command provides date/time and status information about the last time you invoked the command.
 
 
-### <a id="logging_config_mu"></a>Configuring Management Utility Logging
+### Configuring Management Utility Logging<a id="logging_config_mu"></a>
 
 Most management utilities support options for verbose logging and identifying  alternate log file directories.
 
@@ -252,12 +252,12 @@ Management utility logging-related configuration command options include:
 
 Invoke the management utility command with the `--help` option to determine support for changing the log directory and/or enabling verbose output.
 
-### <a id="logfile_manage_mu"></a>Managing Management Utility Log Files
+### Managing Management Utility Log Files<a id="logfile_manage_mu"></a>
 
 Although Management Utility log files are rolled over daily, they are not automatically truncated or deleted. Administrators should implement and run scripts or programs to periodically clean up old Management Utility log files.
 
 
-## <a id="query_log"></a>Query Minidump Log Files 
+## Query Minidump Log Files <a id="query_log"></a>
 
 You can configure the HAWQ GPORCA query optimizer to generate output minidump files describing the optimization context for a given query. (The information in a minidump file is not in a format that you can easily understand. Rather, you would generate and provide the minidump file to the HAWQ development team or support.)
 
@@ -274,21 +274,21 @@ Query minidump files are generated in a `minidumps/` subdirectory in the HAWQ ma
 Use the [optimizer_minidump](../reference/guc/parameter_definitions.html#optimizer_minidump) HAWQ server configuration parameter to configure minidump generation. The default setting generates minidump files only on error.
 
 
-## <a id="logging_pxf"></a>PXF Log Files
+## PXF Log Files<a id="logging_pxf"></a>
 
 PXF provides both service- and database-level logging. Refer to [PXF Logging](../pxf/TroubleshootingPXF.html#pxflogging) for specific PXF logging configuration and management information.
 
-## <a id="logging_ambari"></a>Ambari Log Files
+## Ambari Log Files<a id="logging_ambari"></a>
 
 Ambari log files may be useful in helping diagnose general cluster problems. The Ambari server log files are located in the `/var/log/ambari-server/` directory. Ambari agent log files are located in `/var/log/ambari-agent/`. Refer to [Reviewing Ambari Log Files](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.1.1/bk_ambari_troubleshooting/content/_reviewing_ambari_log_files.html) for additional information.
 
-## <a id="rangerlogs"></a> Ranger Log Files
+##  Ranger Log Files<a id="rangerlogs"></a>
 
 The HAWQ Ranger Plug-in Service log files may be useful in helping diagnose Ranger connectivity and authorization problems. You will find these log files in the `$GPHOME/ranger/plugin-service/logs/` directory. In addition to HAWQ Ranger Plug-in service-related logs, this directory includes the `log4j` provider `audit.log` file. (Refer to [Auditing Authorization Events](../ranger/ranger-auditing.html) for information on configuring HAWQ Ranger audit logging.)
 
 Ranger log files are located in the `/var/log/ranger/admin/` directory.
 
 
-## <a id="logging_other"></a>Hadoop Log Files
+## Hadoop Log Files<a id="logging_other"></a>
 
 Hadoop log files are managed by your Hadoop distribution. If you built Hadoop from source, your log file locations and configuration may be governed by the build and/or install options you specified during the build process.

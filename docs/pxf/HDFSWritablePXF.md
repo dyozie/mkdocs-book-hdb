@@ -29,7 +29,7 @@ This section describes how to use these PXF profiles to create writable external
 
 **Note**: Tables that you create with writable profiles can only be used for INSERT operations.  If you want to query inserted data, you must define a separate external readable table that references the new HDFS file using the equivalent readable profile.
 
-## <a id="pxfwrite_prereq"></a>Prerequisites
+## Prerequisites<a id="pxfwrite_prereq"></a>
 
 Before working with HDFS file data using HAWQ and PXF, ensure that:
 
@@ -37,7 +37,7 @@ Before working with HDFS file data using HAWQ and PXF, ensure that:
 -   All HDFS users have read permissions to HDFS services.
 -   HDFS write permissions are provided to a restricted set of users.
 
-## <a id="hdfsplugin_writeextdata"></a>Writing to PXF External Tables
+## Writing to PXF External Tables<a id="hdfsplugin_writeextdata"></a>
 The PXF HDFS plug-in supports two writable profiles: `HdfsTextSimple` and `SequenceWritable`.
 
 Use the following syntax to create a HAWQ external writable table representing HDFS data: 
@@ -65,7 +65,7 @@ HDFS-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](..
 
 **Note**: When creating PXF external tables, you cannot use the `HEADER` option in your `FORMAT` specification.
 
-## <a id="profile_hdfstextsimple"></a>Custom Options
+## Custom Options<a id="profile_hdfstextsimple"></a>
 
 The `HdfsTextSimple` and `SequenceWritable` profiles support the following custom options:
 
@@ -77,7 +77,7 @@ The `HdfsTextSimple` and `SequenceWritable` profiles support the following custo
 | DATA-SCHEMA    | The name of the writer serialization/deserialization class. The jar file in which this class resides must be in the PXF classpath. This option is required for the `SequenceWritable` profile and has no default value. | SequenceWritable|
 | THREAD-SAFE | Boolean value determining if a table query can run in multi-threaded mode. The default value is `TRUE`. Set this option to `FALSE` to handle all requests in a single thread for operations that are not thread-safe (for example, compression). | HdfsTextSimple, SequenceWritable| 
 
-## <a id="profile_hdfstextsimple"></a>HdfsTextSimple Profile
+## HdfsTextSimple Profile<a id="profile_hdfstextsimple"></a>
 
 Use the `HdfsTextSimple` profile when writing delimited data to a plain text file where each line is a single record.
 
@@ -94,7 +94,7 @@ The `HdfsTextSimple` profile supports the following \<formatting-properties\>:
 | delimiter    | The delimiter character to use when writing the file. Default value is a comma `,`.|
 
 
-### <a id="profile_hdfstextsimple_writing"></a>Example: Writing Data Using the HdfsTextSimple Profile
+### Example: Writing Data Using the HdfsTextSimple Profile<a id="profile_hdfstextsimple_writing"></a>
 
 This example uses the data schema introduced in [Example: Using the HdfsTextSimple Profile] (HDFSFileDataPXF.html#profile_hdfstextsimple_query):
 
@@ -206,7 +206,7 @@ Perform the following operations to use the PXF `HdfsTextSimple` profile to crea
     As described in Step 5 above, to query data from the newly-created HDFS file named `pxfwritable_hdfs_textsimple2`, you can create a readable external HAWQ table referencing this HDFS file.
 
 
-## <a id="profile_hdfsseqwritable_using"></a>SequenceWritable Profile
+## SequenceWritable Profile<a id="profile_hdfsseqwritable_using"></a>
 
 Use the HDFS plug-in `SequenceWritable` profile when writing SequenceFile format files. Files of this type consist of binary key/value pairs. Sequence files are a common data transfer format between MapReduce jobs. 
 
@@ -217,7 +217,7 @@ SequenceFile format files can optionally use record or block compression. The fo
 
 When using the `SequenceWritable` profile to write a SequenceFile format file, you must provide the name of the Java class to use for serializing/deserializing the data. This class must provide read and write methods for the fields in the schema associated with the data.
 
-### <a id="profile_hdfsseqwritable_writing"></a>Example: Writing Data Using the SequenceWritable Profile
+### Example: Writing Data Using the SequenceWritable Profile<a id="profile_hdfsseqwritable_writing"></a>
 
 In this example, you will create a Java class named `PxfExample_CustomWritable` that will serialize/deserialize the fields in the sample schema used in previous examples. You will then use this class to access a writable external table created with the `SequenceWritable` profile. 
 
@@ -396,7 +396,7 @@ public class PxfExample_CustomWritable implements Writable {
     (2 rows)
     ```
 
-## <a id="recordkeyinkey-valuefileformats"></a>Reading the Record Key 
+## Reading the Record Key <a id="recordkeyinkey-valuefileformats"></a>
 
 When a HAWQ external table references a SequenceFile or another file format that store rows in a key-value format, you can access the key values in HAWQ queries by using the `recordkey` keyword as a field name.
 
@@ -412,7 +412,7 @@ The field type of `recordkey` must correspond to the key type, much as the other
 -   LongWritable
 -   Text
 
-### <a id="example1"></a>Example: Using Record Keys
+### Example: Using Record Keys<a id="example1"></a>
 
 Create an external readable table to access the record keys from the writable table `pxf_tbl_seqwrit` that you created in [Example: Writing Data Using the SequenceWritable Profile](#profile_hdfsseqwritable_writing).  The `recordkey` is of type `int8`.
 

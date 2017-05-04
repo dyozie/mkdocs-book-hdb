@@ -23,7 +23,7 @@ under the License.
 
 Provides SSH access to multiple hosts at once.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq ssh -f <hostfile_hawqssh>) | (-h <hostname> [-h <hostname> ...]
@@ -37,7 +37,7 @@ hawq ssh [-? | --help]
 hawq ssh --version
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq ssh` utility allows you to run bash shell commands on multiple hosts at once using SSH (secure shell). You can execute a single command by specifying it on the command-line, or omit the command to enter into an interactive command-line session.
 
@@ -49,7 +49,7 @@ If you do not specify a command on the command-line, `hawq ssh` will go into int
 
 If a user name is not specified in the host file or via the `-u` option, `hawq ssh` will execute commands as the currently logged in user. To determine the currently logged in user, do a `whoami` command. By default, `hawq ssh` goes to `$HOME` of the session user on the remote hosts after login. To ensure commands are executed correctly on all remote hosts, you should always enter absolute paths.
 
-## <a id="args"></a>Arguments
+## Arguments<a id="args"></a>
 <dt>-f \<hostfile\_hawqssh\>  </dt>
 <dd>Specifies the name of a file that contains a list of hosts that will participate in this SSH session. The host name is required, and you can optionally specify an alternate user name and/or SSH port number per host. The syntax of the host file is one host per line as follows:
 
@@ -62,7 +62,7 @@ If a user name is not specified in the host file or via the `-u` option, `hawq s
 <dd>Specifies a single host name that will participate in this SSH session. You can use the `-h` option multiple times to specify multiple host names.</dd>
 
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>\<bash\_command\>   </dt>
 <dd>A bash shell command to execute on all hosts involved in this session (optionally enclosed in quotes). If not specified, `hawq ssh` will start an interactive session.</dd>
@@ -82,7 +82,7 @@ If a user name is not specified in the host file or via the `-u` option, `hawq s
 <dt>-?, -\\\-help </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Start an interactive group SSH session with all hosts listed in the file `hostfile_hawqssh`:
 

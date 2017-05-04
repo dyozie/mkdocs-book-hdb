@@ -23,7 +23,7 @@ under the License.
 
 Interactive command-line interface for HAWQ.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 psql [<option> ...] [<dbname> [<username>]]
@@ -88,13 +88,13 @@ where:
     [-W | --password]  
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `psql` is a terminal-based front-end to HAWQ. It enables you to type in queries interactively, issue them to HAWQ, and see the query results. Alternatively, input can be from a file. In addition, it provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.
 
 **Note:** HAWQ queries timeout after a period of 600 seconds. For this reason, long-running queries may appear to hang in `plsql` until results are processed or until the timeout period expires.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 **General Options**
 
@@ -212,11 +212,11 @@ If the script itself uses `BEGIN`, `COMMIT`, or `ROLLBACK`, this option will not
 
 **Note:** This option remains set for the entire session, and so it affects uses of the meta-command `\connect` as well as the initial connection attempt.</dd>
 
-## <a id="topic1__section6"></a>Exit Status
+## Exit Status<a id="topic1__section6"></a>
 
 `psql` returns 0 to the shell if it finished normally, 1 if a fatal error of its own (out of memory, file not found) occurs, 2 if the connection to the server went bad and the session was not interactive, and 3 if an error occurred in a script and the variable `ON_ERROR_STOP` was set.
 
-## <a id="topic1__section7"></a>Usage
+## Usage<a id="topic1__section7"></a>
 
 **Connecting to a Database**
 
@@ -245,7 +245,7 @@ testdb=#
 
 At the prompt, the user may type in SQL commands. Ordinarily, input lines are sent to the server when a command-terminating semicolon is reached. An end of line does not terminate a command. Thus commands can be spread over several lines for clarity. If the command was sent and executed without error, the results of the command are displayed on the screen.
 
-## <a id="topic1__section10"></a>Meta-Commands
+## Meta-Commands<a id="topic1__section10"></a>
 
 Anything you enter in `psql` that begins with an unquoted backslash is a `psql` meta-command that is processed by `psql` itself. These commands help make `psql` more useful for administration or scripting. Meta-commands are more commonly called slash or backslash commands.
 
@@ -489,7 +489,7 @@ This command is totally separate from the SQL command `SET`.</dd>
 <dt>\\?  </dt>
 <dd>Shows help information about the `psql` backslash commands.</dd>
 
-## <a id="topic1__section11"></a>Patterns
+## Patterns<a id="topic1__section11"></a>
 
 The various `\d` commands accept a pattern parameter to specify the object name(s) to be displayed. In the simplest case, a pattern is just the exact name of the object. The characters within a pattern are normally folded to lower case, just as in SQL names; for example, `\dt FOO` will display the table named `foo`. As in SQL names, placing double quotes around a pattern stops folding to lower case. Should you need to include an actual double quote character in a pattern, write it as a pair of double quotes within a double-quote sequence; again this is in accord with the rules for SQL quoted identifiers. For example, `\dt "FOO""BAR"` will display the table named `FOO"BAR` (not `foo"bar`). Unlike the normal rules for SQL names, you can put double quotes around just part of a pattern, for instance `\dt      FOO"FOO"BAR` will display the table named `fooFOObar`.
 
@@ -501,7 +501,7 @@ Advanced users can use regular-expression notations. All regular expression spec
 
 Whenever the pattern parameter is omitted completely, the `\d` commands display all objects that are visible in the current schema search path – this is equivalent to using the pattern `*.` To see all objects in the database, use the pattern `*.*.`
 
-## <a id="topic1__section12"></a>Advanced Features
+## Advanced Features<a id="topic1__section12"></a>
 
 **Variables**
 
@@ -697,7 +697,7 @@ set disable-completion on
 $endif
 ```
 
-## <a id="topic1__section17"></a>Environment
+## Environment<a id="topic1__section17"></a>
 
 <dt>PAGER  </dt>
 <dd>If the query results do not fit on the screen, they are piped through this command. Typical values are `more` or `less`. The default is platform-dependent. The use of the pager can be disabled by using the `\pset` command.</dd>
@@ -719,17 +719,17 @@ VISUAL  </dt>
 <dt>TMPDIR  </dt>
 <dd>Directory for storing temporary files. The default is `/tmp`.</dd>
 
-## <a id="topic1__section18"></a>Files
+## Files<a id="topic1__section18"></a>
 
 Before starting up, `psql` attempts to read and execute commands from the user's `~/.psqlrc` file.
 
 The command-line history is stored in the file `~/.psql_history`.
 
-## <a id="topic1__section19"></a>Notes
+## Notes<a id="topic1__section19"></a>
 
 `psql` only works smoothly with servers of the same version. That does not mean other combinations will fail outright, but subtle and not-so-subtle problems might come up. Backslash commands are particularly likely to fail if the server is of a different version.
 
-## <a id="topic1__section20"></a>Notes for Windows users
+## Notes for Windows users<a id="topic1__section20"></a>
 
 `psql` is built as a console application. Since the Windows console windows use a different encoding than the rest of the system, you must take special care when using 8-bit characters within `psql`. If `psql` detects a problematic console code page, it will warn you at startup. To change the console code page, two things are necessary:
 
@@ -743,7 +743,7 @@ cmd.exe /c chcp 1252
 
 Set the console font to Lucida Console, because the raster font does not work with the ANSI code page.
 
-## <a id="topic1__section21"></a>Examples
+## Examples<a id="topic1__section21"></a>
 
 Start `psql` in interactive mode:
 

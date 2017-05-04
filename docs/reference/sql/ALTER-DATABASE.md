@@ -23,7 +23,7 @@ under the License.
 
 Changes the attributes of a database.
 
-## <a id="alterrole__section2"></a>Synopsis
+## Synopsis<a id="alterrole__section2"></a>
 
 ```pre
 ALTER DATABASE <name> SET <parameter> { TO | = } { <value> | DEFAULT } 
@@ -31,13 +31,13 @@ ALTER DATABASE <name> SET <parameter> { TO | = } { <value> | DEFAULT }
 ALTER DATABASE <name> RESET <parameter>
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
 `ALTER DATABASE` changes the attributes of a HAWQ database.
 
 `SET` and `RESET` \<parameter\> changes the session default for a configuration parameter for a HAWQ database. Whenever a new session is subsequently started in that database, the specified value becomes the session default value. The database-specific default overrides whatever setting is present in the server configuration file (`hawq-site.xml`). Only the database owner or a superuser can change the session defaults for a database. Certain parameters cannot be set this way, or can only be set by a superuser.
 
-## <a id="alterrole__section4"></a>Parameters
+## Parameters<a id="alterrole__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The name of the database whose attributes are to be altered.
@@ -47,11 +47,11 @@ ALTER DATABASE <name> RESET <parameter>
 <dt> \<parameter\>   </dt>
 <dd>Set this database's session default for the specified configuration parameter to the given value. If value is `DEFAULT` or if `RESET` is used, the database-specific setting is removed, so the system-wide default setting will be inherited in new sessions. Use `RESET ALL` to clear all database-specific settings. See [About Server Configuration Parameters](../guc/guc_config.html#topic1) for information about user-settable configuration parameters.</dd>
 
-## <a id="notes"></a>Notes
+## Notes<a id="notes"></a>
 
 It is also possible to set a configuration parameter session default for a specific role (user) rather than to a database. Role-specific settings override database-specific ones if there is a conflict. See [ALTER ROLE](ALTER-ROLE.html).
 
-## <a id="examples"></a>Examples
+## Examples<a id="examples"></a>
 
 To set the default schema search path for the `mydatabase` database:
 
@@ -60,11 +60,11 @@ ALTER DATABASE mydatabase SET search_path TO myschema,
 public, pg_catalog;
 ```
 
-## <a id="compat"></a>Compatibility
+## Compatibility<a id="compat"></a>
 
 The `ALTER DATABASE` statement is a HAWQ extension.
 
-## <a id="see"></a>See Also
+## See Also<a id="see"></a>
 
 [CREATE DATABASE](CREATE-DATABASE.html#topic1), [DROP DATABASE](DROP-DATABASE.html#topic1), [SET](SET.html)
 

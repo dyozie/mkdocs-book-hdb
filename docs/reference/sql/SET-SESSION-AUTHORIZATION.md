@@ -23,7 +23,7 @@ under the License.
 
 Sets the session role identifier and the current role identifier of the current session.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 SET [SESSION | LOCAL] SESSION AUTHORIZATION <rolename>
@@ -31,7 +31,7 @@ SET [SESSION | LOCAL] SESSION AUTHORIZATION DEFAULT
 RESET SESSION AUTHORIZATION
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 This command sets the session role identifier and the current role identifier of the current SQL-session context to \<rolename\> . The role name may be written as either an identifier or a string literal. Using this command, it is possible, for example, to temporarily become an unprivileged user and later switch back to being a superuser.
 
@@ -41,7 +41,7 @@ The session user identifier may be changed only if the initial session user (the
 
 The `DEFAULT` and `RESET` forms reset the session and current user identifiers to be the originally authenticated user name. These forms may be executed by any user.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>SESSION  </dt>
 <dd>Specifies that the command takes effect for the current session. This is the default.</dd>
@@ -56,7 +56,7 @@ The `DEFAULT` and `RESET` forms reset the session and current user identifiers t
 RESET  </dt>
 <dd>Reset the session and current role identifiers to be that of the role used to log in.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 ``` sql
 SELECT SESSION_USER, CURRENT_USER;
@@ -76,10 +76,10 @@ SELECT SESSION_USER, CURRENT_USER;
  paul         | paul
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 The SQL standard allows some other expressions to appear in place of the literal \<rolename\>, but these options are not important in practice. HAWQ allows identifier syntax (\<rolename\>), while SQL does not. SQL does not allow this command during a transaction; HAWQ does not make this restriction. The `SESSION` and `LOCAL` modifiers are a HAWQ extension, as is the `RESET` syntax.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [SET ROLE](SET-ROLE.html)

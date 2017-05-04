@@ -23,7 +23,7 @@ under the License.
 
 Defines a new table from the results of a query.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE [ [GLOBAL | LOCAL] {TEMPORARY | TEMP} ] TABLE <table_name>
@@ -50,13 +50,13 @@ where \<storage\_parameter\> is:
    ROWGROUPSIZE={1024-1073741823}
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE TABLE AS` creates a table and fills it with data computed by a [SELECT](SELECT.html) command. The table columns have the names and data types associated with the output columns of the `SELECT`, however you can override the column names by giving an explicit list of new column names.
 
 `CREATE TABLE AS` creates a new table and evaluates the query just once to fill the new table initially. The new table will not track subsequent changes to the source tables of the query.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>GLOBAL | LOCAL  </dt>
 <dd>These keywords are present for SQL standard compatibility, but have no effect in HAWQ.</dd>
@@ -106,13 +106,13 @@ where \<storage\_parameter\> is:
 DISTRIBUTED RANDOMLY  </dt>
 <dd>Used to declare the HAWQ distribution policy for the table. The default is RANDOM distribution. `DISTIBUTED BY` can use hash distribution with one or more columns declared as the distribution key. If hash distribution is desired, it can be specified using `bucketnum` attribute, using the first eligible column of the table as the distribution key.</dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 This command is functionally similar to [SELECT INTO](SELECT-INTO.html), but it is preferred since it is less likely to be confused with other uses of the `SELECT INTO` syntax. Furthermore, `CREATE TABLE AS` offers a superset of the functionality offered by `SELECT INTO`.
 
 `CREATE TABLE AS` can be used for fast data loading from external table data sources. See [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html).
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a new table `films_recent` consisting of only recent entries from the table `films`:
 
@@ -130,7 +130,7 @@ CREATE TEMP TABLE films_recent WITH (OIDS) ON COMMIT DROP AS
 EXECUTE recentfilms('2007-01-01');
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 `CREATE TABLE AS` conforms to the SQL standard, with the following exceptions:
 
@@ -140,6 +140,6 @@ EXECUTE recentfilms('2007-01-01');
 -   The `WITH` clause is a HAWQ extension; neither storage parameters nor `OIDs` are in the standard.
 -   The HAWQ concept of tablespaces is not part of the standard. The `TABLESPACE` clause is an extension.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html), [EXECUTE](EXECUTE.html), [SELECT](SELECT.html), [SELECT INTO](SELECT-INTO.html)

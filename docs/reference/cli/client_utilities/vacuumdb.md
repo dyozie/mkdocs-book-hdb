@@ -25,7 +25,7 @@ Garbage-collects and analyzes a database.
 
 `vacuumdb` is typically run on system catalog tables. It has no effect when run on HAWQ user tables.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 vacuumdb [<connection_options>] [<vacuum_options>] [<database_name>]
@@ -55,13 +55,13 @@ where:
 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `vacuumdb` is a utility for cleaning a PostgreSQL database. `vacuumdb` will also generate internal statistics used by the PostgreSQL query optimizer.
 
 `vacuumdb` is a wrapper around the SQL command `VACUUM`. There is no effective difference between vacuuming databases via this utility and via other methods for accessing the server.
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>**\<database\_name\>**</dt>
 <dd>Identifies the name of the database to vacuum. If both this option and the `-d` option are not provided, the environment variable `PGDATABASE` is used. If that is not set, the user name specified for the connection is used.</dd>
@@ -114,11 +114,11 @@ where:
 <dt>-W, -\\\-password  </dt>
 <dd>Force a password prompt.</dd>
 
-## <a id="topic1__section6"></a>Notes
+## Notes<a id="topic1__section6"></a>
 
 `vacuumdb` might need to connect several times to the master server, asking for a password each time. It is convenient to have a `~/.pgpass` file for such cases.
 
-## <a id="topic1__section7"></a>Examples
+## Examples<a id="topic1__section7"></a>
 
 To clean the database `test`:
 

@@ -23,7 +23,7 @@ under the License.
 
 This topic describes best practices for managing resources in HAWQ.
 
-## <a id="topic_ikz_ndx_15"></a>Best Practices for Configuring Resource Management
+## Best Practices for Configuring Resource Management<a id="topic_ikz_ndx_15"></a>
 
 When configuring resource management, you can apply certain best practices to ensure that resources are managed both efficiently and for best system performance.
 
@@ -37,7 +37,7 @@ The following is a list of high-level best practices for optimal resource manage
 -   Configure minimum resource levels in YARN, and tune the timeout of when idle resources are returned to YARN. See [Tune HAWQ Resource Negotiations with YARN](../resourcemgmt/YARNIntegration.html#topic_wp3_4bx_15).
 -   Make sure that the property `yarn.scheduler.minimum-allocation-mb` in `yarn-site.xml` is an equal subdivision of 1GB. For example, 1024, 512.
 
-## <a id="topic_hvd_pls_wv"></a>Best Practices for Using Resource Queues
+## Best Practices for Using Resource Queues<a id="topic_hvd_pls_wv"></a>
 
 Design and configure your resource queues depending on the operational needs of your deployment. This topic describes the best practices for creating and modifying resource queues within the context of different operational scenarios.
 

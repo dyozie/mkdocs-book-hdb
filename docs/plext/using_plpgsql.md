@@ -37,7 +37,7 @@ The PL/pgSQL language addresses some of these limitations. When creating functio
 -   Re-using prepared queries avoids multiple rounds of query parsing
  
 
-## <a id="plpgsql_structure"></a>PL/pgSQL Function Syntax
+## PL/pgSQL Function Syntax<a id="plpgsql_structure"></a>
 
 PL/pgSQL is a block-structured language. The complete text of a function definition must be a block, which is defined as:
 
@@ -78,7 +78,7 @@ This example PL/pgSQL function adds thirteen to an integer:
 **Note**: Do not to confuse the use of `BEGIN/END` for grouping statements in PL/pgSQL with the database commands for transaction control. PL/pgSQL's BEGIN/END are only for statement grouping; they do not start or end a transaction. 
 
 
-## <a id="plpgsql_structure"></a>PL/pgSQL Statements and Control Structures
+## PL/pgSQL Statements and Control Structures<a id="plpgsql_structure"></a>
 
 Refer to the PostgreSQL documentation for detailed information on the statements and control structures supported by the PL/pgSQL language:
 
@@ -87,7 +87,7 @@ Refer to the PostgreSQL documentation for detailed information on the statements
 - [Control Structures](https://www.postgresql.org/docs/8.2/static/plpgsql-control-structures.html) identifies the data manipulation and control constructs supported by PL/pgSQL, including those for looping through query results and trapping errors.
 
 
-## <a id="supportedargumentandresultdatatypes"></a>PL/pgSQL Argument and Result Data Types 
+## PL/pgSQL Argument and Result Data Types <a id="supportedargumentandresultdatatypes"></a>
 
 Functions written in PL/pgSQL accept as arguments any base or array data type supported by the server, and they can return a result containing any of these data types. PL/pgSQL functions can also accept and return any composite type (row-type) specified by name.
 
@@ -98,7 +98,7 @@ In place of an explicit specification of the return type, you can declare PL/pgS
 Upcoming sections provide specific PL/pgSQL examples using base, composite, and polymorphic argument and return types.
 
 
-### <a id="plpgsql_namingargs"></a>Naming PL/pgSQL Function Arguments
+### Naming PL/pgSQL Function Arguments<a id="plpgsql_namingargs"></a>
 
 Arguments passed to PL/pgSQL functions are named with identfiers `$1`, `$2`, `$3`, etc. If you choose, you can also declare aliases for the `$<n>` argument names.
 
@@ -129,7 +129,7 @@ You can also explicitly use the `DECLARE` block to declare an alias for a functi
    $$ LANGUAGE plpgsql;
 ```
 
-### <a id="plpgsql_inoutargs"></a>Input and Output PL/pgSQL Function Arguments
+### Input and Output PL/pgSQL Function Arguments<a id="plpgsql_inoutargs"></a>
 
 You can declare PL/pgSQL functions with both input (default) and output arguments.  Output arguments provide a convenient way of defining functions that return several values or columns. 
 
@@ -148,13 +148,13 @@ In this example, you re-write the `calculate_sales_tax()` function to return the
 
 Notice that you do not include the output arguments when you invoke the `calculate_sales_tax()` function. HAWQ considers only the input arguments to define the function's calling signature.
 
-## <a id="plpgsqltypes"></a>Identifying Column and Row Data Types
+## Identifying Column and Row Data Types<a id="plpgsqltypes"></a>
 
 You may need your PL/pgSQL function to operate on column or row data of which you do not know the data type. PL/pgSQL provides `%TYPE` and `%ROWTYPE` keywords for this purpose.
 
 For additional information on PL/pgSQL declarations, see [Declarations](https://www.postgresql.org/docs/8.2/static/plpgsql-declarations.html) in the PostgreSQL documentation.
 
-### <a id="plpgsqltypes_column"></a>Column Type
+### Column Type<a id="plpgsqltypes_column"></a>
 
 Use the `<variable>%TYPE` notation to access the data type of a variable. You would use this syntax when you want to declare a variable with the same type as a specific table column.
 
@@ -167,7 +167,7 @@ DECLARE
 
 `%TYPE` is particularly valuable in polymorphic functions, as the data types required for internal variables may change from one function invocation to the next.
 
-### <a id="plpgsqltypes_row"></a>Row Type
+### Row Type<a id="plpgsqltypes_row"></a>
 
 A variable of a composite type is called a row-type variable. Row-type variables can hold a whole row of a query result, providing that the query's column set matches the declared type of the variable.
 
@@ -199,7 +199,7 @@ An example using a row-type variable follows. `table1` has integer fields named 
    (1 row)
 ```
 
-## <a id="plpgsqlexamples"></a>PL/pgSQL Functions as Table Sources
+## PL/pgSQL Functions as Table Sources<a id="plpgsqlexamples"></a>
 
 You can use PL/pgSQL functions in the same way you specify a table, view, or subquery in the `FROM` clause of a query. These functions are referred to as table functions, and can return both base and composite types. Functions that return base types produce a one-column table. Functions that return composite types produce a table column for each attribute of the composite type. You can use the columns returned by table functions in `SELECT`, `JOIN`, or `WHERE` clauses in the same manner as you would a table, view, or subquery column.
 
@@ -260,7 +260,7 @@ When a PL/pgSQL function is decared as returning a `SETOF <type>`, each row of t
    (2 rows)
 ```
 
-## <a id="plpgsqlpolymorphic"></a>Polymorphic PL/pgSQL Functions
+## Polymorphic PL/pgSQL Functions<a id="plpgsqlpolymorphic"></a>
 
 PL/pgSQL supports the polymorphic `anyelement` and `anyarray` types. Using these types, you can create a single PL/pgSQL function that operates on multiple data types. Refer to [Polymorphic Types](../reference/HAWQDataTypes.html#polymorphictypes) for additional information in this area.
 

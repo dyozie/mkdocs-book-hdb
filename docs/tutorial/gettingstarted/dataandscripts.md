@@ -27,12 +27,12 @@ This and later exercises operate on this example data set. The data set is provi
 
 In this section, you are introduced to the Retail demo data schema. You will download and examine the data set and work files. You will also load some of the data into HDFS.
 
-## <a id="tut_dataset_prereq"></a>Prerequisites
+## Prerequisites<a id="tut_dataset_prereq"></a>
 
 Ensure that you have [Created the HAWQ Tutorial Database](basicdbadmin.html#tut_ex_createdb) and that your HAWQ cluster is up and running.
 
 
-## <a id="tut_exdownloadfilessteps"></a>Exercise: Download the Retail Demo Data and Script Files
+## Exercise: Download the Retail Demo Data and Script Files<a id="tut_exdownloadfilessteps"></a>
 
 Perform the following steps to download the sample data set and scripts:
 
@@ -87,7 +87,7 @@ Perform the following steps to download the sample data set and scripts:
     (`hawq-samples` repository directories not mentioned in the table above are not used by the *Getting Started with HAWQ* exercises.)
 
 
-## <a id="tut_dsschema_ex"></a>Exercise: Create the Retail Demo HAWQ Schema
+## Exercise: Create the Retail Demo HAWQ Schema<a id="tut_dsschema_ex"></a>
 
 A HAWQ schema is a namespace for a database. It contains named objects like tables, data types, functions, and operators. Access these objects by qualifying their name with the prefix `<schema-name>`.
 
@@ -204,7 +204,7 @@ Perform the following steps to create the Retail demo data schema:
     hawqgsdb=# \q
     ```
 
-## <a id="tut_loadhdfs_ex"></a>Exercise: Load the Dimension Data to HDFS
+## Exercise: Load the Dimension Data to HDFS<a id="tut_loadhdfs_ex"></a>
 
 The Retail demo data set includes the entities described in the table below. A fact table consists of business facts. Orders and order line items are fact tables. Dimension tables provide descriptive information for the measurements in a fact table. The other entities are represented in dimension tables. 
 
@@ -257,7 +257,7 @@ Perform the following steps to load the Retail demo dimension data into HDFS for
     Because the retail demo data exists only as `.tsv.gz` files in HDFS, you cannot immediately query the data using HAWQ. In the next lesson, you create HAWQ external tables that reference these data files, after which you can query them via PXF.
     ```
 
-## <a id="tut_dataset_summary"></a>Summary
+## Summary<a id="tut_dataset_summary"></a>
 
 In this lesson, you downloaded the tutorial data set and work files, created the `retail_demo` HAWQ schema, and loaded the Retail demo dimension data into HDFS. 
 

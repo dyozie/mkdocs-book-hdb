@@ -28,7 +28,7 @@ This section will provide an introduction to using the Ambari REST APIs for HAWQ
 Refer to [Ambari API Reference v1](https://github.com/apache/ambari/blob/trunk/ambari-server/docs/api/v1/index.md) for the official Ambari API documentation, including full REST resource definitions and response semantics. *Note*: These APIs may change in new versions of Ambari.
 
 
-## <a id="ambari-rest-uri"></a>Manageable HAWQ Resources
+## Manageable HAWQ Resources<a id="ambari-rest-uri"></a>
 
 HAWQ provides several REST resources to support starting and stopping services, executing service checks, and viewing configuration information among other activities. HAWQ resources you can manage using the Ambari REST API include:
 
@@ -40,7 +40,7 @@ HAWQ provides several REST resources to support starting and stopping services, 
 | configuration | A specific HAWQ/PXF configuration entity, for example the hawq-site or pxf-profiles configuration files, or a specific single HAWQ or PXF configuration property. |
 | request | A group of tasks. |
 
-## <a id="ambari-rest-uri"></a>URI Structure
+## URI Structure<a id="ambari-rest-uri"></a>
 
 The Ambari REST API provides access to HAWQ cluster resources via URI (uniform resource identifier) paths. To use the Ambari REST API, you will send HTTP requests and parse JSON-formatted HTTP responses.
 
@@ -71,7 +71,7 @@ The Ambari REST API supports the following HAWQ-related \<resource-paths\>:
 | clusters/\<cluster\-name\>/configurations | Cluster configurations. |
 | clusters/\<cluster\-name\>/requests | Group of tasks that run a command. |
 
-## <a id="ambari-rest-curl"></a>Submitting Requests with cURL
+## Submitting Requests with cURL<a id="ambari-rest-curl"></a>
 
 Your HTTP request to the Ambari REST API should include the following information:
 
@@ -100,7 +100,7 @@ $ curl -u <user>:<passwd> -H <header> -X GET|POST|PUT|DELETE -d <data> <URI>
 | \<URI\>    | Path to the Ambari REST resource.  |
 
 
-## <a id="ambari-rest-api-auth"></a>Authenticating with the Ambari REST API
+## Authenticating with the Ambari REST API<a id="ambari-rest-api-auth"></a>
 
 The first step in using the Ambari REST API is to authenticate with the Ambari server. The Ambari REST API supports HTTP basic authentication. With this authentication method, you provide a username and password that is internally encoded and sent in the HTTP header.
 
@@ -124,10 +124,10 @@ Example: Testing Authentication
     If authentication succeeds, Apache license information is displayed.
 
 
-## <a id="ambari-rest-using"></a>Using the Ambari REST API for HAWQ Management
+## Using the Ambari REST API for HAWQ Management<a id="ambari-rest-using"></a>
 
 
-### <a id="ambari-rest-ex-clustname"></a>Example: Retrieving the HAWQ Cluster Name
+### Example: Retrieving the HAWQ Cluster Name<a id="ambari-rest-ex-clustname"></a>
 
 1. Set up an additional environment variables:
 
@@ -147,14 +147,14 @@ Example: Testing Authentication
     $ export AMBARI_URLBASE=$AMBARI_URLBASE/$CLUSTER_NAME
     ```
 
-### <a id="ambari-rest-ex-mgmt"></a>Examples: Managing the HAWQ and PXF Services
+### Examples: Managing the HAWQ and PXF Services<a id="ambari-rest-ex-mgmt"></a>
 
 The following subsections provide `curl` commands for common HAWQ cluster management activities.
 
 Refer to [API usage scenarios, troubleshooting, and other FAQs](https://cwiki.apache.org/confluence/display/AMBARI/API+usage+scenarios%2C+troubleshooting%2C+and+other+FAQs) for additional Ambari REST API usage examples.
 
 
-#### <a id="ambari-rest-ex-get"></a>Viewing HAWQ Cluster Service and Configuration Information
+#### Viewing HAWQ Cluster Service and Configuration Information<a id="ambari-rest-ex-get"></a>
 
 | Task              |Command           |
 |----------------------|------------------------|
@@ -167,7 +167,7 @@ Refer to [API usage scenarios, troubleshooting, and other FAQs](https://cwiki.ap
 | View all components on node. | `curl -u $AMBARI_CREDS -i  -X GET -H 'X-Requested-B:ambari' $AMBARI_URLBASE/hosts/<hawq-node>` |
 
 
-#### <a id="ambari-rest-ex-put"></a>Starting/Stopping HAWQ and PXF Services
+#### Starting/Stopping HAWQ and PXF Services<a id="ambari-rest-ex-put"></a>
 
 | Task              |Command           |
 |----------------------|------------------------|
@@ -176,7 +176,7 @@ Refer to [API usage scenarios, troubleshooting, and other FAQs](https://cwiki.ap
 | Start the PXF service. | `curl -u $AMBARI_CREDS -X PUT -H 'X-Requested-By:ambari' -d '{"RequestInfo": {"context" :"Start PXF via REST"}, "Body": {"ServiceInfo": {"state": "STARTED"}}}' $AMBARI_URLBASE//services/PXF` |
 | Stop the PXF service. | `curl -u $AMBARI_CREDS -X PUT -H 'X-Requested-By:ambari' -d '{"RequestInfo": {"context" :"Stop PXF via REST"}, "Body": {"ServiceInfo": {"state": "INSTALLED"}}}' $AMBARI_URLBASE/services/PXF` |
 
-#### <a id="ambari-rest-ex-post"></a>Invoking HAWQ and PXF Service Actions
+#### Invoking HAWQ and PXF Service Actions<a id="ambari-rest-ex-post"></a>
 
 | Task              |Command           |
 |----------------------|------------------------|

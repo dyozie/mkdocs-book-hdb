@@ -23,7 +23,7 @@ under the License.
 
 Changes the definition of a tablespace.
 
-## <a id="synopsis"></a>Synopsis
+## Synopsis<a id="synopsis"></a>
 
 ``` pre
 ALTER TABLESPACE <name> RENAME TO <newname>
@@ -32,13 +32,13 @@ ALTER TABLESPACE <name> OWNER TO <newowner>
          
 ```
 
-## <a id="desc"></a>Description
+## Description<a id="desc"></a>
 
 `ALTER TABLESPACE` changes the definition of a tablespace.
 
 You must own the tablespace to use `ALTER TABLESPACE`. To alter the owner, you must also be a direct or indirect member of the new owning role. (Note that superusers have these privileges automatically.)
 
-## <a id="altertablespace__section4"></a>Parameters
+## Parameters<a id="altertablespace__section4"></a>
 
 <dt> \<name\>   </dt>
 <dd>The name of an existing tablespace.</dd>
@@ -49,7 +49,7 @@ You must own the tablespace to use `ALTER TABLESPACE`. To alter the owner, you m
 <dt> \<newowner\>   </dt>
 <dd>The new owner of the tablespace.</dd>
 
-## <a id="altertablespace__section5"></a>Examples
+## Examples<a id="altertablespace__section5"></a>
 
 Rename tablespace `index_space` to `fast_raid`:
 
@@ -63,11 +63,11 @@ Change the owner of tablespace `index_space`:
 ALTER TABLESPACE index_space OWNER TO mary;
 ```
 
-## <a id="altertablespace__section6"></a>Compatibility
+## Compatibility<a id="altertablespace__section6"></a>
 
 There is no `ALTER TABLESPACE` statement in the SQL standard.
 
-## <a id="see"></a> See Also
+##  See Also<a id="see"></a>
 
 [CREATE TABLESPACE](CREATE-TABLESPACE.html), [DROP TABLESPACE](DROP-TABLESPACE.html)
 

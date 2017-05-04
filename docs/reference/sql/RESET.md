@@ -23,7 +23,7 @@ under the License.
 
 Restores the value of a system configuration parameter to the default value.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 RESET <configuration_parameter>
@@ -31,7 +31,7 @@ RESET <configuration_parameter>
 RESET ALL
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `RESET` restores system configuration parameters to their default values. `RESET` is an alternative spelling for `SET                   configuration_parameter TO DEFAULT`.
 
@@ -39,7 +39,7 @@ The default value is defined as the value that the parameter would have had, had
 
 See [Server Configuration Parameter Reference](../HAWQSiteConfig.html) for more information.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<configuration\_parameter\>   </dt>
 <dd>The name of a system configuration parameter. See [Server Configuration Parameter Reference](../HAWQSiteConfig.html) for a list of configuration parameters.</dd>
@@ -47,7 +47,7 @@ See [Server Configuration Parameter Reference](../HAWQSiteConfig.html) for more 
 <dt>ALL  </dt>
 <dd>Resets all settable configuration parameters to their default values.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Set the `hawq_rm_stmt_vseg_memory` configuration parameter to its default value:
 
@@ -55,10 +55,10 @@ Set the `hawq_rm_stmt_vseg_memory` configuration parameter to its default value:
 RESET hawq_rm_stmt_vseg_memory; 
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 `RESET` is a HAWQ extension.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [SET](SET.html)

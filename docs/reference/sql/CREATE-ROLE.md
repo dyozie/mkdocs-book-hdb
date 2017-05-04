@@ -23,7 +23,7 @@ under the License.
 
 Defines a new database role (user or group).
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE ROLE <name> [[WITH] <option> [ ... ]]
@@ -53,13 +53,13 @@ where \<option\> can be:
     | [ DENY BETWEEN <deny_point> AND <deny_point>]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `CREATE ROLE` adds a new role to a HAWQ system. A role is an entity that can own database objects and have database privileges. A role can be considered a user, a group, or both depending on how it is used. You must have `CREATEROLE` privilege or be a database superuser to use this command.
 
 Note that roles are defined at the system-level and are valid for all databases in your HAWQ system.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt> \<name\>  </dt>
 <dd>The name of the new role.</dd>
@@ -148,7 +148,7 @@ DENY BETWEEN deny_point AND deny_point
 ```
 </dd>
 
-## <a id="topic1__section5"></a>Notes
+## Notes<a id="topic1__section5"></a>
 
 The preferred way to add and remove role members (manage groups) is to use [GRANT](GRANT.html) and [REVOKE](REVOKE.html).
 
@@ -164,7 +164,7 @@ The `CONNECTION LIMIT` option is never enforced for superusers.
 
 Caution must be exercised when specifying an unencrypted password with this command. The password will be transmitted to the server in clear-text, and it might also be logged in the client's command history or the server log. The client program `createuser`, however, transmits the password encrypted. Also, psql contains a command `\password` that can be used to safely change the password later.
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 Create a role that can log in, but don't give it a password:
 
@@ -196,7 +196,7 @@ Create a role that does not allow login access on Sundays:
 CREATE ROLE user3 DENY DAY 'Sunday';
 ```
 
-## <a id="topic1__section7"></a>Compatibility
+## Compatibility<a id="topic1__section7"></a>
 
 The SQL standard defines the concepts of users and roles, but it regards them as distinct concepts and leaves all commands defining users to be specified by the database implementation. In HAWQ, users and roles are unified into a single type of object. Roles therefore have many more optional attributes than they do in the standard.
 
@@ -210,6 +210,6 @@ Allowing multiple initial administrators, and all the other options of `CREATE R
 
 The behavior specified by the SQL standard is most closely approximated by giving users the `NOINHERIT` attribute, while roles are given the `INHERIT` attribute.
 
-## <a id="topic1__section8"></a>See Also
+## See Also<a id="topic1__section8"></a>
 
 [SET ROLE](SET-ROLE.html), [ALTER ROLE](ALTER-ROLE.html), [DROP ROLE](DROP-ROLE.html), [GRANT](GRANT.html), [REVOKE](REVOKE.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html)

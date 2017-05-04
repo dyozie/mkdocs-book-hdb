@@ -23,7 +23,7 @@ under the License.
 
 This topic provides best practices for operating HAWQ, including recommendations for stopping, starting and monitoring HAWQ.
 
-## <a id="task_qgk_bz3_1v"></a>Best Practices Using the Command Line to Start/Stop HAWQ Cluster Members
+## Best Practices Using the Command Line to Start/Stop HAWQ Cluster Members<a id="task_qgk_bz3_1v"></a>
 
 The following best practices are recommended when using `hawq start` and `hawq stop` to manage your HAWQ cluster.
 
@@ -63,7 +63,7 @@ The following best practices are recommended when using `hawq start` and `hawq s
     $ hawq stop allsegments
     ```
 
-## <a id="id_trr_m1j_1v"></a>Guidelines for Cluster Expansion
+## Guidelines for Cluster Expansion<a id="id_trr_m1j_1v"></a>
 
 This topic provides some guidelines around expanding your HAWQ cluster.
 
@@ -75,12 +75,12 @@ There are several recommendations to keep in mind when modifying the size of you
 -   Note that for hash distributed tables, expanding the cluster will not immediately improve performance since hash distributed tables use a fixed number of virtual segments. In order to obtain better performance with hash distributed tables, you must redistribute the table to the updated cluster by either the [ALTER TABLE](../reference/sql/ALTER-TABLE.html) or [CREATE TABLE AS](../reference/sql/CREATE-TABLE-AS.html#topic1) command.
 -   If you are using hash tables, consider updating the `default_hash_table_bucket_number` server configuration parameter to a larger value after expanding the cluster but before redistributing the hash tables.
 
-## <a id="best_pract_monitoring"></a>Best Practices for Monitoring a HAWQ System
+## Best Practices for Monitoring a HAWQ System<a id="best_pract_monitoring"></a>
 The sections below provide recommendations for common monitoring tasks. 
 
 **Note:** If your HAWQ cluster is managed through the Ambari interface, use Ambari to perform the suggested monitoring tasks. 
 
-### <a id="id_o5n_p1j_1v"></a>Database State Monitoring Activities
+### Database State Monitoring Activities<a id="id_o5n_p1j_1v"></a>
 
 <a id="id_o5n_p1j_1v__d112e31"></a>
 
@@ -116,7 +116,7 @@ WHERE status &lt;&gt; &#39;u&#39;;</code></pre></td>
 </table>
 
 
-### <a id="id_d3w_p1j_1v"></a>Hardware and Operating System Monitoring
+### Hardware and Operating System Monitoring<a id="id_d3w_p1j_1v"></a>
 
 <a id="id_d3w_p1j_1v__d112e111"></a>
 
@@ -191,7 +191,7 @@ If transfer rates are lower than expected, consult with your data architect rega
 </table>
 
 
-### <a id="id_khd_q1j_1v"></a>Data Maintenance
+### Data Maintenance<a id="id_khd_q1j_1v"></a>
 
 <a id="id_khd_q1j_1v__d112e279"></a>
 
@@ -220,7 +220,7 @@ If transfer rates are lower than expected, consult with your data architect rega
 </table>
 
 
-### <a id="id_lx4_q1j_1v"></a>Database Maintenance
+### Database Maintenance<a id="id_lx4_q1j_1v"></a>
 
 <a id="id_lx4_q1j_1v__d112e343"></a>
 
@@ -273,7 +273,7 @@ If transfer rates are lower than expected, consult with your data architect rega
 </table>
 
 
-### <a id="id_blv_q1j_1v"></a>Patching and Upgrading
+### Patching and Upgrading<a id="id_blv_q1j_1v"></a>
 
 <a id="id_blv_q1j_1v__d112e472"></a>
 

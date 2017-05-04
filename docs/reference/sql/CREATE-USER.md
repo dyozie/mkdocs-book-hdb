@@ -23,7 +23,7 @@ under the License.
 
 Defines a new database role with the `LOGIN` privilege by default.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 CREATE USER <name> [ [WITH] <option> [ ... ] ]
@@ -50,16 +50,16 @@ where \<option\> can be:
 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 HAWQ does not support `CREATE USER`. This command has been replaced by [CREATE ROLE](CREATE-ROLE.html).
 
 The only difference between `CREATE ROLE` and `CREATE                     USER` is that `LOGIN` is assumed by default with `CREATE USER`, whereas `NOLOGIN` is assumed by default with `CREATE ROLE`.
 
-## <a id="topic1__section4"></a>Compatibility
+## Compatibility<a id="topic1__section4"></a>
 
 There is no `CREATE USER` statement in the SQL standard.
 
-## <a id="topic1__section5"></a>See Also
+## See Also<a id="topic1__section5"></a>
 
 [CREATE ROLE](CREATE-ROLE.html)

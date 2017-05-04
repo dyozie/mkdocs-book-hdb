@@ -23,13 +23,13 @@ under the License.
 
 Executes a prepared SQL statement.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 EXECUTE <name> [ (<parameter> [, ...] ) ]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `EXECUTE` is used to execute a previously prepared statement. Since prepared statements only exist for the duration of a session, the prepared statement must have been created by a `PREPARE` statement executed earlier in the current session.
 
@@ -37,7 +37,7 @@ If the `PREPARE` statement that created the statement specified some parameters,
 
 For more information on the creation and usage of prepared statements, see `PREPARE`.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>\<name\>   </dt>
 <dd>The name of the prepared statement to execute.</dd>
@@ -45,7 +45,7 @@ For more information on the creation and usage of prepared statements, see `PREP
 <dt>\<parameter\>   </dt>
 <dd>The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as was determined when the prepared statement was created.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Create a prepared statement for an `INSERT` statement, and then execute it:
 
@@ -55,10 +55,10 @@ foo VALUES($1, $2, $3, $4);
 EXECUTE fooplan(1, 'Hunter Valley', 't', 200.00);
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 The SQL standard includes an `EXECUTE` statement, but it is only for use in embedded SQL. This version of the `EXECUTE` statement also uses a somewhat different syntax.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [DEALLOCATE](DEALLOCATE.html), [PREPARE](PREPARE.html)

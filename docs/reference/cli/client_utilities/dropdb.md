@@ -23,7 +23,7 @@ under the License.
 
 Removes a database.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 dropdb [<connection_options>] [-e | --echo] [-i | --interactive] <dbname>
@@ -42,18 +42,18 @@ where:
     [-W | --password] 
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `dropdb` destroys an existing database. The user who executes this command must be a superuser or the owner of the database being dropped.
 
 `dropdb` is a wrapper around the SQL command `DROP                                         DATABASE`.
 
-## <a id="args"></a>Arguments
+## Arguments<a id="args"></a>
 
 <dt>**\<dbname\>** </dt>
 <dd>The name of the database to be removed.</dd>
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 <dt>-e, -\\\-echo  </dt>
 <dd>Echo the commands that `dropdb` generates and sends to the server.</dd>
@@ -86,7 +86,7 @@ where:
 <dt>-\\\-version  </dt>
 <dd>Displays the version of this utility.</dd>
 
-## <a id="topic1__section6"></a>Examples
+## Examples<a id="topic1__section6"></a>
 
 To destroy the database named `demo` using default connection parameters:
 

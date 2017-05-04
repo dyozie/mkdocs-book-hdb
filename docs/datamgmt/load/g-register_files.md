@@ -86,7 +86,7 @@ then run:
 SELECT relname FROM pg_class WHERE oid = segrelid
 ```
 
-## <a id="topic1__section3"></a>Registering Data Using Information from a YAML Configuration File
+## Registering Data Using Information from a YAML Configuration File<a id="topic1__section3"></a>
  
 The `hawq register` command can register HDFS files  by using metadata loaded from a YAML configuration file by using the `--config <yaml_config\>` option. Both AO and Parquet tables can be registered. Tables need not exist in HAWQ before being registered. In disaster recovery, information in a YAML-format file created by the `hawq extract` command can re-create HAWQ tables by using metadata from a backup checkpoint.
 

@@ -23,7 +23,7 @@ under the License.
 
 Verifies and validates HAWQ platform settings.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 hawq check -f <hostfile_hawq_check> | (-h <hostname> | --host <hostname>)
@@ -42,7 +42,7 @@ hawq check --version
 hawq check -?
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 The `hawq check` utility determines the platform on which you are running HAWQ and validates various platform-specific configuration settings as well as HAWQ and HDFS-specific configuration settings. In order to perform HAWQ configuration checks, make sure HAWQ has been already started and `hawq config` works. For HDFS checks, you should either set the `$HADOOP_HOME` environment variable or provide the full path to the hadoop installation location using the `--hadoop` option.
 
@@ -57,7 +57,7 @@ mount.points = /,/data1,/data2
 [linux.diskusage] 
 diskusage.monitor.mounts = /,/data1,/data2
 ```
-## <a id="args"></a>Arguments
+## Arguments<a id="args"></a>
 
 <dt>-f \<hostfile\_hawq\_check\>  </dt>
 <dd>The name of a file that contains a list of hosts that `hawq check` uses to validate platform-specific settings. This file should contain a single host name for all hosts in your HAWQ system (master, standby master, and segments).</dd>
@@ -69,7 +69,7 @@ diskusage.monitor.mounts = /,/data1,/data2
 <dd>Use this option to decompress and check a .zip file created with the `--zipout` option. If you specify the `--zipin` option, `hawq check` performs validation tasks against the specified file.</dd>
 
 
-## <a id="topic1__section4"></a>Options
+## Options<a id="topic1__section4"></a>
 
 
 <dt>-\\\-config \<config\_file\>   </dt>
@@ -102,7 +102,7 @@ diskusage.monitor.mounts = /,/data1,/data2
 <dt>-? (help)  </dt>
 <dd>Displays the online help.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Verify and validate the HAWQ platform settings by entering a host file and specifying the full hadoop install path:
 
@@ -140,6 +140,6 @@ View collected HAWQ platform settings:
 $ hawq check -f hostfile_hawq_check --hadoop /usr/local/hadoop-<version> --stdout
 ```
 
-## <a id="topic1__section6"></a>See Also
+## See Also<a id="topic1__section6"></a>
 
 [hawq checkperf](hawqcheckperf.html#topic1)

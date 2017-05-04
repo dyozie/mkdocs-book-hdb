@@ -36,10 +36,10 @@ After registering the JAR files, you enable or disable Ranger integration in HAW
 
 Use the following procedures to register the HAWQ Ranger Plug-in Service and enable Ranger authorization for HAWQ.
 
-## <a id="prereq"></a>Prerequisites
+## Prerequisites<a id="prereq"></a>
 To use HAWQ Ranger integration, install a compatible Hadoop distribution and Apache Ranger 0.6. You must also have `admin` access to the **Ranger Admin UI**.
 
-## <a id="jar"></a>Step 1: Install Ranger Connectivity to HAWQ
+## Step 1: Install Ranger Connectivity to HAWQ<a id="jar"></a>
 1. `ssh` into the Ranger Administration host as a user with root privileges:
 
     ``` bash
@@ -115,7 +115,7 @@ To use HAWQ Ranger integration, install a compatible Hadoop distribution and Apa
 
 8.  Log in to the Ranger Access Manager. Click the **Edit** button for the **HAWQ** service. Ensure that the Active Status is set to Enabled, and click **Test Connection**. You should receive a message that Ranger connected successfully.  If the connection fails, verify the `hawq` service Config Properties, as well as your `pg_hba.conf` entries, and re-test the connection.
 
-## <a id="enable"></a>Step 2: Configure HAWQ to Use Ranger Policy Management
+## Step 2: Configure HAWQ to Use Ranger Policy Management<a id="enable"></a>
 
 The default Ranger service definition for HAWQ assigns the HAWQ administrator (typically `gpadmin`) all privileges to all objects. 
 
@@ -130,7 +130,7 @@ Once the connection between HAWQ and Ranger is configured, you may choose to set
 6. Select **Service Actions > Restart All** and confirm that you want to restart the HAWQ cluster.
 
 
-## <a id="rpsadminstate"></a>Displaying the Status of HAWQ/Ranger Integration
+## Displaying the Status of HAWQ/Ranger Integration<a id="rpsadminstate"></a>
 
 Determine the status of HAWQ/Ranger integration in your cluster by:
 
@@ -152,7 +152,7 @@ Determine the status of HAWQ/Ranger integration in your cluster by:
     ...
     ```
 
-## <a id="customconfig"></a> Custom Configuration
+##  Custom Configuration<a id="customconfig"></a>
 
 Configuration files for the HAWQ Ranger Plug-in Service are located in the `$GPHOME/ranger/etc` directory. These files include:
 
@@ -169,7 +169,7 @@ gpadmin@master$ /usr/local/hawq/ranger/bin/rps.sh stop
 gpadmin@master$ /usr/local/hawq/ranger/bin/rps.sh start
 ```
 
-## <a id="troubleshoot"></a> Troubleshooting Ranger Configuration
+##  Troubleshooting Ranger Configuration<a id="troubleshoot"></a>
 
 If resource name lookup is not working in the Ranger Admin UI:
 

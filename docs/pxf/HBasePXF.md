@@ -21,7 +21,7 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-## <a id="installingthepxfhbaseplugin"></a>Prerequisites
+## Prerequisites<a id="installingthepxfhbaseplugin"></a>
 
 Before trying to access HBase data with PXF, verify the following:
 
@@ -36,7 +36,7 @@ Before trying to access HBase data with PXF, verify the following:
 -   PXF HBase plug-in is installed on all cluster nodes.
 -   HBase and ZooKeeper jars are installed on all cluster nodes.
 
-## <a id="syntax3"></a>Syntax
+## Syntax<a id="syntax3"></a>
 
 To create an external HBase table, use the following syntax:
 
@@ -53,11 +53,11 @@ The HBase profile is equivalent to the following PXF parameters:
 -   Accessor=org.apache.hawq.pxf.plugins.hbase.HBaseAccessor
 -   Resolver=org.apache.hawq.pxf.plugins.hbase.HBaseResolver
 
-## <a id="columnmapping"></a>Column Mapping
+## Column Mapping<a id="columnmapping"></a>
 
 Most HAWQ external tables (PXF or others) require that the HAWQ table attributes match the source data record layout, and include all the available attributes. With HAWQ, however, you use the PXF HBase plug-in to specify the subset of HBase qualifiers that define the HAWQ PXF table. To set up a clear mapping between each attribute in the PXF table and a specific qualifier in the HBase table, you can use either direct mapping or indirect mapping. In addition, the HBase row key is handled in a special way.
 
-### <a id="rowkey"></a>Row Key
+### Row Key<a id="rowkey"></a>
 
 You can use the HBase table row key in several ways. For example, you can see them using query results, or you can run a WHERE clause filter on a range of row key values. To use the row key in the HAWQ query, define the HAWQ table with the reserved PXF attribute `recordkey.` This attribute name tells PXF to return the record key in any key-value based system and in HBase.
 
@@ -67,7 +67,7 @@ You can use the HBase table row key in several ways. For example, you can see t
 CREATE EXTERNAL TABLE <tname> (recordkey bytea, ... ) LOCATION ('pxf:// ...')
 ```
 
-### <a id="directmapping"></a>Direct Mapping
+### Direct Mapping<a id="directmapping"></a>
 
 Use Direct Mapping to map HAWQ table attributes to HBase qualifiers. You can specify the HBase qualifier names of interest, with column family names included, as quoted values. 
 
@@ -89,7 +89,7 @@ CREATE EXTERNAL TABLE hbase_sales (
 
 The PXF HBase plug-in uses these attribute names as-is and returns the values of these HBase qualifiers.
 
-### <a id="indirectmappingvialookuptable"></a>Indirect Mapping (via Lookup Table)
+### Indirect Mapping (via Lookup Table)<a id="indirectmappingvialookuptable"></a>
 
 The direct mapping method is fast and intuitive, but using indirect mapping helps to reconcile HBase qualifier names with HAWQ behavior:
 
@@ -100,7 +100,7 @@ In either case, Indirect Mapping uses a lookup table on HBase. You can create t
 
 Using the sales example in Direct Mapping, if our `rowkey` represents the HBase table name and the `mapping` column family includes the actual attribute mapping in the key value form of`<hawq attr name>=<hbase                             cf:qualifier>`.
 
-#### <a id="example5"></a>Example
+#### Example<a id="example5"></a>
 
 This example maps the `saleid` qualifier in the `cf1` column family to the HAWQ `id` column and the `comments` qualifier in the `cf8` family to the HAWQ `cmts` column.
 

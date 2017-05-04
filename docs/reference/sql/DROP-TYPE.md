@@ -23,17 +23,17 @@ under the License.
 
 Removes a data type.
 
-## <a id="topic1__section2"></a>Synopsis
+## Synopsis<a id="topic1__section2"></a>
 
 ``` pre
 DROP TYPE [IF EXISTS] <name> [, ...] [CASCADE | RESTRICT]
 ```
 
-## <a id="topic1__section3"></a>Description
+## Description<a id="topic1__section3"></a>
 
 `DROP TYPE` will remove a user-defined data type. Only the owner of a type can remove it.
 
-## <a id="topic1__section4"></a>Parameters
+## Parameters<a id="topic1__section4"></a>
 
 <dt>IF EXISTS  </dt>
 <dd>Do not throw an error if the type does not exist. A notice is issued in this case.</dd>
@@ -47,7 +47,7 @@ DROP TYPE [IF EXISTS] <name> [, ...] [CASCADE | RESTRICT]
 <dt>RESTRICT  </dt>
 <dd>Refuse to drop the type if any objects depend on it. This is the default.</dd>
 
-## <a id="topic1__section5"></a>Examples
+## Examples<a id="topic1__section5"></a>
 
 Remove the data type `box`;
 
@@ -55,10 +55,10 @@ Remove the data type `box`;
 DROP TYPE box;
 ```
 
-## <a id="topic1__section6"></a>Compatibility
+## Compatibility<a id="topic1__section6"></a>
 
 This command is similar to the corresponding command in the SQL standard, apart from the `IF EXISTS` option, which is a HAWQ extension. But note that the `CREATE TYPE` command and the data type extension mechanisms in HAWQ differ from the SQL standard.
 
-## <a id="topic1__section7"></a>See Also
+## See Also<a id="topic1__section7"></a>
 
 [ALTER TYPE](ALTER-TYPE.html), [CREATE TYPE](CREATE-TYPE.html)

@@ -26,7 +26,7 @@ HAWQ writes data to, and reads data from, HDFS natively. HAWQ tables are similar
 In this exercise, you will run scripts that use the SQL `CREATE TABLE` command to create HAWQ tables. You will load the Retail demo fact data into the HAWQ tables using the SQL `COPY` command. You will then perform simple and complex queries on the data.
 
 
-## <a id="tut_introhawqtblprereq"></a>Prerequisites
+## Prerequisites<a id="tut_introhawqtblprereq"></a>
 
 Ensure that you have:
 
@@ -36,7 +36,7 @@ Ensure that you have:
 - [Created the Retail Demo HAWQ Schema](dataandscripts.html#tut_dsschema_ex)
 - Started your HAWQ cluster.
 
-## <a id="tut_excreatehawqtblsteps"></a>Exercise: Create, Add Data to, and Query HAWQ Retail Demo Tables
+## Exercise: Create, Add Data to, and Query HAWQ Retail Demo Tables<a id="tut_excreatehawqtblsteps"></a>
 
 Perform the following steps to create and load HAWQ tables from the sample Retail demo data set. 
 
@@ -214,7 +214,7 @@ Perform the following steps to create and load HAWQ tables from the sample Retai
     hawqgsdb=# \q
     ```
 
-## <a id="tut_introhawqtbl_summary"></a>Summary
+## Summary<a id="tut_introhawqtbl_summary"></a>
 In this lesson, you created and loaded Retail order and order line item data into HAWQ fact tables. You also queried these tables, learning how to filter the data to your needs. 
 
 In Lesson 6, you use PXF external tables to similarly access dimension data stored in HDFS.
