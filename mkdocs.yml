@@ -1,0 +1,62 @@
+site_name: My Docs
+theme: 'material'
+extra:
+  palette:
+    primary: 'teal'
+    accent: 'deep orange'
+  feature:
+    tabs: true
+
+pages:
+  - Pivotal HDB 2.2:
+    - 'Home': 'index.md'
+    - 'Release Notes': 'releasenotes/HAWQ220ReleaseNotes.md'
+    - 'System Requirements': 'requirements/system-requirements.md'
+    - System Overview:
+      - 'HAWQ Architecture': 'overview/HAWQArchitecture.md'
+      - 'Table Distribution and Storage': 'overview/TableDistributionStorage.md'
+      - 'Elastic Query Execution Runtime': 'overview/ElasticSegments.md'
+      - 'Resource Management': 'overview/ResourceManagement.md'
+      - 'HDFS Catalog Cache': 'overview/HDFSCatalogCache.md'
+      - 'Management Tools': 'overview/ManagementTools.md'
+      - 'High Availability, Redundancy, and Fault Tolerance': 'overview/RedundancyFailover.md'
+    - Getting Started Tutorial:
+      - 'Getting Started with HAWQ': 'tutorial/overview.md'
+      - 'Lesson 1 - Runtime Environment': 'tutorial/gettingstarted/introhawqenv.md'
+      - 'Lesson 2 - Cluster Administration': 'tutorial/gettingstarted/basichawqadmin.md'
+      - 'Lesson 3 - Database Administration': 'tutorial/gettingstarted/basicdbadmin.md'
+      - 'Lesson 4 - Sample Data Set and HAWQ Schemas': 'tutorial/gettingstarted/dataandscripts.md'
+      - 'Lesson 5 - HAWQ Tables': 'tutorial/gettingstarted/introhawqtbls.md'
+      - 'Lesson 6 - HAWQ Extension Framework (PXF)': 'tutorial/gettingstarted/intropxfhdfs.md'
+
+  - Installation:
+    - Installing Pivotal HDB:
+      - 'Selecting Host Machines': 'install/select-hosts.md'
+      - 'Setting up HDB Software Repositories': 'install/setup-hdb-repos.md'
+      - 'Installing HAWQ from the Command Line (Optional)': 'install/install-cli.md'
+      - 'PXF Post-Installation Procedures for Hive/HBase': 'install/postinstall-pxf-hbasehive.md'
+      - 'Amazon EC2 Configuration': 'install/aws-config.md'
+    - 'Installing Procedural Languages and Package Extensions': 'install/install_package_extensions.md'
+    - 'Upgrading from HDB 2.1.x': 'install/HDB21xto22xUpgrade.md'
+    - 'Upgrading from HDB 2.0.1': 'install/HDB20xto22xUpgrade.md'
+
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(linenums=true)
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
