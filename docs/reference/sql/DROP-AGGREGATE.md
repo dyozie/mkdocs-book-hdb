@@ -64,4 +64,4 @@ There is no `DROP AGGREGATE` statement in the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[ALTER AGGREGATE](ALTER-AGGREGATE.html), [CREATE AGGREGATE](CREATE-AGGREGATE.html)
+[ALTER AGGREGATE](ALTER-AGGREGATE.html), [CREATE AGGREGATE](CREATE-AGGREGATE/index.html)

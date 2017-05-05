@@ -47,7 +47,7 @@ SELECT [ALL | DISTINCT [ON ( <expression> [, ...] )]]
 
 ## Parameters<a id="topic1__section4"></a>
 
-The majority of parameters for `SELECT INTO` are the same as [SELECT](SELECT.html).
+The majority of parameters for `SELECT INTO` are the same as [SELECT](SELECT/index.html).
 
 <dt>TEMPORARY,  
 TEMP  </dt>
@@ -67,8 +67,8 @@ SELECT * INTO films_recent FROM films WHERE date_prod >=
 
 ## Compatibility<a id="topic1__section6"></a>
 
-The SQL standard uses `SELECT INTO` to represent selecting values into scalar variables of a host program, rather than creating a new table. The HAWQ usage of `SELECT INTO` to represent table creation is historical. It is best to use [CREATE TABLE AS](CREATE-TABLE-AS.html) for this purpose in new applications.
+The SQL standard uses `SELECT INTO` to represent selecting values into scalar variables of a host program, rather than creating a new table. The HAWQ usage of `SELECT INTO` to represent table creation is historical. It is best to use [CREATE TABLE AS](CREATE-TABLE-AS/index.html) for this purpose in new applications.
 
 ## See Also<a id="topic1__section7"></a>
 
-[SELECT](SELECT.html), [CREATE TABLE AS](CREATE-TABLE-AS.html)
+[SELECT](SELECT.html), [CREATE TABLE AS](CREATE-TABLE-AS/index.html)

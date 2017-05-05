@@ -272,4 +272,4 @@ There is no `COPY` statement in the SQL standard.
 
 ## See Also<a id="topic1__section13"></a>
 
-[CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html)
+[CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE/index.html)

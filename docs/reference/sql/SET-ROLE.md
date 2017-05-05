@@ -88,4 +88,4 @@ HAWQ allows identifier syntax (\<rolename\>), while the SQL standard requires th
 
 ## See Also<a id="topic1__section8"></a>
 
-[SET SESSION AUTHORIZATION](SET-SESSION-AUTHORIZATION.html)
+[SET SESSION AUTHORIZATION](SET-SESSION-AUTHORIZATION/index.html)

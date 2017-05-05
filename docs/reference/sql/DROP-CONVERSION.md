@@ -59,6 +59,6 @@ There is no `DROP CONVERSION` statement in the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE CONVERSION](CREATE-CONVERSION.html), [ALTER CONVERSION](ALTER-CONVERSION.html)
+[CREATE CONVERSION](CREATE-CONVERSION.html), [ALTER CONVERSION](ALTER-CONVERSION/index.html)
 
 

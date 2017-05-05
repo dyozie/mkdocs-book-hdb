@@ -120,10 +120,10 @@ By default, the output of `gplogfilter` is sent to standard output. Use the `-o`
 <dd>Rejects the log entries containing the specified string.</dd>
 
 <dt>-m, -\\\-match \<regex\>  </dt>
-<dd>Finds log entries that match the specified Python regular expression. See [http://docs.python.org/library/re.html](http://docs.python.org/library/re.html) for Python regular expression syntax.</dd>
+<dd>Finds log entries that match the specified Python regular expression. See [http://docs.python.org/library/re.html](http://docs.python.org/library/re/index.html) for Python regular expression syntax.</dd>
 
 <dt>-M, -\\\-nomatch \<regex\> </dt>
-<dd>Rejects log entries that match the specified Python regular expression. See [http://docs.python.org/library/re.html](http://docs.python.org/library/re.html) for Python regular expression syntax.</dd>
+<dd>Rejects log entries that match the specified Python regular expression. See [http://docs.python.org/library/re.html](http://docs.python.org/library/re/index.html) for Python regular expression syntax.</dd>
 
 <dt>-t, -\\\-trouble  </dt>
 <dd>Finds only the log entries that have `ERROR:`, `FATAL:`, or `PANIC:` in the first line.</dd>

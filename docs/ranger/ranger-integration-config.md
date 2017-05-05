@@ -32,14 +32,16 @@ Installing or upgrading to HAWQ installs the HAWQ Ranger Plug-in Service, but ne
 
 To use Ranger for managing HAWQ authentication events, you must first install and register several HAWQ JAR files on the Ranger Administration host. This one-time configuration establishes connectivity to your HAWQ cluster from the Ranger Administration host. 
 
-After registering the JAR files, you enable or disable Ranger integration in HAWQ by setting the `hawq_acl_type` configuration parameter. When Ranger is enabled, all access to HAWQ resources is controlled through Ranger security policies. The HAWQ Ranger Plug-in pre-populates Ranger with HAWQ policies to allow `gpadmin` superuser access to all resources. See [Creating HAWQ Authorization Policies in Ranger](ranger-policy-creation.html) for information about creating policies in Ranger.
+After registering the JAR files, you enable or disable Ranger integration in HAWQ by setting the `hawq_acl_type` configuration parameter. When Ranger is enabled, all access to HAWQ resources is controlled through Ranger security policies. The HAWQ Ranger Plug-in pre-populates Ranger with HAWQ policies to allow `gpadmin` superuser access to all resources. See [Creating HAWQ Authorization Policies in Ranger](ranger-policy-creation/index.html) for information about creating policies in Ranger.
 
 Use the following procedures to register the HAWQ Ranger Plug-in Service and enable Ranger authorization for HAWQ.
 
-## Prerequisites<a id="prereq"></a>
+## Prerequisites
+<a id="prereq"></a>
 To use HAWQ Ranger integration, install a compatible Hadoop distribution and Apache Ranger 0.6. You must also have `admin` access to the **Ranger Admin UI**.
 
-## Step 1: Install Ranger Connectivity to HAWQ<a id="jar"></a>
+## Step 1: Install Ranger Connectivity to HAWQ
+<a id="jar"></a>
 1. `ssh` into the Ranger Administration host as a user with root privileges:
 
     ``` bash
@@ -115,8 +117,9 @@ To use HAWQ Ranger integration, install a compatible Hadoop distribution and Apa
 
 8.  Log in to the Ranger Access Manager. Click the **Edit** button for the **HAWQ** service. Ensure that the Active Status is set to Enabled, and click **Test Connection**. You should receive a message that Ranger connected successfully.  If the connection fails, verify the `hawq` service Config Properties, as well as your `pg_hba.conf` entries, and re-test the connection.
 
-## Step 2: Configure HAWQ to Use Ranger Policy Management<a id="enable"></a>
-
+## Step 2: Configure HAWQ to Use Ranger Policy Management
+<a id="enable"></a>
+(ranger-policy-creation/index.html)
 The default Ranger service definition for HAWQ assigns the HAWQ administrator (typically `gpadmin`) all privileges to all objects. 
 
 Once the connection between HAWQ and Ranger is configured, you may choose to set up policies for the HAWQ users according to the procedures in [Creating HAWQ Authorization Policies in Ranger](ranger-policy-creation.html) or enable Ranger with only the default policies. 

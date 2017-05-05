@@ -60,7 +60,7 @@ When creating the resource queue, use the MEMORY\_LIMIT\_CLUSTER and CORE\_LIMIT
 
 You can optionally configure the maximum or minimum number of virtual segments to use when executing a query by setting NVSEG\_UPPER\_LIMIT/NVSEG\_LOWER\_LIMIT or NVSEG\_UPPER\_LIMIT\_PERSEG/NVSEG\_LOWER\_LIMIT\_PERSEG attributes for the resource queue.
 
-After defining a resource queue, you can assign a role to the queue by using the [ALTER ROLE](ALTER-ROLE.html) or [CREATE ROLE](CREATE-ROLE.html) command. You can only assign roles to the leaf-level resource queues (resource queues that do not have any children.)
+After defining a resource queue, you can assign a role to the queue by using the [ALTER ROLE](ALTER-ROLE.html) or [CREATE ROLE](CREATE-ROLE/index.html) command. You can only assign roles to the leaf-level resource queues (resource queues that do not have any children.)
 
 See also [Best Practices for Using Resource Queues](../../bestpractices/managing_resources_bestpractices.html#topic_hvd_pls_wv).
 
@@ -155,4 +155,4 @@ MEMORY_LIMIT_CLUSTER=50%, CORE_LIMIT_CLUSTER=50%, RESOURCE_OVERCOMMIT_FACTOR=2);
 
 ## See Also<a id="topic1__section8"></a>
 
-[ALTER RESOURCE QUEUE](ALTER-RESOURCE-QUEUE.html)[ALTER ROLE](ALTER-ROLE.html), [CREATE ROLE](CREATE-ROLE.html), [DROP RESOURCE QUEUE](DROP-RESOURCE-QUEUE.html)
+[ALTER RESOURCE QUEUE](ALTER-RESOURCE-QUEUE.html)[ALTER ROLE](ALTER-ROLE.html), [CREATE ROLE](CREATE-ROLE.html), [DROP RESOURCE QUEUE](DROP-RESOURCE-QUEUE/index.html)

@@ -27,30 +27,30 @@ You should have some knowledge of Linux/UNIX system administration, database man
 
 ## HAWQ Users<a id="hawq_users"></a>
 
-HAWQ supports users with both administrative and operating privileges. The HAWQ administrator may choose to manage the HAWQ cluster using either Ambari or the command line. [Managing HAWQ Using Ambari](../admin/ambari-admin.html) provides Ambari-specific HAWQ cluster administration procedures. [Starting and Stopping HAWQ](startstop.html), [Expanding a Cluster](ClusterExpansion.html), and [Removing a Node](ClusterShrink.html) describe specific command-line-managed HAWQ cluster administration procedures. Other topics in this guide are applicable to both Ambari- and command-line-managed HAWQ clusters.
+HAWQ supports users with both administrative and operating privileges. The HAWQ administrator may choose to manage the HAWQ cluster using either Ambari or the command line. [Managing HAWQ Using Ambari](../admin/ambari-admin.html) provides Ambari-specific HAWQ cluster administration procedures. [Starting and Stopping HAWQ](startstop.html), [Expanding a Cluster](ClusterExpansion.html), and [Removing a Node](ClusterShrink/index.html) describe specific command-line-managed HAWQ cluster administration procedures. Other topics in this guide are applicable to both Ambari- and command-line-managed HAWQ clusters.
 
-The default HAWQ admininstrator user is named `gpadmin`. The HAWQ admin may choose to assign administrative and/or operating HAWQ privileges to additional users.  Refer to [Configuring Client Authentication](../clientaccess/client_auth.html) and [Managing Roles and Privileges](../clientaccess/roles_privs.html) for additional information about HAWQ user configuration.
+The default HAWQ admininstrator user is named `gpadmin`. The HAWQ admin may choose to assign administrative and/or operating HAWQ privileges to additional users.  Refer to [Configuring Client Authentication](../clientaccess/client_auth.html) and [Managing Roles and Privileges](../clientaccess/roles_privs/index.html) for additional information about HAWQ user configuration.
 
 ## HAWQ Deployment Systems<a id="hawq_systems"></a>
 
-A typical HAWQ deployment includes single HDFS and HAWQ master and standby nodes and multiple HAWQ segment and HDFS data nodes. The HAWQ cluster may also include systems running the HAWQ Extension Framework (PXF) and other Hadoop services. Refer to [HAWQ Architecture](../overview/HAWQArchitecture.html) and [Select HAWQ Host Machines](../install/select-hosts.html) for information about the different systems in a HAWQ deployment and how they are configured.
+A typical HAWQ deployment includes single HDFS and HAWQ master and standby nodes and multiple HAWQ segment and HDFS data nodes. The HAWQ cluster may also include systems running the HAWQ Extension Framework (PXF) and other Hadoop services. Refer to [HAWQ Architecture](../overview/HAWQArchitecture.html) and [Select HAWQ Host Machines](../install/select-hosts/index.html) for information about the different systems in a HAWQ deployment and how they are configured.
 
 
 ## HAWQ Databases<a id="hawq_env_databases"></a>
 
-[Creating and Managing Databases](../ddl/ddl-database.html) and [Creating and Managing Tables](../ddl/ddl-table.html) describe HAWQ database and table creation commands.
+[Creating and Managing Databases](../ddl/ddl-database.html) and [Creating and Managing Tables](../ddl/ddl-table/index.html) describe HAWQ database and table creation commands.
 
-You manage HAWQ databases at the command line using the [psql](../reference/cli/client_utilities/psql.html) utility, an interactive front-end to the HAWQ database. Configuring client access to HAWQ databases and tables may require information related to [Establishing a Database Session](../clientaccess/g-establishing-a-database-session.html).
+You manage HAWQ databases at the command line using the [psql](../reference/cli/client_utilities/psql.html) utility, an interactive front-end to the HAWQ database. Configuring client access to HAWQ databases and tables may require information related to [Establishing a Database Session](../clientaccess/g-establishing-a-database-session/index.html).
 
-[HAWQ Database Drivers and APIs](../clientaccess/g-database-application-interfaces.html) identifies supported HAWQ database drivers and APIs for additional client access methods.
+[HAWQ Database Drivers and APIs](../clientaccess/g-database-application-interfaces/index.html) identifies supported HAWQ database drivers and APIs for additional client access methods.
 
 ## HAWQ Data<a id="hawq_env_data"></a>
 
 HAWQ internal data resides in HDFS. You may require access to data in different formats and locations in your data lake. You can use HAWQ and the HAWQ Extension Framework (PXF) to access and manage both internal and this external data:
 
-- [Managing Data with HAWQ](../datamgmt/dml.html) discusses the basic data operations and details regarding the loading and unloading semantics for HAWQ internal tables.
-- [Using PXF with Unmanaged Data](../pxf/HawqExtensionFrameworkPXF.html) describes PXF, an extensible framework you may use to query data external to HAWQ.
+- [Managing Data with HAWQ](../datamgmt/dml/index.html) discusses the basic data operations and details regarding the loading and unloading semantics for HAWQ internal tables.
+- [Using PXF with Unmanaged Data](../pxf/HawqExtensionFrameworkPXF/index.html) describes PXF, an extensible framework you may use to query data external to HAWQ.
 
 ## HAWQ Operating Environment<a id="hawq_env_setup"></a>
 
-Refer to [Introducing the HAWQ Operating Environment](setuphawqopenv.html) for a discussion of the HAWQ operating environment, including a procedure to set up the HAWQ environment. This section also provides an introduction to the important files and directories in a HAWQ installation.
+Refer to [Introducing the HAWQ Operating Environment](setuphawqopenv/index.html) for a discussion of the HAWQ operating environment, including a procedure to set up the HAWQ environment. This section also provides an introduction to the important files and directories in a HAWQ installation.

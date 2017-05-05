@@ -25,12 +25,12 @@ A writable external table allows you to select rows from other database tables a
 
 This topic describes how to unload data from HAWQ using parallel unload (writable external tables) and non-parallel unload (`COPY`).
 
--   **[Defining a File-Based Writable External Table](../../datamgmt/load/g-defining-a-file-based-writable-external-table.html)**
+-   **[Defining a File-Based Writable External Table](../../datamgmt/load/g-defining-a-file-based-writable-external-table/index.html)**
 
--   **[Defining a Command-Based Writable External Web Table](../../datamgmt/load/g-defining-a-command-based-writable-external-web-table.html)**
+-   **[Defining a Command-Based Writable External Web Table](../../datamgmt/load/g-defining-a-command-based-writable-external-web-table/index.html)**
 
--   **[Unloading Data Using a Writable External Table](../../datamgmt/load/g-unloading-data-using-a-writable-external-table.html)**
+-   **[Unloading Data Using a Writable External Table](../../datamgmt/load/g-unloading-data-using-a-writable-external-table/index.html)**
 
--   **[Unloading Data Using COPY](../../datamgmt/load/g-unloading-data-using-copy.html)**
+-   **[Unloading Data Using COPY](../../datamgmt/load/g-unloading-data-using-copy/index.html)**
 
 

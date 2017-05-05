@@ -151,4 +151,4 @@ INSERT INTO product VALUES (setval('myseq', 201), 'gizmo');
 
 ## See Also<a id="topic1__section8"></a>
 
-[ALTER SEQUENCE](ALTER-SEQUENCE.html), [DROP SEQUENCE](DROP-SEQUENCE.html)
+[ALTER SEQUENCE](ALTER-SEQUENCE.html), [DROP SEQUENCE](DROP-SEQUENCE/index.html)

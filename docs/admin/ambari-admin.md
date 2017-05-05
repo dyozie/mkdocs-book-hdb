@@ -23,10 +23,11 @@ under the License.
 
 Ambari provides an easy interface to perform some of the most common HAWQ and PXF Administration Tasks.
 
-## Integrating YARN for Resource Management<a id="amb-yarn"></a>
+## Integrating YARN for Resource Management
+<a id="amb-yarn"></a>
 
 HAWQ supports integration with YARN for global resource management. In a YARN managed environment, HAWQ can request resources (containers) dynamically from YARN, and return resources when HAWQ’s workload is not heavy.
-
+(../resourcemgmt/YARNIntegration/index.html)
 See also [Integrating YARN with HAWQ](../resourcemgmt/YARNIntegration.html) for command-line instructions and additional details about using HAWQ with YARN.
 
 ### When to Perform
@@ -85,7 +86,8 @@ Use one of the following procedures to move YARN resource manager component from
 1. Run HAWQ Service Check, as described in [Performing a HAWQ Service Check](#amb-service-check), to ensure that HAWQ is operating properly.
 
 
-## Performing a HAWQ Service Check<a id="amb-service-check"></a>
+## Performing a HAWQ Service Check
+<a id="amb-service-check"></a>
 
 A HAWQ Service check uses the `hawq state` command to display the configuration and status of segment hosts in a HAWQ Cluster. It also performs tests to ensure that HAWQ can write to and read from tables, and to ensure that HAWQ can write to and read from HDFS external tables using PXF.
 
@@ -103,7 +105,8 @@ A HAWQ Service check uses the `hawq state` command to display the configuration 
 
 6. Click **OK** to dismiss the log messages or list of background tasks.
 
-## Performing a Configuration Check<a id="amb-config-check"></a>
+## Performing a Configuration Check
+<a id="amb-config-check"></a>
 
 A configuration check determines if operating system parameters on the HAWQ host machines match their recommended settings. You can also perform this procedure from the command line using the `hawq check` command. The `hawq check` command is run against all HAWQ hosts.
 
@@ -122,7 +125,8 @@ A configuration check determines if operating system parameters on the HAWQ host
 
 6. Click **OK** to dismiss the log messages or list of background tasks.
 
-## Performing a Rolling Restart<a id="amb-restart"></a>
+## Performing a Rolling Restart
+<a id="amb-restart"></a>
 Ambari provides the ability to restart a HAWQ cluster by restarting one or more segments at a time until all segments (or all segments with stale configurations) restart. You can specify a delay between restarting segments, and Ambari can stop the process if a specified number of segments fail to restart. Performing a rolling restart in this manner can help ensure that some HAWQ segments are available to service client requests.
 
 **Note:** If you do not need to preserve client connections, you can instead perform an full restart of the entire HAWQ cluster using **Service Actions > Restart All**.
@@ -141,7 +145,8 @@ Ambari provides the ability to restart a HAWQ cluster by restarting one or more 
 
    Ambari displays the **Rolling Restart of HAWQ segments** task in the list of background operations, and indicates the current batch of segments that it is restarting. Click the name of the task to view the log messages generated during the restart. If any segment fails to restart, Ambari displays a red warning icon next to the task.
 
-## Performing Host-Level Actions on HAWQ Segment and PXF Hosts<a id="bulk-lifecycle"></a>
+## Performing Host-Level Actions on HAWQ Segment and PXF Hosts
+<a id="bulk-lifecycle"></a>
 
 Ambari host-level actions enable you to perform actions on one or more hosts in the cluster at once. With HAWQ clusters, you can apply the **Start**, **Stop**, or **Restart** actions to one or more HAWQ segment hosts or PXF hosts. Using the host-level actions saves you the trouble of accessing individual hosts in Ambari and applying service actions one-by-one.
 
@@ -162,18 +167,19 @@ Ambari host-level actions enable you to perform actions on one or more hosts in 
     3.  Select **Actions > Selected Hosts >** [ **Start** | **Stop** |  **Restart** ] to apply the action to your selected hosts.
 
 
-## Expanding the HAWQ Cluster<a id="amb-expand"></a>
+## Expanding the HAWQ Cluster
+<a id="amb-expand"></a>
 
 Apache HAWQ supports dynamic node expansion. You can add segment nodes while HAWQ is running without having to suspend or terminate cluster operations.
 
 ### Guidelines for Cluster Expansion
 
 This topic provides some guidelines around expanding your HAWQ cluster.
-
+(../reference/sql/ALTER-TABLE.html) or [CREATE TABLE AS](../reference/sql/CREATE-TABLE-AS/index.html)
 There are several recommendations to keep in mind when modifying the size of your running HAWQ cluster:
 
 -  When you add a new node, install both a DataNode and a HAWQ segment on the new node.  If you are using YARN to manage HAWQ resources, you must also configure a YARN NodeManager on the new node.
--  After adding a new node, you should always rebalance HDFS data to maintain cluster performance.
+-  After adding a new node, yo(s) has been configured per the instructions found in [Apache HAWQ System Requirements](../requirements/system-requirements.html) and [Select HAWQ Host Machines](../install/select-hosts/index.html)
 -  Adding or removing a node also necessitates an update to the HDFS metadata cache. This update will happen eventually, but can take some time. To speed the update of the metadata cache, select the **Service Actions > Clear HAWQ's HDFS Metadata Cache** option in Ambari.
 -  Note that for hash distributed tables, expanding the cluster will not immediately improve performance since hash distributed tables use a fixed number of virtual segments. In order to obtain better performance with hash distributed tables, you must redistribute the table to the updated cluster by either the [ALTER TABLE](../reference/sql/ALTER-TABLE.html) or [CREATE TABLE AS](../reference/sql/CREATE-TABLE-AS.html) command.
 -  If you are using hash tables, consider updating the `default_hash_table_bucket_number` server configuration parameter to a larger value after expanding the cluster but before redistributing the hash tables.
@@ -185,7 +191,7 @@ First ensure that the new node(s) has been configured per the instructions found
 2.  Access the Ambari web console at http://ambari.server.hostname:8080, and login as the "admin" user. \(The default password is also "admin".\)
 3.  Click **HAWQ** in the list of installed services.
 4.  Select the **Configs** tab, then select the **Advanced** tab in the settings.
-5.  Expand the **General** section, and ensure that the **Exchange SSH Keys** property (`hawq_ssh_keys`) is set to `true`.  Change this property to `true` if needed, and click **Save** to continue. Ambari must be able to exchange SSH keys with any hosts that you add to the cluster in the following steps.
+5.  Expand the **General** section, and(http://docs.hortonworks.com/HDPDocuments/Ambari-2.2.1.1/bk_Installing_HDP_AMB/content/_set_up_password-less_ssh/index.html) needed, and click **Save** to continue. Ambari must be able to exchange SSH keys with any hosts that you add to the cluster in the following steps.
 6.  Select the **Hosts** tab at the top of the screen to display the Hosts summary.
 7.  If the host(s) that you want to add are not currently listed in the Hosts summary page, follow these steps:
     1. Select **Actions > Add New Hosts** to start the Add Host Wizard.
@@ -215,7 +221,7 @@ First ensure that the new node(s) has been configured per the instructions found
         |\> 256 and <= 512|1 \* \#nodes|
         |\> 512|512|
     18.  Ambari requires you to restart the HAWQ service in order to apply the configuration changes. If you need to apply the configuration *without* restarting HAWQ (for dynamic cluster expansion), then use the procedure described in [Workaround for Dynamic Cluster Expansion](#manual-config-steps) *instead* of following this step.
-        <br/><br/>Stop and then start the HAWQ service to apply your configuration changes via Ambari. Select **Service Actions > Stop**, followed by **Service Actions > Start** to ensure that the HAWQ Master starts before the newly-added segment. During the HAWQ startup, Ambari exchanges ssh keys for the `gpadmin` user, and applies the new configuration.
+        <br/><br/>Stop and then start the HAWQ service to apply your configuration changes via Ambari. Select **Service Actions > Stop**, followed by **Service Actions > Start** to ensure that the HAWQ Master start(../reference/sql/ALTER-TABLE.html) or [CREATE TABLE AS](../reference/sql/CREATE-TABLE-AS/index.html)padmin` user, and applies the new configuration.
         **Note:** Do *not* use the **Restart All** service action to complete this step.
 <a id="step-10"></a>
 19.  Consider the impact of rebalancing HDFS to other components, such as HBase, before you complete this step.
@@ -228,7 +234,8 @@ First ensure that the new node(s) has been configured per the instructions found
 
 23.  (Optional.) If you enabled temporary password-based authentication while preparing/configuring your HAWQ host systems, turn off password-based authentication as described in [Apache HAWQ System Requirements](../requirements/system-requirements.html#topic_pwdlessssh).
 
-#### Workaround for Dynamic Cluster Expansion <a id="manual-config-steps"></a>
+#### Workaround for Dynamic Cluster Expansion 
+<a id="manual-config-steps"></a>
 If you need to expand your HAWQ cluster without restarting the HAWQ service, follow this procedure to manually apply the HAWQ configuration changes required for this operation. (Perform these steps *instead of* following Step 9b in the above procedure.)
 
 1. Log in to the HAWQ master host as a HAWQ administrator and source greenplum_path.sh:
@@ -269,7 +276,8 @@ If you need to expand your HAWQ cluster without restarting the HAWQ service, fol
  
 6.  Continue with [Step 10](#step-10) in the previous procedure, [Expanding the HAWQ Cluster](#amb-expand).  When the HAWQ service is ready to be restarted via Ambari, Ambari will refresh the new configurations.
 
-## Activating the HAWQ Standby Master<a id="amb-activate-standby"></a>
+## Activating the HAWQ Standby Master
+<a id="amb-activate-standby"></a>
 Activating the HAWQ Standby Master promotes the standby host as the new HAWQ Master host. The previous HAWQ Master configuration is automatically removed from the cluster.
 
 ### When to Perform
@@ -289,7 +297,8 @@ Activating the HAWQ Standby Master promotes the standby host as the new HAWQ Mas
 
    **Important:** After the Wizard completes, your HAWQ cluster no longer includes a HAWQ Standby Master host. As a best practice, follow the instructions in [Adding a HAWQ Standby Master](#amb-add-standby) to configure a new one.
 
-## Adding a HAWQ Standby Master<a id="amb-add-standby"></a>
+## Adding a HAWQ Standby Master
+<a id="amb-add-standby"></a>
 
 The HAWQ Standby Master serves as a backup of the HAWQ Master host, and is an important part of providing high availability for the HAWQ cluster. When your cluster uses a standby master, you can activate the standby if the active HAWQ Master host fails or becomes unreachable.
 
@@ -324,7 +333,8 @@ The HAWQ Standby Master serves as a backup of the HAWQ Master host, and is an im
      Ambari displays a list of tasks that are performed to install the standby master server and reconfigure the cluster. Click on any of the tasks to view progress or to view the actual log messages that are generated while performing the task.
 7. Click **Complete** after the Wizard finishes all tasks.
 
-## Removing the HAWQ Standby Master<a id="amb-remove-standby"></a>
+## Removing the HAWQ Standby Master
+<a id="amb-remove-standby"></a>
 
 This service action enables you to remove the HAWQ Standby Master component in situations where you may need to reinstall the component.
 
@@ -346,13 +356,15 @@ This service action enables you to remove the HAWQ Standby Master component in s
 
       **Important:** After the Wizard completes, your HAWQ cluster no longer includes a HAWQ Standby Master host. As a best practice, follow the instructions in [Adding a HAWQ Standby Master](#amb-add-standby) to configure a new one.
 
-## Upgrading the HDP Stack<a id="hdp-upgrade"></a>
+## Upgrading the HDP Stack
+<a id="hdp-upgrade"></a>
 
 If you install HAWQ using Ambari 2.2.2 with the HDP 2.3 stack, before you attempt to upgrade to HDP 2.4 you must use Ambari to change the `dfs.allow.truncate` property to `false`. Ambari will display a configuration warning with this setting, but it is required in order to complete the upgrade; choose **Proceed Anyway** when Ambari warns you about the configured value of `dfs.allow.truncate`.
 
 After you complete the upgrade to HDP 2.4, change the value of `dfs.allow.truncate` back to `true` to ensure that HAWQ can operate as intended.
 
-## Changing the HAWQ gpadmin Password<a id="gpadmin-password-change"></a>
+## Changing the HAWQ gpadmin Password
+<a id="gpadmin-password-change"></a>
 The password issued by the Ambari web console is used for the `hawq ssh-exkeys` utility, which is run during the start phase of the HAWQ Master.
 Ambari stores and uses its own copy of the gpadmin password, independently of the host system. Passwords on the master and slave nodes are not automatically updated and synchronized with Ambari. Not updating the Ambari system user password causes Ambari to behave as if the gpadmin password was never changed \(it keeps using the old password\).
 
@@ -393,7 +405,8 @@ All of the listed steps are mandatory. This ensures that HAWQ service remains fu
 
     This will synchronize the password on the host machines with the password that you specified in Ambari.
     
-## Updating HAWQ Configuration Without Cluster Restart<a id="manual-cfg-norestart"></a>
+## Updating HAWQ Configuration Without Cluster Restart
+<a id="manual-cfg-norestart"></a>
 There may be circumstances, such as during dynamic cluster expansion, when you must update HAWQ configuration parameters but cannot tolerate cluster downtime in your Ambari-managed cluster. In these situations, perform the following workaround to update and reload HAWQ configuration changes without a complete cluster restart.
 
 **Note**: Use this procedure for setting or updating only those HAWQ server configuration parameters with a set classification of `reload`.
@@ -492,7 +505,7 @@ To customize the interval, perform the following steps:
 1.  Click on the name of the Alert you want to edit. 
 2.  When the Configuration screen appears, click **Edit**. 
 3.  Enter a number for how often to check status for the selected Alert, then click **Save**. The interval must be specified in whole minutes.
-
+(ambari-rest-api/index.html)
 
 #### Setting the Available HAWQ Segment Threshold
 HAWQ monitors the percentage of available HAWQ segments and can send an alert when a specified percent of unresponsive segments is reached. 

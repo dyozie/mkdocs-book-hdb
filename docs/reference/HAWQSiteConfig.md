@@ -31,12 +31,12 @@ You can use the same configuration file cluster-wide across both master and segm
 
 **Note:** If you install and manage HAWQ using Ambari, be aware that any property changes to `hawq-site.xml` made using the command line could be overwritten by Ambari. For Ambari-managed HAWQ clusters, always use the Ambari administration interface to set or change HAWQ configuration properties.
 
--   **[About Server Configuration Parameters](../reference/guc/guc_config.html)**
+-   **[About Server Configuration Parameters](../reference/guc/guc_config/index.html)**
 
--   **[Configuration Parameter Categories](../reference/guc/guc_category-list.html)**
+-   **[Configuration Parameter Categories](../reference/guc/guc_category-list/index.html)**
 
--   **[Configuration Parameters](../reference/guc/parameter_definitions.html)**
+-   **[Configuration Parameters](../reference/guc/parameter_definitions/index.html)**
 
--   **[Sample hawq-site.xml Configuration File](../reference/HAWQSampleSiteConfig.html)**
+-   **[Sample hawq-site.xml Configuration File](../reference/HAWQSampleSiteConfig/index.html)**
 
 

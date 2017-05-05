@@ -108,7 +108,7 @@ You can assign users the following permissions for allowing or denying access to
 
 These permissions map closely to the privileges that you can assign using HAWQ `GRANT` commands with native HAWQ authorization.
 
-**Note**: The HAWQ Ranger policy editor always displays the complete list of HAWQ permissions. This list is not filtered by the operations that are actually supported by the resource(s) you have selected. Refer to [HAWQ Resources and Permissions](ranger-resource-perms.html) for the specific permissions supported by each HAWQ resource. Additionally, [SQL Command Permissions Summary](ranger-sqlcmd-summary.html) summarizes the policies and permissions required for some common HAWQ SQL commands.
+**Note**: The HAWQ Ranger policy editor always displays the complete list of HAWQ permissions. This list is not filtered by the operations that are actually supported by the resource(s) you have selected. Refer to [HAWQ Resources and Permissions](ranger-resource-perms.html) for the specific permissions supported by each HAWQ resource. Additionally, [SQL Command Permissions Summary](ranger-sqlcmd-summary/index.html) summarizes the policies and permissions required for some common HAWQ SQL commands.
 
 
 ##  Ranger Policy Evaluation<a id="policyeval"></a>

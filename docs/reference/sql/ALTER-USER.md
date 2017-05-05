@@ -58,6 +58,6 @@ The `ALTER USER` statement is a HAWQ extension. The SQL standard leaves the defi
 
 ## See Also<a id="see"></a>
 
-[ALTER ROLE](ALTER-ROLE.html)
+[ALTER ROLE](ALTER-ROLE/index.html)
 
 

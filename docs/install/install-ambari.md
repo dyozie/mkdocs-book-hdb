@@ -6,12 +6,12 @@ title: Install Apache HAWQ using Ambari
 
 -   Install a compatible version of HDP and Ambari, and ensure that your HDP system is fully functional. See the [Release Notes](../releasenotes/HAWQ220ReleaseNotes.html#topic_dhh_2jx_yt) for more information about component version compatibility.
 
--   Select and prepare all host machines that will run the HAWQ and PXF services. See [Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) and [Select HAWQ Host Machines](../../hawq/install/select-hosts.html).
+-   Select and prepare all host machines that will run the HAWQ and PXF services. See [Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) and [Select HAWQ Host Machines](../../hawq/install/select-hosts/index.html).
 
 ## Procedure <a id="section_kwy_f3j_5r"></a>
 The Ambari plug-in for HAWQ is no longer a separate download, but now included in the HDB software installation package.
 
-1.  Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos.html) to set up local `yum` HDB repositories on the single system (call it `repo-node`) you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster. This system may be your Ambari server host if you choose.
+1.  Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos/index.html) to set up local `yum` HDB repositories on the single system (call it `repo-node`) you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster. This system may be your Ambari server host if you choose.
 
 2.  Log in to the Ambari server host machine as the `root` user.
 
@@ -129,10 +129,10 @@ The Ambari plug-in for HAWQ is no longer a separate download, but now included i
 17.  On the Customize Services page, the **Settings** tab configures basic properties of the HAWQ cluster. In most cases you can accept the default values provided on this page. Several configuration options may require attention depending on your deployment:
     *  **HAWQ Master Directory**, **HAWQ Segment Directory**: This specifies the base path for the HAWQ master or segment data directory.
     *  **HAWQ Master Temp Directories**, **HAWQ Segment Temp Directories**: HAWQ temporary directories are used for spill files. Enter one or more directories in which the HAWQ Master or a HAWQ segment stores these temporary files. Separate multiple directories with a comma. Any directories that you specify must already be available on all host machines. If you do not specify master or segment temporary directories, temporary files are stored in `/data/hawq/tmp/[master|segment]`.<br/><br/>As a best practice, use multiple master and segment temporary directories on separate, large disks (2TB or greater) to load balance writes to temporary files \(for example, `/disk1/tmp,/disk2/tmp`\). For a given query, HAWQ will use a separate temp directory (if available) for each virtual segment to store spill files. Multiple HAWQ sessions will also use separate temp directories where available to avoid disk contention. If you configure too few temp directories, or you place multiple temp directories on the same disk, you increase the risk of disk contention or running out of disk space when multiple virtual segments target the same disk. Each HAWQ segment node can have 6 virtual segments.
-    *  **Resource Manager**: Select the resource manager to use for allocating resources in your HAWQ cluster. If you choose **Standalone**, HAWQ exclusively uses resources from the whole cluster. If you choose **YARN**, HAWQ contacts the YARN resource manager to negotiate resources. You can change the resource manager type after the initial installation. You will also have to configure some YARN-related properties in step 22. For more information on using YARN to manage resources, see [Managing Resources](../../hawq/resourcemgmt/HAWQResourceManagement.html).
+    *  **Resource Manager**: Select the resource manager to use for allocating resources in your HAWQ cluster. If you choose **Standalone**, HAWQ exclusively uses resources from the whole cluster. If you choose **YARN**, HAWQ contacts the YARN resource manager to negotiate resources. You can change the resource manager type after the initial installation. You will also have to configure some YARN-related properties in step 22. For more information on using YARN to manage resources, see [Managing Resources](../../hawq/resourcemgmt/HAWQResourceManagement/index.html).
 
 		**Caution:** If you are installing HAWQ in secure mode (Kerberos-enabled), then set **Resource Manager** to **Standalone** to avoid encountering a known installation issue. You can enable YARN mode post-installation if YARN resource management is desired in HAWQ.  
-    *  **VM Overcommit**: Set this value according to the instructions in the [System Requirements](../../hawq/requirements/system-requirements.html) document.
+    *  **VM Overcommit**: Set this value according to the instructions in the [System Requirements](../../hawq/requirements/system-requirements/index.html) document.
 
 17.  Click the **Advanced** tab and enter a **HAWQ System User Password**. Retype the password where indicated.
 >
@@ -154,7 +154,7 @@ The Ambari plug-in for HAWQ is no longer a separate download, but now included i
 	|Property|Action|
     |--------|------|
     |**Advanced hawq-site > hawq\_rm\_yarn\_address**|Specify the address and port number of the YARN resource manager server \(the value of `yarn.resourcemanager.address`\). For example: rm1.example.com:8050|
-    |**Advanced hawq-site > hawq\_rm\_yarn\_queue\_name**|Specify the YARN queue name to use for registering the HAWQ resource manager. For example: `default` **Note:** If you specify a custom queue name other than `default`, you must configure the YARN scheduler and custom queue capacity, either through Ambari or directly in YARN's configuration files. See [Integrating YARN with HAWQ](../../hawq/resourcemgmt/YARNIntegration.html) for more details. |
+    |**Advanced hawq-site > hawq\_rm\_yarn\_queue\_name**|Specify the YARN queue name to use for registering the HAWQ resource manager. For example: `default` **Note:** If you specify a custom queue name other than `default`, you must configure the YARN scheduler and custom queue capacity, either through Ambari or directly in YARN's configuration files. See [Integrating YARN with HAWQ](../../hawq/resourcemgmt/YARNIntegration/index.html) for more details. |
     |**Advanced hawq-site > hawq\_rm\_yarn\_scheduler\_address**|Specify the address and port number of the YARN scheduler server \(the value of `yarn.resourcemanager.scheduler.address`\). For example: rm1.example.com:8030|
 
 	If you have enabled high availability for YARN, then verify that the following values have been populated correctly in HAWQ:
@@ -329,7 +329,7 @@ Perform the following steps to update your Hive profile definitions:
 
 ## Post-Install Procedure for Hive and HBase<a id="post-install-pxf"></a>
 
-If you plan to access Hive or HBase with PXF, perform the post-install procedures identified in [PXF Post-Installation Procedures for Hive/HBase](postinstall-pxf-hbasehive.html) to complete the installation and configuration of the associated PXF plug-ins.
+If you plan to access Hive or HBase with PXF, perform the post-install procedures identified in [PXF Post-Installation Procedures for Hive/HBase](postinstall-pxf-hbasehive/index.html) to complete the installation and configuration of the associated PXF plug-ins.
 
 ## Post-Install Procedure for JSON<a id="post-install-json"></a>
 

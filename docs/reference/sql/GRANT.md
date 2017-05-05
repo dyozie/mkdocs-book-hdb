@@ -196,4 +196,4 @@ Privileges on databases, tablespaces, schemas, and languages are HAWQ extensions
 
 ## See Also<a id="topic1__section11"></a>
 
-[REVOKE](REVOKE.html)
+[REVOKE](REVOKE/index.html)

@@ -32,7 +32,7 @@ HAWQ employs several mechanisms for ensuring high availability. The foremost mec
 * Master mirroring. Clusters have a standby master in the event of failure of the primary master.
 * Dual clusters. Administrators can create a secondary cluster and synchronizes its data with the primary cluster either through dual ETL or backup and restore mechanisms.
 
-In addition to high availability managed on the HAWQ level, you can enable high availability in HDFS for HAWQ by implementing the high availability feature for NameNodes. See [HAWQ Filespaces and High Availability Enabled HDFS](../admin/HAWQFilespacesandHighAvailabilityEnabledHDFS.html).
+In addition to high availability managed on the HAWQ level, you can enable high availability in HDFS for HAWQ by implementing the high availability feature for NameNodes. See [HAWQ Filespaces and High Availability Enabled HDFS](../admin/HAWQFilespacesandHighAvailabilityEnabledHDFS/index.html).
 
 
 ## About Segment Fault Tolerance <a id="aboutsegmentfailover"></a>

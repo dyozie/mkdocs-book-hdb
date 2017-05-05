@@ -66,4 +66,4 @@ The `DROP OWNED` statement is a HAWQ extension.
 
 ## See Also<a id="topic1__section8"></a>
 
-[REASSIGN OWNED](REASSIGN-OWNED.html), [DROP ROLE](DROP-ROLE.html)
+[REASSIGN OWNED](REASSIGN-OWNED.html), [DROP ROLE](DROP-ROLE/index.html)

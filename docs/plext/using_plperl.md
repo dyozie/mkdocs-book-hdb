@@ -43,4 +43,4 @@ psql# CREATE LANGUAGE plperl;
 
 ## References <a id="references"></a>
 
-For more information on using PL/Perl, see the PostgreSQL PL/Perl documentation at [https://www.postgresql.org/docs/8.2/static/plperl.html](https://www.postgresql.org/docs/8.2/static/plperl.html).
+For more information on using PL/Perl, see the PostgreSQL PL/Perl documentation at [https://www.postgresql.org/docs/8.2/static/plperl.html](https://www.postgresql.org/docs/8.2/static/plperl/index.html).

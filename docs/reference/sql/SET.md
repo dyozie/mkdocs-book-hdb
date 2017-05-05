@@ -103,4 +103,4 @@ SET TIME ZONE 'Europe/Rome';
 
 ## See Also<a id="topic1__section7"></a>
 
-[RESET](RESET.html), [SHOW](SHOW.html)
+[RESET](RESET.html), [SHOW](SHOW/index.html)

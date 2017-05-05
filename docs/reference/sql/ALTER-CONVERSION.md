@@ -70,6 +70,6 @@ There is no ALTER CONVERSION statement in the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE CONVERSION](CREATE-CONVERSION.html), [DROP CONVERSION](DROP-CONVERSION.html)
+[CREATE CONVERSION](CREATE-CONVERSION.html), [DROP CONVERSION](DROP-CONVERSION/index.html)
 
 

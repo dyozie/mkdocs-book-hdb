@@ -201,4 +201,4 @@ CREATE TABLE big_objs (
 
 ## See Also<a id="topic1__section11"></a>
 
-[CREATE FUNCTION](CREATE-FUNCTION.html), [ALTER TYPE](ALTER-TYPE.html), [DROP TYPE](DROP-TYPE.html)
+[CREATE FUNCTION](CREATE-FUNCTION.html), [ALTER TYPE](ALTER-TYPE.html), [DROP TYPE](DROP-TYPE/index.html)

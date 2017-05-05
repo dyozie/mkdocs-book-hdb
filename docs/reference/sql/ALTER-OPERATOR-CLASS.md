@@ -57,6 +57,6 @@ There is no `ALTER OPERATOR` statement in the SQL standard.
 
 ## See Also<a id="see"></a>
 
-[CREATE OPERATOR](CREATE-OPERATOR.html), [DROP OPERATOR CLASS](DROP-OPERATOR-CLASS.html)
+[CREATE OPERATOR](CREATE-OPERATOR.html), [DROP OPERATOR CLASS](DROP-OPERATOR-CLASS/index.html)
 
 

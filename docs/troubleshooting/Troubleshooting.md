@@ -40,10 +40,10 @@ A query is not executing as quickly as you would expect. Here is how to investig
     2.  Are there many failed disks?
 
 2.  Check table statistics. Have the tables involved in the query been analyzed?
-3.  Check the plan of the query and run [`EXPLAIN ANALYZE`](../reference/sql/EXPLAIN.html) to determine the bottleneck. 
+3.  Check the plan of the query and run [`EXPLAIN ANALYZE`](../reference/sql/EXPLAIN/index.html) to determine the bottleneck. 
     Sometimes, there is not enough memory for some operators, such as Hash Join, or spill files are used. If an operator cannot perform all of its work in the memory allocated to it, it caches data on disk in *spill files*. Compared with no spill files, a query will run much slower.
 
-4.  Check data locality statistics using [`EXPLAIN ANALYZE`](../reference/sql/EXPLAIN.html). Alternately you can check the logs. Data locality result for every query could also be found in the log of HAWQ. See [Data Locality Statistics](../query/query-performance.html#topic_amk_drc_d5) for information on the statistics.
+4.  Check data locality statistics using [`EXPLAIN ANALYZE`](../reference/sql/EXPLAIN/index.html). Alternately you can check the logs. Data locality result for every query could also be found in the log of HAWQ. See [Data Locality Statistics](../query/query-performance.html#topic_amk_drc_d5) for information on the statistics.
 5.  Check resource queue status. You can query view `pg_resqueue_status` to check if the target queue has already dispatched some resource to the queries, or if the target queue is lacking resources. See [Checking Existing Resource Queues](../resourcemgmt/ResourceQueues.html#topic_lqy_gls_zt).
 6.  Analyze a dump of the resource manager's status to see more resource queue status. See [Analyzing Resource Manager Status](../resourcemgmt/ResourceQueues.html#topic_zrh_pkc_f5).
 
@@ -101,7 +101,7 @@ Some software and projects have virtualized network interfaces that use auto-con
 
 ## Investigating Segments Marked As Down <a id="investigatedownsegment"></a>
 
-**Problem:** The [HAWQ fault tolerance service (FTS)](../admin/FaultTolerance.html) has marked a segment as down in the [gp_segment_configuration](../reference/catalog/gp_segment_configuration.html) catalog table.
+**Problem:** The [HAWQ fault tolerance service (FTS)](../admin/FaultTolerance.html) has marked a segment as down in the [gp_segment_configuration](../reference/catalog/gp_segment_configuration/index.html) catalog table.
 
 **Cause:**  FTS marks a segment as down when a segment encounters a critical error. For example, a temporary directory on the segment fails due to a hardware error. Other causes might include network or communication errors, resource manager errors, or simply a heartbeat timeout. The segment reports critical failures to the HAWQ master through a heartbeat report.
 

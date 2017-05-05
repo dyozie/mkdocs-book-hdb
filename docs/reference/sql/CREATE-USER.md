@@ -52,7 +52,7 @@ where \<option\> can be:
 
 ## Description<a id="topic1__section3"></a>
 
-HAWQ does not support `CREATE USER`. This command has been replaced by [CREATE ROLE](CREATE-ROLE.html).
+HAWQ does not support `CREATE USER`. This command has been replaced by [CREATE ROLE](CREATE-ROLE/index.html).
 
 The only difference between `CREATE ROLE` and `CREATE                     USER` is that `LOGIN` is assumed by default with `CREATE USER`, whereas `NOLOGIN` is assumed by default with `CREATE ROLE`.
 
@@ -62,4 +62,4 @@ There is no `CREATE USER` statement in the SQL standard.
 
 ## See Also<a id="topic1__section5"></a>
 
-[CREATE ROLE](CREATE-ROLE.html)
+[CREATE ROLE](CREATE-ROLE/index.html)

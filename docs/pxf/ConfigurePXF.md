@@ -57,7 +57,7 @@ You can use PXF on a secure HDFS cluster. Read, write, and analyze operations f
 -   Both HDFS and YARN principals are created and are properly configured.
 -   HAWQ is correctly configured to work in secure mode.
 
-Please refer to [Troubleshooting PXF](TroubleshootingPXF.html) for common errors related to PXF security and their meaning.
+Please refer to [Troubleshooting PXF](TroubleshootingPXF/index.html) for common errors related to PXF security and their meaning.
 
 ## Credentials for Remote Services<a id="credentialsforremoteservices"></a>
 

@@ -23,39 +23,39 @@ under the License.
 
 This section provides a complete reference to HAWQ SQL commands, management utilities, configuration parameters, environment variables, and database objects.
 
--   **[Server Configuration Parameter Reference](../reference/HAWQSiteConfig.html)**
+-   **[Server Configuration Parameter Reference](../reference/HAWQSiteConfig/index.html)**
 
     This section describes all server configuration guc/parameters that are available in HAWQ.
 
--   **[HDFS Configuration Reference](../reference/HDFSConfigurationParameterReference.html)**
+-   **[HDFS Configuration Reference](../reference/HDFSConfigurationParameterReference/index.html)**
 
     This reference page describes HDFS configuration values that are configured for HAWQ either within `hdfs-site.xml`, `core-site.xml`, or `hdfs-client.xml`.
 
--   **[Environment Variables](../reference/HAWQEnvironmentVariables.html)**
+-   **[Environment Variables](../reference/HAWQEnvironmentVariables/index.html)**
 
     This topic contains a reference of the environment variables that you set for HAWQ.
 
--   **[Character Set Support Reference](../reference/CharacterSetSupportReference.html)**
+-   **[Character Set Support Reference](../reference/CharacterSetSupportReference/index.html)**
 
     This topic provides a referene of the character sets supported in HAWQ.
 
--   **[Data Types](../reference/HAWQDataTypes.html)**
+-   **[Data Types](../reference/HAWQDataTypes/index.html)**
 
     This topic provides a reference of the data types supported in HAWQ.
 
--   **[SQL Commands](../reference/SQLCommandReference.html)**
+-   **[SQL Commands](../reference/SQLCommandReference/index.html)**
 
     This section contains a description and the syntax of the SQL commands supported by HAWQ.
 
--   **[System Catalog Reference](../reference/catalog/catalog_ref.html)**
+-   **[System Catalog Reference](../reference/catalog/catalog_ref/index.html)**
 
     This reference describes the HAWQ system catalog tables and views.
 
--   **[The hawq\_toolkit Administrative Schema](../reference/toolkit/hawq_toolkit.html)**
+-   **[The hawq\_toolkit Administrative Schema](../reference/toolkit/hawq_toolkit/index.html)**
 
     This section provides a reference on the `hawq_toolkit` administrative schema.
 
--   **[HAWQ Management Tools Reference](../reference/cli/management_tools.html)**
+-   **[HAWQ Management Tools Reference](../reference/cli/management_tools/index.html)**
 
     Reference information for command-line utilities available in HAWQ.
 

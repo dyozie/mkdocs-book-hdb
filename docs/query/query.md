@@ -27,27 +27,27 @@ You enter SQL statements called queries to view and analyze data in a database u
 
 **Note:** HAWQ queries timeout after a period of 600 seconds. For this reason, long-running queries may appear to hang until results are processed or until the timeout period expires.
 
--   **[About HAWQ Query Processing](../query/HAWQQueryProcessing.html)**
+-   **[About HAWQ Query Processing](../query/HAWQQueryProcessing/index.html)**
 
     This topic provides an overview of how HAWQ processes queries. Understanding this process can be useful when writing and tuning queries.
 
--   **[About GPORCA](../query/gporca/query-gporca-optimizer.html)**
+-   **[About GPORCA](../query/gporca/query-gporca-optimizer/index.html)**
 
     In HAWQ, you can use GPORCA or the legacy query optimizer.
 
--   **[Defining Queries](../query/defining-queries.html)**
+-   **[Defining Queries](../query/defining-queries/index.html)**
 
     HAWQ is based on the PostgreSQL implementation of the SQL standard. SQL commands are typically entered using the standard PostgreSQL interactive terminal `psql`, but other programs that have similar functionality can be used as well.
 
--   **[Using Functions and Operators](../query/functions-operators.html)**
+-   **[Using Functions and Operators](../query/functions-operators/index.html)**
 
     HAWQ evaluates functions and operators used in SQL expressions.
 
--   **[Query Performance](../query/query-performance.html)**
+-   **[Query Performance](../query/query-performance/index.html)**
 
     HAWQ dynamically allocates resources to queries. Query performance depends on several factors such as data locality, number of virtual segments used for the query and general cluster health.
 
--   **[Query Profiling](../query/query-profiling.html)**
+-   **[Query Profiling](../query/query-profiling/index.html)**
 
     Examine the query plans of poorly performing queries to identify possible performance tuning opportunities.
 

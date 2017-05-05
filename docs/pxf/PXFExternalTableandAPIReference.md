@@ -266,7 +266,7 @@ When a PXF table is analyzed, any of the following conditions might result in a 
 
 If `ANALYZE` is running over all tables in the database, the next table will be processed – a failure processing one table does not stop the command.
 
-For a detailed explanation about HAWQ statistical data gathering, refer to the [`ANALYZE`](../reference/sql/ANALYZE.html) SQL command reference.
+For a detailed explanation about HAWQ statistical data gathering, refer to the [`ANALYZE`](../reference/sql/ANALYZE/index.html) SQL command reference.
 
 **Note:**
 

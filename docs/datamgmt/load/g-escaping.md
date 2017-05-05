@@ -28,8 +28,8 @@ There are two reserved characters that have special meaning to HAWQ:
 
 If your data contains either of these characters, you must escape the character so that HAWQ treats it as data and not as a field separator or new row. By default, the escape character is a \\ (backslash) for text-formatted files and a double quote (") for csv-formatted files.
 
--   **[Escaping in Text Formatted Files](../../datamgmt/load/g-escaping-in-text-formatted-files.html)**
+-   **[Escaping in Text Formatted Files](../../datamgmt/load/g-escaping-in-text-formatted-files/index.html)**
 
--   **[Escaping in CSV Formatted Files](../../datamgmt/load/g-escaping-in-csv-formatted-files.html)**
+-   **[Escaping in CSV Formatted Files](../../datamgmt/load/g-escaping-in-csv-formatted-files/index.html)**
 
 

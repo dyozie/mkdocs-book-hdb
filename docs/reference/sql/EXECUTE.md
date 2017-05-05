@@ -61,4 +61,4 @@ The SQL standard includes an `EXECUTE` statement, but it is only for use in embe
 
 ## See Also<a id="topic1__section7"></a>
 
-[DEALLOCATE](DEALLOCATE.html), [PREPARE](PREPARE.html)
+[DEALLOCATE](DEALLOCATE.html), [PREPARE](PREPARE/index.html)

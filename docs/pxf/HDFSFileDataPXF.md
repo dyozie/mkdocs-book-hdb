@@ -29,7 +29,7 @@ This section describes how to use PXF to access HDFS data, including how to crea
 
 Before working with HDFS file data using HAWQ and PXF, ensure that:
 
--   The HDFS plug-in is installed on all cluster nodes. See [Installing PXF Plug-ins](InstallPXFPlugins.html) for PXF plug-in installation information.
+-   The HDFS plug-in is installed on all cluster nodes. See [Installing PXF Plug-ins](InstallPXFPlugins/index.html) for PXF plug-in installation information.
 -   All HDFS users have read permissions to HDFS services and that write permissions have been restricted to specific users.
 
 ## HDFS File Formats<a id="hdfsplugin_fileformats"></a>
@@ -96,7 +96,7 @@ LOCATION ('pxf://<host>[:<port>]/<path-to-hdfs-file>
 FORMAT '[TEXT|CSV|CUSTOM]' (<formatting-properties>);
 ```
 
-HDFS-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE.html) call are described in the table below.
+HDFS-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE/index.html) call are described in the table below.
 
 | Keyword  | Value |
 |-------|-------------------------------------|
@@ -278,7 +278,7 @@ The following table summarizes external mapping rules for Avro data.
 
 | Avro Data Type                                                    | PXF/HAWQ Data Type                                                                                                                                                                                            |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Primitive type (int, double, float, long, string, bytes, boolean) | Use the corresponding HAWQ built-in data type; see [Data Types](../reference/HAWQDataTypes.html). |
+| Primitive type (int, double, float, long, string, bytes, boolean) | Use the corresponding HAWQ built-in data type; see [Data Types](../reference/HAWQDataTypes/index.html). |
 | Complex type: Array, Map, Record, or Enum                         | TEXT, with delimiters inserted between collection items, mapped key-value pairs, and record data.                                                                                           |
 | Complex type: Fixed                                               | BYTEA                                                                                                                                                                                               |
 | Union                                                             | Follows the above conventions for primitive or complex data types, depending on the union; supports Null values.                                                                     |
@@ -389,7 +389,7 @@ Perform the following steps to create a sample Avro data file conforming to the 
 
     The sample data uses a comma `,` to separate top level records and a colon `:` to separate map/key values and record field name/values.
 
-3. Convert the text file to Avro format. There are various ways to perform the conversion, both programmatically and via the command line. In this example, we use the [Java Avro tools](http://avro.apache.org/releases.html); the jar file resides in the current directory:
+3. Convert the text file to Avro format. There are various ways to perform the conversion, both programmatically and via the command line. In this example, we use the [Java Avro tools](http://avro.apache.org/releases/index.html); the jar file resides in the current directory:
 
     ``` shell
     $ java -jar ./avro-tools-1.8.1.jar fromjson --schema-file /tmp/avro_schema.avsc /tmp/pxf_hdfs_avro.txt > /tmp/pxf_hdfs_avro.avro

@@ -215,10 +215,10 @@ Perform the following steps to identify the names and email addresses of all cus
 ## Summary    <a id="tut_intropxf_summary"></a>
 In this lesson, you created PXF external tables to access HDFS data and queried these tables. You also performed a query using this external data and the HAWQ internal fact tables created previously, executing business logic on both your managed and unmanaged data.
 
-For additional information about PXF, refer to [Using PXF with Unmanaged Data](../../pxf/HawqExtensionFrameworkPXF.html).
+For additional information about PXF, refer to [Using PXF with Unmanaged Data](../../pxf/HawqExtensionFrameworkPXF/index.html).
 
-Refer to [Accessing HDFS File Data](../../pxf/HDFSFileDataPXF.html) for detailed information about the PXF HDFS Plug-in.
+Refer to [Accessing HDFS File Data](../../pxf/HDFSFileDataPXF/index.html) for detailed information about the PXF HDFS Plug-in.
 
 This lesson wraps up the *Getting Started with HAWQ* tutorial. Now that you are familiar with basic environment set-up, cluster, database, and data management activities, you should feel more confident interacting with your HAWQ cluster.
  
-**Next Steps**: View HAWQ documentation related to [Running a HAWQ Cluster](../../admin/RunningHAWQ.html).
+**Next Steps**: View HAWQ documentation related to [Running a HAWQ Cluster](../../admin/RunningHAWQ/index.html).

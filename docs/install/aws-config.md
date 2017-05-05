@@ -29,7 +29,7 @@ Amazon EC2 can be used to launch as many virtual servers as you need, configure 
 
 EC2 instances are managed by AWS. AWS isolates your EC2 instances from other users in a virtual private cloud (VPC) and lets you control access to the instances. You can configure instance features such as operating system, network connectivity (network ports and protocols, IP addresses), access to the Internet, and size and type of disk storage. 
 
-For information about Amazon EC2, see the [EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html).
+For information about Amazon EC2, see the [EC2 User Guide](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts/index.html).
 
 ## Create and Launch HAWQ Instances<a id="topic_nhk_df4_2v"></a>
 
@@ -86,7 +86,7 @@ Several instance store-backed EC2 instance types have shown acceptable performan
  
 **Note**: This list is not exhaustive. You may find other instance types with similar specifications suitable for your HAWQ deployment.
 
-For optimal network performance, the chosen HAWQ instance type should support EC2 enhanced networking. Enhanced networking results in higher performance, lower latency, and lower jitter. Refer to [Enhanced Networking on Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html) for detailed information on enabling enhanced networking in supported EC2 instance types.
+For optimal network performance, the chosen HAWQ instance type should support EC2 enhanced networking. Enhanced networking results in higher performance, lower latency, and lower jitter. Refer to [Enhanced Networking on Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking/index.html) for detailed information on enabling enhanced networking in supported EC2 instance types.
 
 
 ### Configure Networking and VPC<a id="topic_cfgnetw"></a>
@@ -139,7 +139,7 @@ $ ssh -i ./my-test.pem user1@192.0.2.0
 
 After launching your HAWQ instance, you will connect to and configure the instance. The **Instances** page of the EC2 Console lists the running instances and their associated network access information.
 
-Before installing HAWQ, set up the EC2 instances as you would local host server machines. Configure the host operating system, configure host network information (for example, update the `/etc/hosts` file), set operating system parameters, and install operating system packages. [Apache HAWQ System Requirements](../requirements/system-requirements.html) and [Select HAWQ Host Machines](../install/select-hosts.html) provide the information necessary to prepare your operating system environment for HAWQ.
+Before installing HAWQ, set up the EC2 instances as you would local host server machines. Configure the host operating system, configure host network information (for example, update the `/etc/hosts` file), set operating system parameters, and install operating system packages. [Apache HAWQ System Requirements](../requirements/system-requirements.html) and [Select HAWQ Host Machines](../install/select-hosts/index.html) provide the information necessary to prepare your operating system environment for HAWQ.
 
 ###Passwordless SSH Configuration<a id="topic_pwdlessssh_cc"></a>
 
@@ -152,12 +152,12 @@ Password authentication is typically disabled by default in cloud images. Update
 Links to related Amazon Web Services and EC2 features and information.
 
 - [Amazon Web Services](https://aws.amazon.com)
-- [Amazon Machine Image \(AMI\)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)
-- [EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)
-- [Elastic Block Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html)
-- [EC2 Key Pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
-- [Elastic IP Address](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)
-- [Enhanced Networking on Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html)
-- [Internet Gateways] (http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Internet_Gateway.html)
+- [Amazon Machine Image \(AMI\)](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs/index.html)
+- [EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage/index.html)
+- [Elastic Block Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized/index.html)
+- [EC2 Key Pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs/index.html)
+- [Elastic IP Address](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip/index.html)
+- [Enhanced Networking on Linux Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking/index.html)
+- [Internet Gateways] (http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Internet_Gateway/index.html)
 - [Subnet Public IP Addressing](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html#subnet-public-ip)
-- [Virtual Private Cloud](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html)
+- [Virtual Private Cloud](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction/index.html)

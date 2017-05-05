@@ -93,4 +93,4 @@ The SQL standard specifies that the key word `SAVEPOINT` is mandatory, but HAWQ 
 
 ## See Also<a id="topic1__section8"></a>
 
-[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [SAVEPOINT](SAVEPOINT.html), [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html), [ROLLBACK](ROLLBACK.html)
+[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [SAVEPOINT](SAVEPOINT.html), [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html), [ROLLBACK](ROLLBACK/index.html)

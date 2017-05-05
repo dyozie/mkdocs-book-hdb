@@ -27,31 +27,31 @@ In HAWQ, you can use GPORCA or the legacy query optimizer.
 
 These sections describe GPORCA functionality and usage:
 
--   **[Overview of GPORCA](../../query/gporca/query-gporca-overview.html)**
+-   **[Overview of GPORCA](../../query/gporca/query-gporca-overview/index.html)**
 
     GPORCA extends the planning and optimization capabilities of the HAWQ legacy optimizer.
 
--   **[GPORCA Features and Enhancements](../../query/gporca/query-gporca-features.html)**
+-   **[GPORCA Features and Enhancements](../../query/gporca/query-gporca-features/index.html)**
 
     GPORCA includes enhancements for specific types of queries and operations:
 
--   **[Enabling GPORCA](../../query/gporca/query-gporca-enable.html)**
+-   **[Enabling GPORCA](../../query/gporca/query-gporca-enable/index.html)**
 
     Precompiled versions of HAWQ that include the GPORCA query optimizer enable it by default, no additional configuration is required. To use the GPORCA query optimizer in a HAWQ built from source, your build must include GPORCA. You must also enable specific HAWQ server configuration parameters at or after install time:
 
--   **[Considerations when Using GPORCA](../../query/gporca/query-gporca-notes.html)**
+-   **[Considerations when Using GPORCA](../../query/gporca/query-gporca-notes/index.html)**
 
     To execute queries optimally with GPORCA, consider certain criteria for the query.
 
--   **[Determining The Query Optimizer In Use](../../query/gporca/query-gporca-fallback.html)**
+-   **[Determining The Query Optimizer In Use](../../query/gporca/query-gporca-fallback/index.html)**
 
     When GPORCA is enabled, you can determine if HAWQ is using GPORCA or is falling back to the legacy query optimizer.
 
--   **[Changed Behavior with GPORCA](../../query/gporca/query-gporca-changed.html)**
+-   **[Changed Behavior with GPORCA](../../query/gporca/query-gporca-changed/index.html)**
 
     When GPORCA is enabled, HAWQ's behavior changes. This topic describes these changes.
 
--   **[GPORCA Limitations](../../query/gporca/query-gporca-limitations.html)**
+-   **[GPORCA Limitations](../../query/gporca/query-gporca-limitations/index.html)**
 
     There are limitations in HAWQ when GPORCA is enabled. GPORCA and the legacy query optimizer currently coexist in HAWQ because GPORCA does not support all HAWQ features.
 

@@ -64,4 +64,4 @@ There is no `DROP DATABASE` statement in the SQL standard.
 
 ## See Also<a id="topic1__section8"></a>
 
-[CREATE DATABASE](CREATE-DATABASE.html)
+[CREATE DATABASE](CREATE-DATABASE/index.html)

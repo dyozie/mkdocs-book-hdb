@@ -31,7 +31,7 @@ DROP USER [IF EXISTS] <name> [, ...]
 
 ## Description<a id="topic1__section3"></a>
 
-`DROP USER` is an obsolete command, though still accepted for backwards compatibility. Groups (and users) have been superseded by the more general concept of roles. See [DROP ROLE](DROP-ROLE.html) for more information.
+`DROP USER` is an obsolete command, though still accepted for backwards compatibility. Groups (and users) have been superseded by the more general concept of roles. See [DROP ROLE](DROP-ROLE/index.html) for more information.
 
 ## Parameters<a id="topic1__section4"></a>
 
@@ -47,4 +47,4 @@ There is no `DROP USER` statement in the SQL standard. The SQL standard leaves t
 
 ## See Also<a id="topic1__section6"></a>
 
-[DROP ROLE](DROP-ROLE.html)
+[DROP ROLE](DROP-ROLE/index.html)

@@ -66,7 +66,7 @@ The following table summarizes external mapping rules for JSON data.
 
 | JSON Data Type                                                    | HAWQ Data Type                                                                                                                                                                                            |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Primitive type (integer, float, string, boolean, null) | Use the corresponding HAWQ built-in data type; see [Data Types](../reference/HAWQDataTypes.html). |
+| Primitive type (integer, float, string, boolean, null) | Use the corresponding HAWQ built-in data type; see [Data Types](../reference/HAWQDataTypes/index.html). |
 | Array                         | Use `[]` brackets to identify a specific array index to a member of primitive type.                                                                                            |
 | Object                | Use dot `.` notation to specify each level of projection (nesting) to a member of a primitive type.                                                                                         |
 
@@ -179,7 +179,7 @@ JSON-plug-in-specific keywords and values used in the `CREATE EXTERNAL TABLE` ca
 
 ### Example 1 <a id="jsonexample1"></a>
 
-The following [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE.html) SQL call creates a queryable external table based on the data in the single-line-per-record JSON example.
+The following [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE/index.html) SQL call creates a queryable external table based on the data in the single-line-per-record JSON example.
 
 ``` sql 
 CREATE EXTERNAL TABLE sample_json_singleline_tbl(

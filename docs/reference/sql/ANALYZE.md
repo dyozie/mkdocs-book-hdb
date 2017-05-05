@@ -89,6 +89,6 @@ There is no ANALYZE statement in the SQL standard.
 
 ## See Also<a id="see"></a>
 
-[ALTER TABLE](ALTER-TABLE.html), [EXPLAIN](EXPLAIN.html), [VACUUM](VACUUM.html)
+[ALTER TABLE](ALTER-TABLE.html), [EXPLAIN](EXPLAIN.html), [VACUUM](VACUUM/index.html)
 
 

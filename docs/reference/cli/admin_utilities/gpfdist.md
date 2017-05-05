@@ -50,7 +50,7 @@ For readable external tables, if load files are compressed using `gzip` or `bzip
 
 **Note:** Currently, readable external tables do not support compression on Windows platforms, and writable external tables do not support compression on any platforms.
 
-To run `gpfdist` on your ETL machines, refer to [Client-Based HAWQ Load Tools](../../../datamgmt/load/client-loadtools.html) for more information.
+To run `gpfdist` on your ETL machines, refer to [Client-Based HAWQ Load Tools](../../../datamgmt/load/client-loadtools/index.html) for more information.
 
 **Note:** When using IPv6, always enclose the numeric IP address in brackets.
 
@@ -173,4 +173,4 @@ $ kill 3456
 
 ## See Also<a id="topic1__section7"></a>
 
-[hawq load](hawqload.html#topic1), [CREATE EXTERNAL TABLE](../../sql/CREATE-EXTERNAL-TABLE.html)
+[hawq load](hawqload.html#topic1), [CREATE EXTERNAL TABLE](../../sql/CREATE-EXTERNAL-TABLE/index.html)

@@ -4,13 +4,13 @@ title: Install HAWQ from the Command Line (Optional)
 
 This section provides instructions for installing a HAWQ system.
 
-**Note:** Install HAWQ from the command line only if you do not use Ambari to install and manage HDFS. If you use Ambari for HDFS and management, follow the instructions in [Install HAWQ using Ambari](install-ambari.html) instead.
+**Note:** Install HAWQ from the command line only if you do not use Ambari to install and manage HDFS. If you use Ambari for HDFS and management, follow the instructions in [Install HAWQ using Ambari](install-ambari/index.html) instead.
 
 ## Prerequisites <a id="cliprereq"></a>
 
 Install a compatible HDFS cluster before you attempt to install HAWQ.
 
-Select and configure all host machines that will run the HAWQ and PXF services. See [Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) and [Select HAWQ Host Machines](../../hawq/install/select-hosts.html).
+Select and configure all host machines that will run the HAWQ and PXF services. See [Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) and [Select HAWQ Host Machines](../../hawq/install/select-hosts/index.html).
 
 ## Prepare Host Machines <a id="topic_eqn_fc4_15"></a>
 
@@ -95,7 +95,7 @@ Configure operating system parameters on each host machine before you begin to i
 
 ## Add New HDB Software Repositories<a id="20to201up_setupyum"></a>
 
-Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos.html) to set up local `yum` HDB repositories on the single system (call it `repo-node`) you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster.
+Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos/index.html) to set up local `yum` HDB repositories on the single system (call it `repo-node`) you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster.
 
 After repo set up, each HAWQ host will be configured to obtain the HDB software from the `repo-node` HDB repositories.
 
@@ -694,7 +694,7 @@ Perform these basic commands to ensure that the new  cluster is functional.
 
 If you plan on accessing data in external systems such as HDFS or JSON files, Hive or HBase:
 
-1.  Install PXF on the external system. We recommend installing PXF on all nodes in your cluster. See [Installing PXF Plug-ins](../../hawq/pxf/InstallPXFPlugins.html).
+1.  Install PXF on the external system. We recommend installing PXF on all nodes in your cluster. See [Installing PXF Plug-ins](../../hawq/pxf/InstallPXFPlugins/index.html).
 
-2.  Follow the instructions in [PXF Post-Installation Procedures for Hive/HBase ](postinstall-pxf-hbasehive.html) to complete the PXF configuration.
+2.  Follow the instructions in [PXF Post-Installation Procedures for Hive/HBase ](postinstall-pxf-hbasehive/index.html) to complete the PXF configuration.
 

@@ -72,7 +72,7 @@ There are several recommendations to keep in mind when modifying the size of you
 -   When you add a new node, install both a DataNode and a physical segment on the new node.
 -   After adding a new node, you should always rebalance HDFS data to maintain cluster performance.
 -   Adding or removing a node also necessitates an update to the HDFS metadata cache. This update will happen eventually, but can take some time. To speed the update of the metadata cache, execute **`select gp_metadata_cache_clear();`**.
--   Note that for hash distributed tables, expanding the cluster will not immediately improve performance since hash distributed tables use a fixed number of virtual segments. In order to obtain better performance with hash distributed tables, you must redistribute the table to the updated cluster by either the [ALTER TABLE](../reference/sql/ALTER-TABLE.html) or [CREATE TABLE AS](../reference/sql/CREATE-TABLE-AS.html#topic1) command.
+-   Note that for hash distributed tables, expanding the cluster will not immediately improve performance since hash distributed tables use a fixed number of virtual segments. In order to obtain better performance with hash distributed tables, you must redistribute the table to the updated cluster by either the [ALTER TABLE](../reference/sql/ALTER-TABLE/index.html) or [CREATE TABLE AS](../reference/sql/CREATE-TABLE-AS.html#topic1) command.
 -   If you are using hash tables, consider updating the `default_hash_table_bucket_number` server configuration parameter to a larger value after expanding the cluster but before redistributing the hash tables.
 
 ## Best Practices for Monitoring a HAWQ System<a id="best_pract_monitoring"></a>

@@ -163,4 +163,4 @@ $ hawq filespace --movefilespace=cdbfast_fs_a
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE TABLESPACE](../../sql/CREATE-TABLESPACE.html)
+[CREATE TABLESPACE](../../sql/CREATE-TABLESPACE/index.html)

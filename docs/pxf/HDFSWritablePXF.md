@@ -33,7 +33,7 @@ This section describes how to use these PXF profiles to create writable external
 
 Before working with HDFS file data using HAWQ and PXF, ensure that:
 
--   The HDFS plug-in is installed on all cluster nodes. See [Installing PXF Plug-ins](InstallPXFPlugins.html) for PXF plug-in installation information.
+-   The HDFS plug-in is installed on all cluster nodes. See [Installing PXF Plug-ins](InstallPXFPlugins/index.html) for PXF plug-in installation information.
 -   All HDFS users have read permissions to HDFS services.
 -   HDFS write permissions are provided to a restricted set of users.
 
@@ -50,7 +50,7 @@ LOCATION ('pxf://<host>[:<port>]/<path-to-hdfs-file>
 FORMAT '[TEXT|CSV|CUSTOM]' (<formatting-properties>);
 ```
 
-HDFS-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE.html) call are described in the table below.
+HDFS-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE/index.html) call are described in the table below.
 
 | Keyword  | Value |
 |-------|-------------------------------------|

@@ -523,4 +523,4 @@ To prevent data from becoming out-of-sync across the segments in HAWQ, any funct
 
 ## See Also<a id="topic1__section25"></a>
 
-[EXPLAIN](EXPLAIN.html)
+[EXPLAIN](EXPLAIN/index.html)

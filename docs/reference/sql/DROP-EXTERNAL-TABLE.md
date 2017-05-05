@@ -64,4 +64,4 @@ There is no `DROP EXTERNAL TABLE` statement in the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html)
+[CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE/index.html)

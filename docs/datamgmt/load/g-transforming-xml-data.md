@@ -38,16 +38,16 @@ To load or extract XML data:
 
 The first three steps comprise most of the development effort. The last two steps are straightforward and repeatable, suitable for production.
 
--   **[Determine the Transformation Schema](../../datamgmt/load/g-determine-the-transformation-schema.html)**
+-   **[Determine the Transformation Schema](../../datamgmt/load/g-determine-the-transformation-schema/index.html)**
 
--   **[Write a Transform](../../datamgmt/load/g-write-a-transform.html)**
+-   **[Write a Transform](../../datamgmt/load/g-write-a-transform/index.html)**
 
--   **[Write the gpfdist Configuration](../../datamgmt/load/g-write-the-gpfdist-configuration.html)**
+-   **[Write the gpfdist Configuration](../../datamgmt/load/g-write-the-gpfdist-configuration/index.html)**
 
--   **[Load the Data](../../datamgmt/load/g-load-the-data.html)**
+-   **[Load the Data](../../datamgmt/load/g-load-the-data/index.html)**
 
--   **[Transfer and Store the Data](../../datamgmt/load/g-transfer-and-store-the-data.html)**
+-   **[Transfer and Store the Data](../../datamgmt/load/g-transfer-and-store-the-data/index.html)**
 
--   **[XML Transformation Examples](../../datamgmt/load/g-xml-transformation-examples.html)**
+-   **[XML Transformation Examples](../../datamgmt/load/g-xml-transformation-examples/index.html)**
 
 

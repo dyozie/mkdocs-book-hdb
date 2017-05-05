@@ -111,5 +111,5 @@ The `CREATE CAST` command conforms to the SQL standard, except that SQL does not
 
 ## See Also<a id="topic1__section8"></a>
 
-[DROP CAST](DROP-CAST.html),  [CREATE FUNCTION](CREATE-FUNCTION.html)
+[DROP CAST](DROP-CAST.html),  [CREATE FUNCTION](CREATE-FUNCTION/index.html)
 

@@ -111,5 +111,5 @@ jdbc:pivotal:greenplum://hdm1:5432;DatabaseName=getstartdb;User=hdbuser;Password
 
 `libpq` is installed in the `lib/` directory of your HAWQ distribution. `libpq-fe.h`, the header file required for developing front-end PostgreSQL applications, can be found in the `include/` directory.
 
-For additional information on using the `libpq` API, refer to [libpq - C Library](https://www.postgresql.org/docs/8.2/static/libpq.html) in the PostgreSQL documentation.
+For additional information on using the `libpq` API, refer to [libpq - C Library](https://www.postgresql.org/docs/8.2/static/libpq/index.html) in the PostgreSQL documentation.
 

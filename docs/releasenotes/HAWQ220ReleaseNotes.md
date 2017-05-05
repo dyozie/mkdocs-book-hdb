@@ -10,10 +10,10 @@ The supported platform for running Pivotal HDB 2.2.0 comprises:
 
 -   Red Hat Enterprise Linux \(RHEL\) 6.4+, 7.2+ \(64-bit\) \(See note in [Known Issues and Limitations](#issues-os) for kernel limitations.\)
 -   CentOS 7
--   [Hortonworks Data Platform \(HDP\) 2.5.3](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.3/bk_release-notes/content/ch_relnotes_v253.html).
--   [Ambari 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-release-notes/content/ch_relnotes-ambari-2.4.2.0.html) \(for Ambari-based installation and HAWQ cluster management\).
+-   [Hortonworks Data Platform \(HDP\) 2.5.3](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.3/bk_release-notes/content/ch_relnotes_v253/index.html).
+-   [Ambari 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-release-notes/content/ch_relnotes-ambari-2.4.2.0/index.html) \(for Ambari-based installation and HAWQ cluster management\).
 
-Each Pivotal HDB host machine must also meet the Apache HAWQ \(Incubating\) system requirements. [See Apache HAWQ System Requirements](../../hawq/requirements/system-requirements.html) for more information.
+Each Pivotal HDB host machine must also meet the Apache HAWQ \(Incubating\) system requirements. [See Apache HAWQ System Requirements](../../hawq/requirements/system-requirements/index.html) for more information.
 
 ### Product Support Matrix<a id="topic_g53_tgv_2v"></a>
 
@@ -58,7 +58,7 @@ Pivotal HDB 2.2.0 is based on [Apache HAWQ \(Incubating\)](http://hawq.incubator
 
 - *Ranger Integration \(Beta\)* 
 
-    Pivotal HDB 2.2.0 introduces Beta support for Apache Ranger. The HAWQ Ranger Plugin Service is a RESTful service that provides integration between HDB and Ranger policy management.  Ranger integration enables you to use Apache Ranger to authorize user access to HAWQ resources. Using Ranger enables you to manage all of your Hadoop components’ authorization policies using the same user interface, policy store, and auditing stores. Refer to the [Overview of Ranger Policy Management](../../hawq/ranger/ranger-overview.html) for specific information on HAWQ integration with Ranger.
+    Pivotal HDB 2.2.0 introduces Beta support for Apache Ranger. The HAWQ Ranger Plugin Service is a RESTful service that provides integration between HDB and Ranger policy management.  Ranger integration enables you to use Apache Ranger to authorize user access to HAWQ resources. Using Ranger enables you to manage all of your Hadoop components’ authorization policies using the same user interface, policy store, and auditing stores. Refer to the [Overview of Ranger Policy Management](../../hawq/ranger/ranger-overview/index.html) for specific information on HAWQ integration with Ranger.
 
 - *RHEL/CentOS 7.2+ support*
 
@@ -73,9 +73,9 @@ Pivotal HDB 2.2.0 is based on [Apache HAWQ \(Incubating\)](http://hawq.incubator
 
 Pivotal HDB 2.2.0 upgrade paths:
 
-- The [**Upgrading from Pivotal HDB 2.1.x**](../install/HDB21xto22xUpgrade.html) guide provides specific details on applying the Pivotal HDB 2.2.0 minor release to your HDB 2.1.0, 2.1.1, or 2.1.2 installation.
+- The [**Upgrading from Pivotal HDB 2.1.x**](../install/HDB21xto22xUpgrade/index.html) guide provides specific details on applying the Pivotal HDB 2.2.0 minor release to your HDB 2.1.0, 2.1.1, or 2.1.2 installation.
 
-- The [**Upgrading from Pivotal HDB 2.0.1**](../install/HDB20xto22xUpgrade.html) guide details the steps involved to upgrade your Pivotal HDB 2.0.1 installation to HDB 2.2.0.
+- The [**Upgrading from Pivotal HDB 2.0.1**](../install/HDB20xto22xUpgrade/index.html) guide details the steps involved to upgrade your Pivotal HDB 2.0.1 installation to HDB 2.2.0.
 
 **Note**: There is no direct upgrade path from Pivotal HDB 1.x to HDB 2.2.0. For more information on considerations for upgrading from Pivotal 1.x releases to Pivotal 2.x releases, refer to the [Pivotal HDB 2.0 documentation](http://hdb.docs.pivotal.io/200/hdb/releasenotes/HAWQ20ReleaseNotes.html#upgradepaths). Contact your Pivotal representative for assistance in migrating from HDB 1.x to HDB 2.x.
 
@@ -116,7 +116,7 @@ This procedure is not necessary if you are using or installing MADlib 1.10, or i
 
 **If you are upgrading an HDB 2.0 system that contains MADlib:**
 
-1. Complete the Pivotal HDB 2.2.0 upgrade procedure as described in [Upgrading to Pivotal HDB 2.2.0](../install/HDB20xto22xUpgrade.html).
+1. Complete the Pivotal HDB 2.2.0 upgrade procedure as described in [Upgrading to Pivotal HDB 2.2.0](../install/HDB20xto22xUpgrade/index.html).
 
 2. Download and unpack the MADlib 1.9.x binary distribution from the [Pivotal HDB Download Page](https://network.pivotal.io/products/pivotal-hdb) on Pivotal Network.
 

@@ -51,6 +51,6 @@ This command is a HAWQ extension present for historical reasons. ROLLBACK is the
 
 ## See Also<a id="see"></a>
 
-[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK.html)
+[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK/index.html)
 
 

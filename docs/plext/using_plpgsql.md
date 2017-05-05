@@ -82,9 +82,9 @@ This example PL/pgSQL function adds thirteen to an integer:
 
 Refer to the PostgreSQL documentation for detailed information on the statements and control structures supported by the PL/pgSQL language:
 
--  You can execute SQL commands in PL/pgSQL functions using `EXECUTE`, `PERFORM`, and `SELECT ... INTO` statements.  Refer to [Basic Statements](https://www.postgresql.org/docs/8.2/static/plpgsql-statements.html) for PL/pgSQL specifics in this area.
+-  You can execute SQL commands in PL/pgSQL functions using `EXECUTE`, `PERFORM`, and `SELECT ... INTO` statements.  Refer to [Basic Statements](https://www.postgresql.org/docs/8.2/static/plpgsql-statements/index.html) for PL/pgSQL specifics in this area.
 
-- [Control Structures](https://www.postgresql.org/docs/8.2/static/plpgsql-control-structures.html) identifies the data manipulation and control constructs supported by PL/pgSQL, including those for looping through query results and trapping errors.
+- [Control Structures](https://www.postgresql.org/docs/8.2/static/plpgsql-control-structures/index.html) identifies the data manipulation and control constructs supported by PL/pgSQL, including those for looping through query results and trapping errors.
 
 
 ## PL/pgSQL Argument and Result Data Types <a id="supportedargumentandresultdatatypes"></a>
@@ -152,7 +152,7 @@ Notice that you do not include the output arguments when you invoke the `calcula
 
 You may need your PL/pgSQL function to operate on column or row data of which you do not know the data type. PL/pgSQL provides `%TYPE` and `%ROWTYPE` keywords for this purpose.
 
-For additional information on PL/pgSQL declarations, see [Declarations](https://www.postgresql.org/docs/8.2/static/plpgsql-declarations.html) in the PostgreSQL documentation.
+For additional information on PL/pgSQL declarations, see [Declarations](https://www.postgresql.org/docs/8.2/static/plpgsql-declarations/index.html) in the PostgreSQL documentation.
 
 ### Column Type<a id="plpgsqltypes_column"></a>
 

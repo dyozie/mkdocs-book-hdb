@@ -164,7 +164,7 @@ The `pgcrypto` functions allow database administrators to store certain columns 
 
 ## Encrypting Passwords <a id="topic9"></a>
 
-This technical note outlines how to use a server parameter to implement SHA-256 encrypted password storage. Note that in order to use SHA-256 encryption for storage, the client authentication method must be set to `password` rather than the default, `MD5`. \(See [Encrypting Client/Server Connections](client_auth.html) for more details.\) This means that the password is transmitted in clear text over the network; to avoid this, set up SSL to encrypt the client server communication channel.
+This technical note outlines how to use a server parameter to implement SHA-256 encrypted password storage. Note that in order to use SHA-256 encryption for storage, the client authentication method must be set to `password` rather than the default, `MD5`. \(See [Encrypting Client/Server Connections](client_auth/index.html) for more details.\) This means that the password is transmitted in clear text over the network; to avoid this, set up SSL to encrypt the client server communication channel.
 
 ### Enabling SHA-256 Encryption <a id="topic10"></a>
 

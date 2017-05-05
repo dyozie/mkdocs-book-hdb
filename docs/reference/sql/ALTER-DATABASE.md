@@ -49,7 +49,7 @@ ALTER DATABASE <name> RESET <parameter>
 
 ## Notes<a id="notes"></a>
 
-It is also possible to set a configuration parameter session default for a specific role (user) rather than to a database. Role-specific settings override database-specific ones if there is a conflict. See [ALTER ROLE](ALTER-ROLE.html).
+It is also possible to set a configuration parameter session default for a specific role (user) rather than to a database. Role-specific settings override database-specific ones if there is a conflict. See [ALTER ROLE](ALTER-ROLE/index.html).
 
 ## Examples<a id="examples"></a>
 
@@ -66,6 +66,6 @@ The `ALTER DATABASE` statement is a HAWQ extension.
 
 ## See Also<a id="see"></a>
 
-[CREATE DATABASE](CREATE-DATABASE.html#topic1), [DROP DATABASE](DROP-DATABASE.html#topic1), [SET](SET.html)
+[CREATE DATABASE](CREATE-DATABASE.html#topic1), [DROP DATABASE](DROP-DATABASE.html#topic1), [SET](SET/index.html)
 
 

@@ -23,27 +23,27 @@ under the License.
 
 This chapter provides best practices on using the components and features that are part of a HAWQ system.
 
--   **[Best Practices for Configuring HAWQ Parameters](../bestpractices/config_hawq_bestpractices.html)**
+-   **[Best Practices for Configuring HAWQ Parameters](../bestpractices/config_hawq_bestpractices/index.html)**
 
     This topic provides best practices for configuring the parameters in `hawq-site.xml`.
     
--   **[Best Practices for Operating HAWQ](../bestpractices/operating_hawq_bestpractices.html)**
+-   **[Best Practices for Operating HAWQ](../bestpractices/operating_hawq_bestpractices/index.html)**
 
     This topic provides best practices for operating HAWQ, including recommendations for stopping, starting and monitoring HAWQ.
 
--   **[Best Practices for Securing HAWQ](../bestpractices/secure_bestpractices.html)**
+-   **[Best Practices for Securing HAWQ](../bestpractices/secure_bestpractices/index.html)**
 
     To secure your HAWQ deployment, review the recommendations listed in this topic.
 
--   **[Best Practices for Managing Resources](../bestpractices/managing_resources_bestpractices.html)**
+-   **[Best Practices for Managing Resources](../bestpractices/managing_resources_bestpractices/index.html)**
 
     This topic describes best practices for managing resources in HAWQ.
 
--   **[Best Practices for Managing Data](../bestpractices/managing_data_bestpractices.html)**
+-   **[Best Practices for Managing Data](../bestpractices/managing_data_bestpractices/index.html)**
 
     This topic describes best practices for creating databases, loading data, partioning data, and recovering data in HAWQ.
 
--   **[Best Practices for Querying Data](../bestpractices/querying_data_bestpractices.html)**
+-   **[Best Practices for Querying Data](../bestpractices/querying_data_bestpractices/index.html)**
 
     To obtain the best results when querying data in HAWQ, review the best practices described in this topic.
 

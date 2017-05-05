@@ -85,7 +85,7 @@ The password used if the server demands password authentication. Use of this env
 
 The name of the password file to use for lookups. If not set, it defaults to `~/.pgpass`.
 
-See The Password File under [Configuring Client Authentication](../clientaccess/client_auth.html).
+See The Password File under [Configuring Client Authentication](../clientaccess/client_auth/index.html).
 
 ### PGOPTIONS<a id="pgoptions"></a>
 

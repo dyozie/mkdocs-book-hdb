@@ -59,4 +59,4 @@ The SQL standard only specifies the two forms `ROLLBACK` and `ROLLBACK WORK`. Ot
 
 ## See Also<a id="topic1__section8"></a>
 
-[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [SAVEPOINT](SAVEPOINT.html), [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html)
+[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [SAVEPOINT](SAVEPOINT.html), [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT/index.html)

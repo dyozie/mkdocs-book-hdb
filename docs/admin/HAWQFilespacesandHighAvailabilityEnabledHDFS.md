@@ -39,7 +39,7 @@ To enable the HDFS NameNode HA feature for use with HAWQ, you need to perform th
 
 Enable high availability for NameNodes in your HDFS cluster. See the documentation for your Hadoop distribution for instructions on how to do this. 
 
-**Note:** If you're using Ambari to manage your HDFS cluster, you can use the Enable NameNode HA Wizard. For example, [this Hortonworks HDP procedure](https://docs.hortonworks.com/HDPDocuments/Ambari-2.4.1.0/bk_ambari-user-guide/content/how_to_configure_namenode_high_availability.html) outlines how to do this in Ambari for HDP.
+**Note:** If you're using Ambari to manage your HDFS cluster, you can use the Enable NameNode HA Wizard. For example, [this Hortonworks HDP procedure](https://docs.hortonworks.com/HDPDocuments/Ambari-2.4.1.0/bk_ambari-user-guide/content/how_to_configure_namenode_high_availability/index.html) outlines how to do this in Ambari for HDP.
 
 ### Step 2: Collect Information about the Target Filespace <a id="collectinginformationaboutthetargetfilespace"></a>
 

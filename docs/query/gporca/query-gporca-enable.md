@@ -29,7 +29,7 @@ under the License.
     -   [A specific HAWQ database](#topic_pzr_3db_3r)
     -   [A session or query](#topic_lx4_vqk_br)
 
-**Important:** If you intend to execute queries on partitioned tables with GPORCA enabled, you must collect statistics on the partitioned table root partition with the `ANALYZE ROOTPARTITION` command. The command `ANALYZE         ROOTPARTITION` collects statistics on the root partition of a partitioned table without collecting statistics on the leaf partitions. If you specify a list of column names for a partitioned table, the statistics for the columns and the root partition are collected. For information on the `ANALYZE` command, see [ANALYZE](../../reference/sql/ANALYZE.html).
+**Important:** If you intend to execute queries on partitioned tables with GPORCA enabled, you must collect statistics on the partitioned table root partition with the `ANALYZE ROOTPARTITION` command. The command `ANALYZE         ROOTPARTITION` collects statistics on the root partition of a partitioned table without collecting statistics on the leaf partitions. If you specify a list of column names for a partitioned table, the statistics for the columns and the root partition are collected. For information on the `ANALYZE` command, see [ANALYZE](../../reference/sql/ANALYZE/index.html).
 
 You can also use the HAWQ utility `analyzedb` to update table statistics. The HAWQ utility `analyzedb` can update statistics for multiple tables in parallel. The utility can also check table statistics and update statistics only if the statistics are not current or do not exist. For information about the `analyzedb` utility, see [analyzedb](../../reference/cli/admin_utilities/analyzedb.html#topic1).
 

@@ -25,12 +25,12 @@ You can monitor a HAWQ system using a variety of tools included with the system 
 
 Observing the HAWQ system day-to-day performance helps administrators understand the system behavior, plan workflow, and troubleshoot problems. This chapter discusses tools for monitoring database performance and activity.
 
-Also, be sure to review [Recommended Monitoring and Maintenance Tasks](RecommendedMonitoringTasks.html) for monitoring activities you can script to quickly detect problems in the system.
+Also, be sure to review [Recommended Monitoring and Maintenance Tasks](RecommendedMonitoringTasks/index.html) for monitoring activities you can script to quickly detect problems in the system.
 
 
 ## Using hawq\_toolkit <a id="topic31"></a>
 
-Use HAWQ's administrative schema [*hawq\_toolkit*](../reference/toolkit/hawq_toolkit.html) to query the system catalogs, log files, and operating environment for system status information. The *hawq\_toolkit* schema contains several views you can access using SQL commands. The *hawq\_toolkit* schema is accessible to all database users. Some objects require superuser permissions. Use a command similar to the following to add the *hawq\_toolkit* schema to your schema search path:
+Use HAWQ's administrative schema [*hawq\_toolkit*](../reference/toolkit/hawq_toolkit/index.html) to query the system catalogs, log files, and operating environment for system status information. The *hawq\_toolkit* schema contains several views you can access using SQL commands. The *hawq\_toolkit* schema is accessible to all database users. Some objects require superuser permissions. Use a command similar to the following to add the *hawq\_toolkit* schema to your schema search path:
 
 ```sql
 => SET ROLE 'gpadmin' ;

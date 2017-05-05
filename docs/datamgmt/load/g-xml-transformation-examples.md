@@ -23,10 +23,10 @@ under the License.
 
 The following examples demonstrate the complete process for different types of XML data and STX transformations. Files and detailed instructions associated with these examples can be downloaded from the Apache site `gpfdist_transform` tools demo page. Read the README file before you run the examples.
 
--   **[Command-based Web External Tables](../../datamgmt/load/g-example-1-dblp-database-publications-in-demo-directory.html)**
+-   **[Command-based Web External Tables](../../datamgmt/load/g-example-1-dblp-database-publications-in-demo-directory/index.html)**
 
--   **[Example using IRS MeF XML Files (In demo Directory)](../../datamgmt/load/g-example-irs-mef-xml-files-in-demo-directory.html)**
+-   **[Example using IRS MeF XML Files (In demo Directory)](../../datamgmt/load/g-example-irs-mef-xml-files-in-demo-directory/index.html)**
 
--   **[Example using WITSML™ Files (In demo Directory)](../../datamgmt/load/g-example-witsml-files-in-demo-directory.html)**
+-   **[Example using WITSML™ Files (In demo Directory)](../../datamgmt/load/g-example-witsml-files-in-demo-directory/index.html)**
 
 

@@ -80,4 +80,4 @@ There is no `DROP OPERATOR` statement in the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[ALTER OPERATOR](ALTER-OPERATOR.html), [CREATE OPERATOR](CREATE-OPERATOR.html)
+[ALTER OPERATOR](ALTER-OPERATOR.html), [CREATE OPERATOR](CREATE-OPERATOR/index.html)

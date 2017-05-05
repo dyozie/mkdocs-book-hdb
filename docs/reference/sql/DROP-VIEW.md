@@ -61,4 +61,4 @@ DROP VIEW topten;
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE VIEW](CREATE-VIEW.html)
+[CREATE VIEW](CREATE-VIEW/index.html)

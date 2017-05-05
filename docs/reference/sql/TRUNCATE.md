@@ -68,4 +68,4 @@ There is no `TRUNCATE` command in the SQL standard.
 
 ## See Also<a id="topic1__section8"></a>
 
-[DROP TABLE](DROP-TABLE.html)
+[DROP TABLE](DROP-TABLE/index.html)

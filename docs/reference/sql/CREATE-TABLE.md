@@ -471,4 +471,4 @@ The `CREATE TABLE` command conforms to the SQL standard, with the following exce
 
 ## See Also<a id="topic1__section8"></a>
 
-[ALTER TABLE](ALTER-TABLE.html), [DROP TABLE](DROP-TABLE.html), [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html), [CREATE TABLE AS](CREATE-TABLE-AS.html)
+[ALTER TABLE](ALTER-TABLE.html), [DROP TABLE](DROP-TABLE.html), [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html), [CREATE TABLE AS](CREATE-TABLE-AS/index.html)

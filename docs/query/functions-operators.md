@@ -42,7 +42,7 @@ HAWQ does not support functions that return a table reference (`rangeFuncs`) or 
 
 ## User-Defined Functions<a id="topic28"></a>
 
-HAWQ supports user-defined functions. See [Extending SQL](http://www.postgresql.org/docs/8.2/static/extend.html) in the PostgreSQL documentation for more information.
+HAWQ supports user-defined functions. See [Extending SQL](http://www.postgresql.org/docs/8.2/static/extend/index.html) in the PostgreSQL documentation for more information.
 
 In HAWQ, the shared library files for user-created functions must reside in the same library path location on every host in the HAWQ array (masters and segments).
 
@@ -57,7 +57,7 @@ Use the `CREATE FUNCTION` statement to register user-defined functions that are 
 
 ### Function Volatility<a id="functionvolatility"></a>
 
-Every function has a **volatility** classification, with the possibilities being VOLATILE, STABLE, or IMMUTABLE. VOLATILE is the default if the [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION.html) command does not specify a category. The volatility category is a promise to the optimizer about the behavior of the function:
+Every function has a **volatility** classification, with the possibilities being VOLATILE, STABLE, or IMMUTABLE. VOLATILE is the default if the [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION/index.html) command does not specify a category. The volatility category is a promise to the optimizer about the behavior of the function:
 
 -   A VOLATILE function can do anything, including modifying the database. It can return different results on successive calls with the same arguments. The optimizer makes no assumptions about the behavior of such functions. A query using a volatile function will re-evaluate the function at every row where its value is needed.
 -   A STABLE function cannot modify the database and is guaranteed to return the same results given the same arguments for all rows within a single statement. This category allows the optimizer to optimize multiple calls of the function to a single call.
@@ -146,7 +146,7 @@ When you define a new base type, HAWQ automatically provides support for array
 
 Once the data type exists, we can declare additional functions to provide useful operations on the data type. Operators can then be defined atop the functions, and if needed, operator classes can be created to support indexing of the data type. 
 
-For further details, see the description of the [CREATE TYPE](../reference/sql/CREATE-TYPE.html) command.
+For further details, see the description of the [CREATE TYPE](../reference/sql/CREATE-TYPE/index.html) command.
 
 ## User Defined Operators<a id="userdefinedoperators"></a>
 
@@ -187,7 +187,7 @@ We've shown how to create a binary operator here. To create unary operators, jus
 
 ## Built-in Functions and Operators<a id="topic29"></a>
 
-The following table lists the categories of built-in functions and operators supported by PostgreSQL. All functions and operators are supported in HAWQ as in PostgreSQL with the exception of `STABLE` and `VOLATILE` functions, which are subject to the restrictions noted in [Using Functions in HAWQ](#topic27). See the [Functions and Operators](http://www.postgresql.org/docs/8.2/static/functions.html) section of the PostgreSQL documentation for more information about these built-in functions and operators.
+The following table lists the categories of built-in functions and operators supported by PostgreSQL. All functions and operators are supported in HAWQ as in PostgreSQL with the exception of `STABLE` and `VOLATILE` functions, which are subject to the restrictions noted in [Using Functions in HAWQ](#topic27). See the [Functions and Operators](http://www.postgresql.org/docs/8.2/static/functions/index.html) section of the PostgreSQL documentation for more information about these built-in functions and operators.
 
 <a id="topic29__in204913"></a>
 

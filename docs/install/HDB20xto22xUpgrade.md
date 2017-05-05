@@ -35,9 +35,9 @@ This upgrade procedure **must** be performed in the exact order presented:
 
 If you use Ambari to manage your cluster and your Ambari version is older than 2.4.2:
 
-1. Download [Ambari 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-installation/content/ambari_repositories.html).
+1. Download [Ambari 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-installation/content/ambari_repositories/index.html).
 
-2. Follow the instructions in [Upgrading Ambari to 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-upgrade/content/upgrading_ambari.html) in the Hortonworks Pivotal HDP documentation.  
+2. Follow the instructions in [Upgrading Ambari to 2.4.2](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-upgrade/content/upgrading_ambari/index.html) in the Hortonworks Pivotal HDP documentation.  
 
 ## Step 2: Upgrade HDP<a id="upgrade_hdp"></a>
 
@@ -55,7 +55,7 @@ Perform the following steps to upgrade HDP in your Ambari-managed installation:
 
 9. **Restart** HDFS and dependent services. *Do not restart HAWQ*. Perform  service checks on these services.
     
-4. Upgrade HDP to version 2.5.3. Follow the instructions in [Upgrading HDP](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-upgrade/content/upgrading_hdp_stack.html) in the Hortonworks Pivotal HDP documentation.
+4. Upgrade HDP to version 2.5.3. Follow the instructions in [Upgrading HDP](http://docs.hortonworks.com/HDPDocuments/Ambari-2.4.2.0/bk_ambari-upgrade/content/upgrading_hdp_stack/index.html) in the Hortonworks Pivotal HDP documentation.
 
 5. Navigate back to HDFS service **Configs > Advanced > Custom hdfs-site** and set the `dfs.allow.truncate` property back to `true`. **Restart** the HDFS and any dependent services. 
 
@@ -66,7 +66,7 @@ Perform the following steps to upgrade HDP in your Ambari-managed installation:
     
 ## Step 3: Add New HDB Software Repositories<a id="20xto210up_setupyum"></a>
 
-Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos.html) to set up local `yum` HDB repositories on the `repo-node` you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster.
+Follow the instructions in [Setting up HDB Repositories](setup-hdb-repos/index.html) to set up local `yum` HDB repositories on the `repo-node` you choose to host the HDB software. This system must be accessible to all nodes in your HAWQ cluster.
    
 After you set up the repos, each HAWQ host can obtain the HDB software from the `repo-node` HDB repositories.
 
@@ -131,7 +131,7 @@ Backing up your HDB installation before a minor upgrade is recommended.
 
 2. (*Optional*) Clean out old server log files from your master and segment data directories. Cleaning out old log files is not required, but will reduce the size of the HAWQ files that are backed up.
     
-3. Follow the instructions in [Backing Up and Restoring HAWQ](../../hawq/admin/BackingUpandRestoringHAWQDatabases.html) to back up your existing databases.
+3. Follow the instructions in [Backing Up and Restoring HAWQ](../../hawq/admin/BackingUpandRestoringHAWQDatabases/index.html) to back up your existing databases.
 
 4. Backing up an HDB 2.0.1 binary installation is not necessary; HDB version 2.0.1 and newer support upgrade in place.
 

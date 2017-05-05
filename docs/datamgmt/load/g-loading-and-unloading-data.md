@@ -41,34 +41,34 @@ More efficient data loading options for large datasets take advantage of the HAW
 
 HAWQ leverages the parallel architecture of the Hadoop Distributed File System to access files on that system.
 
--   **[Working with File-Based External Tables](../../datamgmt/load/g-working-with-file-based-ext-tables.html)**
+-   **[Working with File-Based External Tables](../../datamgmt/load/g-working-with-file-based-ext-tables/index.html)**
 
--   **[Using the HAWQ File Server (gpfdist)](../../datamgmt/load/g-using-the-hawq-file-server--gpfdist-.html)**
+-   **[Using the HAWQ File Server (gpfdist)](../../datamgmt/load/g-using-the-hawq-file-server--gpfdist-/index.html)**
 
--   **[Creating and Using Web External Tables](../../datamgmt/load/g-creating-and-using-web-external-tables.html)**
+-   **[Creating and Using Web External Tables](../../datamgmt/load/g-creating-and-using-web-external-tables/index.html)**
 
--   **[Loading Data Using an External Table](../../datamgmt/load/g-loading-data-using-an-external-table.html)**
+-   **[Loading Data Using an External Table](../../datamgmt/load/g-loading-data-using-an-external-table/index.html)**
 
--   **[Registering Files into HAWQ Internal Tables](../../datamgmt/load/g-register_files.html)**
+-   **[Registering Files into HAWQ Internal Tables](../../datamgmt/load/g-register_files/index.html)**
 
--   **[Loading and Writing Non-HDFS Custom Data](../../datamgmt/load/g-loading-and-writing-non-hdfs-custom-data.html)**
+-   **[Loading and Writing Non-HDFS Custom Data](../../datamgmt/load/g-loading-and-writing-non-hdfs-custom-data/index.html)**
 
 -   **[Creating External Tables - Examples](../../datamgmt/load/creating-external-tables-examples.html#topic44)**
 
--   **[Handling Load Errors](../../datamgmt/load/g-handling-load-errors.html)**
+-   **[Handling Load Errors](../../datamgmt/load/g-handling-load-errors/index.html)**
 
--   **[Loading Data with hawq load](../../datamgmt/load/g-loading-data-with-hawqload.html)**
+-   **[Loading Data with hawq load](../../datamgmt/load/g-loading-data-with-hawqload/index.html)**
 
--   **[Loading Data with COPY](../../datamgmt/load/g-loading-data-with-copy.html)**
+-   **[Loading Data with COPY](../../datamgmt/load/g-loading-data-with-copy/index.html)**
 
--   **[Running COPY in Single Row Error Isolation Mode](../../datamgmt/load/g-running-copy-in-single-row-error-isolation-mode.html)**
+-   **[Running COPY in Single Row Error Isolation Mode](../../datamgmt/load/g-running-copy-in-single-row-error-isolation-mode/index.html)**
 
--   **[Optimizing Data Load and Query Performance](../../datamgmt/load/g-optimizing-data-load-and-query-performance.html)**
+-   **[Optimizing Data Load and Query Performance](../../datamgmt/load/g-optimizing-data-load-and-query-performance/index.html)**
 
--   **[Unloading Data from HAWQ](../../datamgmt/load/g-unloading-data-from-hawq-database.html)**
+-   **[Unloading Data from HAWQ](../../datamgmt/load/g-unloading-data-from-hawq-database/index.html)**
 
--   **[Transforming XML Data](../../datamgmt/load/g-transforming-xml-data.html)**
+-   **[Transforming XML Data](../../datamgmt/load/g-transforming-xml-data/index.html)**
 
--   **[Formatting Data Files](../../datamgmt/load/g-formatting-data-files.html)**
+-   **[Formatting Data Files](../../datamgmt/load/g-formatting-data-files/index.html)**
 
 

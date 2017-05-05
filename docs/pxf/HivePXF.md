@@ -32,7 +32,7 @@ This section describes how to use PXF to access Hive data. Options for querying 
 
 Before accessing Hive data with HAWQ and PXF, ensure that:
 
--   The PXF HDFS plug-in is installed on all HAWQ and HDFS cluster nodes (master, segment, NameNode, DataNode). See [Installing PXF Plug-ins](InstallPXFPlugins.html) for PXF plug-in installation information.
+-   The PXF HDFS plug-in is installed on all HAWQ and HDFS cluster nodes (master, segment, NameNode, DataNode). See [Installing PXF Plug-ins](InstallPXFPlugins/index.html) for PXF plug-in installation information.
 -   The PXF Hive plug-in is installed on all HAWQ and HDFS cluster nodes.
 -   If you configured Hadoop with high availability, PXF must also be installed on all HDFS nodes running NameNode services.
 -   The Hive client is installed on all PXF nodes.
@@ -328,7 +328,7 @@ LOCATION ('pxf://<host>[:<port>]/<hive-db-name>.<hive-table-name>
 FORMAT 'CUSTOM|TEXT' (formatter='pxfwritable_import' | delimiter='<delim>')
 ```
 
-Hive-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE.html) call are described below.
+Hive-plug-in-specific keywords and values used in the [CREATE EXTERNAL TABLE](../reference/sql/CREATE-EXTERNAL-TABLE/index.html) call are described below.
 
 | Keyword  | Value |
 |-------|-------------------------------------|

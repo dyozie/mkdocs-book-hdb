@@ -150,7 +150,7 @@ DENY BETWEEN deny_point AND deny_point
 
 ## Notes<a id="topic1__section5"></a>
 
-The preferred way to add and remove role members (manage groups) is to use [GRANT](GRANT.html) and [REVOKE](REVOKE.html).
+The preferred way to add and remove role members (manage groups) is to use [GRANT](GRANT.html) and [REVOKE](REVOKE/index.html).
 
 The `VALID UNTIL` clause defines an expiration time for a password only, not for the role. The expiration time is not enforced when logging in using a non-password-based authentication method.
 
@@ -212,4 +212,4 @@ The behavior specified by the SQL standard is most closely approximated by givin
 
 ## See Also<a id="topic1__section8"></a>
 
-[SET ROLE](SET-ROLE.html), [ALTER ROLE](ALTER-ROLE.html), [DROP ROLE](DROP-ROLE.html), [GRANT](GRANT.html), [REVOKE](REVOKE.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html)
+[SET ROLE](SET-ROLE.html), [ALTER ROLE](ALTER-ROLE.html), [DROP ROLE](DROP-ROLE.html), [GRANT](GRANT.html), [REVOKE](REVOKE.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE/index.html)

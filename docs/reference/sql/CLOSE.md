@@ -61,4 +61,4 @@ CLOSE portala;
 
 ## See Also<a id="topic1__section8"></a>
 
-[DECLARE](DECLARE.html), [FETCH](FETCH.html)
+[DECLARE](DECLARE.html), [FETCH](FETCH/index.html)

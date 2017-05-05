@@ -63,4 +63,4 @@ DROP TABLE mytable;
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE TABLE](CREATE-TABLE.html), [ALTER TABLE](ALTER-TABLE.html), [TRUNCATE](TRUNCATE.html)
+[CREATE TABLE](CREATE-TABLE.html), [ALTER TABLE](ALTER-TABLE.html), [TRUNCATE](TRUNCATE/index.html)

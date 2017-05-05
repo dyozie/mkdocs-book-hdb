@@ -52,7 +52,7 @@ where \<storage\_parameter\> is:
 
 ## Description<a id="topic1__section3"></a>
 
-`CREATE TABLE AS` creates a table and fills it with data computed by a [SELECT](SELECT.html) command. The table columns have the names and data types associated with the output columns of the `SELECT`, however you can override the column names by giving an explicit list of new column names.
+`CREATE TABLE AS` creates a table and fills it with data computed by a [SELECT](SELECT/index.html) command. The table columns have the names and data types associated with the output columns of the `SELECT`, however you can override the column names by giving an explicit list of new column names.
 
 `CREATE TABLE AS` creates a new table and evaluates the query just once to fill the new table initially. The new table will not track subsequent changes to the source tables of the query.
 
@@ -100,7 +100,7 @@ where \<storage\_parameter\> is:
 <dd>The tablespace is the name of the tablespace in which the new table is to be created. If not specified, the database's default tablespace is used.</dd>
 
 <dt>AS \<query\>   </dt>
-<dd>A [SELECT](SELECT.html) command, or an [EXECUTE](EXECUTE.html) command that runs a prepared `SELECT` query.</dd>
+<dd>A [SELECT](SELECT.html) command, or an [EXECUTE](EXECUTE/index.html) command that runs a prepared `SELECT` query.</dd>
 
 <dt>DISTRIBUTED BY (\<column\>, \[ ... \] )  
 DISTRIBUTED RANDOMLY  </dt>
@@ -108,9 +108,9 @@ DISTRIBUTED RANDOMLY  </dt>
 
 ## Notes<a id="topic1__section5"></a>
 
-This command is functionally similar to [SELECT INTO](SELECT-INTO.html), but it is preferred since it is less likely to be confused with other uses of the `SELECT INTO` syntax. Furthermore, `CREATE TABLE AS` offers a superset of the functionality offered by `SELECT INTO`.
+This command is functionally similar to [SELECT INTO](SELECT-INTO/index.html), but it is preferred since it is less likely to be confused with other uses of the `SELECT INTO` syntax. Furthermore, `CREATE TABLE AS` offers a superset of the functionality offered by `SELECT INTO`.
 
-`CREATE TABLE AS` can be used for fast data loading from external table data sources. See [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html).
+`CREATE TABLE AS` can be used for fast data loading from external table data sources. See [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE/index.html).
 
 ## Examples<a id="topic1__section6"></a>
 
@@ -142,4 +142,4 @@ EXECUTE recentfilms('2007-01-01');
 
 ## See Also<a id="topic1__section8"></a>
 
-[CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html), [EXECUTE](EXECUTE.html), [SELECT](SELECT.html), [SELECT INTO](SELECT-INTO.html)
+[CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html), [EXECUTE](EXECUTE.html), [SELECT](SELECT.html), [SELECT INTO](SELECT-INTO/index.html)

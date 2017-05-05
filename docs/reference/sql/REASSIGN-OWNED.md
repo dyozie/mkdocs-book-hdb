@@ -64,4 +64,4 @@ The `REASSIGN OWNED` statement is a HAWQ extension.
 
 ## See Also<a id="topic1__section8"></a>
 
-[DROP OWNED](DROP-OWNED.html), [DROP ROLE](DROP-ROLE.html)
+[DROP OWNED](DROP-OWNED.html), [DROP ROLE](DROP-ROLE/index.html)

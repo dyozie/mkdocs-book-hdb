@@ -347,7 +347,7 @@ The following parameters control the types of plan operations the legacy query o
 
 ### Database Statistics Sampling Parameters<a id="topic24"></a>
 
-These parameters adjust the amount of data sampled by an `ANALYZE` operation. Adjusting these parameters affects statistics collection system-wide. You can configure statistics collection on particular tables and columns by using the `ALTER TABLE` `SET STATISTICS` clause. See [About Database Statistics](../../datamgmt/about_statistics.html).
+These parameters adjust the amount of data sampled by an `ANALYZE` operation. Adjusting these parameters affects statistics collection system-wide. You can configure statistics collection on particular tables and columns by using the `ALTER TABLE` `SET STATISTICS` clause. See [About Database Statistics](../../datamgmt/about_statistics/index.html).
 
 -   [default\_statistics\_target](parameter_definitions.html#default_statistics_target)
 -   [gp\_analyze\_relative\_error](parameter_definitions.html#gp_analyze_relative_error)

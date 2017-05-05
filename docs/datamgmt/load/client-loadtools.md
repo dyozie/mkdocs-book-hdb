@@ -45,7 +45,7 @@ The RHEL Load Tools are provided in a HAWQ distribution.
 
 The files/directories of interest in a HAWQ RHEL Load Tools installation include:
 
-`bin/` — data loading command-line tools ([gpfdist](../../reference/cli/admin_utilities/gpfdist.html) and [hawq load](../../reference/cli/admin_utilities/hawqload.html))   
+`bin/` — data loading command-line tools ([gpfdist](../../reference/cli/admin_utilities/gpfdist.html) and [hawq load](../../reference/cli/admin_utilities/hawqload/index.html))   
 `greenplum_path.sh` — environment set up file
 
 ### Configuring the RHEL Load Environment<a id="installloadrhelcfgenv"></a>
@@ -56,7 +56,7 @@ A `greenplum_path.sh` file is located in the HAWQ base install directory followi
 $ . /usr/local/hawq/greenplum_path.sh
 ```
 
-Continue to [Using the HAWQ File Server (gpfdist)](g-using-the-hawq-file-server--gpfdist-.html) for specific information about using the HAWQ load tools.
+Continue to [Using the HAWQ File Server (gpfdist)](g-using-the-hawq-file-server--gpfdist-/index.html) for specific information about using the HAWQ load tools.
 
 ## Windows Load Tools<a id="installloadrunwin"></a>
 
@@ -90,7 +90,7 @@ The HAWQ Load Tools for Windows requires that the 32-bit version of Python 2.5 b
 ### About the Windows Loader Installation<a id="installloadabout"></a>
 Your HAWQ Windows Load Tools installation includes the following files and directories:
 
-`bin/` — data loading command-line tools ([gpfdist](http://gpdb.docs.pivotal.io/4380/client_tool_guides/load/unix/gpfdist.html) and [gpload](http://gpdb.docs.pivotal.io/4380/client_tool_guides/load/unix/gpload.html))  
+`bin/` — data loading command-line tools ([gpfdist](http://gpdb.docs.pivotal.io/4380/client_tool_guides/load/unix/gpfdist.html) and [gpload](http://gpdb.docs.pivotal.io/4380/client_tool_guides/load/unix/gpload/index.html))  
 `lib/` — data loading library files  
 `greenplum_loaders_path.bat` — environment set up file
 

@@ -181,8 +181,8 @@ Your HAWQ cluster is now running. For additional information:
 
 - [HAWQ Files and Directories](../../admin/setuphawqopenv.html#hawq_env_files_and_dirs) identifies HAWQ files and directories and their install locations.
 - [Environment Variables](../../reference/HAWQEnvironmentVariables.html#optionalenvironmentvariables) includes a complete list of HAWQ deployment-specific environment variables.
-- [Running a HAWQ Cluster](../../admin/RunningHAWQ.html) provides an overview of the components comprising a HAWQ cluster, including the users (administrative and operating), deployment systems (HAWQ master, standby, and segments), databases, and data sources.
+- [Running a HAWQ Cluster](../../admin/RunningHAWQ/index.html) provides an overview of the components comprising a HAWQ cluster, including the users (administrative and operating), deployment systems (HAWQ master, standby, and segments), databases, and data sources.
 
 Lesson 2 introduces basic HAWQ cluster administration activities and commands.
  
-**Lesson 2**: [Cluster Administration](basichawqadmin.html)
+**Lesson 2**: [Cluster Administration](basichawqadmin/index.html)

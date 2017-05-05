@@ -27,7 +27,7 @@ When a HAWQ system is first initialized, the system contains one predefined *sup
 
 Client access and authentication is controlled by the standard PostgreSQL host-based authentication file, `pg_hba.conf`. In HAWQ, the `pg_hba.conf` file of the master instance controls client access and authentication to your HAWQ system. HAWQ segments have `pg_hba.conf` files that are configured to allow only client connections from the master host and never accept client connections. Do not alter the `pg_hba.conf` file on your segments.
 
-See [The pg\_hba.conf File](http://www.postgresql.org/docs/9.0/interactive/auth-pg-hba-conf.html) in the PostgreSQL documentation for more information.
+See [The pg\_hba.conf File](http://www.postgresql.org/docs/9.0/interactive/auth-pg-hba-conf/index.html) in the PostgreSQL documentation for more information.
 
 The general format of the `pg_hba.conf` file is a set of records, one per line. HAWQ ignores blank lines and any text after the `#` comment character. A record consists of a number of fields that are separated by spaces and/or tabs. Fields can contain white space if the field value is quoted. Records cannot be continued across lines. Each remote client access record has the following format:
 
@@ -53,7 +53,7 @@ The following table describes meaning of each field.
 |\<role\>|Specifies which database role names this record matches. The value `all` specifies that it matches all roles. If the specified role is a group and you want all members of that group to be included, precede the role name with a +. Multiple role names can be supplied by separating them with commas. A separate file containing role names can be specified by preceding the file name with @.|
 |\<CIDR-address\>|Specifies the client machine IP address range that this record matches. It contains an IP address in standard dotted decimal notation and a CIDR mask length. IP addresses can only be specified numerically, not as domain or host names. The mask length indicates the number of high-order bits of the client IP address that must match. Bits to the right of this must be zero in the given IP address. There must not be any white space between the IP address, the /, and the CIDR mask length. Typical examples of a CIDR-address are 192.0.2.0/32 for a single host, or 192.0.2.2/24 for a small network, or 192.0.2.3/16 for a larger one. To specify a single host, use a CIDR mask of 32 for IPv4 or 128 for IPv6. In a network address, do not omit trailing zeroes.|
 |\<IP-address\>, \<IP-mask\>|These fields can be used as an alternative to the CIDR-address notation. Instead of specifying the mask length, the actual mask is specified in a separate column. For example, 255.255.255.255 represents a CIDR mask length of 32. These fields only apply to host, hostssl, and hostnossl records.|
-|\<authentication-method\>|Specifies the authentication method to use when connecting. HAWQ supports the [authentication methods](http://www.postgresql.org/docs/9.0/static/auth-methods.html) supported by PostgreSQL 9.0.|
+|\<authentication-method\>|Specifies the authentication method to use when connecting. HAWQ supports the [authentication methods](http://www.postgresql.org/docs/9.0/static/auth-methods/index.html) supported by PostgreSQL 9.0.|
 
 ### Editing the pg\_hba.conf File <a id="topic3"></a>
 

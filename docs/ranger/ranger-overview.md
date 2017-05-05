@@ -25,19 +25,21 @@ HAWQ supports using Apache Ranger for authorizing user access to HAWQ resources.
 
 See the [Apache Ranger documentation](http://ranger.apache.org/) for more information about the core functionality of Ranger.
 
-## Policy Management Architecture<a id="arch"></a>
+## Policy Management Architecture
+<a id="arch"></a>
 
 ![HAWQ Ranger Authorization](../images/hawq-ranger-arch.png "HAWQ Ranger Authorization")
 
 Each HAWQ installation includes a Ranger plug-in service to support Ranger Policy management. The Ranger plug-in service implements the Ranger REST API to bridge all requests between the Ranger Policy Manager and a HAWQ instance. 
-
+(the names of databases, schemas, tables, and so forth) to populate the user interface and assist in creating new policies. This JAR uses a JDBC connection to HAWQ, and requires a one-time registration with the Ranger Policy Manager. See [Configuring HAWQ to use Ranger Policy Management](ranger-integration-config/index.html)
 HAWQ also provides a JAR library that enables the Ranger Policy Manager to lookup HAWQ metadata (the names of databases, schemas, tables, and so forth) to populate the user interface and assist in creating new policies. This JAR uses a JDBC connection to HAWQ, and requires a one-time registration with the Ranger Policy Manager. See [Configuring HAWQ to use Ranger Policy Management](ranger-integration-config.html).
-
+(ranger-policy-creation/index.html)
 A single configuration parameter, `hawq_acl_type` determines whether HAWQ defers all policy management to Ranger via the plug-in service, or whether HAWQ handles authorization natively using catalog tables. By default, HAWQ uses SQL commands to create all access policies, and the policy information is stored in catalog tables.  When you enable Ranger integration for policy management, any authorization policies that you have configured in HAWQ using SQL no longer apply to your installation; you must create new policies using the Ranger interface. See [Creating HAWQ Authorization Policies in Ranger](ranger-policy-creation.html).
 
 The Ranger plug-in service caches Ranger policies locally on each HAWQ node to avoid unnecessary round trips between the HAWQ node and the Ranger Policy Manager server.
 
-## Limitations of Ranger Policy Management<a id="limitations"></a>
+## Limitations of Ranger Policy Management
+<a id="limitations"></a>
 
 In this release, HAWQ integration with Ranger has several limitations:
 

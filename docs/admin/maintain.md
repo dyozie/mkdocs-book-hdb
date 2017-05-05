@@ -25,7 +25,7 @@ under the License.
 
 To keep a HAWQ system running efficiently, the database must be regularly cleared of expired data and the table statistics must be updated so that the query optimizer has accurate information.
 
-HAWQ requires that certain tasks be performed regularly to achieve optimal performance. The tasks discussed here are required, but database administrators can automate them using standard UNIX tools such as `cron` scripts. An administrator sets up the appropriate scripts and checks that they execute successfully. See [Recommended Monitoring and Maintenance Tasks](RecommendedMonitoringTasks.html) for additional suggested maintenance activities you can implement to keep your HAWQ system running optimally.
+HAWQ requires that certain tasks be performed regularly to achieve optimal performance. The tasks discussed here are required, but database administrators can automate them using standard UNIX tools such as `cron` scripts. An administrator sets up the appropriate scripts and checks that they execute successfully. See [Recommended Monitoring and Maintenance Tasks](RecommendedMonitoringTasks/index.html) for additional suggested maintenance activities you can implement to keep your HAWQ system running optimally.
 
 ## Log File Maintenance <a id="topic10"></a>
 

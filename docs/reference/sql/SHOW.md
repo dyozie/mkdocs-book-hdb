@@ -63,4 +63,4 @@ SHOW ALL;
 
 ## See Also<a id="topic1__section7"></a>
 
-[SET](SET.html), [RESET](RESET.html)
+[SET](SET.html), [RESET](RESET/index.html)

@@ -33,8 +33,8 @@ HAWQ provides the following system views not available in PostgreSQL.
 
 For more information about the standard system views supported in PostgreSQL and HAWQ, see the following sections of the PostgreSQL documentation:
 
--   [System Views](http://www.postgresql.org/docs/8.2/static/views-overview.html)
+-   [System Views](http://www.postgresql.org/docs/8.2/static/views-overview/index.html)
 -   [Statistics Collector Views](http://www.postgresql.org/docs/8.2/static/monitoring-stats.html#MONITORING-STATS-VIEWS-TABLE)
--   [The Information Schema](http://www.postgresql.org/docs/8.2/static/information-schema.html)
+-   [The Information Schema](http://www.postgresql.org/docs/8.2/static/information-schema/index.html)
 
 

@@ -61,7 +61,7 @@ The HAWQ resource manager follows several principles when allocating resources t
 
 ## Enforcing Limits on Resources
 
-You can configure HAWQ to enforce limits on resource usage by setting memory and CPU usage limits on both segments and resource queues. See [Configuring Segment Resource Capacity](ConfigureResourceManagement.html) and [Creating Resource Queues](ResourceQueues.html).
+You can configure HAWQ to enforce limits on resource usage by setting memory and CPU usage limits on both segments and resource queues. See [Configuring Segment Resource Capacity](ConfigureResourceManagement.html) and [Creating Resource Queues](ResourceQueues/index.html).
 
 **Cluster Memory to Core Ratio**
 

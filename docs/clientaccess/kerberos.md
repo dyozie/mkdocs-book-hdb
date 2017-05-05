@@ -27,7 +27,7 @@ You can control access to HAWQ with a Kerberos authentication server.
 
 HAWQ supports the Generic Security Service Application Program Interface \(GSSAPI\) with Kerberos authentication. GSSAPI provides automatic authentication \(single sign-on\) for systems that support it. You specify the HAWQ users \(roles\) that require Kerberos authentication in the HAWQ configuration file `pg_hba.conf`. The login fails if Kerberos authentication is not available when a role attempts to log in to HAWQ.
 
-Kerberos provides a secure, encrypted authentication service. It does not encrypt data exchanged between the client and database and provides no authorization services. To encrypt data exchanged over the network, you must use an SSL connection. To manage authorization for access to HAWQ databases and objects such as schemas and tables, you use settings in the `pg_hba.conf` file and privileges given to HAWQ users and roles within the database. For information about managing authorization privileges, see [Managing Roles and Privileges](roles_privs.html).
+Kerberos provides a secure, encrypted authentication service. It does not encrypt data exchanged between the client and database and provides no authorization services. To encrypt data exchanged over the network, you must use an SSL connection. To manage authorization for access to HAWQ databases and objects such as schemas and tables, you use settings in the `pg_hba.conf` file and privileges given to HAWQ users and roles within the database. For information about managing authorization privileges, see [Managing Roles and Privileges](roles_privs/index.html).
 
 For more information about Kerberos, see [http://web.mit.edu/kerberos/](http://web.mit.edu/kerberos/).
 
@@ -252,7 +252,7 @@ After you have set up Kerberos on the HAWQ master, you can configure HAWQ to use
     host all all 0.0.0.0/0 gss include_realm=0 krb_realm=KRB.EXAMPLE.COM
     ```
 
-    For information about the `pg_hba.conf` file, see [The pg\_hba.conf file](http://www.postgresql.org/docs/9.0/static/auth-pg-hba-conf.html) in the Postgres documentation.
+    For information about the `pg_hba.conf` file, see [The pg\_hba.conf file](http://www.postgresql.org/docs/9.0/static/auth-pg-hba-conf/index.html) in the Postgres documentation.
 
 4.  Create a ticket using `kinit` and show the tickets in the Kerberos ticket cache with `klist`.
 5.  As a test, log in to the database as the `gpadmin` role with the Kerberos credentials `gpadmin/kerberos-gpdb`:
@@ -286,7 +286,7 @@ After you have set up Kerberos on the HAWQ master, you can configure HAWQ to use
     host all all 0.0.0.0/0 krb5 include_realm=0 krb_realm=proddb map=mymap
     ```
 
-    For more information about specifying username maps see [Username maps](http://www.postgresql.org/docs/9.0/static/auth-username-maps.html) in the Postgres documentation.
+    For more information about specifying username maps see [Username maps](http://www.postgresql.org/docs/9.0/static/auth-username-maps/index.html) in the Postgres documentation.
 
 6.  If a Kerberos principal is not a HAWQ user, a message similar to the following is displayed from the `psql` command line when the user attempts to log in to the database:
 

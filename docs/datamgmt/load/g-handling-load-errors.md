@@ -36,12 +36,12 @@ When you set `SEGMENT REJECT LIMIT`, HAWQ scans the external data in single row 
 SELECT DISTINCT * FROM external_table;
 ```
 
--   **[Define an External Table with Single Row Error Isolation](../../datamgmt/load/g-define-an-external-table-with-single-row-error-isolation.html)**
+-   **[Define an External Table with Single Row Error Isolation](../../datamgmt/load/g-define-an-external-table-with-single-row-error-isolation/index.html)**
 
--   **[Capture Row Formatting Errors and Declare a Reject Limit](../../datamgmt/load/g-create-an-error-table-and-declare-a-reject-limit.html)**
+-   **[Capture Row Formatting Errors and Declare a Reject Limit](../../datamgmt/load/g-create-an-error-table-and-declare-a-reject-limit/index.html)**
 
--   **[Identifying Invalid CSV Files in Error Table Data](../../datamgmt/load/g-identifying-invalid-csv-files-in-error-table-data.html)**
+-   **[Identifying Invalid CSV Files in Error Table Data](../../datamgmt/load/g-identifying-invalid-csv-files-in-error-table-data/index.html)**
 
--   **[Moving Data between Tables](../../datamgmt/load/g-moving-data-between-tables.html)**
+-   **[Moving Data between Tables](../../datamgmt/load/g-moving-data-between-tables/index.html)**
 
 

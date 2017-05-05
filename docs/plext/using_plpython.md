@@ -68,7 +68,7 @@ dbname=# DROP LANGUAGE plpythonu;
 
 ## Developing Functions with PL/Python <a id="developfunctions"></a>
 
-PL/Python functions are defined using the standard SQL [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION.html) syntax.
+PL/Python functions are defined using the standard SQL [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION/index.html) syntax.
 
 The body of a PL/Python user-defined function is a Python script. When the function is called, its arguments are passed as elements of the array `args[]`. You can also pass named arguments as ordinary variables to the Python script. 
 
@@ -259,7 +259,7 @@ Read on for a description of how one passes data between PL/Python function call
 
 ##### Saving Execution Plans<a id="plpyprepare_dictionaries"></a>
 
-When you prepare an execution plan using the PL/Python module, the plan is automatically saved. See the [Postgres Server Programming Interface (SPI)](http://www.postgresql.org/docs/8.2/static/spi.html) documentation for information about execution plans.
+When you prepare an execution plan using the PL/Python module, the plan is automatically saved. See the [Postgres Server Programming Interface (SPI)](http://www.postgresql.org/docs/8.2/static/spi/index.html) documentation for information about execution plans.
 
 To make effective use of saved plans across function calls, you use one of the Python persistent storage dictionaries, SD or GD.
 
@@ -774,13 +774,13 @@ This section lists references for using PL/Python.
 
 ### Technical References <a id="technicalreferences"></a>
 
-For information about PL/Python in HAWQ, see the [PL/Python - Python Procedural Language](http://www.postgresql.org/docs/8.2/static/plpython.html) PostgreSQL documentation.
+For information about PL/Python in HAWQ, see the [PL/Python - Python Procedural Language](http://www.postgresql.org/docs/8.2/static/plpython/index.html) PostgreSQL documentation.
 
 For information about Python Package Index (PyPI), refer to [PyPI - the Python Package Index](https://pypi.python.org/pypi).
 
 The following Python modules may be of interest:
 
-- [SciPy library](http://www.scipy.org/scipylib/index.html) provides user-friendly and efficient numerical routines including those for numerical integration and optimization. To download the SciPy package tar file:
+- [SciPy library](http://www.scipy.org/scipylib/index/index.html) provides user-friendly and efficient numerical routines including those for numerical integration and optimization. To download the SciPy package tar file:
 
     ``` shell
     hawq-node$ wget http://sourceforge.net/projects/scipy/files/scipy/0.10.1/scipy-0.10.1.tar.gz

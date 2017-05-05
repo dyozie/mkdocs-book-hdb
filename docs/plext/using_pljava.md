@@ -69,7 +69,7 @@ The PL/Java classpath is handled differently in a distributed HAWQ environment t
 
 ### Server Configuration Parameters <a id="serverconfigparams"></a>
 
-PL/Java uses server configuration parameters to configure the classpath, Java Virtual Machine (VM), and other options. Refer to the [Server Configuration Parameter Reference](../reference/HAWQSiteConfig.html) for general information about HAWQ server configuration parameters.
+PL/Java uses server configuration parameters to configure the classpath, Java Virtual Machine (VM), and other options. Refer to the [Server Configuration Parameter Reference](../reference/HAWQSiteConfig/index.html) for general information about HAWQ server configuration parameters.
 
 The following server configuration parameters are used by HAWQ PL/Java. These parameters replace the `pljava.*` configuration parameters that are used in the standard PostgreSQL PL/Java implementation.
 
@@ -295,7 +295,7 @@ This section provides information about writing functions with PL/Java.
 You must have a Java SDK installed to write Java methods.
 
 ### SQL Declaration <a id="sqldeclaration"></a>
-PL/Java functions are defined using the standard SQL [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION.html) syntax. A PL/Java user-defined function specifies `LANGUAGE java` (trusted) or `LANGUAGE javau` (untrusted). The function must also include `RETURNS` and `AS` clauses.
+PL/Java functions are defined using the standard SQL [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION/index.html) syntax. A PL/Java user-defined function specifies `LANGUAGE java` (trusted) or `LANGUAGE javau` (untrusted). The function must also include `RETURNS` and `AS` clauses.
 
 The `RETURNS` clause identifies the type of the function's return value. 
 

@@ -33,7 +33,7 @@ DECLARE <name> [BINARY] [INSENSITIVE] [NO SCROLL] CURSOR
 
 ## Description<a id="topic1__section3"></a>
 
-`DECLARE` allows a user to create cursors, which can be used to retrieve a small number of rows at a time out of a larger query. Cursors can return data either in text or in binary format using [FETCH](FETCH.html).
+`DECLARE` allows a user to create cursors, which can be used to retrieve a small number of rows at a time out of a larger query. Cursors can return data either in text or in binary format using [FETCH](FETCH/index.html).
 
 Normal cursors return data in text format, the same as a `SELECT` would produce. Since data is stored natively in binary format, the system must do a conversion to produce the text format. Once the information comes back in text form, the client application may need to convert it to a binary format to manipulate it. In addition, data in the text format is often larger in size than in the binary format. Binary cursors return the data in a binary representation that may be more easily manipulated. Nevertheless, if you intend to display the data as text anyway, retrieving it in text form will save you some effort on the client side.
 
@@ -63,7 +63,7 @@ WITHOUT HOLD  </dt>
 <dd>`WITH HOLD` specifies that the cursor may continue to be used after the transaction that created it successfully commits. `WITHOUT HOLD` specifies that the cursor cannot be used outside of the transaction that created it. `WITHOUT HOLD` is the default.</dd>
 
 <dt>\<query\> </dt>
-<dd>A [SELECT](SELECT.html) command which will provide the rows to be returned by the cursor.</dd>
+<dd>A [SELECT](SELECT/index.html) command which will provide the rows to be returned by the cursor.</dd>
 
 <!-- -->
 
@@ -100,4 +100,4 @@ Binary cursors are a HAWQ extension.
 
 ## See Also<a id="topic1__section8"></a>
 
-[CLOSE](CLOSE.html), [FETCH](FETCH.html), [SELECT](SELECT.html)
+[CLOSE](CLOSE.html), [FETCH](FETCH.html), [SELECT](SELECT/index.html)

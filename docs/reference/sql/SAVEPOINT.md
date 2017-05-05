@@ -43,7 +43,7 @@ A savepoint is a special mark inside a transaction that allows all commands that
 
 ## Notes<a id="topic1__section5"></a>
 
-Use [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html) to rollback to a savepoint. Use [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html) to destroy a savepoint, keeping the effects of commands executed after it was established.
+Use [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html) to rollback to a savepoint. Use [RELEASE SAVEPOINT](RELEASE-SAVEPOINT/index.html) to destroy a savepoint, keeping the effects of commands executed after it was established.
 
 Savepoints can only be established when inside a transaction block. There can be multiple savepoints defined within a transaction.
 
@@ -78,8 +78,8 @@ The above transaction will insert both 3 and 4.
 
 ## Compatibility<a id="topic1__section7"></a>
 
-SQL requires a savepoint to be destroyed automatically when another savepoint with the same name is established. In HAWQ, the old savepoint is kept, though only the more recent one will be used when rolling back or releasing. (Releasing the newer savepoint will cause the older one to again become accessible to [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html) and [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html).) Otherwise, `SAVEPOINT` is fully SQL conforming.
+SQL requires a savepoint to be destroyed automatically when another savepoint with the same name is established. In HAWQ, the old savepoint is kept, though only the more recent one will be used when rolling back or releasing. (Releasing the newer savepoint will cause the older one to again become accessible to [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html) and [RELEASE SAVEPOINT](RELEASE-SAVEPOINT/index.html).) Otherwise, `SAVEPOINT` is fully SQL conforming.
 
 ## See Also<a id="topic1__section8"></a>
 
-[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK.html), [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html), [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT.html)
+[BEGIN](BEGIN.html), [COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK.html), [RELEASE SAVEPOINT](RELEASE-SAVEPOINT.html), [ROLLBACK TO SAVEPOINT](ROLLBACK-TO-SAVEPOINT/index.html)

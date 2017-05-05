@@ -62,6 +62,6 @@ The `DROP CAST` command conforms to the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE CAST](CREATE-CAST.html)
+[CREATE CAST](CREATE-CAST/index.html)
 
 

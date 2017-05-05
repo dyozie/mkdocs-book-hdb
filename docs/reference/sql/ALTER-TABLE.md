@@ -438,4 +438,4 @@ The `ADD`, `DROP`, and `SET DEFAULT` forms conform with the SQL standard. The ot
 
 ## See Also<a id="altertable__section8"></a>
 
-[CREATE TABLE](CREATE-TABLE.html), [DROP TABLE](DROP-TABLE.html)
+[CREATE TABLE](CREATE-TABLE.html), [DROP TABLE](DROP-TABLE/index.html)

@@ -52,7 +52,7 @@ If a schema name is given then the view is created in the specified schema. Othe
 <dd>An optional list of names to be used for columns of the view. If not given, the column names are deduced from the query.</dd>
 
 <dt> \<query\>   </dt>
-<dd>A [SELECT](SELECT.html) command which will provide the columns and rows of the view.</dd>
+<dd>A [SELECT](SELECT/index.html) command which will provide the columns and rows of the view.</dd>
 
 ## Notes<a id="topic1__section5"></a>
 
@@ -104,4 +104,4 @@ The SQL standard specifies some additional capabilities for the `CREATE         
 
 ## See Also<a id="topic1__section8"></a>
 
-[SELECT](SELECT.html), [DROP VIEW](DROP-VIEW.html)
+[SELECT](SELECT.html), [DROP VIEW](DROP-VIEW/index.html)

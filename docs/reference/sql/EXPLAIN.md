@@ -112,4 +112,4 @@ There is no `EXPLAIN` statement defined in the SQL standard.
 
 ## See Also<a id="topic1__section8"></a>
 
-[ANALYZE](ANALYZE.html)
+[ANALYZE](ANALYZE/index.html)

@@ -41,7 +41,7 @@ Row-oriented storage provides the best options for the following situations:
 
 ## Altering a Table <a id="topic55"></a>
 
-The `ALTER TABLE`command changes the definition of a table. Use `ALTER TABLE` to change table attributes such as column definitions, distribution policy, storage model, and partition structure \(see also [Maintaining Partitioned Tables](ddl-partition.html)\). For example, to add a not-null constraint to a table column:
+The `ALTER TABLE`command changes the definition of a table. Use `ALTER TABLE` to change table attributes such as column definitions, distribution policy, storage model, and partition structure \(see also [Maintaining Partitioned Tables](ddl-partition/index.html)\). For example, to add a not-null constraint to a table column:
 
 ``` sql
 => ALTER TABLE address ALTER COLUMN street SET NOT NULL;

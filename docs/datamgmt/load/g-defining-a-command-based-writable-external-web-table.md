@@ -57,6 +57,6 @@ The following HAWQ variables are available for use in OS commands executed by a 
 | $GP\_USER           | The database user executing the external table statement.                                                                  |
 | $GP\_XID            | The transaction ID of the external table statement.                                                                        |
 
--   **[Disabling EXECUTE for Web or Writable External Tables](../../datamgmt/load/g-disabling-execute-for-web-or-writable-external-tables.html)**
+-   **[Disabling EXECUTE for Web or Writable External Tables](../../datamgmt/load/g-disabling-execute-for-web-or-writable-external-tables/index.html)**
 
 

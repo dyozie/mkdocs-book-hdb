@@ -31,7 +31,7 @@ END [WORK | TRANSACTION]
 
 ## Description<a id="topic1__section3"></a>
 
-`END` commits the current transaction. All changes made by the transaction become visible to others and are guaranteed to be durable if a crash occurs. This command is a HAWQ extension that is equivalent to [COMMIT](COMMIT.html).
+`END` commits the current transaction. All changes made by the transaction become visible to others and are guaranteed to be durable if a crash occurs. This command is a HAWQ extension that is equivalent to [COMMIT](COMMIT/index.html).
 
 ## Parameters<a id="topic1__section4"></a>
 
@@ -49,8 +49,8 @@ END;
 
 ## Compatibility<a id="topic1__section6"></a>
 
-`END` is a HAWQ extension that provides functionality equivalent to [COMMIT](COMMIT.html), which is specified in the SQL standard.
+`END` is a HAWQ extension that provides functionality equivalent to [COMMIT](COMMIT/index.html), which is specified in the SQL standard.
 
 ## See Also<a id="topic1__section7"></a>
 
-[BEGIN](BEGIN.html), [ROLLBACK](ROLLBACK.html), [COMMIT](COMMIT.html)
+[BEGIN](BEGIN.html), [ROLLBACK](ROLLBACK.html), [COMMIT](COMMIT/index.html)

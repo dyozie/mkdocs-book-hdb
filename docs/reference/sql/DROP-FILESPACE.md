@@ -58,4 +58,4 @@ There is no `DROP FILESPACE` statement in the SQL standard or in PostgreSQL.
 
 ## See Also<a id="topic1__section7"></a>
 
-[DROP TABLESPACE](DROP-TABLESPACE.html), [hawq filespace](../cli/admin_utilities/hawqfilespace.html#topic1)
+[DROP TABLESPACE](DROP-TABLESPACE/index.html), [hawq filespace](../cli/admin_utilities/hawqfilespace.html#topic1)

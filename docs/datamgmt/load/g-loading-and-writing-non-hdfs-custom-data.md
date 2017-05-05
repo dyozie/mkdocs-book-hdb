@@ -23,6 +23,6 @@ under the License.
 
 HAWQ supports `TEXT` and `CSV` formats for importing and exporting data. You can load and write the data in other formats by defining and using a custom format or custom protocol.
 
--   **[Using a Custom Format](../../datamgmt/load/g-using-a-custom-format.html)**
+-   **[Using a Custom Format](../../datamgmt/load/g-using-a-custom-format/index.html)**
 
 

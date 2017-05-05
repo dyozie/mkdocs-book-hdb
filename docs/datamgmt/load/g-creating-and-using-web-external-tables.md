@@ -25,8 +25,8 @@ under the License.
 
 You can define command-based or URL-based web external tables. The definition forms are distinct: you cannot mix command-based and URL-based definitions.
 
--   **[Command-based Web External Tables](../../datamgmt/load/g-command-based-web-external-tables.html)**
+-   **[Command-based Web External Tables](../../datamgmt/load/g-command-based-web-external-tables/index.html)**
 
--   **[URL-based Web External Tables](../../datamgmt/load/g-url-based-web-external-tables.html)**
+-   **[URL-based Web External Tables](../../datamgmt/load/g-url-based-web-external-tables/index.html)**
 
 

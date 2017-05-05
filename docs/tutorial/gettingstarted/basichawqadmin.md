@@ -204,9 +204,9 @@ Perform the following steps to view the HDFS NodeName and set the HAWQ PL/Java `
 
 In this lesson, you viewed the state of the HAWQ cluster and learned how to change cluster configuration parameters. 
 
-For additional information on HAWQ server configuration parameters, see [Server Configuration Parameter Reference](../../reference/HAWQSiteConfig.html).
+For additional information on HAWQ server configuration parameters, see [Server Configuration Parameter Reference](../../reference/HAWQSiteConfig/index.html).
 
-The following table identifies HAWQ management commands used in the tutorial exercises. For detailed information on specific HAWQ management commands, refer to the [HAWQ Management Tools Reference](../../reference/cli/management_tools.html).
+The following table identifies HAWQ management commands used in the tutorial exercises. For detailed information on specific HAWQ management commands, refer to the [HAWQ Management Tools Reference](../../reference/cli/management_tools/index.html).
 
 <a id="topic_table_clustmgmtcmd"></a>
 
@@ -222,4 +222,4 @@ The following table identifies HAWQ management commands used in the tutorial exe
 
 Lesson 3 introduces basic HAWQ database administration activities and commands.
 
-**Lesson 3**: [Database Administration](basicdbadmin.html)
+**Lesson 3**: [Database Administration](basicdbadmin/index.html)

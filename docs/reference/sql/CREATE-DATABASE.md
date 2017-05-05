@@ -102,4 +102,4 @@ There is no `CREATE DATABASE` statement in the SQL standard. Databases are equiv
 
 ## See Also<a id="topic1__section8"></a>
 
-[DROP DATABASE](DROP-DATABASE.html)
+[DROP DATABASE](DROP-DATABASE/index.html)

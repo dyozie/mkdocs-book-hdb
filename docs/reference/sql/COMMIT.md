@@ -41,7 +41,7 @@ TRANSACTION  </dt>
 
 ## Notes<a id="topic1__section5"></a>
 
-Use [ROLLBACK](ROLLBACK.html) to abort a transaction.
+Use [ROLLBACK](ROLLBACK/index.html) to abort a transaction.
 
 Issuing `COMMIT` when not inside a transaction does no harm, but it will provoke a warning message.
 
@@ -59,4 +59,4 @@ The SQL standard only specifies the two forms `COMMIT` and `COMMIT           WOR
 
 ## See Also<a id="topic1__section8"></a>
 
-[BEGIN](BEGIN.html), [END](END.html), [ROLLBACK](ROLLBACK.html)
+[BEGIN](BEGIN.html), [END](END.html), [ROLLBACK](ROLLBACK/index.html)

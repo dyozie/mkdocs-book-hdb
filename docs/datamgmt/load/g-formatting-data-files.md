@@ -23,14 +23,14 @@ under the License.
 
 When you use the HAWQ tools for loading and unloading data, you must specify how your data is formatted. `COPY`, `CREATE             EXTERNAL TABLE, `and `hawq load` have clauses that allow you to specify how your data is formatted. Data can be delimited text (`TEXT`) or comma separated values (`CSV`) format. External data must be formatted correctly to be read by HAWQ. This topic explains the format of data files expected by HAWQ.
 
--   **[Formatting Rows](../../datamgmt/load/g-formatting-rows.html)**
+-   **[Formatting Rows](../../datamgmt/load/g-formatting-rows/index.html)**
 
--   **[Formatting Columns](../../datamgmt/load/g-formatting-columns.html)**
+-   **[Formatting Columns](../../datamgmt/load/g-formatting-columns/index.html)**
 
--   **[Representing NULL Values](../../datamgmt/load/g-representing-null-values.html)**
+-   **[Representing NULL Values](../../datamgmt/load/g-representing-null-values/index.html)**
 
--   **[Escaping](../../datamgmt/load/g-escaping.html)**
+-   **[Escaping](../../datamgmt/load/g-escaping/index.html)**
 
--   **[Character Encoding](../../datamgmt/load/g-character-encoding.html)**
+-   **[Character Encoding](../../datamgmt/load/g-character-encoding/index.html)**
 
 

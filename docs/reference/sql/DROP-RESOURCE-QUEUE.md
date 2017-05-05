@@ -43,7 +43,7 @@ This command removes a resource queue from HAWQ. To drop a resource queue, the q
 
 ## Notes<a id="topic1__section5"></a>
 
-Use [ALTER ROLE](ALTER-ROLE.html) to remove a user from a resource queue.
+Use [ALTER ROLE](ALTER-ROLE/index.html) to remove a user from a resource queue.
 
 To see all the currently active queries for all resource queues, perform the following query of the `pg_locks` table joined with the `pg_roles` and `pg_resqueue` tables:
 
@@ -81,4 +81,4 @@ The `DROP RESOURCE QUEUE` statement is a HAWQ extension.
 
 ## See Also<a id="topic1__section8"></a>
 
-[CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html), [ALTER ROLE](ALTER-ROLE.html), [ALTER RESOURCE QUEUE](ALTER-RESOURCE-QUEUE.html)
+[CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html), [ALTER ROLE](ALTER-ROLE.html), [ALTER RESOURCE QUEUE](ALTER-RESOURCE-QUEUE/index.html)

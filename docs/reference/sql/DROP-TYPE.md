@@ -61,4 +61,4 @@ This command is similar to the corresponding command in the SQL standard, apart 
 
 ## See Also<a id="topic1__section7"></a>
 
-[ALTER TYPE](ALTER-TYPE.html), [CREATE TYPE](CREATE-TYPE.html)
+[ALTER TYPE](ALTER-TYPE.html), [CREATE TYPE](CREATE-TYPE/index.html)

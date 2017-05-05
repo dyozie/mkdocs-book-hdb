@@ -83,4 +83,4 @@ There is no CREATE CONVERSION statement in the SQL standard.
 
 ## See Also<a id="topic1__section8"></a>
 
-[DROP CONVERSION](DROP-CONVERSION.html), [CREATE FUNCTION](CREATE-FUNCTION.html)
+[DROP CONVERSION](DROP-CONVERSION.html), [CREATE FUNCTION](CREATE-FUNCTION/index.html)

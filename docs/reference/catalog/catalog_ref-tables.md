@@ -32,7 +32,7 @@ This topic lists the system tables included in HAWQ.
 -   [gp\_persistent\_filespace\_node](gp_persistent_filespace_node.html#topic1)
 -   [gp\_persistent\_relation\_node](gp_persistent_relation_node.html#topic1)
 -   [gp\_persistent\_tablespace\_node](gp_persistent_tablespace_node.html#topic1)
--   gp\_relation\_node (Deprecated. See [gp\_relfile\_node](gp_relfile_node.html).)
+-   gp\_relation\_node (Deprecated. See [gp\_relfile\_node](gp_relfile_node/index.html).)
 -   [gp\_segment\_configuration](gp_segment_configuration.html#topic1)
 -   [gp\_version\_at\_initdb](gp_version_at_initdb.html#topic1)
 -   [pg\_aggregate](pg_aggregate.html#topic1)

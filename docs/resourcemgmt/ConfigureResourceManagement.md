@@ -29,8 +29,8 @@ To configure resource management in HAWQ, follow these high-level steps:
     -   Standalone mode, or no global resource management. When configured to run in standalone mode, HAWQ consumes cluster node resources without considering the resource requirements of co-existing applications, and the HAWQ resource manager assumes it can use all the resources from registered segments, unless configured otherwise. See [Using Standalone Mode](#topic_url_pls_zt).
     -   External global resource manager mode. Currently HAWQ supports YARN as a global resource manager. When you configure YARN as the global resource manager in a HAWQ cluster, HAWQ becomes an unmanaged YARN application. HAWQ negotiates resources with the YARN resource manager to consume YARN cluster resources.
 2.  If you are using standalone mode for HAWQ resource management, decide on whether to limit the amount of memory and CPU usage allocated per HAWQ segment. See [Configuring Segment Resource Capacity](#topic_htk_fxh_15).
-3.  If you are using YARN as your global resource manager, configure the resource queue in YARN where HAWQ will register itself as a YARN application. Then configure HAWQ with the location and configuration requirements for communicating with YARN's resource manager. See [Integrating YARN with HAWQ](YARNIntegration.html) for details.
-4.  In HAWQ, create and define resource queues. See [Working with Hierarchical Resource Queues](ResourceQueues.html).
+3.  If you are using YARN as your global resource manager, configure the resource queue in YARN where HAWQ will register itself as a YARN application. Then configure HAWQ with the location and configuration requirements for communicating with YARN's resource manager. See [Integrating YARN with HAWQ](YARNIntegration/index.html) for details.
+4.  In HAWQ, create and define resource queues. See [Working with Hierarchical Resource Queues](ResourceQueues/index.html).
 
 ## Using Standalone Mode <a id="topic_url_pls_zt"></a>
 
@@ -100,8 +100,8 @@ In some cases, you may want to specify additional resource quotas on the query s
 
 The following configuration properties allow a user to control resource quotas without altering corresponding resource queues.
 
--   [hawq\_rm\_stmt\_nvseg](../reference/guc/parameter_definitions.html)
--   [hawq\_rm\_stmt\_vseg\_memory](../reference/guc/parameter_definitions.html)
+-   [hawq\_rm\_stmt\_nvseg](../reference/guc/parameter_definitions/index.html)
+-   [hawq\_rm\_stmt\_vseg\_memory](../reference/guc/parameter_definitions/index.html)
 
 However, the changed resource quota for the virtual segment cannot exceed the resource queue’s maximum capacity in HAWQ.
 
@@ -139,4 +139,4 @@ To alleviate the load on NameNode, you can limit V, the number of virtual segmen
 -   `hawq_rm_nvseg_perquery_limit` limits the maximum number of virtual segments that can be used for one statement execution on a cluster-wide level.  The hash buckets defined in `default_hash_table_bucket_number` cannot exceed this number. The default value is 512.
 -   `default_hash_table_bucket_number` defines the number of buckets used by default when you create a hash table. When you query a hash table, the query's virtual segment resources are fixed and allocated based on the bucket number defined for the table. A best practice is to tune this configuration parameter after you expand the cluster.
 
-You can also limit the number of virtual segments used by queries when configuring your resource queues. \(See [CREATE RESOURCE QUEUE](../reference/sql/CREATE-RESOURCE-QUEUE.html).\) The global configuration parameters are a hard limit, however, and any limits set on the resource queue or on the statement-level cannot be larger than these limits set on the cluster-wide level.
+You can also limit the number of virtual segments used by queries when configuring your resource queues. \(See [CREATE RESOURCE QUEUE](../reference/sql/CREATE-RESOURCE-QUEUE/index.html).\) The global configuration parameters are a hard limit, however, and any limits set on the resource queue or on the statement-level cannot be larger than these limits set on the cluster-wide level.

@@ -38,9 +38,9 @@ Ensure that you have a running HAWQ 2.x single or multi-node cluster. You may ch
 
 This guide includes the following content and exercises:
 
-[Lesson 1: Runtime Environment](gettingstarted/introhawqenv.html) - Examine and set up the HAWQ runtime environment.  
-[Lesson 2: Cluster Administration](gettingstarted/basichawqadmin.html) - Perform common HAWQ cluster management activities.  
-[Lesson 3: Database Administration](gettingstarted/basicdbadmin.html) - Perform common HAWQ database management activities.  
-[Lesson 4: Sample Data Set and HAWQ Schemas](gettingstarted/dataandscripts.html) - Download tutorial data and work files, create the Retail demo schema, load data to HDFS.  
-[Lesson 5: HAWQ Tables](gettingstarted/introhawqtbls.html) - Create and query HAWQ-managed tables.  
-[Lesson 6: HAWQ Extension Framework (PXF)](gettingstarted/intropxfhdfs.html) - Use PXF to access external HDFS data.  
+[Lesson 1: Runtime Environment](gettingstarted/introhawqenv/index.html) - Examine and set up the HAWQ runtime environment.  
+[Lesson 2: Cluster Administration](gettingstarted/basichawqadmin/index.html) - Perform common HAWQ cluster management activities.  
+[Lesson 3: Database Administration](gettingstarted/basicdbadmin/index.html) - Perform common HAWQ database management activities.  
+[Lesson 4: Sample Data Set and HAWQ Schemas](gettingstarted/dataandscripts/index.html) - Download tutorial data and work files, create the Retail demo schema, load data to HDFS.  
+[Lesson 5: HAWQ Tables](gettingstarted/introhawqtbls/index.html) - Create and query HAWQ-managed tables.  
+[Lesson 6: HAWQ Extension Framework (PXF)](gettingstarted/intropxfhdfs/index.html) - Use PXF to access external HDFS data.  

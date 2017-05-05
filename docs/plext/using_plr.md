@@ -103,7 +103,7 @@ R packages are modules that contain R functions and data sets. You can install R
 
 1. For an R package, identify all dependent R packages and each package web URL. The information can be found by selecting the given package from the following navigation page:
 
-	[http://cran.r-project.org/web/packages/available_packages_by_name.html](http://cran.r-project.org/web/packages/available_packages_by_name.html)
+	[http://cran.r-project.org/web/packages/available_packages_by_name.html](http://cran.r-project.org/web/packages/available_packages_by_name/index.html)
 
 	As an example, the page for the R package `arm` indicates that the package requires the following R libraries: `Matrix`, `lattice`, `lme4`, `R2WinBUGS`, `coda`, `abind`, `foreign`, and `MASS`.
 	
@@ -235,14 +235,14 @@ where N.N.N corresponds to the version of R installed.
 
 ### R Functions and Arguments <a id="rfunctions"></a>
 
-See [http://www.joeconway.com/plr/doc/plr-funcs.html](http://www.joeconway.com/plr/doc/plr-funcs.html).
+See [http://www.joeconway.com/plr/doc/plr-funcs.html](http://www.joeconway.com/plr/doc/plr-funcs/index.html).
 
 ### Passing Data Values in R <a id="passdatavalues"></a>
 
-See [http://www.joeconway.com/plr/doc/plr-data.html](http://www.joeconway.com/plr/doc/plr-data.html).
+See [http://www.joeconway.com/plr/doc/plr-data.html](http://www.joeconway.com/plr/doc/plr-data/index.html).
 
 ### Aggregate Functions in R <a id="aggregatefunctions"></a>
 
-See [http://www.joeconway.com/plr/doc/plr-aggregate-funcs.html](http://www.joeconway.com/plr/doc/plr-aggregate-funcs.html).
+See [http://www.joeconway.com/plr/doc/plr-aggregate-funcs.html](http://www.joeconway.com/plr/doc/plr-aggregate-funcs/index.html).
 
 

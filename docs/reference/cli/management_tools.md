@@ -23,60 +23,60 @@ under the License.
 
 Reference information for command-line utilities available in HAWQ.
 
--   **[analyzedb](../../reference/cli/admin_utilities/analyzedb.html)**
+-   **[analyzedb](../../reference/cli/admin_utilities/analyzedb/index.html)**
 
--   **[createdb](../../reference/cli/client_utilities/createdb.html)**
+-   **[createdb](../../reference/cli/client_utilities/createdb/index.html)**
 
--   **[createuser](../../reference/cli/client_utilities/createuser.html)**
+-   **[createuser](../../reference/cli/client_utilities/createuser/index.html)**
 
--   **[dropdb](../../reference/cli/client_utilities/dropdb.html)**
+-   **[dropdb](../../reference/cli/client_utilities/dropdb/index.html)**
 
--   **[dropuser](../../reference/cli/client_utilities/dropuser.html)**
+-   **[dropuser](../../reference/cli/client_utilities/dropuser/index.html)**
 
--   **[gpfdist](../../reference/cli/admin_utilities/gpfdist.html)**
+-   **[gpfdist](../../reference/cli/admin_utilities/gpfdist/index.html)**
 
--   **[gplogfilter](../../reference/cli/admin_utilities/gplogfilter.html)**
+-   **[gplogfilter](../../reference/cli/admin_utilities/gplogfilter/index.html)**
 
--   **[hawq activate](../../reference/cli/admin_utilities/hawqactivate.html)**
+-   **[hawq activate](../../reference/cli/admin_utilities/hawqactivate/index.html)**
 
--   **[hawq check](../../reference/cli/admin_utilities/hawqcheck.html)**
+-   **[hawq check](../../reference/cli/admin_utilities/hawqcheck/index.html)**
 
--   **[hawq checkperf](../../reference/cli/admin_utilities/hawqcheckperf.html)**
+-   **[hawq checkperf](../../reference/cli/admin_utilities/hawqcheckperf/index.html)**
 
--   **[hawq config](../../reference/cli/admin_utilities/hawqconfig.html)**
+-   **[hawq config](../../reference/cli/admin_utilities/hawqconfig/index.html)**
 
--   **[hawq extract](../../reference/cli/admin_utilities/hawqextract.html)**
+-   **[hawq extract](../../reference/cli/admin_utilities/hawqextract/index.html)**
 
--   **[hawq filespace](../../reference/cli/admin_utilities/hawqfilespace.html)**
+-   **[hawq filespace](../../reference/cli/admin_utilities/hawqfilespace/index.html)**
 
--   **[hawq init](../../reference/cli/admin_utilities/hawqinit.html)**
+-   **[hawq init](../../reference/cli/admin_utilities/hawqinit/index.html)**
 
--   **[hawq load](../../reference/cli/admin_utilities/hawqload.html)**
+-   **[hawq load](../../reference/cli/admin_utilities/hawqload/index.html)**
 
--   **[hawq register](../../reference/cli/admin_utilities/hawqregister.html)**
+-   **[hawq register](../../reference/cli/admin_utilities/hawqregister/index.html)**
 
--   **[hawq restart](../../reference/cli/admin_utilities/hawqrestart.html)**
+-   **[hawq restart](../../reference/cli/admin_utilities/hawqrestart/index.html)**
 
--   **[hawq scp](../../reference/cli/admin_utilities/hawqscp.html)**
+-   **[hawq scp](../../reference/cli/admin_utilities/hawqscp/index.html)**
 
--   **[hawq ssh](../../reference/cli/admin_utilities/hawqssh.html)**
+-   **[hawq ssh](../../reference/cli/admin_utilities/hawqssh/index.html)**
 
--   **[hawq ssh-exkeys](../../reference/cli/admin_utilities/hawqssh-exkeys.html)**
+-   **[hawq ssh-exkeys](../../reference/cli/admin_utilities/hawqssh-exkeys/index.html)**
 
--   **[hawq start](../../reference/cli/admin_utilities/hawqstart.html)**
+-   **[hawq start](../../reference/cli/admin_utilities/hawqstart/index.html)**
 
--   **[hawq state](../../reference/cli/admin_utilities/hawqstate.html)**
+-   **[hawq state](../../reference/cli/admin_utilities/hawqstate/index.html)**
 
--   **[hawq stop](../../reference/cli/admin_utilities/hawqstop.html)**
+-   **[hawq stop](../../reference/cli/admin_utilities/hawqstop/index.html)**
 
--   **[pg\_dump](../../reference/cli/client_utilities/pg_dump.html)**
+-   **[pg\_dump](../../reference/cli/client_utilities/pg_dump/index.html)**
 
--   **[pg\_dumpall](../../reference/cli/client_utilities/pg_dumpall.html)**
+-   **[pg\_dumpall](../../reference/cli/client_utilities/pg_dumpall/index.html)**
 
--   **[pg\_restore](../../reference/cli/client_utilities/pg_restore.html)**
+-   **[pg\_restore](../../reference/cli/client_utilities/pg_restore/index.html)**
 
--   **[psql](../../reference/cli/client_utilities/psql.html)**
+-   **[psql](../../reference/cli/client_utilities/psql/index.html)**
 
--   **[vacuumdb](../../reference/cli/client_utilities/vacuumdb.html)**
+-   **[vacuumdb](../../reference/cli/client_utilities/vacuumdb/index.html)**
 
 

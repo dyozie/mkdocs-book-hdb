@@ -58,5 +58,5 @@ If a query performs poorly, examine its query plan and ask the following questio
 
     `Work_mem used: 23430K bytes avg, 23430K bytes max (seg0). Work_mem wanted: 33649K bytes avg, 33649K bytes max (seg0) to lessen workfile I/O affecting 2               workers.`
 
-  **Note:** The "bytes wanted" (*work\_mem* property) is based on the amount of data written to work files and is not exact. This property is not configurable. Use resource queues to manage memory use. For more information on resource queues, see [Configuring Resource Management](../resourcemgmt/ConfigureResourceManagement.html) and [Working with Hierarchical Resource Queues](../resourcemgmt/ResourceQueues.html).
+  **Note:** The "bytes wanted" (*work\_mem* property) is based on the amount of data written to work files and is not exact. This property is not configurable. Use resource queues to manage memory use. For more information on resource queues, see [Configuring Resource Management](../resourcemgmt/ConfigureResourceManagement.html) and [Working with Hierarchical Resource Queues](../resourcemgmt/ResourceQueues/index.html).
 

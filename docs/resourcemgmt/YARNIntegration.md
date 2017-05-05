@@ -34,7 +34,7 @@ To integrate YARN with HAWQ, use the following high-level steps.
 3.  Enable YARN mode within HAWQ. See [Enabling YARN Mode in HAWQ](#topic_rtd_cjh_15).
 4.  After you integrate YARN with HAWQ, adjust HAWQ's resource usage as needed by doing any of the following:
     -   Change the capacity of the corresponding YARN resource queue for HAWQ. For example, see the properties described for CapacityScheduler configuration. You can then refresh the YARN queues without having to restart or reload HAWQ. See See [Configuring YARN for HAWQ](#hawqinputformatexample) and [Setting HAWQ Segment Resource Capacity in YARN](#topic_pzf_kqn_c5).
-    -   Change resource consumption within HAWQ on a finer grained level by altering HAWQ's resource queues. See [Working with Hierarchical Resource Queues](ResourceQueues.html).
+    -   Change resource consumption within HAWQ on a finer grained level by altering HAWQ's resource queues. See [Working with Hierarchical Resource Queues](ResourceQueues/index.html).
     -   \(Optional\) Tune HAWQ and YARN resource negotiations. For example, you can set a minimum number of YARN containers per segment or modify the idle timeout for YARN resources in HAWQ. See [Tune HAWQ Resource Negotiations with YARN](#topic_wp3_4bx_15).
 
 ## Configuring YARN for HAWQ <a id="hawqinputformatexample"></a>
@@ -123,7 +123,7 @@ In the following configuration within `capacity-scheduler.xml,` we configure the
 
 Similar to how you can set segment resource capacity in HAWQ's standalone mode, you can do the same for HAWQ segments managed by YARN.
 
-In HAWQ standalone mode, you can configure the resource capacity of individual segments as described in [Configuring Segment Resource Capacity](ConfigureResourceManagement.html). If you are using YARN to manage HAWQ resources, then you configure the resource capacity of segments by configuring YARN. We recommend that you configure all segments with identical resource capacity. In `yarn-site.xml`, set the following properties:
+In HAWQ standalone mode, you can configure the resource capacity of individual segments as described in [Configuring Segment Resource Capacity](ConfigureResourceManagement/index.html). If you are using YARN to manage HAWQ resources, then you configure the resource capacity of segments by configuring YARN. We recommend that you configure all segments with identical resource capacity. In `yarn-site.xml`, set the following properties:
 
 ``` xml
 <property>
@@ -162,7 +162,7 @@ However, if you had set `yarn.scheduler.minimum-allocation-mb` to 4GB, then it w
 
 **Note:** If you are specifying 1GB or under for `yarn.scheduler.minimum-allocation-mb` in `yarn-site.xml`, then make sure that the property is an equal subdivision of 1GB. For example, 1024, 512.
 
-See [Handling Segment Resource Fragmentation](../troubleshooting/Troubleshooting.html) for general information on resource fragmentation.
+See [Handling Segment Resource Fragmentation](../troubleshooting/Troubleshooting/index.html) for general information on resource fragmentation.
 
 ## Enabling YARN Mode in HAWQ <a id="topic_rtd_cjh_15"></a>
 

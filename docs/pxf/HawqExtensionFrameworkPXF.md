@@ -25,44 +25,44 @@ HAWQ Extension Framework (PXF) is an extensible framework that allows HAWQ to qu
 
 PXF includes built-in connectors for accessing data inside HDFS files, Hive tables, and HBase tables. PXF also integrates with HCatalog to query Hive tables directly.
 
-PXF allows users to create custom connectors to access other parallel data stores or processing engines. To create these connectors using Java plug-ins, see the [PXF External Tables and API](PXFExternalTableandAPIReference.html).
+PXF allows users to create custom connectors to access other parallel data stores or processing engines. To create these connectors using Java plug-ins, see the [PXF External Tables and API](PXFExternalTableandAPIReference/index.html).
 
--   **[Installing PXF Plug-ins](../pxf/InstallPXFPlugins.html)**
+-   **[Installing PXF Plug-ins](../pxf/InstallPXFPlugins/index.html)**
 
     This topic describes how to install the built-in PXF service plug-ins that are required to connect PXF to HDFS, Hive, and HBase. You should install the appropriate RPMs on each node in your cluster.
 
--   **[Configuring PXF](../pxf/ConfigurePXF.html)**
+-   **[Configuring PXF](../pxf/ConfigurePXF/index.html)**
 
     This topic describes how to configure the PXF service.
 
--   **[Accessing HDFS File Data](../pxf/HDFSFileDataPXF.html)**
+-   **[Accessing HDFS File Data](../pxf/HDFSFileDataPXF/index.html)**
 
     This topic describes how to access HDFS file data using PXF.
 
--   **[Accessing Hive Data](../pxf/HivePXF.html)**
+-   **[Accessing Hive Data](../pxf/HivePXF/index.html)**
 
     This topic describes how to access Hive data using PXF. You have several options for querying data stored in Hive. You can create external tables in PXF and then query those tables, or you can easily query Hive tables by using HAWQ and PXF's integration with HCatalog. HAWQ accesses Hive table metadata stored in HCatalog.
 
--   **[Accessing HBase Data](../pxf/HBasePXF.html)**
+-   **[Accessing HBase Data](../pxf/HBasePXF/index.html)**
 
     This topic describes how to access HBase data using PXF.
 
--   **[Accessing JSON Data](../pxf/JsonPXF.html)**
+-   **[Accessing JSON Data](../pxf/JsonPXF/index.html)**
 
     This topic describes how to access JSON data using PXF.
 
--   **[Writing Data to HDFS](../pxf/HDFSWritablePXF.html)**
+-   **[Writing Data to HDFS](../pxf/HDFSWritablePXF/index.html)**
 
     This topic describes how to write to HDFS using PXF.
 
--   **[Using Profiles to Read and Write Data](../pxf/ReadWritePXF.html)**
+-   **[Using Profiles to Read and Write Data](../pxf/ReadWritePXF/index.html)**
 
     PXF profiles are collections of common metadata attributes that can be used to simplify the reading and writing of data. You can use any of the built-in profiles that come with PXF or you can create your own.
 
--   **[PXF External Tables and API](../pxf/PXFExternalTableandAPIReference.html)**
+-   **[PXF External Tables and API](../pxf/PXFExternalTableandAPIReference/index.html)**
 
     You can use the PXF API to create your own connectors to access any other type of parallel data store or processing engine.
 
--   **[Troubleshooting PXF](../pxf/TroubleshootingPXF.html)**
+-   **[Troubleshooting PXF](../pxf/TroubleshootingPXF/index.html)**
 
 

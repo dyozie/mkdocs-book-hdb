@@ -32,7 +32,7 @@ Support for SQL and C language user-defined functions and aliasing of internal f
 
 ## Defining SQL Functions<a id="builtinsql"></a>
 
-SQL functions execute an arbitrary list of SQL statements. The SQL statements in the body of a SQL function must be separated by semicolons. The final statement in a non-void-returning SQL function must be a [SELECT](../reference/sql/SELECT.html) that returns data of the type specified by the function's return type. The function will return a single or set of rows corresponding to this last SQL query.
+SQL functions execute an arbitrary list of SQL statements. The SQL statements in the body of a SQL function must be separated by semicolons. The final statement in a non-void-returning SQL function must be a [SELECT](../reference/sql/SELECT/index.html) that returns data of the type specified by the function's return type. The function will return a single or set of rows corresponding to this last SQL query.
 
 The following example creates and calls a SQL function to count the number of rows of the table named `orders`:
 
@@ -48,7 +48,7 @@ gpadmin=# SELECT count_orders();
 (1 row)
 ```
 
-For additional information about creating SQL functions, refer to [Query Language (SQL) Functions](https://www.postgresql.org/docs/8.2/static/xfunc-sql.html) in the PostgreSQL documentation.
+For additional information about creating SQL functions, refer to [Query Language (SQL) Functions](https://www.postgresql.org/docs/8.2/static/xfunc-sql/index.html) in the PostgreSQL documentation.
 
 ## Aliasing Internal Functions<a id="builtininternal"></a>
 
@@ -71,13 +71,13 @@ gpadmin=# SELECT all_caps('change me');
 
 ```
 
-For more information about aliasing internal functions, refer to [Internal Functions](https://www.postgresql.org/docs/8.2/static/xfunc-internal.html) in the PostgreSQL documentation.
+For more information about aliasing internal functions, refer to [Internal Functions](https://www.postgresql.org/docs/8.2/static/xfunc-internal/index.html) in the PostgreSQL documentation.
 
 ## Defining C Functions<a id="builtinc_lang"></a>
 
 You must compile user-defined functions written in C into shared libraries so that the HAWQ server can load them on demand. This dynamic loading distinguishes C language functions from internal functions that are written in C.
 
-The [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION.html) call for a user-defined C function must include both the name of the shared library and the name of the function.
+The [CREATE FUNCTION](../reference/sql/CREATE-FUNCTION/index.html) call for a user-defined C function must include both the name of the shared library and the name of the function.
 
 If an absolute path to the shared library is not provided, an attempt is made to locate the library relative to the: 
 
@@ -125,5 +125,5 @@ gpadmin=# SELECT double_it_c(27);
 
 The shared library `.so` extension may be omitted.
 
-For additional information about using the C language to create functions, refer to [C-Language Functions](https://www.postgresql.org/docs/8.2/static/xfunc-c.html) in the PostgreSQL documentation.
+For additional information about using the C language to create functions, refer to [C-Language Functions](https://www.postgresql.org/docs/8.2/static/xfunc-c/index.html) in the PostgreSQL documentation.
 

@@ -35,8 +35,8 @@ HAWQ provides functions for formatting fixed-width data, but you must author the
 2.  Specify the shared library function with `CREATE FUNCTION` in HAWQ.
 3.  Use the `formatter` parameter of `CREATE EXTERNAL                TABLE`'s `FORMAT` clause to call the function.
 
--   **[Importing and Exporting Fixed Width Data](../../datamgmt/load/g-importing-and-exporting-fixed-width-data.html)**
+-   **[Importing and Exporting Fixed Width Data](../../datamgmt/load/g-importing-and-exporting-fixed-width-data/index.html)**
 
--   **[Examples - Read Fixed-Width Data](../../datamgmt/load/g-examples-read-fixed-width-data.html)**
+-   **[Examples - Read Fixed-Width Data](../../datamgmt/load/g-examples-read-fixed-width-data/index.html)**
 
 

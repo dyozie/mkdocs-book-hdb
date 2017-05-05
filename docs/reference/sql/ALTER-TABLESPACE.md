@@ -69,6 +69,6 @@ There is no `ALTER TABLESPACE` statement in the SQL standard.
 
 ##  See Also<a id="see"></a>
 
-[CREATE TABLESPACE](CREATE-TABLESPACE.html), [DROP TABLESPACE](DROP-TABLESPACE.html)
+[CREATE TABLESPACE](CREATE-TABLESPACE.html), [DROP TABLESPACE](DROP-TABLESPACE/index.html)
 
 

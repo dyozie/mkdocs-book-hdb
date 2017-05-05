@@ -99,7 +99,7 @@ The `SETOF` modifier indicates that the function will return a set of items, rat
 The type of a column is referenced by writing `                             <tablename>.<columnname>%<TYPE>`.</dd>
 
 <dt> \<langname\>  </dt>
-<dd>The name of the language that the function is implemented in. May be `SQL`, `C`, `internal`, or the name of a user-defined procedural language. See [CREATE LANGUAGE](CREATE-LANGUAGE.html) for the procedural languages supported in HAWQ. For backward compatibility, the name may be enclosed by single quotes.</dd>
+<dd>The name of the language that the function is implemented in. May be `SQL`, `C`, `internal`, or the name of a user-defined procedural language. See [CREATE LANGUAGE](CREATE-LANGUAGE/index.html) for the procedural languages supported in HAWQ. For backward compatibility, the name may be enclosed by single quotes.</dd>
 
 <dt>IMMUTABLE  
 STABLE  
@@ -206,4 +206,4 @@ For compatibility with some other database systems, \<argmode\> can be written e
 
 ## See Also<a id="topic1__section10"></a>
 
-[ALTER FUNCTION](ALTER-FUNCTION.html), [DROP FUNCTION](DROP-FUNCTION.html)
+[ALTER FUNCTION](ALTER-FUNCTION.html), [DROP FUNCTION](DROP-FUNCTION/index.html)

@@ -73,7 +73,7 @@ The *count* is the number of rows inserted. If count is exactly one, and the tar
 <dd>The corresponding column will be filled with its default value.</dd>
 
 <dt> \<query\>   </dt>
-<dd>A query (`SELECT` statement) that supplies the rows to be inserted. Refer to the [SELECT](SELECT.html) statement for a description of the syntax.</dd>
+<dd>A query (`SELECT` statement) that supplies the rows to be inserted. Refer to the [SELECT](SELECT/index.html) statement for a description of the syntax.</dd>
 
 ## Examples<a id="topic1__section7"></a>
 
@@ -127,4 +127,4 @@ Possible limitations of the *query* clause are documented under `SELECT`.
 
 ## See Also<a id="topic1__section9"></a>
 
-[COPY](COPY.html), [SELECT](SELECT.html), [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE.html)
+[COPY](COPY.html), [SELECT](SELECT.html), [CREATE EXTERNAL TABLE](CREATE-EXTERNAL-TABLE/index.html)

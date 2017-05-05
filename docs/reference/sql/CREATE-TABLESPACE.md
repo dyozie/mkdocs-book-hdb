@@ -37,7 +37,7 @@ CREATE TABLESPACE <tablespace_name> [OWNER <username>]
 
 A tablespace allows superusers to define an alternative location on the file system where the data files containing database objects (such as tables) may reside.
 
-A user with appropriate privileges can pass a tablespace name to [CREATE DATABASE](CREATE-DATABASE.html) or [CREATE TABLE](CREATE-TABLE.html) to have the data files for these objects stored within the specified tablespace.
+A user with appropriate privileges can pass a tablespace name to [CREATE DATABASE](CREATE-DATABASE.html) or [CREATE TABLE](CREATE-TABLE/index.html) to have the data files for these objects stored within the specified tablespace.
 
 In HAWQ, there must be a file system location defined for the master and each segment in order for the tablespace to have a location to store its objects across an entire HAWQ system. This collection of file system locations is defined in a filespace object. A filespace must be defined before you can create a tablespace. See [hawq filespace](../cli/admin_utilities/hawqfilespace.html#topic1) for more information.
 
@@ -74,4 +74,4 @@ CREATE TABLESPACE mytblspace FILESPACE myfilespace;
 
 ## See Also<a id="topic1__section8"></a>
 
-[CREATE DATABASE](CREATE-DATABASE.html), [CREATE TABLE](CREATE-TABLE.html), [DROP TABLESPACE](DROP-TABLESPACE.html)
+[CREATE DATABASE](CREATE-DATABASE.html), [CREATE TABLE](CREATE-TABLE.html), [DROP TABLESPACE](DROP-TABLESPACE/index.html)

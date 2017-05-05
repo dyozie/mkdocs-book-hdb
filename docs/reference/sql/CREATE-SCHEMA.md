@@ -79,4 +79,4 @@ According to the SQL standard, the owner of a schema always owns all objects wit
 
 ## See Also<a id="topic1__section8"></a>
 
-[DROP SCHEMA](DROP-SCHEMA.html)
+[DROP SCHEMA](DROP-SCHEMA/index.html)

@@ -34,7 +34,7 @@ DEALLOCATE [PREPARE] <name>
 
 `DEALLOCATE` is used to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends.
 
-For more information on prepared statements, see [PREPARE](PREPARE.html).
+For more information on prepared statements, see [PREPARE](PREPARE/index.html).
 
 ## Parameters<a id="topic1__section4"></a>
 
@@ -58,4 +58,4 @@ The SQL standard includes a `DEALLOCATE` statement, but it is only for use in em
 
 ## See Also<a id="topic1__section7"></a>
 
-[EXECUTE](EXECUTE.html), [PREPARE](PREPARE.html)
+[EXECUTE](EXECUTE.html), [PREPARE](PREPARE/index.html)

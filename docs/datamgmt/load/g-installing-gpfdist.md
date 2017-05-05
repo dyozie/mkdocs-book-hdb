@@ -21,6 +21,6 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-You may choose to run `gpfdist` from a machine other than the HAWQ master, such as on a machine devoted to ETL processing. To install `gpfdist` on your ETL server, refer to [Client-Based HAWQ Load Tools](client-loadtools.html) for information related to Linux and Windows load tools installation and configuration.
+You may choose to run `gpfdist` from a machine other than the HAWQ master, such as on a machine devoted to ETL processing. To install `gpfdist` on your ETL server, refer to [Client-Based HAWQ Load Tools](client-loadtools/index.html) for information related to Linux and Windows load tools installation and configuration.
 
 

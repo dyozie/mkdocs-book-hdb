@@ -37,12 +37,12 @@ RESET ALL
 
 The default value is defined as the value that the parameter would have had, had no `SET` ever been issued for it in the current session. The actual source of this value might be a compiled-in default, the master `hawq-site.xml` configuration file, command-line options, or per-database or per-user default settings.
 
-See [Server Configuration Parameter Reference](../HAWQSiteConfig.html) for more information.
+See [Server Configuration Parameter Reference](../HAWQSiteConfig/index.html) for more information.
 
 ## Parameters<a id="topic1__section4"></a>
 
 <dt> \<configuration\_parameter\>   </dt>
-<dd>The name of a system configuration parameter. See [Server Configuration Parameter Reference](../HAWQSiteConfig.html) for a list of configuration parameters.</dd>
+<dd>The name of a system configuration parameter. See [Server Configuration Parameter Reference](../HAWQSiteConfig/index.html) for a list of configuration parameters.</dd>
 
 <dt>ALL  </dt>
 <dd>Resets all settable configuration parameters to their default values.</dd>
@@ -61,4 +61,4 @@ RESET hawq_rm_stmt_vseg_memory;
 
 ## See Also<a id="topic1__section7"></a>
 
-[SET](SET.html)
+[SET](SET/index.html)

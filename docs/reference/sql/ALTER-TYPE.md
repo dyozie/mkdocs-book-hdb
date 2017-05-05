@@ -68,6 +68,6 @@ There is no `ALTER TYPE` statement in the SQL standard.
 
 ## See Also<a id="see"></a>
 
-[CREATE TYPE](CREATE-TYPE.html), [DROP TYPE](DROP-TYPE.html)
+[CREATE TYPE](CREATE-TYPE.html), [DROP TYPE](DROP-TYPE/index.html)
 
 

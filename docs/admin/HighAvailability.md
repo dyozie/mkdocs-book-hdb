@@ -51,6 +51,6 @@ Applications can take advantage of both clusters and also ensure that the ETL is
 
 To maintain a dual cluster with the backup/restore method, create backups of the primary cluster and restore them on the secondary cluster. This method takes longer to synchronize data on the secondary cluster than the dual ETL strategy, but requires less application logic to be developed. Populating a second cluster with backups is ideal in use cases where data modifications and ETL are performed daily or less frequently.
 
-See [Backing Up and Restoring HAWQ](BackingUpandRestoringHAWQDatabases.html) for instructions on how to backup and restore HAWQ.
+See [Backing Up and Restoring HAWQ](BackingUpandRestoringHAWQDatabases/index.html) for instructions on how to backup and restore HAWQ.
 
 

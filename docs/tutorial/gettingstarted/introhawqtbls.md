@@ -219,4 +219,4 @@ In this lesson, you created and loaded Retail order and order line item data int
 
 In Lesson 6, you use PXF external tables to similarly access dimension data stored in HDFS.
  
-**Lesson 6**: [HAWQ Extension Framework (PXF)](intropxfhdfs.html)
+**Lesson 6**: [HAWQ Extension Framework (PXF)](intropxfhdfs/index.html)

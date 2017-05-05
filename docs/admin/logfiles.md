@@ -34,7 +34,7 @@ Log files may be created and/or rotated at pre-defined or configured intervals. 
 
 ### Locating HAWQ Log Files <a id="logfile_locate_db"></a>
 
-Each HAWQ master, standby, and segment database instance has its own server log file. Daily log files are created in the `pg_log` subdirectory of the master and segment data directory on the respective HAWQ node. You can obtain the master data directory location from the `hawq_master_directory` property value set in the `$GPHOME/etc/`[`hawq-site.xml`](../reference/HAWQSampleSiteConfig.html) configuration file. Similarly, you can obtain the segment data directory location from the `hawq_segment_directory` property value from `hawq-site.xml`.
+Each HAWQ master, standby, and segment database instance has its own server log file. Daily log files are created in the `pg_log` subdirectory of the master and segment data directory on the respective HAWQ node. You can obtain the master data directory location from the `hawq_master_directory` property value set in the `$GPHOME/etc/`[`hawq-site.xml`](../reference/HAWQSampleSiteConfig/index.html) configuration file. Similarly, you can obtain the segment data directory location from the `hawq_segment_directory` property value from `hawq-site.xml`.
 
 The naming convention for HAWQ database server log files is `hawq-<date>_<time>.[csv|log]`. For example, `hawq-2017-01-02_061611.csv` or `hawq-2017-01-03_001704.log`. The number and size of log files present for a given \<date\> is dependent upon the values of certain HAWQ server configuration parameters (discussed later in this document).
 
@@ -112,7 +112,7 @@ For example, the following `hawq_toolkit` query displays the time and message fo
 
 ### Searching HAWQ Log Files <a id="topic30"></a>
 
-Use the [`gplogfilter`](../reference/cli/admin_utilities/gplogfilter.html) HAWQ utility to search through a HAWQ log file for entries matching specific criteria. By default, this utility searches through the HAWQ master log file in the default location.
+Use the [`gplogfilter`](../reference/cli/admin_utilities/gplogfilter/index.html) HAWQ utility to search through a HAWQ log file for entries matching specific criteria. By default, this utility searches through the HAWQ master log file in the default location.
 
 For example, to display the entries logged to the master log file after 2:00pm on January 18, 2016:
 
@@ -120,7 +120,7 @@ For example, to display the entries logged to the master log file after 2:00pm o
 $ gplogfilter -b '2016-01-18 14:00'
 ```
 
-Run `gplogfilter` using the [`hawq ssh`](../reference/cli/admin_utilities/hawqssh.html) utility to search through all segment log files simultaneously. For example, create a \<seg\_hosts\> file that includes all segment hosts of interest, then invoke `gplogfilter` to display the last three lines of each segment log file on each segment host. (Note: enter the commands after the `=>` prompt, do not include the `=>`.):
+Run `gplogfilter` using the [`hawq ssh`](../reference/cli/admin_utilities/hawqssh/index.html) utility to search through all segment log files simultaneously. For example, create a \<seg\_hosts\> file that includes all segment hosts of interest, then invoke `gplogfilter` to display the last three lines of each segment log file on each segment host. (Note: enter the commands after the `=>` prompt, do not include the `=>`.):
 
 ``` shell
 $ hawq ssh -f <seg_hosts>
@@ -280,11 +280,11 @@ PXF provides both service- and database-level logging. Refer to [PXF Logging](..
 
 ## Ambari Log Files<a id="logging_ambari"></a>
 
-Ambari log files may be useful in helping diagnose general cluster problems. The Ambari server log files are located in the `/var/log/ambari-server/` directory. Ambari agent log files are located in `/var/log/ambari-agent/`. Refer to [Reviewing Ambari Log Files](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.1.1/bk_ambari_troubleshooting/content/_reviewing_ambari_log_files.html) for additional information.
+Ambari log files may be useful in helping diagnose general cluster problems. The Ambari server log files are located in the `/var/log/ambari-server/` directory. Ambari agent log files are located in `/var/log/ambari-agent/`. Refer to [Reviewing Ambari Log Files](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.1.1/bk_ambari_troubleshooting/content/_reviewing_ambari_log_files/index.html) for additional information.
 
 ##  Ranger Log Files<a id="rangerlogs"></a>
 
-The HAWQ Ranger Plug-in Service log files may be useful in helping diagnose Ranger connectivity and authorization problems. You will find these log files in the `$GPHOME/ranger/plugin-service/logs/` directory. In addition to HAWQ Ranger Plug-in service-related logs, this directory includes the `log4j` provider `audit.log` file. (Refer to [Auditing Authorization Events](../ranger/ranger-auditing.html) for information on configuring HAWQ Ranger audit logging.)
+The HAWQ Ranger Plug-in Service log files may be useful in helping diagnose Ranger connectivity and authorization problems. You will find these log files in the `$GPHOME/ranger/plugin-service/logs/` directory. In addition to HAWQ Ranger Plug-in service-related logs, this directory includes the `log4j` provider `audit.log` file. (Refer to [Auditing Authorization Events](../ranger/ranger-auditing/index.html) for information on configuring HAWQ Ranger audit logging.)
 
 Ranger log files are located in the `/var/log/ranger/admin/` directory.
 

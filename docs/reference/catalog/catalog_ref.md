@@ -25,15 +25,15 @@ This reference describes the HAWQ system catalog tables and views.
 
 System tables prefixed with '`gp_`' relate to the parallel features of HAWQ. Tables prefixed with '`pg_`' are either standard PostgreSQL system catalog tables supported in HAWQ, or are related to features HAWQ that provides to enhance PostgreSQL for data warehousing workloads. Note that the global system catalog for HAWQ resides on the master instance.
 
--   **[System Tables](../../reference/catalog/catalog_ref-tables.html)**
+-   **[System Tables](../../reference/catalog/catalog_ref-tables/index.html)**
 
     This topic lists the system tables included in HAWQ.
 
--   **[System Views](../../reference/catalog/catalog_ref-views.html)**
+-   **[System Views](../../reference/catalog/catalog_ref-views/index.html)**
 
     HAWQ provides the following system views not available in PostgreSQL.
 
--   **[System Catalogs Definitions](../../reference/catalog/catalog_ref-html.html)**
+-   **[System Catalogs Definitions](../../reference/catalog/catalog_ref-html/index.html)**
 
     System catalog table and view definitions in alphabetical order.
 

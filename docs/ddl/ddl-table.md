@@ -31,7 +31,7 @@ The `CREATE TABLE` command creates a table and defines its structure. When you c
 -   Any table constraints to limit the data that a column or table can contain. See [Setting Table Constraints](#topic28).
 -   The distribution policy of the table, which determines how HAWQ divides data is across the segments. See [Choosing the Table Distribution Policy](#topic34).
 -   The way the table is stored on disk.
--   The table partitioning strategy for large tables, which specifies how the data should be divided. See [Creating and Managing Databases](../ddl/ddl-database.html).
+-   The table partitioning strategy for large tables, which specifies how the data should be divided. See [Creating and Managing Databases](../ddl/ddl-database/index.html).
 
 ### Choosing Column Data Types <a id="topic27"></a>
 

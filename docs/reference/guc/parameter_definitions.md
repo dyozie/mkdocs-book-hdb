@@ -837,7 +837,7 @@ For each executed query, prints the HAWQ query slice plan. *client\_min\_message
 
 The default number of hash buckets to use when executing a query statement on a hash table. Due to dynamic allocation, when the query is actually executed, the number of virtual segments may differ from this number depending on the query's needs. The total number of segments should never exceed the maximum set in `hawq_rm_nvseg_perquery_limit`.
 
-When expanding the cluster, you should adjust this number to reflect the number of nodes in the new cluster times the number of virtual segments per node. See [Expanding a Cluster](../../admin/ClusterExpansion.html) and [Creating and Managing Tables](../../ddl/ddl-table.html) for more details on modifying this parameter.
+When expanding the cluster, you should adjust this number to reflect the number of nodes in the new cluster times the number of virtual segments per node. See [Expanding a Cluster](../../admin/ClusterExpansion.html) and [Creating and Managing Tables](../../ddl/ddl-table/index.html) for more details on modifying this parameter.
 
 | Value Range    | Default         | Set Classifications     |
 |----------------|-----------------|-------------------------|
@@ -1860,7 +1860,7 @@ Sets the maximum total disk size that all running queries are allowed to use for
 
 ## hawq\_acl\_type<a name="hawq_acl_type"></a>
 
-Identifies the authorization method currently configured in your HAWQ cluster. HAWQ supports native and Ranger authorization. Refer to [Configuring HAWQ to Use Ranger Policy Management](../../ranger/ranger-integration-config.html) for detailed information on configuring Ranger authorization for HAWQ.
+Identifies the authorization method currently configured in your HAWQ cluster. HAWQ supports native and Ranger authorization. Refer to [Configuring HAWQ to Use Ranger Policy Management](../../ranger/ranger-integration-config/index.html) for detailed information on configuring Ranger authorization for HAWQ.
 
 | Value Range                                                             | Default             | Set Classifications     |
 |-------------------------------------------------------------------------|---------------------|-------------------------|
@@ -2184,7 +2184,7 @@ Reports whether PostgreSQL was built with support for 64-bit-integer dates and t
 
 Sets the display format for interval values. The value *sql\_standard* produces output matching SQL standard interval literals. The value *postgres* produces output matching PostgreSQL releases prior to 8.4 when the [DateStyle](#DateStyle) parameter was set to ISO.
 
-The value *iso\_8601* will produce output matching the time interval *format with designators* defined in section 4.4.3.2 of ISO 8601. See the [<span class="ph">PostgreSQL 8.4 documentation</span>](http://www.postgresql.org/docs/8.4/static/datatype-datetime.html) for more information.
+The value *iso\_8601* will produce output matching the time interval *format with designators* defined in section 4.4.3.2 of ISO 8601. See the [<span class="ph">PostgreSQL 8.4 documentation</span>](http://www.postgresql.org/docs/8.4/static/datatype-datetime/index.html) for more information.
 
 <table>
 <colgroup>
@@ -2599,7 +2599,7 @@ Sets the maximum number of append-only relations that can be written to or loade
 
 ## max\_connections<a name="max_connections"></a>
 
-The maximum number of concurrent connections allowed on master. In a HAWQ system, user client connections go through the HAWQ master instance only. Segment instances should allow 5-10 times the amount as the master. When you increase this parameter, you must increase [max\_prepared\_transactions](#max_prepared_transactions) as well. For more information about limiting concurrent connections, see [Configuring Client Authentication](../../clientaccess/client_auth.html).
+The maximum number of concurrent connections allowed on master. In a HAWQ system, user client connections go through the HAWQ master instance only. Segment instances should allow 5-10 times the amount as the master. When you increase this parameter, you must increase [max\_prepared\_transactions](#max_prepared_transactions) as well. For more information about limiting concurrent connections, see [Configuring Client Authentication](../../clientaccess/client_auth/index.html).
 
 Increasing this parameter may cause HAWQ to request more shared memory. See [shared\_buffers](#shared_buffers) for information about HAWQ server instance shared memory buffers.
 
@@ -2982,7 +2982,7 @@ Specifies the order in which schemas are searched when an object is referenced b
 
 ## seg\_max\_connections<a name="seg_max_connections"></a>
 
-The maximum number of concurrent connections on a segment. In a HAWQ system, user client connections go through the HAWQ master instance only. Segment instances should allow 5-10 times the amount of connections allowed on the master (see [max\_connections](#max_connections).) When you increase this parameter, you must increase [max\_prepared\_transactions](#max_prepared_transactions) as well. For more information about limiting concurrent connections, see [Configuring Client Authentication](../../clientaccess/client_auth.html).
+The maximum number of concurrent connections on a segment. In a HAWQ system, user client connections go through the HAWQ master instance only. Segment instances should allow 5-10 times the amount of connections allowed on the master (see [max\_connections](#max_connections).) When you increase this parameter, you must increase [max\_prepared\_transactions](#max_prepared_transactions) as well. For more information about limiting concurrent connections, see [Configuring Client Authentication](../../clientaccess/client_auth/index.html).
 
 Increasing this parameter may cause HAWQ to request more shared memory. See [shared\_buffers](#shared_buffers) for information about HAWQ server instance shared memory buffers.
 
@@ -3154,7 +3154,7 @@ Sets the maximum number of temporary buffers used by each database session. Thes
 
 ## TimeZone<a name="TimeZone"></a>
 
-Sets the time zone for displaying and interpreting time stamps. The default is to use whatever the system environment specifies as the time zone. See [<span class="ph">Date/Time Keywords</span>](http://www.postgresql.org/docs/8.2/static/datetime-keywords.html) in the PostgreSQL documentation.
+Sets the time zone for displaying and interpreting time stamps. The default is to use whatever the system environment specifies as the time zone. See [<span class="ph">Date/Time Keywords</span>](http://www.postgresql.org/docs/8.2/static/datetime-keywords/index.html) in the PostgreSQL documentation.
 
 | Value Range            | Default | Set Classifications |
 |------------------------|---------|---------------------|

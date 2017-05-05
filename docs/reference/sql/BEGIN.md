@@ -54,9 +54,9 @@ READ ONLY  </dt>
 
 ## Notes<a id="topic1__section5"></a>
 
-Use [COMMIT](COMMIT.html) or [ROLLBACK](ROLLBACK.html) to terminate a transaction block.
+Use [COMMIT](COMMIT.html) or [ROLLBACK](ROLLBACK/index.html) to terminate a transaction block.
 
-Issuing `BEGIN` when already inside a transaction block will provoke a warning message. The state of the transaction is not affected. To nest transactions within a transaction block, use savepoints (see [SAVEPOINT](SAVEPOINT.html)).
+Issuing `BEGIN` when already inside a transaction block will provoke a warning message. The state of the transaction is not affected. To nest transactions within a transaction block, use savepoints (see [SAVEPOINT](SAVEPOINT/index.html)).
 
 ## Examples<a id="topic1__section6"></a>
 
@@ -74,4 +74,4 @@ Incidentally, the `BEGIN` key word is used for a different purpose in embedded S
 
 ## See Also<a id="topic1__section8"></a>
 
-[COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK.html), [SAVEPOINT](SAVEPOINT.html)
+[COMMIT](COMMIT.html), [ROLLBACK](ROLLBACK.html), [SAVEPOINT](SAVEPOINT/index.html)

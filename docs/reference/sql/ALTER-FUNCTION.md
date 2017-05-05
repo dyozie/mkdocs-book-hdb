@@ -96,7 +96,7 @@ VOLATILE  </dt>
 
 ## Notes<a id="notes"></a>
 
-HAWQ has limitations on the use of functions defined as `STABLE` or `VOLATILE`. See [CREATE FUNCTION](CREATE-FUNCTION.html) for more information.
+HAWQ has limitations on the use of functions defined as `STABLE` or `VOLATILE`. See [CREATE FUNCTION](CREATE-FUNCTION/index.html) for more information.
 
 ## Examples<a id="alterfunction__section6"></a>
 
@@ -124,4 +124,4 @@ This statement is partially compatible with the `ALTER FUNCTION` statement in th
 
 ## See Also<a id="see"></a>
 
-[CREATE AGGREGATE](CREATE-AGGREGATE.html), [DROP AGGREGATE](DROP-AGGREGATE.html)
+[CREATE AGGREGATE](CREATE-AGGREGATE.html), [DROP AGGREGATE](DROP-AGGREGATE/index.html)

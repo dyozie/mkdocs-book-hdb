@@ -162,4 +162,4 @@ The SQL standard allows only `FROM` preceding the cursor name; the option to use
 
 ## See Also<a id="topic1__section9"></a>
 
-[DECLARE](DECLARE.html), [CLOSE](CLOSE.html)
+[DECLARE](DECLARE.html), [CLOSE](CLOSE/index.html)

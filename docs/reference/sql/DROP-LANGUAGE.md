@@ -65,4 +65,4 @@ DROP LANGUAGE plsample;
 
 ## See Also<a id="topic1__section8"></a>
 
-[CREATE LANGUAGE](CREATE-LANGUAGE.html)
+[CREATE LANGUAGE](CREATE-LANGUAGE/index.html)

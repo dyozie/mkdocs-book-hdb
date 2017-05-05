@@ -33,7 +33,7 @@ HAWQ uses two other database templates internally, `template0` and `postgres`. D
 
 You must have appropriate privileges or be a HAWQ superuser to create a database. If you do not have the correct privileges, you cannot create a database. The HAWQ administrator must either grant you the necessary privileges or create a database for you.
 
-The [CREATE DATABASE](../reference/sql/CREATE-DATABASE.html) command creates a new database. For example:
+The [CREATE DATABASE](../reference/sql/CREATE-DATABASE/index.html) command creates a new database. For example:
 
 ``` sql
 =# CREATE DATABASE <new_dbname>;
@@ -67,7 +67,7 @@ You can use the `\l` meta-command of the `psql` client subsystem to display the 
 
 ## Altering a Database <a id="topic7"></a>
 
-Use the [ALTER DATABASE](../reference/sql/ALTER-DATABASE.html) command to update database attributes including owner or name. You can also use ALTER DATABASE to update a database's default configuration. For example, the following command alters the `search_path` server configuration parameter to change the default schema search path for database `mydatabase`:
+Use the [ALTER DATABASE](../reference/sql/ALTER-DATABASE/index.html) command to update database attributes including owner or name. You can also use ALTER DATABASE to update a database's default configuration. For example, the following command alters the `search_path` server configuration parameter to change the default schema search path for database `mydatabase`:
 
 ``` sql
 =# ALTER DATABASE mydatabase SET search_path TO myschema, public, pg_catalog;
@@ -77,7 +77,7 @@ To alter a database, you must be the owner of the database or a superuser.
 
 ## Dropping a Database <a id="topic8"></a>
 
-The [DROP DATABASE](../reference/sql/DROP-DATABASE.html) command drops \(deletes\) a database. It removes the system catalog entries for the database and deletes the data on disk. You must be the database owner or a superuser to drop a database, and you cannot drop a database while you or anyone else is connected to it. Connect to `template1` \(or another database\) before dropping a database. For example:
+The [DROP DATABASE](../reference/sql/DROP-DATABASE/index.html) command drops \(deletes\) a database. It removes the system catalog entries for the database and deletes the data on disk. You must be the database owner or a superuser to drop a database, and you cannot drop a database while you or anyone else is connected to it. Connect to `template1` \(or another database\) before dropping a database. For example:
 
 ``` shell
 =# \c template1

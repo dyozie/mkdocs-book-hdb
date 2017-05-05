@@ -59,7 +59,7 @@ These are two ways to determine which query optimizer HAWQ used to execute the q
 
     The log file contains messages that indicate which query optimizer was used. In the log file message, the `[OPT]` flag appears when GPORCA attempts to optimize a query. If HAWQ falls back to the legacy optimizer, an error message is added to the log file, indicating the unsupported feature. Also, in the message, the label `Planner produced             plan:` appears before the query when HAWQ falls back to the legacy optimizer.
 
-    **Note:** You can configure HAWQ to display log messages on the psql command line by setting the HAWQ server configuration parameter `client_min_messages` to `LOG`. See [Server Configuration Parameter Reference](../../reference/HAWQSiteConfig.html) for information about the parameter.
+    **Note:** You can configure HAWQ to display log messages on the psql command line by setting the HAWQ server configuration parameter `client_min_messages` to `LOG`. See [Server Configuration Parameter Reference](../../reference/HAWQSiteConfig/index.html) for information about the parameter.
 
 ## Example<a id="topic_n4w_nb5_xr"></a>
 

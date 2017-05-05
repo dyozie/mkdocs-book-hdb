@@ -61,4 +61,4 @@ DROP SCHEMA mystuff CASCADE;
 
 ## See Also<a id="topic1__section7"></a>
 
-[CREATE SCHEMA](CREATE-SCHEMA.html)
+[CREATE SCHEMA](CREATE-SCHEMA/index.html)

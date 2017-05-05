@@ -61,9 +61,9 @@ where \<option\> can be:
 
 -   **RENAME** — Changes the name of the role. Database superusers can rename any role. Roles having `CREATEROLE` privilege can rename non-superuser roles. The current session user cannot be renamed (connect as a different user to rename a role). Because MD5-encrypted passwords use the role name as cryptographic salt, renaming a role clears its password if the password is MD5-encrypted.
 -   **RESOURCE QUEUE** — Assigns the role to a workload management resource queue. The role would then be subject to the limits assigned to the resource queue when issuing queries. Specify `NONE` to assign the role to the default resource queue. A role can only belong to one resource queue. For a role without `LOGIN` privilege, resource queues have no effect. See [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html#topic1) for more information.
--   **WITH** \<option\> — Changes many of the role attributes that can be specified in [CREATE ROLE](CREATE-ROLE.html). Attributes not mentioned in the command retain their previous settings. Database superusers can change any of these settings for any role. Roles having `CREATEROLE` privilege can change any of these settings, but only for non-superuser roles. Ordinary roles can only change their own password.
+-   **WITH** \<option\> — Changes many of the role attributes that can be specified in [CREATE ROLE](CREATE-ROLE/index.html). Attributes not mentioned in the command retain their previous settings. Database superusers can change any of these settings for any role. Roles having `CREATEROLE` privilege can change any of these settings, but only for non-superuser roles. Ordinary roles can only change their own password.
 
-**Note:** SET and RESET commands are currently not supported in connection with ALTER ROLE and will result in an error. See [SET](SET.html) and [About Server Configuration Parameters](../guc/guc_config.html#topic1) for information about user-settable configuration parameters.
+**Note:** SET and RESET commands are currently not supported in connection with ALTER ROLE and will result in an error. See [SET](SET/index.html) and [About Server Configuration Parameters](../guc/guc_config.html#topic1) for information about user-settable configuration parameters.
 
 ## Parameters<a id="alterrole__section4"></a>
 
@@ -88,7 +88,7 @@ CONNECTION LIMIT \<connlimit\>
 PASSWORD '\<password\>'  
 ENCRYPTED | UNENCRYPTED  
 VALID UNTIL '\<timestamp\>'  </dt>
-<dd>These clauses alter role attributes originally set by [CREATE ROLE](CREATE-ROLE.html).</dd>
+<dd>These clauses alter role attributes originally set by [CREATE ROLE](CREATE-ROLE/index.html).</dd>
 
 <dt>DENY \<deny\_point\>  
 DENY BETWEEN \<deny\_point\> AND \<deny\_point\>   </dt>
@@ -194,4 +194,4 @@ The `ALTER ROLE` statement is a HAWQ extension.
 
 ## See Also<a id="see"></a>
 
-[CREATE ROLE](CREATE-ROLE.html), [DROP ROLE](DROP-ROLE.html), [SET](SET.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html), [GRANT](GRANT.html), [REVOKE](REVOKE.html) 
+[CREATE ROLE](CREATE-ROLE.html), [DROP ROLE](DROP-ROLE.html), [SET](SET.html), [CREATE RESOURCE QUEUE](CREATE-RESOURCE-QUEUE.html), [GRANT](GRANT.html), [REVOKE](REVOKE/index.html) 

@@ -216,9 +216,9 @@ You manage and access HAWQ databases and tables via the `psql` utility, an inter
 ## Summary<a id="tut_dbadmin_summary"></a>
 You created the database you will use in later lessons. You also created, inserted data into, and queried a simple HAWQ table using`psql`.
 
-For information on SQL command support in HAWQ, refer to the [SQL Command](../../reference/SQLCommandReference.html) reference. 
+For information on SQL command support in HAWQ, refer to the [SQL Command](../../reference/SQLCommandReference/index.html) reference. 
 
-For detailed information on the `psql` subsystem, refer to the [psql](../../reference/cli/client_utilities/psql.html) reference page. Commonly-used `psql` meta\-commands are identified in the table below.
+For detailed information on the `psql` subsystem, refer to the [psql](../../reference/cli/client_utilities/psql/index.html) reference page. Commonly-used `psql` meta\-commands are identified in the table below.
 
 | Action                                                    | Command                                                                                                                                                                                            |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -230,4 +230,4 @@ For detailed information on the `psql` subsystem, refer to the [psql](../../refe
 
 Lesson 4 introduces the Retail demo, a more complicated data set used in upcoming lessons. You will download and examine the data set and work files. You will also load some of the data set into HDFS.
  
-**Lesson 4**: [Sample Data Set and HAWQ Schemas](dataandscripts.html)
+**Lesson 4**: [Sample Data Set and HAWQ Schemas](dataandscripts/index.html)

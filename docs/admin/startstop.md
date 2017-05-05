@@ -33,12 +33,12 @@ Initializing a HAWQ system also starts the system.
 
 Do not issue a `KILL` command to end any Postgres process. Instead, use the database command `pg_cancel_backend()`.
 
-For information about [hawq start](../reference/cli/admin_utilities/hawqstart.html) and [hawq stop](../reference/cli/admin_utilities/hawqstop.html), see the appropriate pages in the HAWQ Management Utility Reference or enter `hawq start -h` or `hawq stop -h` on the command line.
+For information about [hawq start](../reference/cli/admin_utilities/hawqstart.html) and [hawq stop](../reference/cli/admin_utilities/hawqstop/index.html), see the appropriate pages in the HAWQ Management Utility Reference or enter `hawq start -h` or `hawq stop -h` on the command line.
 
 
 ## Starting HAWQ <a id="task_hkd_gzv_fp"></a>
 
-When a HAWQ system is first initialized, it is also started. For more information about initializing HAWQ, see [hawq init](../reference/cli/admin_utilities/hawqinit.html). 
+When a HAWQ system is first initialized, it is also started. For more information about initializing HAWQ, see [hawq init](../reference/cli/admin_utilities/hawqinit/index.html). 
 
 To start a stopped HAWQ system that was previously initialized, run the `hawq start` command on the master instance.
 
@@ -64,7 +64,7 @@ The `hawq restart` command with the appropriate `cluster` or node-type option wi
 
 Reload changes to the HAWQ configuration files without interrupting the system.
 
-The `hawq stop` command can reload changes to the `pg_hba.conf `configuration file and to *runtime* parameters in the `hawq-site.xml` and `pg_hba.conf` files without service interruption. Active sessions pick up changes when they reconnect to the database. Many server configuration parameters require a full system restart \(`hawq restart cluster`\) to activate. For information about server configuration parameters, see the [Server Configuration Parameter Reference](../reference/guc/guc_config.html).
+The `hawq stop` command can reload changes to the `pg_hba.conf `configuration file and to *runtime* parameters in the `hawq-site.xml` and `pg_hba.conf` files without service interruption. Active sessions pick up changes when they reconnect to the database. Many server configuration parameters require a full system restart \(`hawq restart cluster`\) to activate. For information about server configuration parameters, see the [Server Configuration Parameter Reference](../reference/guc/guc_config/index.html).
 
 -   Reload configuration file changes without shutting down the system using the `hawq stop` command:
 

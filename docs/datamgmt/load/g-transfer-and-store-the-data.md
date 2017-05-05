@@ -26,10 +26,10 @@ Use one of the following approaches to transform the data with `gpfdist`.
 -   `GPLOAD` supports only input transformations, but is easier to implement in many cases.
 -   `INSERT INTO SELECT FROM` supports both input and output transformations, but exposes more details.
 
--   **[Transforming with GPLOAD](../../datamgmt/load/g-transforming-with-gpload.html)**
+-   **[Transforming with GPLOAD](../../datamgmt/load/g-transforming-with-gpload/index.html)**
 
--   **[Transforming with INSERT INTO SELECT FROM](../../datamgmt/load/g-transforming-with-insert-into-select-from.html)**
+-   **[Transforming with INSERT INTO SELECT FROM](../../datamgmt/load/g-transforming-with-insert-into-select-from/index.html)**
 
--   **[Configuration File Format](../../datamgmt/load/g-configuration-file-format.html)**
+-   **[Configuration File Format](../../datamgmt/load/g-configuration-file-format/index.html)**
 
 

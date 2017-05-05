@@ -59,4 +59,4 @@ The SQL standard defines `DROP ROLE`, but it allows only one role to be dropped 
 
 ## See Also<a id="topic1__section7"></a>
 
-[ALTER ROLE](ALTER-ROLE.html), [CREATE ROLE](CREATE-ROLE.html), [DROP OWNED](DROP-OWNED.html), [REASSIGN OWNED](REASSIGN-OWNED.html), [SET ROLE](SET-ROLE.html)
+[ALTER ROLE](ALTER-ROLE.html), [CREATE ROLE](CREATE-ROLE.html), [DROP OWNED](DROP-OWNED.html), [REASSIGN OWNED](REASSIGN-OWNED.html), [SET ROLE](SET-ROLE/index.html)

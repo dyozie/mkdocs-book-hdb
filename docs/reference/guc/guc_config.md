@@ -26,7 +26,7 @@ There are many HAWQ server configuration parameters that affect the behavior of 
 -   [Parameter Types and Values](#topic_vsn_22l_z4) describes the parameter data types and values.
 -   [Setting Parameters](#topic_cyz_p2l_z4) describes limitations on who can change them and where or when they can be set.
 -   [Configuration Parameter Categories](guc_category-list.html#guc-cat-list) organizes parameters by functionality.
--   [Configuration Parameters](parameter_definitions.html) lists the parameter descriptions in alphabetic order.
+-   [Configuration Parameters](parameter_definitions/index.html) lists the parameter descriptions in alphabetic order.
 
 ## Parameter Types and Values<a id="topic_vsn_22l_z4"></a>
 

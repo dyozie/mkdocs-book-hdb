@@ -25,14 +25,14 @@ The `gpfdist` protocol provides the best performance and is the easiest to set u
 
 This topic describes the setup and management tasks for using `gpfdist` with external tables.
 
--   **[About gpfdist Setup and Performance](../../datamgmt/load/g-about-gpfdist-setup-and-performance.html)**
+-   **[About gpfdist Setup and Performance](../../datamgmt/load/g-about-gpfdist-setup-and-performance/index.html)**
 
--   **[Controlling Segment Parallelism](../../datamgmt/load/g-controlling-segment-parallelism.html)**
+-   **[Controlling Segment Parallelism](../../datamgmt/load/g-controlling-segment-parallelism/index.html)**
 
--   **[Installing gpfdist](../../datamgmt/load/g-installing-gpfdist.html)**
+-   **[Installing gpfdist](../../datamgmt/load/g-installing-gpfdist/index.html)**
 
--   **[Starting and Stopping gpfdist](../../datamgmt/load/g-starting-and-stopping-gpfdist.html)**
+-   **[Starting and Stopping gpfdist](../../datamgmt/load/g-starting-and-stopping-gpfdist/index.html)**
 
--   **[Troubleshooting gpfdist](../../datamgmt/load/g-troubleshooting-gpfdist.html)**
+-   **[Troubleshooting gpfdist](../../datamgmt/load/g-troubleshooting-gpfdist/index.html)**
 
 

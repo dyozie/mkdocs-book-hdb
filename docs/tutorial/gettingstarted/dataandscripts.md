@@ -263,4 +263,4 @@ In this lesson, you downloaded the tutorial data set and work files, created the
 
 In Lessons 5 and 6, you will create and query HAWQ internal and external tables in the `retail_demo` schema.
 
-**Lesson 5**: [HAWQ Tables](introhawqtbls.html)
+**Lesson 5**: [HAWQ Tables](introhawqtbls/index.html)

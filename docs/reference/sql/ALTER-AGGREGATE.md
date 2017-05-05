@@ -82,6 +82,6 @@ There is no `ALTER AGGREGATE` statement in the SQL standard.
 
 ## See Also<a id="see"></a>
 
-[CREATE AGGREGATE](CREATE-AGGREGATE.html), [DROP AGGREGATE](DROP-AGGREGATE.html)
+[CREATE AGGREGATE](CREATE-AGGREGATE.html), [DROP AGGREGATE](DROP-AGGREGATE/index.html)
 
 
